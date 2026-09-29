@@ -2,6 +2,8 @@
 
 **Your practical:** the SEED Ubuntu 20.04 **Race-Condition Vulnerability Lab**. Follow this guide in order. It covers the official tasks and your group-division deliverables.
 
+The original lecturer text and division PDF are in `course-materials/`. For Member 6, use `../Member6/START_TO_FINISH_GUIDE.md`; Dirty COW requires a separate old Ubuntu 12.04 VM. The existing S01/S02 screenshots in your evidence folder are preserved; compare them with this guide's checkpoints and supplement them if needed.
+
 **How to use this document:** commands labelled **Windows PowerShell** run on your Windows computer. All other command blocks run in a **terminal inside the SEED Ubuntu VM**. Do not type the Markdown backticks. `[INSERT ...]` denotes a placeholder for evidence you must collect, not a command.
 
 ## 1. What you must finish

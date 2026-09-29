@@ -1,6 +1,12 @@
 # Preparation and verification status
 
-Checked on **23 September 2026**.
+Reviewed for the combined repository on **29 September 2026**. Existing user-supplied S01/S02 screenshots are preserved. Their presence does not establish completion of the attack experiments.
+
+## Existing screenshot review
+
+* S01 shows VM `Eeshan4`, 2048 MB RAM, VMSVGA, NAT and `SEED-Ubuntu20.04.vdi`. Its VirtualBox OS profile is labelled **Oracle Linux (64-bit)**; this is host configuration metadata, not the guest release. At a convenient powered-off configuration point, select Ubuntu (64-bit) for consistency and recapture S01 if needed.
+* S02 actually shows `seed` UID 1000, **Ubuntu 20.04.1 LTS**, **5.4.0-54-generic**, **x86_64**, and **GCC 9.3.0**, with the required tool paths available. These are valid observed setup values from the supplied image, not invented run results.
+* These screenshots support Member 5 setup. They are not evidence of a Dirty COW vulnerable environment, and do not replace Member 6's separate Ubuntu 12.04 setup.
 
 ## Completed here
 

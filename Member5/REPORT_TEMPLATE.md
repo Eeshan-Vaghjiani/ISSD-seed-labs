@@ -301,7 +301,7 @@ The central lesson is that checking permission on an attacker-changeable pathnam
 6. SEED VirtualBox manual: https://github.com/seed-labs/seed-labs/blob/master/manuals/vm/seedvm-manual.md
 7. Linux kernel sysctl filesystem documentation: https://www.kernel.org/doc/html/latest/admin-guide/sysctl/fs.html
 
-Guide references checked on 23 September 2026. My access / experiment date: [INSERT]. The vulnerable-program pattern and task structure are adapted from SEED Labs, Wenliang Du, under CC BY-NC-SA 4.0. [INSERT acknowledgement of assistance as required by course policy.]
+Guide references reviewed for the combined repository on 29 September 2026. Supplied course files are in `course-materials/`. My access / experiment date: [INSERT]. The vulnerable-program pattern and task structure are adapted from SEED Labs, Wenliang Du, under CC BY-NC-SA 4.0. [INSERT acknowledgement of assistance as required by course policy.]
 
 ## Appendix A — submitted files
 

@@ -1,0 +1,15 @@
+"Electronic Authentication procedures:
+Identity enrollment and proofing
+CSP vs Verifier vs Relying party (Contextualize to Multiuser and Hybrid clouds)
+Subscriber vs Claimant Vs Applicant (Consider things, Agentic tools/Models and APIs)
+Typs of authenticators and consequences with PQC
+Passwordless authentication and Federated Auth"	"Race-Condition Vulnerability Lab
+https://seedsecuritylabs.org/Labs_20.04/Software/Race_Condition/
+Dirty-COW Attack Lab
+https://seedsecuritylabs.org/Labs_20.04/Software/Dirty_COW/
+"
+	
+	
+	
+	
+	

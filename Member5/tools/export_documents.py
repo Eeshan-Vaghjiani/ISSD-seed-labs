@@ -12,6 +12,7 @@ from docx.shared import Inches, Pt, RGBColor
 
 
 ROOT = Path(__file__).resolve().parents[1]
+FOOTER = "ISSD | Member 5 | SEED Race-Condition Lab"
 DOCUMENTS = (
     "START_TO_FINISH_GUIDE",
     "REPORT_TEMPLATE",
@@ -45,7 +46,7 @@ def export(name):
     normal.paragraph_format.space_after = Pt(6)
     for level in range(1, 4):
         document.styles[f"Heading {level}"].font.color.rgb = RGBColor.from_string("17365D")
-    section.footer.paragraphs[0].text = "ISSD | Member 5 | SEED Race-Condition Lab"
+    section.footer.paragraphs[0].text = FOOTER
     document.core_properties.title = name.replace("_", " ")
     document.core_properties.subject = "Guide / template; insert actual lab evidence"
     lines = source.read_text(encoding="utf-8").splitlines()

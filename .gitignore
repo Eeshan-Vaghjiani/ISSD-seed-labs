@@ -1,0 +1,34 @@
+# Downloaded VM media and snapshots belong outside the teaching repository.
+*.vdi
+*.vmdk
+*.vhd
+*.vhdx
+*.ova
+*.iso
+*.sav
+*.vbox
+*.vbox-prev
+SEED*.zip
+Labsetup.zip
+
+# Generated executable/cache/editor files; documents and evidence are tracked.
+__pycache__/
+*.pyc
+*.o
+*.exe
+~$*.docx
+Member5/lab-files/vulp
+Member5/lab-files/vulp_slow
+Member5/lab-files/vulp_least
+Member5/lab-files/attack_naive
+Member5/lab-files/attack_atomic
+Member6/lab-files/cow_attack
+Member6/lab-files/cow_control
+
+# Never commit private credentials or guest account-database backups.
+.env
+.env.*
+*.pem
+*.key
+*shadow*
+issd-member*-passwd.*
