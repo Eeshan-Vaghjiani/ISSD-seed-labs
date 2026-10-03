@@ -2,6 +2,7 @@
 
 ## Open these
 
+* **LIVE_PREPARATION.md** / **LIVE_PREPARATION.pdf** — VM prerequisites, missing-helper recovery, display setup, full/short rehearsal routes, screenshot fallbacks and Q&A.
 * **MAIN_PRESENTATION.pptx** — editable main presentation: mechanism, interpretation of terminal output, recorded findings and countermeasures. The live-demo transitions are slides 3, 5 and 7.
 * **LIVE_COMMANDS.pdf** / **LIVE_COMMANDS.md** — compact A/B command sheet to keep beside you while presenting.
 * **LIVE_DEMO.pdf** / **LIVE_DEMO.md** — full ordered A/B guide with setup, the ten-second demonstration, a bounded genuine no-delay run, a short defence control, cleanup and recovery explanations.
@@ -18,8 +19,9 @@ The cover uses **Member 5 — ISSD**, as requested. Unknown personal/administrat
 * `source/` — actual C/shell lab files and input record.
 * `automation/` — the existing VM helpers used by the command guide.
 * `logs/` — original labelled summaries, attacker outputs and controls, including failures.
-* `provenance/` — evidence review, verified login records, exact-append/recording metadata and monitor changes.
+* `provenance/` — verified login records, exact-append/recording metadata and monitor changes. The current evidence review is `../evidence/EVIDENCE_REVIEW.md`.
 * `BUILD_VERIFICATION.md` — completed document and layout checks.
+* `READINESS_REVIEW.md` — requirement-by-requirement review, screenshot qualifications and remaining rehearsal actions.
 
 The complete raw VM evidence archive remains available at `/home/seed/issd-member5/exports/member5-evidence-audited-20261003-064223.tar.gz`. Earlier full captures and preservation records remain intact. Figure crops are for readability, not new or manufactured terminal output.
 

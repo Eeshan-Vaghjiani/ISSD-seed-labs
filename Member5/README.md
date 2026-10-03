@@ -2,9 +2,9 @@
 
 **Completed work:** open [submission/README.md](submission/README.md) for the finished report, main findings PPTX, slide notes, and the exact A/B live-demo command guide. The audited screenshots are directly in [evidence/](evidence/); see [the evidence review](evidence/EVIDENCE_REVIEW.md).
 
-**Start with [START_TO_FINISH_GUIDE.md](START_TO_FINISH_GUIDE.md).** It takes you from installing VirtualBox to collecting evidence and presenting the SEED Race-Condition Vulnerability Lab.
+**For the completed presentation, start with [submission/LIVE_PREPARATION.md](submission/LIVE_PREPARATION.md).** For first-time installation and the full original procedure, use [START_TO_FINISH_GUIDE.md](START_TO_FINISH_GUIDE.md). The older setup guide's saved-policy cleanup is historical; the completed VM's chosen final 1/2 policy and current classroom cleanup are documented in `submission/LIVE_DEMO.md`.
 
-Prefer Word? Open **`START_TO_FINISH_GUIDE.docx`**, **`REPORT_TEMPLATE.docx`**, and **`PRESENTATION_PLAN.docx`** in this folder. The Word report has the same evidence placeholders, ready for inserting screenshots. Markdown is the source for regeneration; edits made directly in Word will not be copied back to Markdown.
+Prefer Word? The **finished report is `submission/REPORT.docx`**. `START_TO_FINISH_GUIDE.docx`, `REPORT_TEMPLATE.docx`, and `PRESENTATION_PLAN.docx` in this folder are the older preparation documents; the template still has intentional placeholders. Markdown is the source for regeneration; edits made directly in Word will not be copied back to Markdown.
 
 | File / folder | Purpose |
 |---|---|

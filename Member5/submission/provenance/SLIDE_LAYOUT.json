@@ -694,7 +694,7 @@
   },
   {
     "slide": 5,
-    "text": "Same no-delay vulp. Bash monitor times: 1 s, 0 s, 0 s; 0 means sub-second timer resolution.",
+    "text": "Same no-delay vulp. Bash timer: whole seconds; a 0 s reading does not mean zero runtime.",
     "box": [
       0.73,
       5.4,

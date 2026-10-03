@@ -106,7 +106,8 @@ def assets():
         '# Original source attribution\n\nRetained from the supplied Member 5 lab pack. '
         'Completed experimental observations are in REPORT.md.\n\n## Sources and attribution'
         + attribution)
-    for name in ('reset.sh', 'audit-setup.sh', 'cleanup.sh', 'lab_runner.py', 'verify-record.py'):
+    for name in ('reset.sh', 'audit-setup.sh', 'cleanup.sh', 'lab_runner.py', 'verify-record.py',
+                 'task3a-controls.sh', 'task3b-controls.sh'):
         copy_original(VM / 'automation' / name, OUT / 'automation' / name)
     for path in (VM / 'lab-files/logs').iterdir():
         if path.is_file() and ('passwd-after' not in path.name) and (
@@ -455,7 +456,7 @@ def build_deck():
         d.rect(s, .61, y-.10, 12.05, .69, PALE)
         for x, value, width in zip(xs, row, [4.08, 1.90, 2.4, 2.0]):
             d.text(s, x, y+.04, width, .43, value, 23, TEAL if x == xs[-1] else BLACK, x == xs[-1])
-    d.text(s, .73, 5.40, 11.89, .56, 'Same no-delay vulp. Bash monitor times: 1 s, 0 s, 0 s; 0 means sub-second timer resolution.', 17, GRAY)
+    d.text(s, .73, 5.40, 11.89, .56, 'Same no-delay vulp. Bash timer: whole seconds; a 0 s reading does not mean zero runtime.', 17, GRAY)
     d.text(s, .73, 6.15, 11.89, .42, 'Live demonstration: original vulp + atomic switching, with no artificial delay.', 20, TEAL, True)
     d.note(s, 'Switch to the genuine no-delay atomic demonstration',
            'These are historical measurements, rounded to three decimals on the slide; the report contains exact values and labels. They do not promise that the next trial will finish in one attempt or that one method is always faster. The supplied C victim has no artificial sleep. If presenting live, use Part 2: B resets and creates a unique shared label, A starts the bounded atomic attacker, and B starts the 30-second no-delay monitor only after initialization. Inspect any changed file and verify non-sudo login/id; then exit root and reset. If the 30 seconds expire unchanged, state that the live attempt did not win and use the labelled actual S09/S11 evidence. Do not call that short class attempt the original 300-second experiment. Return to slide 6.')
@@ -583,7 +584,7 @@ def main():
     if args.only in ('all','slides'):
         build_deck()
     if args.only in ('all','docs'):
-        for name in ('REPORT','LIVE_DEMO','LIVE_COMMANDS','SLIDE_NOTES'):
+        for name in ('REPORT','LIVE_DEMO','LIVE_COMMANDS','SLIDE_NOTES','LIVE_PREPARATION'):
             render_doc(name)
 
 
