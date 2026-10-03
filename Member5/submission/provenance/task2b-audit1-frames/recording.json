@@ -1,0 +1,1184 @@
+{
+  "label": "task2b-audit1-20261003-064223",
+  "method": "native GStreamer full-desktop PNG sequence",
+  "pipeline": "ximagesrc name=screen display-name=:0 use-damage=true show-pointer=false do-timestamp=true ! video/x-raw,framerate=30/1 ! videoconvert ! video/x-raw,format=RGB ! queue max-size-buffers=3 max-size-bytes=0 max-size-time=0 ! pngenc name=encoder compression-level=1 ! multifilesink name=files post-messages=true sync=false location=\"../evidence/audit-20261003-064223/task2b-audit1-frames/frame-%05d.png\"",
+  "started": "2026-10-03T06:47:21.745602-04:00",
+  "wall_seconds": 10.00440333699953,
+  "requested_fps": 30,
+  "frames": [
+    {
+      "pts_ns": 5823918,
+      "sampled_at": "2026-10-03T06:47:21.798655-04:00",
+      "raw_processes": {
+        "attacker": {
+          "pid": 216571,
+          "start_ticks": "1284797",
+          "live": true,
+          "program": "./attack_naive",
+          "ruid": 1000,
+          "euid": 1000
+        }
+      },
+      "filename": "../evidence/audit-20261003-064223/task2b-audit1-frames/frame-00000.png",
+      "index": 0,
+      "written_processes": {
+        "attacker": {
+          "pid": 216571,
+          "start_ticks": "1284797",
+          "live": true,
+          "program": "./attack_naive",
+          "ruid": 1000,
+          "euid": 1000
+        }
+      },
+      "written_at": "2026-10-03T06:47:21.872951-04:00",
+      "both_live_raw_and_written": false,
+      "sha256": "3b7b6f431da34209984c0d557896ede7d127d5a485092bba5da54beccb17a6dd"
+    },
+    {
+      "pts_ns": 49966606,
+      "sampled_at": "2026-10-03T06:47:21.900483-04:00",
+      "raw_processes": {
+        "attacker": {
+          "pid": 216571,
+          "start_ticks": "1284797",
+          "live": true,
+          "program": "./attack_naive",
+          "ruid": 1000,
+          "euid": 1000
+        }
+      },
+      "filename": "../evidence/audit-20261003-064223/task2b-audit1-frames/frame-00001.png",
+      "index": 1,
+      "written_processes": {
+        "attacker": {
+          "pid": 216571,
+          "start_ticks": "1284797",
+          "live": true,
+          "program": "./attack_naive",
+          "ruid": 1000,
+          "euid": 1000
+        }
+      },
+      "written_at": "2026-10-03T06:47:21.947894-04:00",
+      "both_live_raw_and_written": false,
+      "sha256": "3b7b6f431da34209984c0d557896ede7d127d5a485092bba5da54beccb17a6dd"
+    },
+    {
+      "pts_ns": 155164665,
+      "sampled_at": "2026-10-03T06:47:22.076715-04:00",
+      "raw_processes": {
+        "attacker": {
+          "pid": 216571,
+          "start_ticks": "1284797",
+          "live": true,
+          "program": "./attack_naive",
+          "ruid": 1000,
+          "euid": 1000
+        }
+      },
+      "filename": "../evidence/audit-20261003-064223/task2b-audit1-frames/frame-00002.png",
+      "index": 2,
+      "written_processes": {
+        "attacker": {
+          "pid": 216571,
+          "start_ticks": "1284797",
+          "live": true,
+          "program": "./attack_naive",
+          "ruid": 1000,
+          "euid": 1000
+        }
+      },
+      "written_at": "2026-10-03T06:47:22.123442-04:00",
+      "both_live_raw_and_written": false,
+      "sha256": "fba626b3d90b42b6fdc6d3b6171dbca0beef1e8ac70c39f51fe901fada2f55b4"
+    },
+    {
+      "pts_ns": 344892412,
+      "sampled_at": "2026-10-03T06:47:22.662778-04:00",
+      "raw_processes": {
+        "attacker": {
+          "pid": 216571,
+          "start_ticks": "1284797",
+          "live": true,
+          "program": "./attack_naive",
+          "ruid": 1000,
+          "euid": 1000
+        }
+      },
+      "filename": "../evidence/audit-20261003-064223/task2b-audit1-frames/frame-00003.png",
+      "index": 3,
+      "written_processes": {
+        "attacker": {
+          "pid": 216571,
+          "start_ticks": "1284797",
+          "live": true,
+          "program": "./attack_naive",
+          "ruid": 1000,
+          "euid": 1000
+        }
+      },
+      "written_at": "2026-10-03T06:47:22.701311-04:00",
+      "both_live_raw_and_written": false,
+      "sha256": "3b7b6f431da34209984c0d557896ede7d127d5a485092bba5da54beccb17a6dd"
+    },
+    {
+      "pts_ns": 921056675,
+      "sampled_at": "2026-10-03T06:47:23.265445-04:00",
+      "raw_processes": {
+        "attacker": {
+          "pid": 216571,
+          "start_ticks": "1284797",
+          "live": true,
+          "program": "./attack_naive",
+          "ruid": 1000,
+          "euid": 1000
+        }
+      },
+      "filename": "../evidence/audit-20261003-064223/task2b-audit1-frames/frame-00004.png",
+      "index": 4,
+      "written_processes": {
+        "attacker": {
+          "pid": 216571,
+          "start_ticks": "1284797",
+          "live": true,
+          "program": "./attack_naive",
+          "ruid": 1000,
+          "euid": 1000
+        }
+      },
+      "written_at": "2026-10-03T06:47:23.313683-04:00",
+      "both_live_raw_and_written": false,
+      "sha256": "fba626b3d90b42b6fdc6d3b6171dbca0beef1e8ac70c39f51fe901fada2f55b4"
+    },
+    {
+      "pts_ns": 1518140215,
+      "sampled_at": "2026-10-03T06:47:23.876123-04:00",
+      "raw_processes": {
+        "attacker": {
+          "pid": 216571,
+          "start_ticks": "1284797",
+          "live": true,
+          "program": "./attack_naive",
+          "ruid": 1000,
+          "euid": 1000
+        }
+      },
+      "filename": "../evidence/audit-20261003-064223/task2b-audit1-frames/frame-00005.png",
+      "index": 5,
+      "written_processes": {
+        "attacker": {
+          "pid": 216571,
+          "start_ticks": "1284797",
+          "live": true,
+          "program": "./attack_naive",
+          "ruid": 1000,
+          "euid": 1000
+        }
+      },
+      "written_at": "2026-10-03T06:47:23.933915-04:00",
+      "both_live_raw_and_written": false,
+      "sha256": "3b7b6f431da34209984c0d557896ede7d127d5a485092bba5da54beccb17a6dd"
+    },
+    {
+      "pts_ns": 2129086900,
+      "sampled_at": "2026-10-03T06:47:23.952343-04:00",
+      "raw_processes": {
+        "attacker": {
+          "pid": 216571,
+          "start_ticks": "1284797",
+          "live": true,
+          "program": "./attack_naive",
+          "ruid": 1000,
+          "euid": 1000
+        }
+      },
+      "filename": "../evidence/audit-20261003-064223/task2b-audit1-frames/frame-00006.png",
+      "index": 6,
+      "written_processes": {
+        "attacker": {
+          "pid": 216571,
+          "start_ticks": "1284797",
+          "live": true,
+          "program": "./attack_naive",
+          "ruid": 1000,
+          "euid": 1000
+        }
+      },
+      "written_at": "2026-10-03T06:47:24.009167-04:00",
+      "both_live_raw_and_written": false,
+      "sha256": "fba626b3d90b42b6fdc6d3b6171dbca0beef1e8ac70c39f51fe901fada2f55b4"
+    },
+    {
+      "pts_ns": 2203211178,
+      "sampled_at": "2026-10-03T06:47:24.009283-04:00",
+      "raw_processes": {
+        "attacker": {
+          "pid": 216571,
+          "start_ticks": "1284797",
+          "live": true,
+          "program": "./attack_naive",
+          "ruid": 1000,
+          "euid": 1000
+        }
+      },
+      "filename": "../evidence/audit-20261003-064223/task2b-audit1-frames/frame-00007.png",
+      "index": 7,
+      "written_processes": {
+        "attacker": {
+          "pid": 216571,
+          "start_ticks": "1284797",
+          "live": true,
+          "program": "./attack_naive",
+          "ruid": 1000,
+          "euid": 1000
+        }
+      },
+      "written_at": "2026-10-03T06:47:24.054810-04:00",
+      "both_live_raw_and_written": false,
+      "sha256": "2b97f55541ef784ed4eca5c19c772d11ff4abcad875e62aa5ffbe749979de6d2"
+    },
+    {
+      "pts_ns": 2233333333,
+      "sampled_at": "2026-10-03T06:47:24.528569-04:00",
+      "raw_processes": {
+        "attacker": {
+          "pid": 216571,
+          "start_ticks": "1284797",
+          "live": true,
+          "program": "./attack_naive",
+          "ruid": 1000,
+          "euid": 1000
+        }
+      },
+      "filename": "../evidence/audit-20261003-064223/task2b-audit1-frames/frame-00008.png",
+      "index": 8,
+      "written_processes": {
+        "attacker": {
+          "pid": 216571,
+          "start_ticks": "1284797",
+          "live": true,
+          "program": "./attack_naive",
+          "ruid": 1000,
+          "euid": 1000
+        }
+      },
+      "written_at": "2026-10-03T06:47:24.590827-04:00",
+      "both_live_raw_and_written": false,
+      "sha256": "909e72232303833f13d24fb08968fb0555baa0b63e40e785bd9b236917270683"
+    },
+    {
+      "pts_ns": 2777868052,
+      "sampled_at": "2026-10-03T06:47:24.685478-04:00",
+      "raw_processes": {
+        "attacker": {
+          "pid": 216571,
+          "start_ticks": "1284797",
+          "live": true,
+          "program": "./attack_naive",
+          "ruid": 1000,
+          "euid": 1000
+        },
+        "monitor": {
+          "pid": 216593,
+          "start_ticks": "1285250",
+          "live": true,
+          "program": [
+            "bash",
+            "run_trials.sh",
+            "./vulp",
+            "300",
+            "task2b-audit1-20261003-064223"
+          ],
+          "ruid": 1000,
+          "euid": 1000
+        }
+      },
+      "filename": "../evidence/audit-20261003-064223/task2b-audit1-frames/frame-00009.png",
+      "index": 9,
+      "written_processes": {
+        "attacker": {
+          "pid": 216571,
+          "start_ticks": "1284797",
+          "live": true,
+          "program": "./attack_naive",
+          "ruid": 1000,
+          "euid": 1000
+        },
+        "monitor": {
+          "pid": 216593,
+          "start_ticks": "1285250",
+          "live": true,
+          "program": [
+            "bash",
+            "run_trials.sh",
+            "./vulp",
+            "300",
+            "task2b-audit1-20261003-064223"
+          ],
+          "ruid": 1000,
+          "euid": 1000
+        }
+      },
+      "written_at": "2026-10-03T06:47:24.740806-04:00",
+      "both_live_raw_and_written": true,
+      "sha256": "7893032a93c5a02147d4a6b05fe1c03f0dc673ccad837a1aaa5355d9de9faccd"
+    },
+    {
+      "pts_ns": 2935833283,
+      "sampled_at": "2026-10-03T06:47:24.827170-04:00",
+      "raw_processes": {
+        "attacker": {
+          "pid": 216571,
+          "start_ticks": "1284797",
+          "live": true,
+          "program": "./attack_naive",
+          "ruid": 1000,
+          "euid": 1000
+        },
+        "monitor": {
+          "pid": 216593,
+          "start_ticks": "1285250",
+          "live": true,
+          "program": [
+            "bash",
+            "run_trials.sh",
+            "./vulp",
+            "300",
+            "task2b-audit1-20261003-064223"
+          ],
+          "ruid": 1000,
+          "euid": 1000
+        }
+      },
+      "filename": "../evidence/audit-20261003-064223/task2b-audit1-frames/frame-00010.png",
+      "index": 10,
+      "written_processes": {
+        "attacker": {
+          "pid": 216571,
+          "start_ticks": "1284797",
+          "live": false,
+          "program": "./attack_naive",
+          "ruid": 1000,
+          "euid": 1000
+        },
+        "monitor": {
+          "pid": 216593,
+          "start_ticks": "1285250",
+          "live": false,
+          "program": [
+            "bash",
+            "run_trials.sh",
+            "./vulp",
+            "300",
+            "task2b-audit1-20261003-064223"
+          ],
+          "ruid": 1000,
+          "euid": 1000
+        }
+      },
+      "written_at": "2026-10-03T06:47:24.934415-04:00",
+      "both_live_raw_and_written": false,
+      "sha256": "195f06fe1497cf3995f90c37c198839f7058886afb1f73e71f7b48501bcb743d"
+    },
+    {
+      "pts_ns": 3077829087,
+      "sampled_at": "2026-10-03T06:47:24.934515-04:00",
+      "raw_processes": {
+        "attacker": {
+          "pid": 216571,
+          "start_ticks": "1284797",
+          "live": false,
+          "program": "./attack_naive",
+          "ruid": 1000,
+          "euid": 1000
+        },
+        "monitor": {
+          "pid": 216593,
+          "start_ticks": "1285250",
+          "live": false,
+          "program": [
+            "bash",
+            "run_trials.sh",
+            "./vulp",
+            "300",
+            "task2b-audit1-20261003-064223"
+          ],
+          "ruid": 1000,
+          "euid": 1000
+        }
+      },
+      "filename": "../evidence/audit-20261003-064223/task2b-audit1-frames/frame-00011.png",
+      "index": 11,
+      "written_processes": {
+        "attacker": {
+          "pid": 216571,
+          "start_ticks": "1284797",
+          "live": false,
+          "program": "./attack_naive",
+          "ruid": 1000,
+          "euid": 1000
+        },
+        "monitor": {
+          "pid": 216593,
+          "start_ticks": "1285250",
+          "live": false,
+          "program": [
+            "bash",
+            "run_trials.sh",
+            "./vulp",
+            "300",
+            "task2b-audit1-20261003-064223"
+          ],
+          "ruid": 1000,
+          "euid": 1000
+        }
+      },
+      "written_at": "2026-10-03T06:47:24.970855-04:00",
+      "both_live_raw_and_written": false,
+      "sha256": "7db66110b1e07f01667ca252bbbc26d18ddd44fedf6d2ef5154b65492406bb62"
+    },
+    {
+      "pts_ns": 3138024797,
+      "sampled_at": "2026-10-03T06:47:24.970927-04:00",
+      "raw_processes": {
+        "attacker": {
+          "pid": 216571,
+          "start_ticks": "1284797",
+          "live": false,
+          "program": "./attack_naive",
+          "ruid": 1000,
+          "euid": 1000
+        },
+        "monitor": {
+          "pid": 216593,
+          "start_ticks": "1285250",
+          "live": false,
+          "program": [
+            "bash",
+            "run_trials.sh",
+            "./vulp",
+            "300",
+            "task2b-audit1-20261003-064223"
+          ],
+          "ruid": 1000,
+          "euid": 1000
+        }
+      },
+      "filename": "../evidence/audit-20261003-064223/task2b-audit1-frames/frame-00012.png",
+      "index": 12,
+      "written_processes": {
+        "attacker": {
+          "pid": 216571,
+          "start_ticks": "1284797",
+          "live": false,
+          "program": "./attack_naive",
+          "ruid": 1000,
+          "euid": 1000
+        },
+        "monitor": {
+          "pid": 216593,
+          "start_ticks": "1285250",
+          "live": false,
+          "program": [
+            "bash",
+            "run_trials.sh",
+            "./vulp",
+            "300",
+            "task2b-audit1-20261003-064223"
+          ],
+          "ruid": 1000,
+          "euid": 1000
+        }
+      },
+      "written_at": "2026-10-03T06:47:24.992523-04:00",
+      "both_live_raw_and_written": false,
+      "sha256": "0b9d75def72b92fa79ce169940cb8e01688a886d230a1b0103ae2e127bb337d8"
+    },
+    {
+      "pts_ns": 3175529818,
+      "sampled_at": "2026-10-03T06:47:24.992606-04:00",
+      "raw_processes": {
+        "attacker": {
+          "pid": 216571,
+          "start_ticks": "1284797",
+          "live": false,
+          "program": "./attack_naive",
+          "ruid": 1000,
+          "euid": 1000
+        },
+        "monitor": {
+          "pid": 216593,
+          "start_ticks": "1285250",
+          "live": false,
+          "program": [
+            "bash",
+            "run_trials.sh",
+            "./vulp",
+            "300",
+            "task2b-audit1-20261003-064223"
+          ],
+          "ruid": 1000,
+          "euid": 1000
+        }
+      },
+      "filename": "../evidence/audit-20261003-064223/task2b-audit1-frames/frame-00013.png",
+      "index": 13,
+      "written_processes": {
+        "attacker": {
+          "pid": 216571,
+          "start_ticks": "1284797",
+          "live": false,
+          "program": "./attack_naive",
+          "ruid": 1000,
+          "euid": 1000
+        },
+        "monitor": {
+          "pid": 216593,
+          "start_ticks": "1285250",
+          "live": false,
+          "program": [
+            "bash",
+            "run_trials.sh",
+            "./vulp",
+            "300",
+            "task2b-audit1-20261003-064223"
+          ],
+          "ruid": 1000,
+          "euid": 1000
+        }
+      },
+      "written_at": "2026-10-03T06:47:25.016245-04:00",
+      "both_live_raw_and_written": false,
+      "sha256": "ac2e30f8cfef12cddbff667be0663d257674651db86875b6e9c067ee953b3e8f"
+    },
+    {
+      "pts_ns": 3211040789,
+      "sampled_at": "2026-10-03T06:47:25.127079-04:00",
+      "raw_processes": {
+        "attacker": {
+          "pid": 216571,
+          "start_ticks": "1284797",
+          "live": false,
+          "program": "./attack_naive",
+          "ruid": 1000,
+          "euid": 1000
+        },
+        "monitor": {
+          "pid": 216593,
+          "start_ticks": "1285250",
+          "live": false,
+          "program": [
+            "bash",
+            "run_trials.sh",
+            "./vulp",
+            "300",
+            "task2b-audit1-20261003-064223"
+          ],
+          "ruid": 1000,
+          "euid": 1000
+        }
+      },
+      "filename": "../evidence/audit-20261003-064223/task2b-audit1-frames/frame-00014.png",
+      "index": 14,
+      "written_processes": {
+        "attacker": {
+          "pid": 216571,
+          "start_ticks": "1284797",
+          "live": false,
+          "program": "./attack_naive",
+          "ruid": 1000,
+          "euid": 1000
+        },
+        "monitor": {
+          "pid": 216593,
+          "start_ticks": "1285250",
+          "live": false,
+          "program": [
+            "bash",
+            "run_trials.sh",
+            "./vulp",
+            "300",
+            "task2b-audit1-20261003-064223"
+          ],
+          "ruid": 1000,
+          "euid": 1000
+        }
+      },
+      "written_at": "2026-10-03T06:47:25.147830-04:00",
+      "both_live_raw_and_written": false,
+      "sha256": "86ac7fdabd639531e4a060a2ed97e09c9eacd97543965c6afa197f35685c7834"
+    },
+    {
+      "pts_ns": 3378277505,
+      "sampled_at": "2026-10-03T06:47:25.727028-04:00",
+      "raw_processes": {
+        "attacker": {
+          "pid": 216571,
+          "start_ticks": "1284797",
+          "live": false,
+          "program": "./attack_naive",
+          "ruid": 1000,
+          "euid": 1000
+        },
+        "monitor": {
+          "pid": 216593,
+          "start_ticks": "1285250",
+          "live": false,
+          "program": [
+            "bash",
+            "run_trials.sh",
+            "./vulp",
+            "300",
+            "task2b-audit1-20261003-064223"
+          ],
+          "ruid": 1000,
+          "euid": 1000
+        }
+      },
+      "filename": "../evidence/audit-20261003-064223/task2b-audit1-frames/frame-00015.png",
+      "index": 15,
+      "written_processes": {
+        "attacker": {
+          "pid": 216571,
+          "start_ticks": "1284797",
+          "live": false,
+          "program": "./attack_naive",
+          "ruid": 1000,
+          "euid": 1000
+        },
+        "monitor": {
+          "pid": 216593,
+          "start_ticks": "1285250",
+          "live": false,
+          "program": [
+            "bash",
+            "run_trials.sh",
+            "./vulp",
+            "300",
+            "task2b-audit1-20261003-064223"
+          ],
+          "ruid": 1000,
+          "euid": 1000
+        }
+      },
+      "written_at": "2026-10-03T06:47:25.748367-04:00",
+      "both_live_raw_and_written": false,
+      "sha256": "ac2e30f8cfef12cddbff667be0663d257674651db86875b6e9c067ee953b3e8f"
+    },
+    {
+      "pts_ns": 3977628525,
+      "sampled_at": "2026-10-03T06:47:26.326001-04:00",
+      "raw_processes": {
+        "attacker": {
+          "pid": 216571,
+          "start_ticks": "1284797",
+          "live": false,
+          "program": "./attack_naive",
+          "ruid": 1000,
+          "euid": 1000
+        },
+        "monitor": {
+          "pid": 216593,
+          "start_ticks": "1285250",
+          "live": false,
+          "program": [
+            "bash",
+            "run_trials.sh",
+            "./vulp",
+            "300",
+            "task2b-audit1-20261003-064223"
+          ],
+          "ruid": 1000,
+          "euid": 1000
+        }
+      },
+      "filename": "../evidence/audit-20261003-064223/task2b-audit1-frames/frame-00016.png",
+      "index": 16,
+      "written_processes": {
+        "attacker": {
+          "pid": 216571,
+          "start_ticks": "1284797",
+          "live": false,
+          "program": "./attack_naive",
+          "ruid": 1000,
+          "euid": 1000
+        },
+        "monitor": {
+          "pid": 216593,
+          "start_ticks": "1285250",
+          "live": false,
+          "program": [
+            "bash",
+            "run_trials.sh",
+            "./vulp",
+            "300",
+            "task2b-audit1-20261003-064223"
+          ],
+          "ruid": 1000,
+          "euid": 1000
+        }
+      },
+      "written_at": "2026-10-03T06:47:26.346989-04:00",
+      "both_live_raw_and_written": false,
+      "sha256": "86ac7fdabd639531e4a060a2ed97e09c9eacd97543965c6afa197f35685c7834"
+    },
+    {
+      "pts_ns": 4573605214,
+      "sampled_at": "2026-10-03T06:47:26.928238-04:00",
+      "raw_processes": {
+        "attacker": {
+          "pid": 216571,
+          "start_ticks": "1284797",
+          "live": false,
+          "program": "./attack_naive",
+          "ruid": 1000,
+          "euid": 1000
+        },
+        "monitor": {
+          "pid": 216593,
+          "start_ticks": "1285250",
+          "live": false,
+          "program": [
+            "bash",
+            "run_trials.sh",
+            "./vulp",
+            "300",
+            "task2b-audit1-20261003-064223"
+          ],
+          "ruid": 1000,
+          "euid": 1000
+        }
+      },
+      "filename": "../evidence/audit-20261003-064223/task2b-audit1-frames/frame-00017.png",
+      "index": 17,
+      "written_processes": {
+        "attacker": {
+          "pid": 216571,
+          "start_ticks": "1284797",
+          "live": false,
+          "program": "./attack_naive",
+          "ruid": 1000,
+          "euid": 1000
+        },
+        "monitor": {
+          "pid": 216593,
+          "start_ticks": "1285250",
+          "live": false,
+          "program": [
+            "bash",
+            "run_trials.sh",
+            "./vulp",
+            "300",
+            "task2b-audit1-20261003-064223"
+          ],
+          "ruid": 1000,
+          "euid": 1000
+        }
+      },
+      "written_at": "2026-10-03T06:47:26.948631-04:00",
+      "both_live_raw_and_written": false,
+      "sha256": "ac2e30f8cfef12cddbff667be0663d257674651db86875b6e9c067ee953b3e8f"
+    },
+    {
+      "pts_ns": 5182349498,
+      "sampled_at": "2026-10-03T06:47:27.530487-04:00",
+      "raw_processes": {
+        "attacker": {
+          "pid": 216571,
+          "start_ticks": "1284797",
+          "live": false,
+          "program": "./attack_naive",
+          "ruid": 1000,
+          "euid": 1000
+        },
+        "monitor": {
+          "pid": 216593,
+          "start_ticks": "1285250",
+          "live": false,
+          "program": [
+            "bash",
+            "run_trials.sh",
+            "./vulp",
+            "300",
+            "task2b-audit1-20261003-064223"
+          ],
+          "ruid": 1000,
+          "euid": 1000
+        }
+      },
+      "filename": "../evidence/audit-20261003-064223/task2b-audit1-frames/frame-00018.png",
+      "index": 18,
+      "written_processes": {
+        "attacker": {
+          "pid": 216571,
+          "start_ticks": "1284797",
+          "live": false,
+          "program": "./attack_naive",
+          "ruid": 1000,
+          "euid": 1000
+        },
+        "monitor": {
+          "pid": 216593,
+          "start_ticks": "1285250",
+          "live": false,
+          "program": [
+            "bash",
+            "run_trials.sh",
+            "./vulp",
+            "300",
+            "task2b-audit1-20261003-064223"
+          ],
+          "ruid": 1000,
+          "euid": 1000
+        }
+      },
+      "written_at": "2026-10-03T06:47:27.549891-04:00",
+      "both_live_raw_and_written": false,
+      "sha256": "86ac7fdabd639531e4a060a2ed97e09c9eacd97543965c6afa197f35685c7834"
+    },
+    {
+      "pts_ns": 5787115392,
+      "sampled_at": "2026-10-03T06:47:28.143377-04:00",
+      "raw_processes": {
+        "attacker": {
+          "pid": 216571,
+          "start_ticks": "1284797",
+          "live": false,
+          "program": "./attack_naive",
+          "ruid": 1000,
+          "euid": 1000
+        },
+        "monitor": {
+          "pid": 216593,
+          "start_ticks": "1285250",
+          "live": false,
+          "program": [
+            "bash",
+            "run_trials.sh",
+            "./vulp",
+            "300",
+            "task2b-audit1-20261003-064223"
+          ],
+          "ruid": 1000,
+          "euid": 1000
+        }
+      },
+      "filename": "../evidence/audit-20261003-064223/task2b-audit1-frames/frame-00019.png",
+      "index": 19,
+      "written_processes": {
+        "attacker": {
+          "pid": 216571,
+          "start_ticks": "1284797",
+          "live": false,
+          "program": "./attack_naive",
+          "ruid": 1000,
+          "euid": 1000
+        },
+        "monitor": {
+          "pid": 216593,
+          "start_ticks": "1285250",
+          "live": false,
+          "program": [
+            "bash",
+            "run_trials.sh",
+            "./vulp",
+            "300",
+            "task2b-audit1-20261003-064223"
+          ],
+          "ruid": 1000,
+          "euid": 1000
+        }
+      },
+      "written_at": "2026-10-03T06:47:28.164255-04:00",
+      "both_live_raw_and_written": false,
+      "sha256": "ac2e30f8cfef12cddbff667be0663d257674651db86875b6e9c067ee953b3e8f"
+    },
+    {
+      "pts_ns": 6397315045,
+      "sampled_at": "2026-10-03T06:47:28.744070-04:00",
+      "raw_processes": {
+        "attacker": {
+          "pid": 216571,
+          "start_ticks": "1284797",
+          "live": false,
+          "program": "./attack_naive",
+          "ruid": 1000,
+          "euid": 1000
+        },
+        "monitor": {
+          "pid": 216593,
+          "start_ticks": "1285250",
+          "live": false,
+          "program": [
+            "bash",
+            "run_trials.sh",
+            "./vulp",
+            "300",
+            "task2b-audit1-20261003-064223"
+          ],
+          "ruid": 1000,
+          "euid": 1000
+        }
+      },
+      "filename": "../evidence/audit-20261003-064223/task2b-audit1-frames/frame-00020.png",
+      "index": 20,
+      "written_processes": {
+        "attacker": {
+          "pid": 216571,
+          "start_ticks": "1284797",
+          "live": false,
+          "program": "./attack_naive",
+          "ruid": 1000,
+          "euid": 1000
+        },
+        "monitor": {
+          "pid": 216593,
+          "start_ticks": "1285250",
+          "live": false,
+          "program": [
+            "bash",
+            "run_trials.sh",
+            "./vulp",
+            "300",
+            "task2b-audit1-20261003-064223"
+          ],
+          "ruid": 1000,
+          "euid": 1000
+        }
+      },
+      "written_at": "2026-10-03T06:47:28.765656-04:00",
+      "both_live_raw_and_written": false,
+      "sha256": "86ac7fdabd639531e4a060a2ed97e09c9eacd97543965c6afa197f35685c7834"
+    },
+    {
+      "pts_ns": 6995915379,
+      "sampled_at": "2026-10-03T06:47:29.342587-04:00",
+      "raw_processes": {
+        "attacker": {
+          "pid": 216571,
+          "start_ticks": "1284797",
+          "live": false,
+          "program": "./attack_naive",
+          "ruid": 1000,
+          "euid": 1000
+        },
+        "monitor": {
+          "pid": 216593,
+          "start_ticks": "1285250",
+          "live": false,
+          "program": [
+            "bash",
+            "run_trials.sh",
+            "./vulp",
+            "300",
+            "task2b-audit1-20261003-064223"
+          ],
+          "ruid": 1000,
+          "euid": 1000
+        }
+      },
+      "filename": "../evidence/audit-20261003-064223/task2b-audit1-frames/frame-00021.png",
+      "index": 21,
+      "written_processes": {
+        "attacker": {
+          "pid": 216571,
+          "start_ticks": "1284797",
+          "live": false,
+          "program": "./attack_naive",
+          "ruid": 1000,
+          "euid": 1000
+        },
+        "monitor": {
+          "pid": 216593,
+          "start_ticks": "1285250",
+          "live": false,
+          "program": [
+            "bash",
+            "run_trials.sh",
+            "./vulp",
+            "300",
+            "task2b-audit1-20261003-064223"
+          ],
+          "ruid": 1000,
+          "euid": 1000
+        }
+      },
+      "written_at": "2026-10-03T06:47:29.372028-04:00",
+      "both_live_raw_and_written": false,
+      "sha256": "ac2e30f8cfef12cddbff667be0663d257674651db86875b6e9c067ee953b3e8f"
+    },
+    {
+      "pts_ns": 7592035516,
+      "sampled_at": "2026-10-03T06:47:29.944135-04:00",
+      "raw_processes": {
+        "attacker": {
+          "pid": 216571,
+          "start_ticks": "1284797",
+          "live": false,
+          "program": "./attack_naive",
+          "ruid": 1000,
+          "euid": 1000
+        },
+        "monitor": {
+          "pid": 216593,
+          "start_ticks": "1285250",
+          "live": false,
+          "program": [
+            "bash",
+            "run_trials.sh",
+            "./vulp",
+            "300",
+            "task2b-audit1-20261003-064223"
+          ],
+          "ruid": 1000,
+          "euid": 1000
+        }
+      },
+      "filename": "../evidence/audit-20261003-064223/task2b-audit1-frames/frame-00022.png",
+      "index": 22,
+      "written_processes": {
+        "attacker": {
+          "pid": 216571,
+          "start_ticks": "1284797",
+          "live": false,
+          "program": "./attack_naive",
+          "ruid": 1000,
+          "euid": 1000
+        },
+        "monitor": {
+          "pid": 216593,
+          "start_ticks": "1285250",
+          "live": false,
+          "program": [
+            "bash",
+            "run_trials.sh",
+            "./vulp",
+            "300",
+            "task2b-audit1-20261003-064223"
+          ],
+          "ruid": 1000,
+          "euid": 1000
+        }
+      },
+      "written_at": "2026-10-03T06:47:29.963552-04:00",
+      "both_live_raw_and_written": false,
+      "sha256": "86ac7fdabd639531e4a060a2ed97e09c9eacd97543965c6afa197f35685c7834"
+    },
+    {
+      "pts_ns": 8199532245,
+      "sampled_at": "2026-10-03T06:47:30.544166-04:00",
+      "raw_processes": {
+        "attacker": {
+          "pid": 216571,
+          "start_ticks": "1284797",
+          "live": false,
+          "program": "./attack_naive",
+          "ruid": 1000,
+          "euid": 1000
+        },
+        "monitor": {
+          "pid": 216593,
+          "start_ticks": "1285250",
+          "live": false,
+          "program": [
+            "bash",
+            "run_trials.sh",
+            "./vulp",
+            "300",
+            "task2b-audit1-20261003-064223"
+          ],
+          "ruid": 1000,
+          "euid": 1000
+        }
+      },
+      "filename": "../evidence/audit-20261003-064223/task2b-audit1-frames/frame-00023.png",
+      "index": 23,
+      "written_processes": {
+        "attacker": {
+          "pid": 216571,
+          "start_ticks": "1284797",
+          "live": false,
+          "program": "./attack_naive",
+          "ruid": 1000,
+          "euid": 1000
+        },
+        "monitor": {
+          "pid": 216593,
+          "start_ticks": "1285250",
+          "live": false,
+          "program": [
+            "bash",
+            "run_trials.sh",
+            "./vulp",
+            "300",
+            "task2b-audit1-20261003-064223"
+          ],
+          "ruid": 1000,
+          "euid": 1000
+        }
+      },
+      "written_at": "2026-10-03T06:47:30.564493-04:00",
+      "both_live_raw_and_written": false,
+      "sha256": "ac2e30f8cfef12cddbff667be0663d257674651db86875b6e9c067ee953b3e8f"
+    },
+    {
+      "pts_ns": 8801001999,
+      "sampled_at": "2026-10-03T06:47:31.144909-04:00",
+      "raw_processes": {
+        "attacker": {
+          "pid": 216571,
+          "start_ticks": "1284797",
+          "live": false,
+          "program": "./attack_naive",
+          "ruid": 1000,
+          "euid": 1000
+        },
+        "monitor": {
+          "pid": 216593,
+          "start_ticks": "1285250",
+          "live": false,
+          "program": [
+            "bash",
+            "run_trials.sh",
+            "./vulp",
+            "300",
+            "task2b-audit1-20261003-064223"
+          ],
+          "ruid": 1000,
+          "euid": 1000
+        }
+      },
+      "filename": "../evidence/audit-20261003-064223/task2b-audit1-frames/frame-00024.png",
+      "index": 24,
+      "written_processes": {
+        "attacker": {
+          "pid": 216571,
+          "start_ticks": "1284797",
+          "live": false,
+          "program": "./attack_naive",
+          "ruid": 1000,
+          "euid": 1000
+        },
+        "monitor": {
+          "pid": 216593,
+          "start_ticks": "1285250",
+          "live": false,
+          "program": [
+            "bash",
+            "run_trials.sh",
+            "./vulp",
+            "300",
+            "task2b-audit1-20261003-064223"
+          ],
+          "ruid": 1000,
+          "euid": 1000
+        }
+      },
+      "written_at": "2026-10-03T06:47:31.167394-04:00",
+      "both_live_raw_and_written": false,
+      "sha256": "86ac7fdabd639531e4a060a2ed97e09c9eacd97543965c6afa197f35685c7834"
+    }
+  ],
+  "errors": []
+}

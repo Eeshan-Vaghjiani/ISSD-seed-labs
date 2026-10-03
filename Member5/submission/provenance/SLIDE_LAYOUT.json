@@ -1,0 +1,1630 @@
+[
+  {
+    "slide": 1,
+    "text": "MEMBER 5 \u2014 ISSD",
+    "box": [
+      1.0,
+      0.67,
+      10,
+      0.35
+    ],
+    "font_pt": 15
+  },
+  {
+    "slide": 1,
+    "text": "One name.\nTwo different files.",
+    "box": [
+      1.0,
+      1.42,
+      11.2,
+      1.55
+    ],
+    "font_pt": 47
+  },
+  {
+    "slide": 1,
+    "text": "Race-condition vulnerability lab",
+    "box": [
+      1.02,
+      3.37,
+      10.9,
+      0.66
+    ],
+    "font_pt": 28
+  },
+  {
+    "slide": 1,
+    "text": "A race condition is timing-dependent. Here the target changes between check and use.",
+    "box": [
+      1.03,
+      4.27,
+      10.8,
+      0.8
+    ],
+    "font_pt": 24
+  },
+  {
+    "slide": 1,
+    "text": "MECHANISM  \u2192  LIVE TERMINALS  \u2192  FINDINGS  \u2192  DEFENCES",
+    "box": [
+      1.25,
+      5.91,
+      10.45,
+      0.31
+    ],
+    "font_pt": 17
+  },
+  {
+    "slide": 2,
+    "text": "ISSD  /  MEMBER 5  /  MECHANISM",
+    "box": [
+      0.55,
+      0.31,
+      10,
+      0.22
+    ],
+    "font_pt": 10
+  },
+  {
+    "slide": 2,
+    "text": "Where the race lives",
+    "box": [
+      0.55,
+      0.73,
+      12.15,
+      0.61
+    ],
+    "font_pt": 33
+  },
+  {
+    "slide": 2,
+    "text": "The pathname stays the same; the object reached through it can change.",
+    "box": [
+      0.57,
+      1.46,
+      12.0,
+      0.54
+    ],
+    "font_pt": 17
+  },
+  {
+    "slide": 2,
+    "text": "SEED Race-Condition Lab \u2022 Wenliang Du / SEED Labs \u2022 Actual VM findings: 3 Oct 2026",
+    "box": [
+      0.56,
+      7.07,
+      11.5,
+      0.18
+    ],
+    "font_pt": 9
+  },
+  {
+    "slide": 2,
+    "text": "2",
+    "box": [
+      12.2,
+      7.03,
+      0.55,
+      0.26
+    ],
+    "font_pt": 12
+  },
+  {
+    "slide": 2,
+    "text": "CHECK",
+    "box": [
+      0.9,
+      2.51,
+      6.6,
+      0.35
+    ],
+    "font_pt": 14
+  },
+  {
+    "slide": 2,
+    "text": "access(\"/tmp/XYZ\", W_OK)",
+    "box": [
+      0.9,
+      3.01,
+      6.57,
+      0.62
+    ],
+    "font_pt": 25
+  },
+  {
+    "slide": 2,
+    "text": "Attacker switches the symlink here",
+    "box": [
+      0.92,
+      3.77,
+      6.3,
+      0.38
+    ],
+    "font_pt": 20
+  },
+  {
+    "slide": 2,
+    "text": "USE",
+    "box": [
+      0.9,
+      4.43,
+      6.6,
+      0.35
+    ],
+    "font_pt": 14
+  },
+  {
+    "slide": 2,
+    "text": "fopen(\"/tmp/XYZ\", \"a+\")",
+    "box": [
+      0.9,
+      4.92,
+      6.57,
+      0.6
+    ],
+    "font_pt": 25
+  },
+  {
+    "slide": 2,
+    "text": "Real UID: 1000 (seed)",
+    "box": [
+      8.45,
+      2.48,
+      4.0,
+      0.38
+    ],
+    "font_pt": 23
+  },
+  {
+    "slide": 2,
+    "text": "The permission check uses the ordinary caller.",
+    "box": [
+      8.45,
+      3.04,
+      3.95,
+      0.65
+    ],
+    "font_pt": 20
+  },
+  {
+    "slide": 2,
+    "text": "Effective UID: 0",
+    "box": [
+      8.45,
+      4.51,
+      4.0,
+      0.38
+    ],
+    "font_pt": 23
+  },
+  {
+    "slide": 2,
+    "text": "The Set-UID victim supplies root authority to the open.",
+    "box": [
+      8.45,
+      5.07,
+      3.95,
+      0.68
+    ],
+    "font_pt": 20
+  },
+  {
+    "slide": 2,
+    "text": "Lab prerequisite: deliberately installed root-owned Set-UID victim; attack controls set to 0/0.",
+    "box": [
+      0.65,
+      6.42,
+      12.0,
+      0.36
+    ],
+    "font_pt": 16
+  },
+  {
+    "slide": 3,
+    "text": "ISSD  /  MEMBER 5  /  LIVE DEMO 1",
+    "box": [
+      0.55,
+      0.31,
+      10,
+      0.22
+    ],
+    "font_pt": 10
+  },
+  {
+    "slide": 3,
+    "text": "What to watch in the live demo",
+    "box": [
+      0.55,
+      0.73,
+      12.15,
+      0.61
+    ],
+    "font_pt": 33
+  },
+  {
+    "slide": 3,
+    "text": "Switch to the two terminals now. Explain the output as it appears.",
+    "box": [
+      0.57,
+      1.46,
+      12.0,
+      0.54
+    ],
+    "font_pt": 17
+  },
+  {
+    "slide": 3,
+    "text": "SEED Race-Condition Lab \u2022 Wenliang Du / SEED Labs \u2022 Actual VM findings: 3 Oct 2026",
+    "box": [
+      0.56,
+      7.07,
+      11.5,
+      0.18
+    ],
+    "font_pt": 9
+  },
+  {
+    "slide": 3,
+    "text": "3",
+    "box": [
+      12.2,
+      7.03,
+      0.55,
+      0.26
+    ],
+    "font_pt": 12
+  },
+  {
+    "slide": 3,
+    "text": "A \u2014 Attacker",
+    "box": [
+      0.88,
+      2.53,
+      5.33,
+      0.5
+    ],
+    "font_pt": 29
+  },
+  {
+    "slide": 3,
+    "text": "First: XYZ \u2192 /dev/null\nThen: XYZ \u2192 /etc/passwd",
+    "box": [
+      0.88,
+      3.28,
+      5.22,
+      1.3
+    ],
+    "font_pt": 25
+  },
+  {
+    "slide": 3,
+    "text": "B \u2014 Victim and results",
+    "box": [
+      7.1,
+      2.53,
+      5.22,
+      0.5
+    ],
+    "font_pt": 28
+  },
+  {
+    "slide": 3,
+    "text": "Check passed\nInspect the complete record\nNon-sudo login \u2192 id",
+    "box": [
+      7.1,
+      3.28,
+      5.13,
+      1.39
+    ],
+    "font_pt": 24
+  },
+  {
+    "slide": 3,
+    "text": "Task 2.A: an explicit artificial 10-second delay for explanation.",
+    "box": [
+      0.86,
+      5.76,
+      11.52,
+      0.38
+    ],
+    "font_pt": 23
+  },
+  {
+    "slide": 4,
+    "text": "ISSD  /  MEMBER 5  /  INTERPRETATION",
+    "box": [
+      0.55,
+      0.31,
+      10,
+      0.22
+    ],
+    "font_pt": 10
+  },
+  {
+    "slide": 4,
+    "text": "Read the output in the right order",
+    "box": [
+      0.55,
+      0.73,
+      12.15,
+      0.61
+    ],
+    "font_pt": 33
+  },
+  {
+    "slide": 4,
+    "text": "The proof is the full chain, not a successful-looking message.",
+    "box": [
+      0.57,
+      1.46,
+      12.0,
+      0.54
+    ],
+    "font_pt": 17
+  },
+  {
+    "slide": 4,
+    "text": "SEED Race-Condition Lab \u2022 Wenliang Du / SEED Labs \u2022 Actual VM findings: 3 Oct 2026",
+    "box": [
+      0.56,
+      7.07,
+      11.5,
+      0.18
+    ],
+    "font_pt": 9
+  },
+  {
+    "slide": 4,
+    "text": "4",
+    "box": [
+      12.2,
+      7.03,
+      0.55,
+      0.26
+    ],
+    "font_pt": 12
+  },
+  {
+    "slide": 4,
+    "text": "uid=1000(seed)",
+    "box": [
+      0.85,
+      2.35,
+      5.55,
+      0.55
+    ],
+    "font_pt": 23
+  },
+  {
+    "slide": 4,
+    "text": "The attack starts as an ordinary user.",
+    "box": [
+      6.75,
+      2.35,
+      5.54,
+      0.58
+    ],
+    "font_pt": 20
+  },
+  {
+    "slide": 4,
+    "text": "Exact seven-field test record",
+    "box": [
+      0.85,
+      3.43,
+      5.55,
+      0.55
+    ],
+    "font_pt": 23
+  },
+  {
+    "slide": 4,
+    "text": "The chosen account entry reached /etc/passwd.",
+    "box": [
+      6.75,
+      3.43,
+      5.54,
+      0.58
+    ],
+    "font_pt": 20
+  },
+  {
+    "slide": 4,
+    "text": "su - test  \u2192  id: uid=0(root)",
+    "box": [
+      0.85,
+      4.51,
+      5.55,
+      0.55
+    ],
+    "font_pt": 23
+  },
+  {
+    "slide": 4,
+    "text": "That non-sudo login actually obtained root authority.",
+    "box": [
+      6.75,
+      4.51,
+      5.54,
+      0.58
+    ],
+    "font_pt": 20
+  },
+  {
+    "slide": 4,
+    "text": "A changed SHA-256 is a signal to inspect \u2014 not proof of root access.",
+    "box": [
+      0.88,
+      6.04,
+      11.55,
+      0.34
+    ],
+    "font_pt": 22
+  },
+  {
+    "slide": 5,
+    "text": "ISSD  /  MEMBER 5  /  LIVE DEMO 2 / FINDINGS",
+    "box": [
+      0.55,
+      0.31,
+      10,
+      0.22
+    ],
+    "font_pt": 10
+  },
+  {
+    "slide": 5,
+    "text": "The no-delay experiment also succeeded",
+    "box": [
+      0.55,
+      0.73,
+      12.15,
+      0.61
+    ],
+    "font_pt": 33
+  },
+  {
+    "slide": 5,
+    "text": "Recorded measurements from 3 October 2026 \u2014 a live run can differ.",
+    "box": [
+      0.57,
+      1.46,
+      12.0,
+      0.54
+    ],
+    "font_pt": 17
+  },
+  {
+    "slide": 5,
+    "text": "SEED Race-Condition Lab \u2022 Wenliang Du / SEED Labs \u2022 Actual VM findings: 3 Oct 2026",
+    "box": [
+      0.56,
+      7.07,
+      11.5,
+      0.18
+    ],
+    "font_pt": 9
+  },
+  {
+    "slide": 5,
+    "text": "5",
+    "box": [
+      12.2,
+      7.03,
+      0.55,
+      0.26
+    ],
+    "font_pt": 12
+  },
+  {
+    "slide": 5,
+    "text": "Recorded run",
+    "box": [
+      0.82,
+      2.17,
+      4.0,
+      0.4
+    ],
+    "font_pt": 20
+  },
+  {
+    "slide": 5,
+    "text": "Attempts",
+    "box": [
+      5.02,
+      2.17,
+      2.0,
+      0.4
+    ],
+    "font_pt": 20
+  },
+  {
+    "slide": 5,
+    "text": "Wall time",
+    "box": [
+      7.3,
+      2.17,
+      2.4,
+      0.4
+    ],
+    "font_pt": 20
+  },
+  {
+    "slide": 5,
+    "text": "Verified",
+    "box": [
+      10.07,
+      2.17,
+      2.0,
+      0.4
+    ],
+    "font_pt": 20
+  },
+  {
+    "slide": 5,
+    "text": "Naive: first success",
+    "box": [
+      0.82,
+      2.81,
+      4.08,
+      0.43
+    ],
+    "font_pt": 23
+  },
+  {
+    "slide": 5,
+    "text": "20",
+    "box": [
+      5.02,
+      2.81,
+      1.9,
+      0.43
+    ],
+    "font_pt": 23
+  },
+  {
+    "slide": 5,
+    "text": "0.865 s",
+    "box": [
+      7.3,
+      2.81,
+      2.4,
+      0.43
+    ],
+    "font_pt": 23
+  },
+  {
+    "slide": 5,
+    "text": "UID 0",
+    "box": [
+      10.07,
+      2.81,
+      2.0,
+      0.43
+    ],
+    "font_pt": 23
+  },
+  {
+    "slide": 5,
+    "text": "Atomic exchange",
+    "box": [
+      0.82,
+      3.59,
+      4.08,
+      0.43
+    ],
+    "font_pt": 23
+  },
+  {
+    "slide": 5,
+    "text": "1",
+    "box": [
+      5.02,
+      3.59,
+      1.9,
+      0.43
+    ],
+    "font_pt": 23
+  },
+  {
+    "slide": 5,
+    "text": "0.273 s",
+    "box": [
+      7.3,
+      3.59,
+      2.4,
+      0.43
+    ],
+    "font_pt": 23
+  },
+  {
+    "slide": 5,
+    "text": "UID 0",
+    "box": [
+      10.07,
+      3.59,
+      2.0,
+      0.43
+    ],
+    "font_pt": 23
+  },
+  {
+    "slide": 5,
+    "text": "Naive: recorded repeat",
+    "box": [
+      0.82,
+      4.37,
+      4.08,
+      0.43
+    ],
+    "font_pt": 23
+  },
+  {
+    "slide": 5,
+    "text": "1",
+    "box": [
+      5.02,
+      4.37,
+      1.9,
+      0.43
+    ],
+    "font_pt": 23
+  },
+  {
+    "slide": 5,
+    "text": "0.238 s",
+    "box": [
+      7.3,
+      4.37,
+      2.4,
+      0.43
+    ],
+    "font_pt": 23
+  },
+  {
+    "slide": 5,
+    "text": "UID 0",
+    "box": [
+      10.07,
+      4.37,
+      2.0,
+      0.43
+    ],
+    "font_pt": 23
+  },
+  {
+    "slide": 5,
+    "text": "Same no-delay vulp. Bash monitor times: 1 s, 0 s, 0 s; 0 means sub-second timer resolution.",
+    "box": [
+      0.73,
+      5.4,
+      11.89,
+      0.56
+    ],
+    "font_pt": 17
+  },
+  {
+    "slide": 5,
+    "text": "Live demonstration: original vulp + atomic switching, with no artificial delay.",
+    "box": [
+      0.73,
+      6.15,
+      11.89,
+      0.42
+    ],
+    "font_pt": 20
+  },
+  {
+    "slide": 6,
+    "text": "ISSD  /  MEMBER 5  /  SURPRISING OBSERVATION",
+    "box": [
+      0.55,
+      0.31,
+      10,
+      0.22
+    ],
+    "font_pt": 10
+  },
+  {
+    "slide": 6,
+    "text": "Why the naive attacker got stuck",
+    "box": [
+      0.55,
+      0.73,
+      12.15,
+      0.61
+    ],
+    "font_pt": 33
+  },
+  {
+    "slide": 6,
+    "text": "File exists and Operation not permitted explained a real failure.",
+    "box": [
+      0.57,
+      1.46,
+      12.0,
+      0.54
+    ],
+    "font_pt": 17
+  },
+  {
+    "slide": 6,
+    "text": "SEED Race-Condition Lab \u2022 Wenliang Du / SEED Labs \u2022 Actual VM findings: 3 Oct 2026",
+    "box": [
+      0.56,
+      7.07,
+      11.5,
+      0.18
+    ],
+    "font_pt": 9
+  },
+  {
+    "slide": 6,
+    "text": "6",
+    "box": [
+      12.2,
+      7.03,
+      0.55,
+      0.26
+    ],
+    "font_pt": 12
+  },
+  {
+    "slide": 6,
+    "text": "1  unlink()",
+    "box": [
+      0.86,
+      2.48,
+      3.41,
+      0.4
+    ],
+    "font_pt": 24
+  },
+  {
+    "slide": 6,
+    "text": "XYZ is temporarily absent.",
+    "box": [
+      0.86,
+      3.23,
+      3.37,
+      1.26
+    ],
+    "font_pt": 23
+  },
+  {
+    "slide": 6,
+    "text": "2  fopen(\"a+\")",
+    "box": [
+      5.03,
+      2.48,
+      3.41,
+      0.4
+    ],
+    "font_pt": 24
+  },
+  {
+    "slide": 6,
+    "text": "The victim can create a root-owned regular file.",
+    "box": [
+      5.03,
+      3.23,
+      3.37,
+      1.26
+    ],
+    "font_pt": 23
+  },
+  {
+    "slide": 6,
+    "text": "3  Sticky /tmp",
+    "box": [
+      9.2,
+      2.48,
+      3.41,
+      0.4
+    ],
+    "font_pt": 24
+  },
+  {
+    "slide": 6,
+    "text": "seed cannot unlink that root-owned entry.",
+    "box": [
+      9.2,
+      3.23,
+      3.37,
+      1.26
+    ],
+    "font_pt": 23
+  },
+  {
+    "slide": 6,
+    "text": "Observed: root:seed, mode 0664, under root-owned mode-1777 /tmp.",
+    "box": [
+      0.78,
+      5.25,
+      11.79,
+      0.45
+    ],
+    "font_pt": 20
+  },
+  {
+    "slide": 6,
+    "text": "RENAME_EXCHANGE removes this missing-name gap \u2014 it does not fix the victim.",
+    "box": [
+      0.92,
+      6.12,
+      11.46,
+      0.31
+    ],
+    "font_pt": 20
+  },
+  {
+    "slide": 7,
+    "text": "ISSD  /  MEMBER 5  /  LIVE DEMO 3 / DEFENCES",
+    "box": [
+      0.55,
+      0.31,
+      10,
+      0.22
+    ],
+    "font_pt": 10
+  },
+  {
+    "slide": 7,
+    "text": "Two defences, tested independently",
+    "box": [
+      0.55,
+      0.73,
+      12.15,
+      0.61
+    ],
+    "font_pt": 33
+  },
+  {
+    "slide": 7,
+    "text": "The long trials are recorded findings; the live check is a short control.",
+    "box": [
+      0.57,
+      1.46,
+      12.0,
+      0.54
+    ],
+    "font_pt": 17
+  },
+  {
+    "slide": 7,
+    "text": "SEED Race-Condition Lab \u2022 Wenliang Du / SEED Labs \u2022 Actual VM findings: 3 Oct 2026",
+    "box": [
+      0.56,
+      7.07,
+      11.5,
+      0.18
+    ],
+    "font_pt": 9
+  },
+  {
+    "slide": 7,
+    "text": "7",
+    "box": [
+      12.2,
+      7.03,
+      0.55,
+      0.26
+    ],
+    "font_pt": 12
+  },
+  {
+    "slide": 7,
+    "text": "Least privilege",
+    "box": [
+      0.88,
+      2.47,
+      5.37,
+      0.44
+    ],
+    "font_pt": 27
+  },
+  {
+    "slide": 7,
+    "text": "vulp_least \u2022 controls 0/0",
+    "box": [
+      0.88,
+      3.06,
+      5.36,
+      0.38
+    ],
+    "font_pt": 19
+  },
+  {
+    "slide": 7,
+    "text": "9,455 attempts / 300 s",
+    "box": [
+      0.88,
+      3.65,
+      5.37,
+      0.44
+    ],
+    "font_pt": 26
+  },
+  {
+    "slide": 7,
+    "text": "Target hash unchanged\nProtected operation denied\nOrdinary-file write succeeded",
+    "box": [
+      0.88,
+      4.35,
+      5.25,
+      1.31
+    ],
+    "font_pt": 21
+  },
+  {
+    "slide": 7,
+    "text": "Symlink protection",
+    "box": [
+      7.1,
+      2.47,
+      5.37,
+      0.44
+    ],
+    "font_pt": 27
+  },
+  {
+    "slide": 7,
+    "text": "original vulp \u2022 controls 1/0",
+    "box": [
+      7.1,
+      3.06,
+      5.36,
+      0.38
+    ],
+    "font_pt": 19
+  },
+  {
+    "slide": 7,
+    "text": "9,177 attempts / 300 s",
+    "box": [
+      7.1,
+      3.65,
+      5.37,
+      0.44
+    ],
+    "font_pt": 26
+  },
+  {
+    "slide": 7,
+    "text": "Target hash unchanged\nStable privileged open denied\nOwnership/context rule applies",
+    "box": [
+      7.1,
+      4.35,
+      5.25,
+      1.31
+    ],
+    "font_pt": 21
+  },
+  {
+    "slide": 7,
+    "text": "Observed: no protected-file change in either 300-second trial.",
+    "box": [
+      0.8,
+      6.25,
+      11.85,
+      0.47
+    ],
+    "font_pt": 21
+  },
+  {
+    "slide": 8,
+    "text": "ISSD  /  MEMBER 5  /  TAKEAWAY",
+    "box": [
+      0.55,
+      0.31,
+      10,
+      0.22
+    ],
+    "font_pt": 10
+  },
+  {
+    "slide": 8,
+    "text": "Protect the operation, not just the filename",
+    "box": [
+      0.55,
+      0.73,
+      12.15,
+      0.61
+    ],
+    "font_pt": 33
+  },
+  {
+    "slide": 8,
+    "text": "A local file-handling flaw can undermine the account database used by authentication.",
+    "box": [
+      0.57,
+      1.46,
+      12.0,
+      0.54
+    ],
+    "font_pt": 17
+  },
+  {
+    "slide": 8,
+    "text": "SEED Race-Condition Lab \u2022 Wenliang Du / SEED Labs \u2022 Actual VM findings: 3 Oct 2026",
+    "box": [
+      0.56,
+      7.07,
+      11.5,
+      0.18
+    ],
+    "font_pt": 9
+  },
+  {
+    "slide": 8,
+    "text": "8",
+    "box": [
+      12.2,
+      7.03,
+      0.55,
+      0.26
+    ],
+    "font_pt": 12
+  },
+  {
+    "slide": 8,
+    "text": "Use the right privilege",
+    "box": [
+      0.87,
+      2.57,
+      3.41,
+      0.87
+    ],
+    "font_pt": 25
+  },
+  {
+    "slide": 8,
+    "text": "Drop privilege before user-directed file operations.",
+    "box": [
+      0.87,
+      3.62,
+      3.4,
+      1.08
+    ],
+    "font_pt": 20
+  },
+  {
+    "slide": 8,
+    "text": "Use the opened object",
+    "box": [
+      5.03,
+      2.57,
+      3.41,
+      0.87
+    ],
+    "font_pt": 25
+  },
+  {
+    "slide": 8,
+    "text": "Open once; retain and validate the file descriptor.",
+    "box": [
+      5.03,
+      3.62,
+      3.4,
+      1.08
+    ],
+    "font_pt": 20
+  },
+  {
+    "slide": 8,
+    "text": "Create files safely",
+    "box": [
+      9.190000000000001,
+      2.57,
+      3.41,
+      0.87
+    ],
+    "font_pt": 25
+  },
+  {
+    "slide": 8,
+    "text": "Use mkstemp, O_CREAT|O_EXCL and trusted directories.",
+    "box": [
+      9.190000000000001,
+      3.62,
+      3.4,
+      1.08
+    ],
+    "font_pt": 20
+  },
+  {
+    "slide": 8,
+    "text": "Do not check an attacker-changeable name and later use it with more privilege.",
+    "box": [
+      0.79,
+      5.16,
+      11.8,
+      0.72
+    ],
+    "font_pt": 28
+  },
+  {
+    "slide": 8,
+    "text": "After the demo: exit root, stop processes, restore the baseline and remove Set-UID (Part 4).",
+    "box": [
+      0.81,
+      6.19,
+      11.7,
+      0.52
+    ],
+    "font_pt": 18
+  },
+  {
+    "slide": 9,
+    "text": "ISSD  /  MEMBER 5  /  BACKUP \u2014 EVIDENCE",
+    "box": [
+      0.55,
+      0.31,
+      10,
+      0.22
+    ],
+    "font_pt": 10
+  },
+  {
+    "slide": 9,
+    "text": "Recorded verification: account and UID",
+    "box": [
+      0.55,
+      0.73,
+      12.15,
+      0.61
+    ],
+    "font_pt": 33
+  },
+  {
+    "slide": 9,
+    "text": "Actual image excerpts; whole originals are retained as S09.",
+    "box": [
+      0.57,
+      1.46,
+      12.0,
+      0.54
+    ],
+    "font_pt": 17
+  },
+  {
+    "slide": 9,
+    "text": "SEED Race-Condition Lab \u2022 Wenliang Du / SEED Labs \u2022 Actual VM findings: 3 Oct 2026",
+    "box": [
+      0.56,
+      7.07,
+      11.5,
+      0.18
+    ],
+    "font_pt": 9
+  },
+  {
+    "slide": 9,
+    "text": "9",
+    "box": [
+      12.2,
+      7.03,
+      0.55,
+      0.26
+    ],
+    "font_pt": 12
+  },
+  {
+    "slide": 9,
+    "text": "Complete-record check",
+    "box": [
+      0.75,
+      2.02,
+      11.9,
+      0.35
+    ],
+    "font_pt": 21
+  },
+  {
+    "slide": 9,
+    "text": "Actual non-sudo command and UID output (separate excerpts)",
+    "box": [
+      0.75,
+      4.42,
+      11.9,
+      0.35
+    ],
+    "font_pt": 21
+  },
+  {
+    "slide": 10,
+    "text": "ISSD  /  MEMBER 5  /  BACKUP \u2014 RESULT DETAILS",
+    "box": [
+      0.55,
+      0.31,
+      10,
+      0.22
+    ],
+    "font_pt": 10
+  },
+  {
+    "slide": 10,
+    "text": "What the failures and timers mean",
+    "box": [
+      0.55,
+      0.73,
+      12.15,
+      0.61
+    ],
+    "font_pt": 33
+  },
+  {
+    "slide": 10,
+    "text": "Preserved outcomes matter as much as the successful screenshots.",
+    "box": [
+      0.57,
+      1.46,
+      12.0,
+      0.54
+    ],
+    "font_pt": 17
+  },
+  {
+    "slide": 10,
+    "text": "SEED Race-Condition Lab \u2022 Wenliang Du / SEED Labs \u2022 Actual VM findings: 3 Oct 2026",
+    "box": [
+      0.56,
+      7.07,
+      11.5,
+      0.18
+    ],
+    "font_pt": 9
+  },
+  {
+    "slide": 10,
+    "text": "10",
+    "box": [
+      12.2,
+      7.03,
+      0.55,
+      0.26
+    ],
+    "font_pt": 12
+  },
+  {
+    "slide": 10,
+    "text": "Original naive log",
+    "box": [
+      0.87,
+      2.25,
+      4.0,
+      0.42
+    ],
+    "font_pt": 21
+  },
+  {
+    "slide": 10,
+    "text": "Last progress 76,000 / 227 s; final totals unknown.",
+    "box": [
+      5.11,
+      2.25,
+      7.25,
+      0.45
+    ],
+    "font_pt": 19
+  },
+  {
+    "slide": 10,
+    "text": "Naive retry 1",
+    "box": [
+      0.87,
+      3.06,
+      4.0,
+      0.42
+    ],
+    "font_pt": 21
+  },
+  {
+    "slide": 10,
+    "text": "9 attempts; 0 integer seconds; sticky-file failure.",
+    "box": [
+      5.11,
+      3.06,
+      7.25,
+      0.45
+    ],
+    "font_pt": 19
+  },
+  {
+    "slide": 10,
+    "text": "Supplemental capture run",
+    "box": [
+      0.87,
+      3.87,
+      4.0,
+      0.42
+    ],
+    "font_pt": 21
+  },
+  {
+    "slide": 10,
+    "text": "2 attempts; 0 integer seconds; sticky-file failure.",
+    "box": [
+      5.11,
+      3.87,
+      7.25,
+      0.45
+    ],
+    "font_pt": 19
+  },
+  {
+    "slide": 10,
+    "text": "Integer timer",
+    "box": [
+      0.87,
+      4.68,
+      4.0,
+      0.42
+    ],
+    "font_pt": 21
+  },
+  {
+    "slide": 10,
+    "text": "0 seconds means below the timer\u2019s granularity.",
+    "box": [
+      5.11,
+      4.68,
+      7.25,
+      0.45
+    ],
+    "font_pt": 19
+  },
+  {
+    "slide": 10,
+    "text": "Runner wall time",
+    "box": [
+      0.87,
+      5.489999999999999,
+      4.0,
+      0.42
+    ],
+    "font_pt": 21
+  },
+  {
+    "slide": 10,
+    "text": "Includes monitor startup/exit; not the race-window size.",
+    "box": [
+      5.11,
+      5.489999999999999,
+      7.25,
+      0.45
+    ],
+    "font_pt": 19
+  },
+  {
+    "slide": 11,
+    "text": "ISSD  /  MEMBER 5  /  BACKUP \u2014 PRESENTER BACKUP",
+    "box": [
+      0.55,
+      0.31,
+      10,
+      0.22
+    ],
+    "font_pt": 10
+  },
+  {
+    "slide": 11,
+    "text": "Live-demo recovery",
+    "box": [
+      0.55,
+      0.73,
+      12.15,
+      0.61
+    ],
+    "font_pt": 33
+  },
+  {
+    "slide": 11,
+    "text": "Use the real output; keep the experiment boundary clear.",
+    "box": [
+      0.57,
+      1.46,
+      12.0,
+      0.54
+    ],
+    "font_pt": 17
+  },
+  {
+    "slide": 11,
+    "text": "SEED Race-Condition Lab \u2022 Wenliang Du / SEED Labs \u2022 Actual VM findings: 3 Oct 2026",
+    "box": [
+      0.56,
+      7.07,
+      11.5,
+      0.18
+    ],
+    "font_pt": 9
+  },
+  {
+    "slide": 11,
+    "text": "11",
+    "box": [
+      12.2,
+      7.03,
+      0.55,
+      0.26
+    ],
+    "font_pt": 12
+  },
+  {
+    "slide": 11,
+    "text": "Timing miss / 30 s unchanged",
+    "box": [
+      0.77,
+      2.08,
+      4.22,
+      0.7
+    ],
+    "font_pt": 22
+  },
+  {
+    "slide": 11,
+    "text": "State the failed bounded attempt. Use the labelled recorded S09/S11 result.",
+    "box": [
+      5.3,
+      2.08,
+      7.08,
+      0.75
+    ],
+    "font_pt": 21
+  },
+  {
+    "slide": 11,
+    "text": "File exists / unlink denied",
+    "box": [
+      0.77,
+      3.1,
+      4.22,
+      0.7
+    ],
+    "font_pt": 22
+  },
+  {
+    "slide": 11,
+    "text": "Stop first. Inspect /tmp and XYZ ownership. Preserve the failure; reset in B.",
+    "box": [
+      5.3,
+      3.1,
+      7.08,
+      0.75
+    ],
+    "font_pt": 21
+  },
+  {
+    "slide": 11,
+    "text": "Root shell still open",
+    "box": [
+      0.77,
+      4.12,
+      4.22,
+      0.7
+    ],
+    "font_pt": 22
+  },
+  {
+    "slide": 11,
+    "text": "exit once, then id. Return to seed before reset or a new ordinary-user trial.",
+    "box": [
+      5.3,
+      4.12,
+      7.08,
+      0.75
+    ],
+    "font_pt": 21
+  },
+  {
+    "slide": 11,
+    "text": "Set-UID missing",
+    "box": [
+      0.77,
+      5.140000000000001,
+      4.22,
+      0.7
+    ],
+    "font_pt": 22
+  },
+  {
+    "slide": 11,
+    "text": "Use Part 0 setup. Do not run the attacker or victim through sudo.",
+    "box": [
+      5.3,
+      5.140000000000001,
+      7.08,
+      0.75
+    ],
+    "font_pt": 21
+  },
+  {
+    "slide": 12,
+    "text": "ISSD  /  MEMBER 5  /  BACKUP \u2014 REFERENCES",
+    "box": [
+      0.55,
+      0.31,
+      10,
+      0.22
+    ],
+    "font_pt": 10
+  },
+  {
+    "slide": 12,
+    "text": "Sources and supporting files",
+    "box": [
+      0.55,
+      0.73,
+      12.15,
+      0.61
+    ],
+    "font_pt": 33
+  },
+  {
+    "slide": 12,
+    "text": "Original lab content and actual experimental evidence are distinguishable.",
+    "box": [
+      0.57,
+      1.46,
+      12.0,
+      0.54
+    ],
+    "font_pt": 17
+  },
+  {
+    "slide": 12,
+    "text": "SEED Race-Condition Lab \u2022 Wenliang Du / SEED Labs \u2022 Actual VM findings: 3 Oct 2026",
+    "box": [
+      0.56,
+      7.07,
+      11.5,
+      0.18
+    ],
+    "font_pt": 9
+  },
+  {
+    "slide": 12,
+    "text": "12",
+    "box": [
+      12.2,
+      7.03,
+      0.55,
+      0.26
+    ],
+    "font_pt": 12
+  },
+  {
+    "slide": 12,
+    "text": "Wenliang Du / SEED Labs \u2014 Race Condition Vulnerability Lab (2006\u20132020)\nseedsecuritylabs.org/Labs_20.04/Software/Race_Condition/\nLinux kernel filesystem sysctl documentation; access(2), rename(2), open(2)\nSupplied Member 5 allocation and our VM logs / S01\u2013S15 evidence",
+    "box": [
+      0.81,
+      2.21,
+      11.8,
+      2.61
+    ],
+    "font_pt": 22
+  },
+  {
+    "slide": 12,
+    "text": "REPORT.pdf: analysis and full results     LIVE_DEMO.pdf: exact A/B command order",
+    "box": [
+      0.81,
+      5.21,
+      11.8,
+      0.65
+    ],
+    "font_pt": 20
+  },
+  {
+    "slide": 12,
+    "text": "CC BY-NC-SA 4.0 attribution retained. AI-assisted orchestration/document preparation is disclosed in the report.",
+    "box": [
+      0.81,
+      6.06,
+      11.8,
+      0.55
+    ],
+    "font_pt": 16
+  }
+]

@@ -1,0 +1,44 @@
+--- original/run_trials.sh
++++ working/run_trials.sh
+@@ -36,16 +36,24 @@
+ mkdir -p logs
+ summary="logs/${label}-summary.txt"
+ last="logs/${label}-last-output.txt"
++if [[ -e $summary || -e $last ]]; then
++    echo "Label already has logs; choose a unique label to preserve evidence." >&2
++    exit 1
++fi
+ before=$(sha256sum /etc/passwd)
+ start=$SECONDS
+ attempts=0
++interrupted=0
+ printf 'Start: %s\nVictim: %s\nLimit: %s seconds\nBefore: %s\n' \
+     "$(date -Is)" "$victim" "$duration" "$before" | tee "$summary"
+-trap 'echo "Interrupted: stop the attacker in terminal A as well." | tee -a "$summary"; exit 130' INT TERM
+-while (( SECONDS - start < duration )); do
++# Finish and count the in-flight invocation before reporting an interruption.
++# The visible runner sends TERM to this monitor, then waits before any reset.
++trap 'interrupted=130' INT
++trap 'interrupted=143' TERM
++while (( interrupted == 0 && SECONDS - start < duration )); do
+     status=0
++    attempts=$((attempts + 1))
+     "$victim" < input.txt > "$last" 2>&1 || status=$?
+-    attempts=$((attempts + 1))
+     after=$(sha256sum /etc/passwd)
+     if [[ $before != "$after" ]]; then
+         printf 'CHANGE detected after %s attempts and %s seconds.\nAfter: %s\n' \
+@@ -65,6 +73,13 @@
+             "$attempts" "$((SECONDS - start))" "$status" | tee -a "$summary"
+     fi
+ done
++if (( interrupted != 0 )); then
++    printf 'INTERRUPTED after %s attempts and %s seconds; signal_exit=%s.\n' \
++        "$attempts" "$((SECONDS - start))" "$interrupted" | tee -a "$summary"
++    printf 'After: %s\n' "$(sha256sum /etc/passwd)" | tee -a "$summary"
++    echo 'Stop the attacker in terminal A as well.' | tee -a "$summary"
++    exit "$interrupted"
++fi
+ printf 'NO CHANGE within %ss; attempts=%s. This is an observation, not proof of impossibility.\n' \
+     "$((SECONDS - start))" "$attempts" | tee -a "$summary"
+ echo 'Stop the attacker in terminal A. Last victim output:' | tee -a "$summary"

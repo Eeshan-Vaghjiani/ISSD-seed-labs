@@ -1,0 +1,52 @@
++ id
+uid=1000(seed) gid=1000(seed) groups=1000(seed),4(adm),24(cdrom),27(sudo),30(dip),46(plugdev),120(lpadmin),131(lxd),132(sambashare),136(docker)
++ date -Is
+2026-10-03T06:27:16-04:00
++ pgrep -a -x 'attack_naive|attack_atomic|vulp|vulp_slow|vulp_least|su'
++ pgrep -af '[b]ash run_trials.sh'
++ sudo test -f /root/issd-member5-passwd.original
++ sudo cp -a /root/issd-member5-passwd.original /etc/passwd
++ sudo cmp /etc/passwd /root/issd-member5-passwd.original
++ echo 'Clean password-file baseline restored'
+Clean password-file baseline restored
++ sha256sum -c ../passwd-before.sha256
+/etc/passwd: OK
++ grep '^test:' /etc/passwd
++ echo 'No test record remains'
+No test record remains
++ sudo rm -f /tmp/XYZ /tmp/ABC
++ id
+uid=1000(seed) gid=1000(seed) groups=1000(seed),4(adm),24(cdrom),27(sudo),30(dip),46(plugdev),120(lpadmin),131(lxd),132(sambashare),136(docker)
++ cat ../sysctl-before.txt
+fs.protected_symlinks = 0
+fs.protected_regular = 0
++ echo 'Saved file is 0/0; original pre-lab runtime values are not established.'
+Saved file is 0/0; original pre-lab runtime values are not established.
++ echo 'User-selected final policy: protected_symlinks=1, protected_regular=2.'
+User-selected final policy: protected_symlinks=1, protected_regular=2.
++ sudo sysctl -w fs.protected_symlinks=1 fs.protected_regular=2
+fs.protected_symlinks = 1
+fs.protected_regular = 2
++ sudo sysctl fs.protected_symlinks fs.protected_regular
+fs.protected_symlinks = 1
+fs.protected_regular = 2
++ sudo chmod 0755 vulp vulp_slow vulp_least
++ sudo rm -f /tmp/XYZ /tmp/ABC
++ sudo cmp /etc/passwd /root/issd-member5-passwd.original
++ echo 'Original password file restored'
+Original password file restored
++ sha256sum -c ../passwd-before.sha256
+/etc/passwd: OK
++ grep '^test:' /etc/passwd
++ echo 'No test account'
+No test account
++ ls -l vulp vulp_slow vulp_least
+-rwxr-xr-x 1 root root 17104 Sep 26 12:05 vulp
+-rwxr-xr-x 1 root root 17240 Sep 26 12:05 vulp_least
+-rwxr-xr-x 1 root root 17368 Sep 26 12:05 vulp_slow
++ pgrep -a -x 'attack_naive|attack_atomic|vulp|vulp_slow|vulp_least|su'
++ pgrep -af '[b]ash run_trials.sh'
++ echo 'No experiment or su processes remain'
+No experiment or su processes remain
++ id
+uid=1000(seed) gid=1000(seed) groups=1000(seed),4(adm),24(cdrom),27(sudo),30(dip),46(plugdev),120(lpadmin),131(lxd),132(sambashare),136(docker)

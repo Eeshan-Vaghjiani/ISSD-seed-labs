@@ -1,0 +1,2 @@
+/tmp type=directory owner=root uid=0 group=root mode=1777 inode=4587521 size=4096 mtime=2026-10-03 05:41:04.081878197 -0400
+/tmp/XYZ type=regular file owner=root uid=0 group=seed mode=664 inode=4593750 size=3381664 mtime=2026-10-03 05:29:23.670321858 -0400

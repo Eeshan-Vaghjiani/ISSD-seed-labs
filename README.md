@@ -1,5 +1,7 @@
 # ISSD — SEED security lab guides
 
+**Member 5 completed deliverables:** [report, main PPTX and exact A/B live-demo guide](Member5/submission/README.md). The audited screenshots are in [Member5/evidence/](Member5/evidence/).
+
 Two complete preparation packs for the group lab allocation:
 
 | Role | Start here | Required guest |

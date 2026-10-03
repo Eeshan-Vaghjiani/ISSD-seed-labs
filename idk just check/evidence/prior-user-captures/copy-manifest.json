@@ -1,0 +1,65 @@
+[
+  {
+    "original": "/home/seed/Desktop/files/ISSD-seed-labs/Member5/evidence/S01-vm-setup.png",
+    "copy": "repository-Member5/S01-vm-setup.png",
+    "sha256": "c23efb367a2111314b0f29e6d40cf0a07a58ea1a5e010f1a5e04727ac34d8ab5",
+    "capture_automated_in_this_session": false,
+    "copy_automated": true
+  },
+  {
+    "original": "/home/seed/Desktop/files/ISSD-seed-labs/Member5/evidence/S02-guest-environment.png",
+    "copy": "repository-Member5/S02-guest-environment.png",
+    "sha256": "07e80b53863b5fb184f9d2702993702830b817f950f1c8ccdfe75868947693fc",
+    "capture_automated_in_this_session": false,
+    "copy_automated": true
+  },
+  {
+    "original": "/home/seed/Desktop/files/ISSD-seed-labs/evidence/S03-lab-permissions.png",
+    "copy": "repository-root/S03-lab-permissions.png",
+    "sha256": "c715fbc4fc8693ec2f40262004bbe26dfae1fadd808f6db76692c02bc38d9680",
+    "capture_automated_in_this_session": false,
+    "copy_automated": true
+  },
+  {
+    "original": "/home/seed/Desktop/files/ISSD-seed-labs/evidence/S04-vulnerable-code.png",
+    "copy": "repository-root/S04-vulnerable-code.png",
+    "sha256": "b84061c9c215615783b24fa081efc9b80cfbc15b86a12391117baa426960998e",
+    "capture_automated_in_this_session": false,
+    "copy_automated": true
+  },
+  {
+    "original": "/home/seed/Desktop/files/ISSD-seed-labs/evidence/S06-task2a-timing-20261003-051013.png",
+    "copy": "repository-root/S06-task2a-timing-20261003-051013.png",
+    "sha256": "307c3b9a51a9a1d5f7f15436a825123d5a2871a39225faba320b99ad7eb98481",
+    "capture_automated_in_this_session": false,
+    "copy_automated": true
+  },
+  {
+    "original": "/home/seed/Desktop/files/ISSD-seed-labs/evidence/S07-task2a-result-20261003-051108.png",
+    "copy": "repository-root/S07-task2a-result-20261003-051108.png",
+    "sha256": "92e3859c8184438e15d322be1e6fc528762e10d8e361421da6ff612e0eecee81",
+    "capture_automated_in_this_session": false,
+    "copy_automated": true
+  },
+  {
+    "original": "/home/seed/Desktop/files/ISSD-seed-labs/evidence/SO3-lab-permission.png",
+    "copy": "repository-root/SO3-lab-permission.png",
+    "sha256": "ae0de1222f1117381a6057c2774216b22d04b8e26eed5959d71865ea7ecc7ee0",
+    "capture_automated_in_this_session": false,
+    "copy_automated": true
+  },
+  {
+    "original": "/home/seed/Desktop/files/ISSD-seed-labs/evidence/SO4-vulnerable-code.png",
+    "copy": "repository-root/SO4-vulnerable-code.png",
+    "sha256": "528f1a4afa98f95e33e2f6bd596f404a2497cc9b3e67eb7a55a736d6c345ddc7",
+    "capture_automated_in_this_session": false,
+    "copy_automated": true
+  },
+  {
+    "original": "/home/seed/Desktop/files/ISSD-seed-labs/evidence/SO5-task1-target-validation.png",
+    "copy": "repository-root/SO5-task1-target-validation.png",
+    "sha256": "838488895fca8246fb3d468a14ff9540252a1675662fd9d8f46b24dfba4777af",
+    "capture_automated_in_this_session": false,
+    "copy_automated": true
+  }
+]

@@ -1,0 +1,17 @@
+{
+  "label": "task2c-20261003-054443",
+  "program": "./attack_atomic",
+  "pid": 177327,
+  "start_ticks": "1032212",
+  "started": "2026-10-03T06:05:14.271646-04:00",
+  "ruid": 1000,
+  "euid": 1000,
+  "phase": "exited",
+  "limit_seconds": 330,
+  "initialization_message": "Atomic switching active; Ctrl+C to stop.",
+  "ready_time": "2026-10-03T06:05:14.275033-04:00",
+  "returncode": -15,
+  "ended": "2026-10-03T06:05:16.952779-04:00",
+  "wall_seconds": 2.677937,
+  "reason": "process exited or monitor requested stop"
+}

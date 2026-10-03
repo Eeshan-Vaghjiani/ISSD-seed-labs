@@ -1,0 +1,38 @@
+{
+  "label": "task2b-audit1-20261003-064223",
+  "victim": "./vulp",
+  "attacker": "./attack_naive",
+  "started": "2026-10-03T06:47:24.648189-04:00",
+  "ended": "2026-10-03T06:47:24.909274-04:00",
+  "limit_seconds": 300,
+  "attempts": 1,
+  "monitor_elapsed_seconds": 0,
+  "runner_wall_seconds": 0.237911,
+  "monitor_returncode": 0,
+  "stop_reason": "monitor completed",
+  "before_sha256": "b2386623b8c504aa933d9c519b96158bd55e5e6eb4ae75183d5abf9e5a191d67",
+  "after_sha256": "ee8e5826ab8273976e0a26a3175864f21c5f539cf8d48ea382cd33951aec081b",
+  "changed": true,
+  "test_records": [
+    "test:U6aMy0wojraho:0:0:test:/root:/bin/bash"
+  ],
+  "exact_record_count": 1,
+  "runner_ruid": 1000,
+  "runner_euid": 1000,
+  "attacker_confirmed_stopped": true,
+  "login_verified": false,
+  "tmp_paths": {
+    "/tmp/XYZ": {
+      "type": "symlink",
+      "uid": 1000,
+      "gid": 1000,
+      "mode": "0o777",
+      "inode": 4593750,
+      "size": 11,
+      "target": "/etc/passwd"
+    },
+    "/tmp/ABC": {
+      "type": "absent"
+    }
+  }
+}

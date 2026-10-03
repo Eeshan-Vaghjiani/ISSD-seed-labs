@@ -1,5 +1,19 @@
 # Preparation and verification status
 
+## Completed execution — 3 October 2026
+
+Member 5's practical tasks and screenshot checkpoints S01–S15 have now been performed and audited. See [the current evidence review](evidence/EVIDENCE_REVIEW.md) and [finished submission documents](submission/README.md). The final document/layout checks are recorded in [submission/BUILD_VERIFICATION.md](submission/BUILD_VERIFICATION.md).
+
+* Task 1: administrator-assisted record validation, with a preserved authentication failure and successful retry.
+* Task 2.A: explicit ten-second teaching window, exact record and actual non-sudo UID-0 login.
+* Task 2.B: actual no-delay successes, preserved sticky failures and native original live-state frames; the audited success took one attempt (0 integer monitor seconds, 0.237911 runner seconds). Earlier verified success: 20 attempts, 1 integer second.
+* Task 2.C: atomic exchange, no-delay victim, one attempt, verified non-sudo UID-0 login.
+* Task 3.A: 9,455 attempts / 300 seconds without target change; protected denial and permitted-file write controls.
+* Task 3.B: 9,177 attempts / 300 seconds without target change; actual stable-link denied open with the original victim.
+* Cleanup: original baseline verified, no test account/processes, lab links removed, victim modes 0755. Final 1/2 policy was explicitly selected; saved 0/0 values are not represented as original defaults.
+
+The following sections preserve the **historical pre-execution preparation review**, not the current run status.
+
 Reviewed for the combined repository on **29 September 2026**. Existing user-supplied S01/S02 screenshots are preserved. Their presence does not establish completion of the attack experiments.
 
 ## Existing screenshot review

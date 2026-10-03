@@ -1,0 +1,26 @@
+{
+  "task2a-audit-20261003-064223": {
+    "verified": true,
+    "method": "One visible ./vulp_slow < input.txt invocation, seed symlink switch during its 10-second wait, exact-record inspection, non-sudo su - test, actual id and whoami",
+    "id_output": "uid=0(root) gid=0(root) groups=0(root)",
+    "whoami_output": "root",
+    "attempts": 1,
+    "configured_demo_delay_seconds": 10,
+    "separate_wall_time_measured": false,
+    "screenshot": "S07-audited-task2a-result-20261003-064606-277120.png",
+    "password_input_automated": false,
+    "root_shell_exited_before_reset": true
+  },
+  "task2b-audit1-20261003-064223": {
+    "verified": true,
+    "method": "Actual non-sudo su - test in terminal B, followed by id and whoami after complete-record and stopped-process checks",
+    "id_output": "uid=0(root) gid=0(root) groups=0(root)",
+    "whoami_output": "root",
+    "attempts": 1,
+    "monitor_elapsed_seconds": 0,
+    "runner_wall_seconds": 0.237911,
+    "screenshot": "S09-audited-task2b-result-20261003-065821-438447.png",
+    "password_input_automated": false,
+    "root_shell_exited_before_reset": true
+  }
+}

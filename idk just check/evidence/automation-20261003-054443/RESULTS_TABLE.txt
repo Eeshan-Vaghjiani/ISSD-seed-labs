@@ -1,0 +1,13 @@
+SAVED TRIAL RESULTS — derived from actual logs
+Trial                 Attempts Mon(s)  Wall(s) Observation
+task2b-retry1                9      0    0.533 Sticky-file failure; no target change
+task2b-retry2               20      1    0.865 Record + su/id UID 0 verified
+task2c                       1      0    0.273 Record + su/id UID 0 verified
+task3a                    9455    300  299.996 No target change
+task3b                    9177    300  299.564 No target change
+task2b-capture               2      0    0.379 Sticky-file failure; no target change
+
+Old user log: last progress 76000 attempts / 227s; final totals unknown.
+Mon(s) uses integer SECONDS; Wall(s) includes monitor startup/exit.
+Defence controls: protected writes denied; permitted write succeeded.
+See raw summaries, control logs, actual su/id transcript and PNGs.

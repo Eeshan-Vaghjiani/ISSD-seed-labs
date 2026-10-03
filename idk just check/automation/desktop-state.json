@@ -1,0 +1,39 @@
+{
+  "session": "20261003-054443",
+  "evidence": "/home/seed/issd-member5/evidence/automation-20261003-054443",
+  "profile": "d3c3a432-fe55-40e3-bafb-c538c5cdac19",
+  "original_profiles": [
+    "eeb3ab6c-a273-4f48-9dbc-d758611ea272",
+    "b1dcc9dd-5262-4d8d-a863-c897e6d979b9",
+    "60afed95-181f-41c1-9d99-2ea890aa0b20"
+  ],
+  "original_windows": [
+    {
+      "xid": 39872969,
+      "title": "files",
+      "geometry": [
+        72,
+        76,
+        886,
+        590
+      ],
+      "minimized": false
+    },
+    {
+      "xid": 56623114,
+      "title": "OC | Automating SEED Race-Condition Lab ex\u2026",
+      "geometry": [
+        72,
+        28,
+        885,
+        667
+      ],
+      "minimized": false
+    }
+  ],
+  "original_xrandr": "Screen 0: minimum 1 x 1, current 958 x 946, maximum 16384 x 16384\nVirtual1 connected primary 958x946+0+0 (normal left inverted right x axis y axis) 0mm x 0mm\n   958x946       60.00*+\n   2560x1600     59.99  \n   1920x1440     60.00  \n   1856x1392     60.00  \n   1792x1344     60.00  \n   1920x1200     59.88  \n   1600x1200     60.00  \n   1680x1050     59.95  \n   1400x1050     59.98  \n   1280x1024     60.02  \n   1440x900      59.89  \n   1280x960      60.00  \n   1360x768      60.02  \n   1280x800      59.81  \n   1152x864      75.00  \n   1280x768      59.87  \n   1024x768      60.00  \n   800x600       60.32  \n   640x480       59.94  \nVirtual2 disconnected (normal left inverted right x axis y axis)\nVirtual3 disconnected (normal left inverted right x axis y axis)\nVirtual4 disconnected (normal left inverted right x axis y axis)\nVirtual5 disconnected (normal left inverted right x axis y axis)\nVirtual6 disconnected (normal left inverted right x axis y axis)\nVirtual7 disconnected (normal left inverted right x axis y axis)\nVirtual8 disconnected (normal left inverted right x axis y axis)\n",
+  "windows": {
+    "A": 56666929,
+    "B": 56667311
+  }
+}

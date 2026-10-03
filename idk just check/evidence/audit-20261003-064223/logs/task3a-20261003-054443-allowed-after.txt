@@ -1,0 +1,3 @@
+ordinary writable file
+
+normal-operation

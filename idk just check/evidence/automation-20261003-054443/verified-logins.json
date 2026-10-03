@@ -1,0 +1,26 @@
+{
+  "task2b-retry2-20261003-054443": {
+    "verified": true,
+    "method": "Actual non-sudo su - test in visible terminal B, followed by id and whoami",
+    "id_output": "uid=0(root) gid=0(root) groups=0(root)",
+    "whoami_output": "root",
+    "exact_record": "test:U6aMy0wojraho:0:0:test:/root:/bin/bash",
+    "record_count": 1,
+    "screenshot": "S09c-task2b-verified-return-to-seed-20261003-060509-204138.png",
+    "visual_review": "Summary, full record, non-sudo login, UID 0, exit and seed UID 1000 are readable. Both terminals have the requested titles.",
+    "password_input_automated": false,
+    "root_shell_exited_before_next_trial": true
+  },
+  "task2c-20261003-054443": {
+    "verified": true,
+    "method": "Actual non-sudo su - test in visible terminal B, followed by id and whoami",
+    "id_output": "uid=0(root) gid=0(root) groups=0(root)",
+    "whoami_output": "root",
+    "exact_record": "test:U6aMy0wojraho:0:0:test:/root:/bin/bash",
+    "record_count": 1,
+    "screenshot": "S11b-task2c-atomic-result-20261003-060651-471964.png",
+    "visual_review": "Atomic-exchange source/command, seed identity, actual trial summary, full record, non-sudo login and UID 0 are readable. Both terminals have the requested titles.",
+    "password_input_automated": false,
+    "root_shell_exited_before_next_trial": true
+  }
+}

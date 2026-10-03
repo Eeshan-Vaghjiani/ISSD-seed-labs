@@ -1,0 +1,29 @@
+source ../automation/preserve-failure.sh
+id; ls -ld /tmp; ls -l /tmp/XYZ; stat -c "type=%F owner=%U uid=%u mode=%a" /tmp/XYZ
+sudo -v
+bash ../automation/prepare-trials.sh
+python3 ../automation/lab_runner.py monitor ./vulp 300 task2b-retry1-20261003-054443
+ls -ld /tmp /tmp/XYZ; stat -c "type=%F owner=%U uid=%u mode=%a" /tmp/XYZ
+bash ../automation/reset.sh
+python3 ../automation/lab_runner.py monitor ./vulp 300 task2b-retry2-20261003-054443
+python3 ../automation/verify-record.py && su - test
+id
+bash ../automation/reset.sh && sudo sysctl fs.protected_symlinks fs.protected_regular
+python3 ../automation/lab_runner.py monitor ./vulp 300 task2c-20261003-054443
+python3 ../automation/verify-record.py && su - test
+id
+bash ../automation/reset.sh && sudo sysctl -w fs.protected_symlinks=0 fs.protected_regular=0 && sudo sysctl fs.protected_symlinks fs.protected_regular
+python3 ../automation/lab_runner.py monitor ./vulp_least 300 task3a-20261003-054443
+bash ../automation/task3a-controls.sh task3a-20261003-054443 2>&1 | tee logs/task3a-20261003-054443-controls.txt
+cat ../allowed.txt; printf '\n'; sudo sysctl fs.protected_symlinks fs.protected_regular
+bash ../automation/reset.sh && sudo sysctl -w fs.protected_symlinks=1 fs.protected_regular=0 && sudo sysctl fs.protected_symlinks fs.protected_regular && ls -ld /tmp && ls -l vulp
+python3 ../automation/lab_runner.py monitor ./vulp 300 task3b-20261003-054443
+bash ../automation/task3b-controls.sh 2>&1 | tee logs/task3b-20261003-054443-controls.txt
+sudo sysctl fs.protected_symlinks fs.protected_regular
+bash ../automation/reset.sh && sudo sysctl -w fs.protected_symlinks=0 fs.protected_regular=0 && sudo sysctl fs.protected_symlinks fs.protected_regular
+python3 ../automation/lab_runner.py monitor ./vulp 300 task2b-capture-20261003-054443
+ls -ld /tmp /tmp/XYZ; stat -c "type=%F owner=%U uid=%u mode=%a" /tmp/XYZ
+set -o pipefail; bash ../automation/cleanup.sh 2>&1 | tee logs/cleanup-20261003-054443.txt
+python3 ../automation/finish-report.py
+id; ls -1 ../evidence; ls -1 ../evidence/automation-20261003-054443/final-artifacts
+history -a

@@ -1,0 +1,14 @@
+printf "Pre-reset diagnostic retry; original failure state retained.\n"; id; timeout 2s ./attack_naive; printf "Diagnostic exit=%s\n" "$?"
+python3 ../automation/lab_runner.py attack ./attack_naive 330 task2b-retry1-20261003-054443
+python3 ../automation/lab_runner.py attack ./attack_naive 330 task2b-retry2-20261003-054443
+nl -ba attack_atomic.c | sed -n '27,40p'
+python3 ../automation/lab_runner.py attack ./attack_atomic 330 task2c-20261003-054443
+nl -ba vulp.c | sed -n '28,39p'
+python3 ../automation/lab_runner.py attack ./attack_atomic 330 task3a-20261003-054443
+nl -ba vulp.c | sed -n '28,39p;48,61p;64,70p'
+nl -ba attack_atomic.c | sed -n '27,40p'
+python3 ../automation/lab_runner.py attack ./attack_atomic 330 task3b-20261003-054443
+printf 'Supplemental no-delay Task 2.B run for live S08 capture\n'; nl -ba attack_naive.c | sed -n '7,17p;20,32p'
+python3 ../automation/lab_runner.py attack ./attack_naive 330 task2b-capture-20261003-054443
+id; python3 ../automation/show-results.py | tee ../evidence/automation-20261003-054443/RESULTS_TABLE.txt
+history -a

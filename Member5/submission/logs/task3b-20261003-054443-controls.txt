@@ -1,0 +1,21 @@
++ id
+uid=1000(seed) gid=1000(seed) groups=1000(seed),4(adm),24(cdrom),27(sudo),30(dip),46(plugdev),120(lpadmin),131(lxd),132(sambashare),136(docker)
++ ls -l vulp
+-rwsr-xr-x 1 root root 17104 Sep 26 12:05 vulp
++ ln -sfn /dev/null /tmp/XYZ
++ ls -ld /tmp /tmp/XYZ
+drwxrwxrwt 20 root root 4096 Oct  3 06:24 /tmp
+lrwxrwxrwx  1 seed seed    9 Oct  3 06:24 /tmp/XYZ -> /dev/null
++ status=0
++ ./vulp
+Open failed: Permission denied
++ status=1
++ printf 'Static symlink-follow exit=%s\n' 1
+Static symlink-follow exit=1
++ sha256sum /etc/passwd
+b2386623b8c504aa933d9c519b96158bd55e5e6eb4ae75183d5abf9e5a191d67  /etc/passwd
++ sha256sum -c ../passwd-before.sha256
+/etc/passwd: OK
++ grep '^test:' /etc/passwd
++ echo 'No test account'
+No test account

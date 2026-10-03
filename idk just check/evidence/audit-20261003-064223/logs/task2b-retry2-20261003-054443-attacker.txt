@@ -1,0 +1,9 @@
++ id
+uid=1000(seed) gid=1000(seed) groups=1000(seed),4(adm),24(cdrom),27(sudo),30(dip),46(plugdev),120(lpadmin),131(lxd),132(sambashare),136(docker)
++ pwd
+/home/seed/issd-member5/lab-files
+Run: task2b-retry2-20261003-054443 | attacker limit: 330s | 2026-10-03T06:00:47.821212-04:00
++ ./attack_naive
+Naive switching active; Ctrl+C to stop.
+Attacker stopped: returncode=-15 wall=3.351235s
+Reason: process exited or monitor requested stop

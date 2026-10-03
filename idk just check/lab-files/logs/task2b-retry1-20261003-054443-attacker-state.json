@@ -1,0 +1,17 @@
+{
+  "label": "task2b-retry1-20261003-054443",
+  "program": "./attack_naive",
+  "pid": 176809,
+  "start_ticks": "999162",
+  "started": "2026-10-03T05:59:43.770832-04:00",
+  "ruid": 1000,
+  "euid": 1000,
+  "phase": "exited",
+  "limit_seconds": 330,
+  "initialization_message": "Naive switching active; Ctrl+C to stop.",
+  "ready_time": "2026-10-03T05:59:43.774048-04:00",
+  "returncode": 1,
+  "ended": "2026-10-03T05:59:46.692226-04:00",
+  "wall_seconds": 2.918417,
+  "reason": "process exited or monitor requested stop"
+}

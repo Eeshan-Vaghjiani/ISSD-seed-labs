@@ -1,0 +1,116 @@
+[
+  {
+    "selected": "S01-vm-setup.png",
+    "original": "prior-user-captures/repository-Member5/S01-vm-setup.png",
+    "sha256": "c23efb367a2111314b0f29e6d40cf0a07a58ea1a5e010f1a5e04727ac34d8ab5",
+    "pixel_changes": false
+  },
+  {
+    "selected": "S02-guest-environment.png",
+    "original": "prior-user-captures/repository-Member5/S02-guest-environment.png",
+    "sha256": "07e80b53863b5fb184f9d2702993702830b817f950f1c8ccdfe75868947693fc",
+    "pixel_changes": false
+  },
+  {
+    "selected": "S03-lab-permissions.png",
+    "original": "S03-audited-clean-setup-20261003-064231-233133.png",
+    "sha256": "9904e5c1c47dd3ec7994393648365a5fb7536a9915b651e2dbb5c40077f81e02",
+    "pixel_changes": false
+  },
+  {
+    "selected": "S04-vulnerable-code.png",
+    "original": "S04-audited-no-delay-code-20261003-064351-993793.png",
+    "sha256": "6369611a552906f9e8ae62dfd58824d7b9aa23cb8d5910bbe868dc22863a2b91",
+    "pixel_changes": false
+  },
+  {
+    "selected": "S05-task1-target-validation.png",
+    "original": "prior-user-captures/repository-root/SO5-task1-target-validation.png",
+    "sha256": "838488895fca8246fb3d468a14ff9540252a1675662fd9d8f46b24dfba4777af",
+    "pixel_changes": false
+  },
+  {
+    "selected": "S06-task2a-timing.png",
+    "original": "S06-audited-task2a-timing-20261003-064402-174893.png",
+    "sha256": "3bda86af6e3a06acae6e6540f9936bfba6475d1b3aeceaff973913207d3b206e",
+    "pixel_changes": false
+  },
+  {
+    "selected": "S07-task2a-result.png",
+    "original": "S07-audited-task2a-result-20261003-064606-277120.png",
+    "sha256": "c7eac8fb598023728f98e30194c2b6e10032cfa46d3f3e643669e1798852582d",
+    "pixel_changes": false
+  },
+  {
+    "selected": "S08a-task2b-running.png",
+    "original": "S08-audited-task2b-live-initialization-20261003-064223.png",
+    "sha256": "7893032a93c5a02147d4a6b05fe1c03f0dc673ccad837a1aaa5355d9de9faccd",
+    "pixel_changes": false
+  },
+  {
+    "selected": "S08b-task2b-running.png",
+    "original": "S08b-audited-task2b-live-start-20261003-064223.png",
+    "sha256": "195f06fe1497cf3995f90c37c198839f7058886afb1f73e71f7b48501bcb743d",
+    "pixel_changes": false
+  },
+  {
+    "selected": "S09-task2b-result.png",
+    "original": "S09-audited-task2b-result-20261003-065821-438447.png",
+    "sha256": "122d20ffabd9d98e72caac3189d461695bcf73f7730f49123d29d2223b0aac7c",
+    "pixel_changes": false
+  },
+  {
+    "selected": "S10a-task2b-sticky-bit.png",
+    "original": "S10b-task2b-sticky-bit-20261003-054837-421699.png",
+    "sha256": "af813c98ab0ccad0ff04661d13ae6e1faa31164909aaafcf10649957c7622223",
+    "pixel_changes": false
+  },
+  {
+    "selected": "S10b-task2b-file-exists.png",
+    "original": "S10c-task2b-retry1-file-exists-20261003-060044-140462.png",
+    "sha256": "c195f85b6731acedc28626d79afb24e520e819f072d086eaaf9432683ae61264",
+    "pixel_changes": false
+  },
+  {
+    "selected": "S11-task2c-atomic-result.png",
+    "original": "S11b-task2c-atomic-result-20261003-060651-471964.png",
+    "sha256": "a280506935b3bdd20233f7e0d03015b8202a81190f5ba9780a94e92f03104105",
+    "pixel_changes": false
+  },
+  {
+    "selected": "S12a-task3a-trial.png",
+    "original": "S12b-task3a-300-second-result-20261003-061538-113813.png",
+    "sha256": "4f4a61f89e17d41bf38695fa423f4af2398383e4129e3ac13711c7f297e93aab",
+    "pixel_changes": false
+  },
+  {
+    "selected": "S12b-task3a-controls.png",
+    "original": "S12d-task3a-readable-control-result-20261003-061634-221128.png",
+    "sha256": "d5291718c37b4b85281d88545299fe22607000ad7c3a330a87c1a2eb5121f081",
+    "pixel_changes": false
+  },
+  {
+    "selected": "S13a-task3b-trial.png",
+    "original": "S13b-task3b-300-second-result-20261003-062412-658217.png",
+    "sha256": "5cbb2a4e0edccc74dd3089b7cf47917f6b033557b1f9ab114dcfe4480c60ce82",
+    "pixel_changes": false
+  },
+  {
+    "selected": "S13b-task3b-controls.png",
+    "original": "S13c-task3b-symlink-protection-20261003-062417-917614.png",
+    "sha256": "9b4df891dea44fbc961076621b509aaea78d5af8b9e7b13cc4aa700075481d44",
+    "pixel_changes": false
+  },
+  {
+    "selected": "S14-cleanup.png",
+    "original": "S14-audited-cleanup-20261003-070123-471583.png",
+    "sha256": "9384ad31983333ec91916e704845c5e1fbb8a7a43ec368b99c75350c26c2d205",
+    "pixel_changes": false
+  },
+  {
+    "selected": "S15-deliverables.png",
+    "original": "S15-audited-deliverables-20261003-070648-596921.png",
+    "sha256": "ab8ff3595c35630073585d20521c74b30f755979c8a7060b4eeb8283a059d217",
+    "pixel_changes": false
+  }
+]

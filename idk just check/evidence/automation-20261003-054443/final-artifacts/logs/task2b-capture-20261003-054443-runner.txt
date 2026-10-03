@@ -1,0 +1,19 @@
++ id
+uid=1000(seed) gid=1000(seed) groups=1000(seed),4(adm),24(cdrom),27(sudo),30(dip),46(plugdev),120(lpadmin),131(lxd),132(sambashare),136(docker)
++ pwd
+/home/seed/issd-member5/lab-files
+Initialization confirmed: pid=215536 Naive switching active; Ctrl+C to stop.
+Seed-owned link(s) confirmed; clean baseline hash matches.
++ bash run_trials.sh ./vulp 300 task2b-capture-20261003-054443
+Start: 2026-10-03T06:25:16-04:00
+Victim: ./vulp
+Limit: 300 seconds
+Before: b2386623b8c504aa933d9c519b96158bd55e5e6eb4ae75183d5abf9e5a191d67  /etc/passwd
+Attacker exited; stopping monitor and retaining the failure.
+INTERRUPTED after 2 attempts and 0 seconds; signal_exit=143.
+After: b2386623b8c504aa933d9c519b96158bd55e5e6eb4ae75183d5abf9e5a191d67  /etc/passwd
+Stop the attacker in terminal A as well.
+Monitor exited: 143 | runner wall time: 0.378590s
+Attacker confirmed stopped. attacker exited; monitor stopped after in-flight attempt
+/tmp/XYZ: regular file uid=0 mode=0o664
+Password-file SHA-256 is unchanged.

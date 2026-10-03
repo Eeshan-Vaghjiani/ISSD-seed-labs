@@ -1,0 +1,17 @@
+{
+  "label": "task2b-capture-20261003-054443",
+  "program": "./attack_naive",
+  "pid": 215536,
+  "start_ticks": "1152105",
+  "started": "2026-10-03T06:25:13.196308-04:00",
+  "ruid": 1000,
+  "euid": 1000,
+  "phase": "exited",
+  "limit_seconds": 330,
+  "initialization_message": "Naive switching active; Ctrl+C to stop.",
+  "ready_time": "2026-10-03T06:25:13.199436-04:00",
+  "returncode": 1,
+  "ended": "2026-10-03T06:25:16.946865-04:00",
+  "wall_seconds": 3.747722,
+  "reason": "process exited or monitor requested stop"
+}

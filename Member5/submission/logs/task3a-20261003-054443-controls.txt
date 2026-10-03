@@ -1,0 +1,33 @@
++ id
+uid=1000(seed) gid=1000(seed) groups=1000(seed),4(adm),24(cdrom),27(sudo),30(dip),46(plugdev),120(lpadmin),131(lxd),132(sambashare),136(docker)
++ ls -l vulp_least
+-rwsr-xr-x 1 root root 17240 Sep 26 12:05 vulp_least
++ ln -sfn /etc/passwd /tmp/XYZ
++ ls -l /tmp/XYZ
+lrwxrwxrwx 1 seed seed 11 Oct  3 06:15 /tmp/XYZ -> /etc/passwd
++ status=0
++ ./vulp_least
+No permission
++ status=1
++ printf 'Static protected-target exit=%s\n' 1
+Static protected-target exit=1
++ sha256sum /etc/passwd
+b2386623b8c504aa933d9c519b96158bd55e5e6eb4ae75183d5abf9e5a191d67  /etc/passwd
++ sha256sum -c ../passwd-before.sha256
+/etc/passwd: OK
++ grep '^test:' /etc/passwd
++ echo 'No test account'
+No test account
++ [[ -e ../allowed.txt ]]
++ printf 'ordinary writable file\n'
++ ln -sfn /home/seed/issd-member5/allowed.txt /tmp/XYZ
++ ./vulp_least
++ printf 'normal-operation\n'
++ cat ../allowed.txt
+ordinary writable file
+
+normal-operation+ printf '\n'
+
++ cp -p ../allowed.txt logs/task3a-20261003-054443-allowed-after.txt
++ sha256sum -c ../passwd-before.sha256
+/etc/passwd: OK

