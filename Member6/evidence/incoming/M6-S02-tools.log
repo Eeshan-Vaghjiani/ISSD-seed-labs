@@ -1,0 +1,23 @@
++ command -v gcc bash timeout unzip wget nano python
+/usr/bin/gcc
+/bin/bash
+/usr/bin/timeout
+/usr/bin/unzip
+/usr/bin/wget
+/usr/bin/nano
+/usr/bin/python
++ nproc
+2
++ free -m
+             total       used       free     shared    buffers     cached
+Mem:          2016        879       1137          0        109        351
+-/+ buffers/cache:        418       1598
+Swap:         2044          0       2044
++ pwd
+/home/seed/issd-member6/lab-files
++ df -T .
+Filesystem     Type 1K-blocks    Used Available Use% Mounted on
+/dev/sda1      ext4  80505672 4166464  72249764   6% /
+++ uname -r
++ dpkg-query -W '-f=${Package}\t${Architecture}\t${Source}\n' linux-image-3.5.0-37-generic
+linux-image-3.5.0-37-generic	i386	linux-lts-quantal

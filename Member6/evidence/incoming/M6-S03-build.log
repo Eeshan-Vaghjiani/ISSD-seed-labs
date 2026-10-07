@@ -1,0 +1,40 @@
+No matching process: cow_attack
+No supplied trial wrapper is running.
++ id
+uid=1000(seed) gid=1000(seed) groups=1000(seed),4(adm),24(cdrom),27(sudo),30(dip),46(plugdev),109(lpadmin),124(sambashare),130(wireshark)
++ pwd
+/home/seed/issd-member6/lab-files
++ df -T .
+Filesystem     Type 1K-blocks    Used Available Use% Mounted on
+/dev/sda1      ext4  80505672 4166592  72249636   6% /
++ sha256sum -c SOURCE_SHA256SUMS
+build.sh: OK
+cow_attack.c: OK
+cow_control.c: OK
+run_trial.sh: OK
++ bash build.sh
+-rwxr-xr-x 1 seed seed 12540 Oct  7 12:37 cow_attack
+-rwxr-xr-x 1 seed seed  7601 Oct  7 12:37 cow_control
+No Set-UID installation is used for Dirty COW.
++ file cow_attack cow_control
+cow_attack:  ELF 32-bit LSB executable, Intel 80386, version 1 (SYSV), dynamically linked (uses shared libs), for GNU/Linux 2.6.24, BuildID[sha1]=0xcedb25e9c2441e6e43f80bb134959432696a6283, not stripped
+cow_control: ELF 32-bit LSB executable, Intel 80386, version 1 (SYSV), dynamically linked (uses shared libs), for GNU/Linux 2.6.24, BuildID[sha1]=0xb67a3bc84e2c6c9fe46f963747af0e6cde85da2d, not stripped
++ stat -c '%n uid=%u gid=%g mode=%a bytes=%s' cow_attack cow_control
+cow_attack uid=1000 gid=1000 mode=755 bytes=12540
+cow_control uid=1000 gid=1000 mode=755 bytes=7601
++ python --version
+Python 2.7.3
++ python -c 'compile(open("../automation/verify-trial.py").read(), "verify-trial.py", "exec"); print("Guest verifier syntax OK")'
+Guest verifier syntax OK
++ status=0
++ timeout --signal=TERM --kill-after=2s 1s /bin/sleep 2
++ status=124
++ printf 'Timeout compatibility check exit=%s (expected 124)\n' 124
+Timeout compatibility check exit=124 (expected 124)
++ [[ 124 == 124 ]]
++ tee ../provenance/build-initial-binaries.sha256
++ sha256sum cow_attack cow_control
+89ad662a800e3fd3d0f9f7ef85eef9a4fce50af1a2e45b3ee80f1e462c7b44ab  cow_attack
+c836a6e8b9b2624a956d55c42b9b7eb1bfecfc12b475a317952e52020c58ee35  cow_control
++ echo 'Build and prerequisite runtime checks passed. No Dirty COW experiment was run by this helper.'
+Build and prerequisite runtime checks passed. No Dirty COW experiment was run by this helper.

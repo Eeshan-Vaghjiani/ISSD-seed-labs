@@ -1,0 +1,23 @@
++ whoami
+seed
++ id
+uid=1000(seed) gid=1000(seed) groups=1000(seed),4(adm),24(cdrom),27(sudo),30(dip),46(plugdev),109(lpadmin),124(sambashare),130(wireshark)
++ lsb_release -a
+No LSB modules are available.
+Distributor ID:	Ubuntu
+Description:	Ubuntu 12.04.2 LTS
+Release:	12.04
+Codename:	precise
++ uname -r
+3.5.0-37-generic
++ uname -m
+i686
++ gcc --version
+gcc (Ubuntu/Linaro 4.6.3-1ubuntu5) 4.6.3
+Copyright (C) 2011 Free Software Foundation, Inc.
+This is free software; see the source for copying conditions.  There is NO
+warranty; not even for MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.
+
+++ uname -r
++ dpkg-query -W linux-image-3.5.0-37-generic
+linux-image-3.5.0-37-generic	3.5.0-37.58~precise1
