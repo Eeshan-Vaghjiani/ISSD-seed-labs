@@ -1,0 +1,406 @@
+{
+  "scope": "HOST media/transfer provenance; no guest execution",
+  "recorded_utc": "2026-10-07T18:23:35.144167+00:00",
+  "official_vm_archive": {
+    "path": "/home/DHB/Downloads/SEEDUbuntu12.04.zip",
+    "bytes": 2311129278,
+    "md5": "6ec9c429a2f4a9163530ada20f0621dc",
+    "sha256": "e324e3d32a916763504b51eab0d4031ab7ea56b94deff43372019c77d29d0cb8",
+    "official_page": "https://seedsecuritylabs.org/labsetup.html",
+    "official_link": "https://seed.nyc3.cdn.digitaloceanspaces.com/SEEDUbuntu12.04.zip",
+    "local_archive_reused": true,
+    "zip_crc_all_entries_passed": true,
+    "entries": [
+      {
+        "path": "SEEDUbuntu12.04/",
+        "bytes": 0,
+        "crc32": "00000000"
+      },
+      {
+        "path": "SEEDUbuntu12.04/.DS_Store",
+        "bytes": 21508,
+        "crc32": "55325b31"
+      },
+      {
+        "path": "SEEDUbuntu12.04/._.DS_Store",
+        "bytes": 4096,
+        "crc32": "56687303"
+      },
+      {
+        "path": "SEEDUbuntu12.04/SEEDUbuntu12.04-s001.vmdk",
+        "bytes": 1069154304,
+        "crc32": "9209f436"
+      },
+      {
+        "path": "SEEDUbuntu12.04/SEEDUbuntu12.04-s002.vmdk",
+        "bytes": 524288,
+        "crc32": "6c682100"
+      },
+      {
+        "path": "SEEDUbuntu12.04/SEEDUbuntu12.04-s003.vmdk",
+        "bytes": 589824,
+        "crc32": "266cc968"
+      },
+      {
+        "path": "SEEDUbuntu12.04/SEEDUbuntu12.04-s004.vmdk",
+        "bytes": 619839488,
+        "crc32": "1f4406de"
+      },
+      {
+        "path": "SEEDUbuntu12.04/SEEDUbuntu12.04-s005.vmdk",
+        "bytes": 129302528,
+        "crc32": "1e1ca538"
+      },
+      {
+        "path": "SEEDUbuntu12.04/SEEDUbuntu12.04-s006.vmdk",
+        "bytes": 169476096,
+        "crc32": "3fa93331"
+      },
+      {
+        "path": "SEEDUbuntu12.04/SEEDUbuntu12.04-s007.vmdk",
+        "bytes": 137756672,
+        "crc32": "84453d19"
+      },
+      {
+        "path": "SEEDUbuntu12.04/SEEDUbuntu12.04-s008.vmdk",
+        "bytes": 67633152,
+        "crc32": "3f923871"
+      },
+      {
+        "path": "SEEDUbuntu12.04/SEEDUbuntu12.04-s009.vmdk",
+        "bytes": 98697216,
+        "crc32": "7be4a03b"
+      },
+      {
+        "path": "SEEDUbuntu12.04/SEEDUbuntu12.04-s010.vmdk",
+        "bytes": 117637120,
+        "crc32": "663ddc01"
+      },
+      {
+        "path": "SEEDUbuntu12.04/SEEDUbuntu12.04-s011.vmdk",
+        "bytes": 60162048,
+        "crc32": "11b0a908"
+      },
+      {
+        "path": "SEEDUbuntu12.04/SEEDUbuntu12.04-s012.vmdk",
+        "bytes": 119865344,
+        "crc32": "576873a6"
+      },
+      {
+        "path": "SEEDUbuntu12.04/SEEDUbuntu12.04-s013.vmdk",
+        "bytes": 142475264,
+        "crc32": "aa8d4564"
+      },
+      {
+        "path": "SEEDUbuntu12.04/SEEDUbuntu12.04-s014.vmdk",
+        "bytes": 118095872,
+        "crc32": "2a29d99b"
+      },
+      {
+        "path": "SEEDUbuntu12.04/SEEDUbuntu12.04-s015.vmdk",
+        "bytes": 72482816,
+        "crc32": "70d37fa1"
+      },
+      {
+        "path": "SEEDUbuntu12.04/SEEDUbuntu12.04-s016.vmdk",
+        "bytes": 50397184,
+        "crc32": "3cb722c5"
+      },
+      {
+        "path": "SEEDUbuntu12.04/SEEDUbuntu12.04-s017.vmdk",
+        "bytes": 29622272,
+        "crc32": "fe6ffc87"
+      },
+      {
+        "path": "SEEDUbuntu12.04/SEEDUbuntu12.04-s018.vmdk",
+        "bytes": 26148864,
+        "crc32": "eadfcb90"
+      },
+      {
+        "path": "SEEDUbuntu12.04/SEEDUbuntu12.04-s019.vmdk",
+        "bytes": 183107584,
+        "crc32": "2517a11e"
+      },
+      {
+        "path": "SEEDUbuntu12.04/SEEDUbuntu12.04-s020.vmdk",
+        "bytes": 1886388224,
+        "crc32": "a24c990c"
+      },
+      {
+        "path": "SEEDUbuntu12.04/SEEDUbuntu12.04-s021.vmdk",
+        "bytes": 853016576,
+        "crc32": "354a46bc"
+      },
+      {
+        "path": "SEEDUbuntu12.04/SEEDUbuntu12.04-s022.vmdk",
+        "bytes": 210436096,
+        "crc32": "e6d53478"
+      },
+      {
+        "path": "SEEDUbuntu12.04/SEEDUbuntu12.04-s023.vmdk",
+        "bytes": 91422720,
+        "crc32": "0c5faed6"
+      },
+      {
+        "path": "SEEDUbuntu12.04/SEEDUbuntu12.04-s024.vmdk",
+        "bytes": 109248512,
+        "crc32": "e614eaf8"
+      },
+      {
+        "path": "SEEDUbuntu12.04/SEEDUbuntu12.04-s025.vmdk",
+        "bytes": 21889024,
+        "crc32": "385d25b9"
+      },
+      {
+        "path": "SEEDUbuntu12.04/SEEDUbuntu12.04-s026.vmdk",
+        "bytes": 21233664,
+        "crc32": "8c105acf"
+      },
+      {
+        "path": "SEEDUbuntu12.04/SEEDUbuntu12.04-s027.vmdk",
+        "bytes": 8323072,
+        "crc32": "dbbe46f4"
+      },
+      {
+        "path": "SEEDUbuntu12.04/SEEDUbuntu12.04-s028.vmdk",
+        "bytes": 393216,
+        "crc32": "4eb7a0ec"
+      },
+      {
+        "path": "SEEDUbuntu12.04/SEEDUbuntu12.04-s029.vmdk",
+        "bytes": 2359296,
+        "crc32": "d65ac14d"
+      },
+      {
+        "path": "SEEDUbuntu12.04/SEEDUbuntu12.04-s030.vmdk",
+        "bytes": 393216,
+        "crc32": "db52c5b1"
+      },
+      {
+        "path": "SEEDUbuntu12.04/SEEDUbuntu12.04-s031.vmdk",
+        "bytes": 393216,
+        "crc32": "cdf0ee77"
+      },
+      {
+        "path": "SEEDUbuntu12.04/SEEDUbuntu12.04-s032.vmdk",
+        "bytes": 393216,
+        "crc32": "3bc80ea6"
+      },
+      {
+        "path": "SEEDUbuntu12.04/SEEDUbuntu12.04-s033.vmdk",
+        "bytes": 27721728,
+        "crc32": "03d17c99"
+      },
+      {
+        "path": "SEEDUbuntu12.04/SEEDUbuntu12.04-s034.vmdk",
+        "bytes": 589824,
+        "crc32": "b1b37a66"
+      },
+      {
+        "path": "SEEDUbuntu12.04/SEEDUbuntu12.04-s035.vmdk",
+        "bytes": 393216,
+        "crc32": "4e610973"
+      },
+      {
+        "path": "SEEDUbuntu12.04/SEEDUbuntu12.04-s036.vmdk",
+        "bytes": 393216,
+        "crc32": "a75dc3aa"
+      },
+      {
+        "path": "SEEDUbuntu12.04/SEEDUbuntu12.04-s037.vmdk",
+        "bytes": 393216,
+        "crc32": "260cccea"
+      },
+      {
+        "path": "SEEDUbuntu12.04/SEEDUbuntu12.04-s038.vmdk",
+        "bytes": 14090240,
+        "crc32": "c6af7ebe"
+      },
+      {
+        "path": "SEEDUbuntu12.04/SEEDUbuntu12.04-s039.vmdk",
+        "bytes": 589824,
+        "crc32": "a16a1d5e"
+      },
+      {
+        "path": "SEEDUbuntu12.04/SEEDUbuntu12.04-s040.vmdk",
+        "bytes": 221315072,
+        "crc32": "ccf2bdce"
+      },
+      {
+        "path": "SEEDUbuntu12.04/SEEDUbuntu12.04-s041.vmdk",
+        "bytes": 65536,
+        "crc32": "729ccf18"
+      },
+      {
+        "path": "SEEDUbuntu12.04/SEEDUbuntu12.04.plist",
+        "bytes": 18166,
+        "crc32": "954d149b"
+      },
+      {
+        "path": "SEEDUbuntu12.04/SEEDUbuntu12.04.vmdk",
+        "bytes": 2724,
+        "crc32": "600f3e0e"
+      },
+      {
+        "path": "SEEDUbuntu12.04/SEEDUbuntu12.04.vmsd",
+        "bytes": 0,
+        "crc32": "00000000"
+      },
+      {
+        "path": "SEEDUbuntu12.04/SEEDUbuntu12.04.vmx",
+        "bytes": 2956,
+        "crc32": "f1486b4c"
+      },
+      {
+        "path": "SEEDUbuntu12.04/SEEDUbuntu12.04.vmxf",
+        "bytes": 373,
+        "crc32": "fbe4982e"
+      },
+      {
+        "path": "SEEDUbuntu12.04/Ubuntu-Seed.nvram",
+        "bytes": 8684,
+        "crc32": "70064be0"
+      },
+      {
+        "path": "SEEDUbuntu12.04/vmmcores-1.gz",
+        "bytes": 2166115,
+        "crc32": "4142897f"
+      },
+      {
+        "path": "SEEDUbuntu12.04/vmware-0.log",
+        "bytes": 312139,
+        "crc32": "fb4a49c7"
+      },
+      {
+        "path": "SEEDUbuntu12.04/vmware-1.log",
+        "bytes": 201911,
+        "crc32": "7674bdfd"
+      },
+      {
+        "path": "SEEDUbuntu12.04/vmware-2.log",
+        "bytes": 163466,
+        "crc32": "5adc669e"
+      },
+      {
+        "path": "SEEDUbuntu12.04/vmware-vmx-3648.dmp",
+        "bytes": 2528094,
+        "crc32": "26dcff0a"
+      },
+      {
+        "path": "SEEDUbuntu12.04/vmware.log",
+        "bytes": 311295,
+        "crc32": "6385bba6"
+      },
+      {
+        "path": "SEEDUbuntu12.04/vprintproxy.log",
+        "bytes": 39892,
+        "crc32": "202b67ef"
+      }
+    ]
+  },
+  "iso": "/home/DHB/VirtualBox VMs/ISSD-Member6-media/M6-transfer-20261007.iso",
+  "iso_bytes": 540672,
+  "iso_sha256": "ca282434a383663baf6675c5747bcc4f6ba55c273f28f175d23ab7d3794a9cb3",
+  "command": [
+    "bsdtar",
+    "--format=iso9660",
+    "--options=iso9660:volume-id=M6PACK",
+    "-cf",
+    "/home/DHB/VirtualBox VMs/ISSD-Member6-media/M6-transfer-20261007.iso",
+    "-C",
+    "/home/DHB/Downloads/ISSP/ISSD-seed-labs/Member6",
+    "lab-files",
+    "automation",
+    "reference",
+    "VM_SESSION_GUIDE.md"
+  ],
+  "inputs": [
+    {
+      "path": "lab-files/SOURCE_SHA256SUMS",
+      "bytes": 313,
+      "sha256": "791bbbab6bb155e969d24a7b77405d17c0e7686acb3c5ccd8c0476c4d5dd8cb5"
+    },
+    {
+      "path": "lab-files/build.sh",
+      "bytes": 458,
+      "sha256": "d2a0b9a5dd0b0a284e0fbbef46295be5cd9f3982f79c494b0db076f5cd7c6bcb"
+    },
+    {
+      "path": "lab-files/cow_attack.c",
+      "bytes": 5150,
+      "sha256": "77fc34c697f0217b1fcd29bfe7cba4e53ea92a3dc41e72dde5ae02ec23e756b4"
+    },
+    {
+      "path": "lab-files/cow_control.c",
+      "bytes": 1378,
+      "sha256": "32a85207d427bf3ae706e8cf2987febb2b5542b0e4a57ae4cd805dd94804e20f"
+    },
+    {
+      "path": "lab-files/run_trial.sh",
+      "bytes": 3022,
+      "sha256": "73a1885c95d5e21ececfea7bf8bd264946f86fc0e413d3667b0bd91094999478"
+    },
+    {
+      "path": "automation/README.md",
+      "bytes": 3728,
+      "sha256": "b51c101fd80ae21127f95a0e41f2ef478bd3390e4d81223c3a7e0af41c497bf4"
+    },
+    {
+      "path": "automation/check-cleanup.sh",
+      "bytes": 1674,
+      "sha256": "54e4ea8ba980d74938abe634622e5f1d4bc38faf6f3372363651f23bb3fa7949"
+    },
+    {
+      "path": "automation/check-environment.sh",
+      "bytes": 1249,
+      "sha256": "63fec6f36c5b13dc6e213856f0907d077be20395db3b270ee930de777f5758fd"
+    },
+    {
+      "path": "automation/export-evidence.sh",
+      "bytes": 1584,
+      "sha256": "8a54bb76cddf0dafe7194f4e020fc38524819adb5f812959a90f8ebd1662dc65"
+    },
+    {
+      "path": "automation/guest-guard.sh",
+      "bytes": 3083,
+      "sha256": "c0e2f323cc9898b69ff3dd4f7cd1360dce79b3beaae0598fd63f682948f58d92"
+    },
+    {
+      "path": "automation/prepare-workspace.sh",
+      "bytes": 1448,
+      "sha256": "a6254c7596db286ed62041d0310a931e178e04ac32e8dd8645ca759d47cc7a56"
+    },
+    {
+      "path": "automation/trial-with-evidence.sh",
+      "bytes": 2359,
+      "sha256": "47d799899fd6231513f4add03658b3c2e059256ef5d39ec45d16942c935991e8"
+    },
+    {
+      "path": "automation/verify-trial.py",
+      "bytes": 7523,
+      "sha256": "aa6cd0cbbd04eb97975ba25d2e3036cfe6067af7d85f344ad4454f2421d1d778"
+    },
+    {
+      "path": "reference/Dirty_COW.pdf",
+      "bytes": 91862,
+      "sha256": "1fa98615c414d37bb400f93218c80861d4fa47fcf4ba4146f70e611ba8e4332d"
+    },
+    {
+      "path": "reference/Labsetup.zip",
+      "bytes": 956,
+      "sha256": "7f28c9386a79209302bfb6a0f8333f2b8141e17628b84287c5a899e105d924d0"
+    },
+    {
+      "path": "reference/README.md",
+      "bytes": 1705,
+      "sha256": "dff21d28a1568df008d18fb9a4537375ae740e9b4d14b44964f22c193faad188"
+    },
+    {
+      "path": "VM_SESSION_GUIDE.md",
+      "bytes": 16190,
+      "sha256": "db2eda3039649e59d13fddc89f68f3c328ae8b0d43015a38cf53752c74478695"
+    }
+  ],
+  "iso_listing": ".\nlab-files\nautomation\nreference\nlab-files/SOURCE_SHA256SUMS\nlab-files/run_trial.sh\nlab-files/cow_attack.c\nlab-files/cow_control.c\nlab-files/build.sh\nautomation/verify-trial.py\nautomation/check-cleanup.sh\nautomation/guest-guard.sh\nautomation/trial-with-evidence.sh\nautomation/prepare-workspace.sh\nautomation/check-environment.sh\nautomation/README.md\nautomation/export-evidence.sh\nreference/README.md\nreference/Labsetup.zip\nreference/Dirty_COW.pdf\nVM_SESSION_GUIDE.md\n",
+  "every_iso_input_hash_verified": true
+}

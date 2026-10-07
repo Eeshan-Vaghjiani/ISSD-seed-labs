@@ -1,0 +1,2 @@
+M6pack on /home/seed/m6-transfer type vboxsf (uid=1000,gid=1000,ro)
+M6export on /home/seed/m6-export type vboxsf (uid=1000,gid=1000,rw)

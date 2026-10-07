@@ -1,5 +1,20 @@
 # Member 6 — preparation and verification status
 
+## Current execution preparation — 7 October 2026
+
+The full current audit is [EXECUTION_STATUS.md](EXECUTION_STATUS.md); the completed pre-boot checks and retained records are in [PREPARATION_VERIFICATION.md](PREPARATION_VERIFICATION.md). The repository audit covered all 616 original tracked files, with no detected structural/integrity errors. All Member 6 requirements/source and the relevant Member 5 coursework, finished documents, evidence/provenance and helper code were reviewed.
+
+* Reused and verified the official-checksum local `SEEDUbuntu12.04.zip`: MD5 match, SHA-256 recorded, every ZIP entry CRC checked; extracted the split VMDK outside the repository.
+* Created the separate 32-bit `ISSD-Member6-SEED12` profile with 2048 MB, 2 CPUs, VMSVGA 64 MB/3D-off, matching LSI Logic disk controller, disconnected NAT and transfer shares.
+* Took powered-off `M6-clean-SEED12` before first boot. Actual command/configuration output is retained in `evidence/host/`.
+* Found the host boot blocker: Arch runs 7.2.8 while installed headers/DKMS VirtualBox modules target 7.2.9. No guest has booted; actual kernel, package, GCC, control, attack, login and cleanup checks remain pending.
+* Added source-hash, guest-boundary, metadata, whole-file comparison, raw-frame capture and evidence-export helpers. The four supplied C/build/trial files remain byte-identical to the audited commit. Host shell/Python syntax checks, in-memory comparison checks and actual Arch-host rejection passed. Guest runtime compatibility is still unverified.
+* Added the Arch setup companion, exact guest session/capture procedure, explicit expected/actual results ledger and presentation/demo notes. The original report/template/plan remains the basis for final evidence-led documents.
+
+**No M6 screenshots or experimental results have been fabricated or collected.** A template/host inventory is not guest proof. Follow the manual reboot handoff in [ARCH_HOST_SETUP.md](ARCH_HOST_SETUP.md), then verify the actual guest before any trial.
+
+## Historical preparation review
+
 Research/check date: **29 September 2026**.
 
 ## Completed during preparation

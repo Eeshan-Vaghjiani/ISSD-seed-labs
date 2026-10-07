@@ -1,0 +1,20 @@
+build.sh: OK
+cow_attack.c: OK
+cow_control.c: OK
+run_trial.sh: OK
+build.sh: OK
+cow_attack.c: OK
+cow_control.c: OK
+run_trial.sh: OK
+/usr/bin/gcc
+/home/seed/issd-member6/lab-files
+Filesystem     Type 1K-blocks    Used Available Use% Mounted on
+/dev/sda1      ext4  80505672 4166332  72249896   6% /
+total 28
+-rw-r--r-- 1 seed seed  458 Oct  7 12:23 build.sh
+-rw-r--r-- 1 seed seed 5150 Oct  7 12:23 cow_attack.c
+-rw-r--r-- 1 seed seed 1378 Oct  7 12:23 cow_control.c
+drwx------ 2 seed seed 4096 Oct  7 12:23 logs
+-rw-r--r-- 1 seed seed 3022 Oct  7 12:23 run_trial.sh
+-rw-r--r-- 1 seed seed  313 Oct  7 12:23 SOURCE_SHA256SUMS
+Source copied and checksum-verified on native guest storage. Build separately with bash build.sh.

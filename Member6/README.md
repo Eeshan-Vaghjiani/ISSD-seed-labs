@@ -1,5 +1,7 @@
 # ISSD — Member 6: Dirty COW lab pack
 
+**Arch execution update — 7 October 2026:** the repository is audited and the separate `ISSD-Member6-SEED12` VM plus `M6-clean-SEED12` snapshot are created. **A host reboot is required before the first guest boot; the experiments remain unexecuted.** Start with [ARCH_HOST_SETUP.md](ARCH_HOST_SETUP.md), then [VM_SESSION_GUIDE.md](VM_SESSION_GUIDE.md). See [the complete checkpoint status](EXECUTION_STATUS.md), [repository audit](REPOSITORY_AUDIT.md), [capture plan](evidence/CAPTURE_PLAN.md), and [submission preparation](submission/README.md).
+
 **Start with [START_TO_FINISH_GUIDE.md](START_TO_FINISH_GUIDE.md)** or its editable Word copy, `START_TO_FINISH_GUIDE.docx`.
 
 ## Critical environment distinction

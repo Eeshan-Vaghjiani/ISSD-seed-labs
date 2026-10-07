@@ -1,0 +1,12 @@
+++ uname -r
++ dpkg-query -W '-f=${Package}\t${Version}\t${Architecture}\t${Source}\n' linux-image-3.5.0-37-generic
+linux-image-3.5.0-37-generic	3.5.0-37.58~precise1	i386	linux-lts-quantal
++ command -v wmctrl xdotool gconftool-2
+/usr/bin/gconftool-2
++ gconftool-2 --get /apps/gnome-terminal/global/default_profile
+Default
++ gconftool-2 --get /apps/gnome-terminal/profiles/Default/background_type
+image
++ df -T /home/seed
+Filesystem     Type 1K-blocks    Used Available Use% Mounted on
+/dev/sda1      ext4  80505672 4165908  72250320   6% /

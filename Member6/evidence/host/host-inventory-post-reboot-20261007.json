@@ -1,0 +1,112 @@
+{
+  "scope": "ARCH HOST ONLY; not SEED guest evidence",
+  "recorded_utc": "2026-10-07T18:53:05.280938+00:00",
+  "kernel": "7.2.9-arch1-1",
+  "architecture": "x86_64",
+  "os_release": "NAME=\"Arch Linux\"\nPRETTY_NAME=\"Arch Linux\"\nID=arch\nBUILD_ID=rolling\nANSI_COLOR=\"38;2;23;147;209\"\nHOME_URL=\"https://archlinux.org/\"\nDOCUMENTATION_URL=\"https://wiki.archlinux.org/\"\nSUPPORT_URL=\"https://bbs.archlinux.org/\"\nBUG_REPORT_URL=\"https://gitlab.archlinux.org/groups/archlinux/-/issues\"\nPRIVACY_POLICY_URL=\"https://terms.archlinux.org/docs/privacy-policy/\"\nLOGO=archlinux-logo\n",
+  "commands": [
+    {
+      "command": [
+        "date",
+        "-u",
+        "+%Y-%m-%dT%H:%M:%SZ"
+      ],
+      "exit_code": 0,
+      "stdout": "2026-10-07T18:53:05Z\n",
+      "stderr": ""
+    },
+    {
+      "command": [
+        "uname",
+        "-r"
+      ],
+      "exit_code": 0,
+      "stdout": "7.2.9-arch1-1\n",
+      "stderr": ""
+    },
+    {
+      "command": [
+        "uname",
+        "-m"
+      ],
+      "exit_code": 0,
+      "stdout": "x86_64\n",
+      "stderr": ""
+    },
+    {
+      "command": [
+        "id"
+      ],
+      "exit_code": 0,
+      "stdout": "uid=1000(DHB) gid=984(users) groups=984(users),950(docker),968(libvirt),985(video),986(uucp),987(storage),994(input),996(audio),998(wheel),1002(dept)\n",
+      "stderr": ""
+    },
+    {
+      "command": [
+        "pacman",
+        "-Q",
+        "virtualbox",
+        "virtualbox-host-dkms",
+        "linux",
+        "linux-headers",
+        "dkms"
+      ],
+      "exit_code": 0,
+      "stdout": "virtualbox 7.2.20-1\nvirtualbox-host-dkms 7.2.20-1\nlinux 7.2.9.arch1-1\nlinux-headers 7.2.9.arch1-1\ndkms 3.4.4-1\n",
+      "stderr": ""
+    },
+    {
+      "command": [
+        "dkms",
+        "status"
+      ],
+      "exit_code": 0,
+      "stdout": "rtw89/r2001.e2be1a0, 7.2.9-arch1-1, x86_64: installed\nvboxhost/7.2.20_OSE, 7.2.9-arch1-1, x86_64: installed\n",
+      "stderr": ""
+    },
+    {
+      "command": [
+        "modinfo",
+        "vboxdrv"
+      ],
+      "exit_code": 0,
+      "stdout": "filename:       /lib/modules/7.2.9-arch1-1/updates/dkms/vboxdrv.ko.zst\nsoftdep:        pre: kvm_intel kvm_amd\nversion:        7.2.20 r175154 (0x00390002)\nlicense:        GPL\ndescription:    Oracle VirtualBox Support Driver\nauthor:         Oracle and/or its affiliates\nsrcversion:     400E2165BA6BB4A353F334F\ndepends:        \nname:           vboxdrv\nretpoline:      Y\nvermagic:       7.2.9-arch1-1 SMP preempt mod_unload \nsig_id:         PKCS#7\nsigner:         DKMS module signing key\nsig_key:        67:4C:14:D8:8F:83:4C:2B:1B:CD:4A:7D:D4:16:A2:F4:73:60:8A:61\nsig_hashalgo:   sha512\nsignature:      8A:37:7F:8E:CF:4F:3E:A5:46:DC:93:88:C9:F5:2A:F0:E7:F2:73:C9:\n\t\t7C:E3:98:88:4D:AB:40:89:63:4D:46:AF:41:9B:1C:B4:B0:14:7E:D8:\n\t\tD5:0F:B2:75:C1:8C:C3:55:F0:39:D3:A6:A5:43:A4:AB:D0:C6:2E:F3:\n\t\t87:BE:50:17:36:71:84:56:9B:35:2F:D0:F0:A0:7C:9A:E9:B9:3C:D7:\n\t\tAE:8B:4D:04:CE:7D:C9:CC:6B:6A:D7:18:D0:A2:D4:DF:66:EE:B6:DE:\n\t\t9D:27:97:43:74:FA:D1:F0:7B:0E:B1:59:9F:04:9E:22:6C:F2:47:76:\n\t\tFE:EC:00:D9:55:40:DC:C8:4A:BF:2D:2A:F8:AD:91:E4:31:BF:5A:37:\n\t\tC9:20:E9:5F:0E:26:AA:DC:44:87:5C:83:20:90:0D:C6:F4:5C:01:18:\n\t\t76:47:B5:84:3A:63:0D:FA:D9:36:30:D5:32:6A:AC:2B:23:EA:82:49:\n\t\t39:AF:82:DA:BE:4E:68:4D:CD:08:37:40:68:96:A1:CD:92:C6:38:9E:\n\t\tE4:FD:0A:D1:E2:41:0F:62:FD:A3:3A:F2:97:C5:1C:48:98:C9:85:64:\n\t\t08:D7:C9:E4:98:C5:8B:D5:5F:2C:AE:C0:BD:D0:57:9D:02:94:59:ED:\n\t\t56:23:48:77:90:54:E2:12:DE:7A:20:AC:9B:19:43:CC\nparm:           disabled:Disable automatic module loading (int)\nparm:           force_async_tsc:force the asynchronous TSC mode (int)\n",
+      "stderr": ""
+    },
+    {
+      "command": [
+        "VBoxManage",
+        "--version"
+      ],
+      "exit_code": 0,
+      "stdout": "7.2.20r175154\n",
+      "stderr": ""
+    },
+    {
+      "command": [
+        "VBoxManage",
+        "list",
+        "vms"
+      ],
+      "exit_code": 0,
+      "stdout": "\"ISSD-Member6-SEED12\" {242db196-83e1-4b7a-9f0b-e399d6f8b9dc}\n",
+      "stderr": ""
+    },
+    {
+      "command": [
+        "VBoxManage",
+        "list",
+        "runningvms"
+      ],
+      "exit_code": 0,
+      "stdout": "",
+      "stderr": ""
+    }
+  ],
+  "module_trees": [
+    "7.2.9-arch1-1"
+  ],
+  "vboxdrv_device_exists": true,
+  "vboxdrv_loaded": true,
+  "free_disk_bytes": 177238740992
+}

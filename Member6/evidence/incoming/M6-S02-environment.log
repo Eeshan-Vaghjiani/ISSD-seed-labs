@@ -1,0 +1,84 @@
+
++ date -u +%Y-%m-%dT%H:%M:%SZ 
+2026-10-07T19:17:10Z
+
++ whoami 
+seed
+
++ id 
+uid=1000(seed) gid=1000(seed) groups=1000(seed),4(adm),24(cdrom),27(sudo),30(dip),46(plugdev),109(lpadmin),124(sambashare),130(wireshark)
+
++ lsb_release -a 
+No LSB modules are available.
+Distributor ID:	Ubuntu
+Description:	Ubuntu 12.04.2 LTS
+Release:	12.04
+Codename:	precise
+
++ uname -r 
+3.5.0-37-generic
+
++ uname -m 
+i686
+
++ gcc --version 
+gcc (Ubuntu/Linaro 4.6.3-1ubuntu5) 4.6.3
+Copyright (C) 2011 Free Software Foundation, Inc.
+This is free software; see the source for copying conditions.  There is NO
+warranty; not even for MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.
+
+
++ command -v gcc 
+/usr/bin/gcc
+
++ command -v bash 
+/bin/bash
+
++ command -v timeout 
+/usr/bin/timeout
+
++ command -v unzip 
+/usr/bin/unzip
+
++ command -v wget 
+/usr/bin/wget
+
++ command -v nano 
+/usr/bin/nano
+
++ command -v python 
+/usr/bin/python
+
++ command -v script 
+/usr/bin/script
+
++ command -v sha256sum 
+/usr/bin/sha256sum
+
++ command -v pgrep 
+/usr/bin/pgrep
+
++ dpkg-query -W linux-image-3.5.0-37-generic 
+linux-image-3.5.0-37-generic	3.5.0-37.58~precise1
+
++ cat /sys/class/dmi/id/product_name 
+VirtualBox
+
++ getconf LONG_BIT 
+32
+
++ timeout --version 
+timeout (GNU coreutils) 8.13
+Copyright (C) 2011 Free Software Foundation, Inc.
+License GPLv3+: GNU GPL version 3 or later <http://gnu.org/licenses/gpl.html>.
+This is free software: you are free to change and redistribute it.
+There is NO WARRANTY, to the extent permitted by law.
+
+Written by Pádraig Brady.
+
++ pgrep -V 
+pgrep (procps version 3.2.8)
+Prescribed guest identity/release/kernel/architecture checks passed.
+Review the actual kernel package against the cited SEED manual/vendor information before trials.
+No experiment has been executed by this checker.
+Environment checker exit=0

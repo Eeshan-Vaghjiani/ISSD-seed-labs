@@ -1,0 +1,320 @@
+{
+  "scope": "HOST preparation only; guest experiments remain unexecuted",
+  "recorded_utc": "2026-10-07T18:32:00.410399+00:00",
+  "host_kernel": "7.2.8-arch1-2",
+  "checks": [
+    {
+      "check": "VM name",
+      "passed": true,
+      "actual": "ISSD-Member6-SEED12"
+    },
+    {
+      "check": "VM platformArchitecture",
+      "passed": true,
+      "actual": "x86"
+    },
+    {
+      "check": "VM ostype",
+      "passed": true,
+      "actual": "Ubuntu 12.04 LTS (Precise Pangolin) (32-bit)"
+    },
+    {
+      "check": "VM memory",
+      "passed": true,
+      "actual": 2048
+    },
+    {
+      "check": "VM cpus",
+      "passed": true,
+      "actual": 2
+    },
+    {
+      "check": "VM vram",
+      "passed": true,
+      "actual": 64
+    },
+    {
+      "check": "VM graphicscontroller",
+      "passed": true,
+      "actual": "vmsvga"
+    },
+    {
+      "check": "VM accelerate3d",
+      "passed": true,
+      "actual": "off"
+    },
+    {
+      "check": "VM pae",
+      "passed": true,
+      "actual": "on"
+    },
+    {
+      "check": "VM longmode",
+      "passed": true,
+      "actual": "off"
+    },
+    {
+      "check": "VM ioapic",
+      "passed": true,
+      "actual": "on"
+    },
+    {
+      "check": "VM firmware",
+      "passed": true,
+      "actual": "BIOS"
+    },
+    {
+      "check": "VM boot1",
+      "passed": true,
+      "actual": "disk"
+    },
+    {
+      "check": "VM nic1",
+      "passed": true,
+      "actual": "nat"
+    },
+    {
+      "check": "VM nic2",
+      "passed": true,
+      "actual": "none"
+    },
+    {
+      "check": "VM cableconnected1",
+      "passed": true,
+      "actual": "off"
+    },
+    {
+      "check": "VM clipboard",
+      "passed": true,
+      "actual": "hosttoguest"
+    },
+    {
+      "check": "VM draganddrop",
+      "passed": true,
+      "actual": "disabled"
+    },
+    {
+      "check": "VM VMState",
+      "passed": true,
+      "actual": "poweroff"
+    },
+    {
+      "check": "VM CurrentSnapshotName",
+      "passed": true,
+      "actual": "M6-clean-SEED12"
+    },
+    {
+      "check": "No configured NAT port forwarding",
+      "passed": true,
+      "actual": null
+    },
+    {
+      "check": "Read-only M6pack share",
+      "passed": true,
+      "actual": {
+        "name": "M6pack",
+        "hostPath": "/home/DHB/Downloads/ISSP/ISSD-seed-labs/Member6",
+        "writable": "false",
+        "autoMount": "false"
+      }
+    },
+    {
+      "check": "Dedicated M6export share",
+      "passed": true,
+      "actual": {
+        "name": "M6export",
+        "hostPath": "/home/DHB/Downloads/ISSP/ISSD-seed-labs/Member6/evidence/incoming",
+        "writable": "true",
+        "autoMount": "false"
+      }
+    },
+    {
+      "check": "Active differencing disk has verified SEED base parent",
+      "passed": true,
+      "actual": {
+        "base": "/home/DHB/VirtualBox VMs/ISSD-Member6-media/SEEDUbuntu12.04/SEEDUbuntu12.04.vmdk",
+        "active_uuid": "{07f6aed5-7127-40b7-b6c8-6cbf2eabc1a7}"
+      }
+    },
+    {
+      "check": "All 41 split base-disk extents present",
+      "passed": true,
+      "actual": null
+    },
+    {
+      "check": "Final data CD attached",
+      "passed": true,
+      "actual": "/home/DHB/VirtualBox VMs/ISSD-Member6-media/M6-transfer-20261007-final.iso"
+    },
+    {
+      "check": "Final ISO SHA-256 matches provenance",
+      "passed": true,
+      "actual": "f217dc9abc5b02c118689aaf0e0ddf5868a654d1d3eb0982de6c666660aa352c"
+    },
+    {
+      "check": "Every frozen bundle input still matches source",
+      "passed": true,
+      "actual": []
+    },
+    {
+      "check": "Original source build.sh",
+      "passed": true,
+      "actual": "d2a0b9a5dd0b0a284e0fbbef46295be5cd9f3982f79c494b0db076f5cd7c6bcb"
+    },
+    {
+      "check": "Original source cow_attack.c",
+      "passed": true,
+      "actual": "77fc34c697f0217b1fcd29bfe7cba4e53ea92a3dc41e72dde5ae02ec23e756b4"
+    },
+    {
+      "check": "Original source cow_control.c",
+      "passed": true,
+      "actual": "32a85207d427bf3ae706e8cf2987febb2b5542b0e4a57ae4cd805dd94804e20f"
+    },
+    {
+      "check": "Original source run_trial.sh",
+      "passed": true,
+      "actual": "73a1885c95d5e21ececfea7bf8bd264946f86fc0e413d3667b0bd91094999478"
+    },
+    {
+      "check": "Bash syntax checks",
+      "passed": true,
+      "actual": 9
+    },
+    {
+      "check": "Python AST checks (no guest code executed)",
+      "passed": true,
+      "actual": 7
+    }
+  ],
+  "commands": [
+    {
+      "command": [
+        "VBoxManage",
+        "showvminfo",
+        "ISSD-Member6-SEED12",
+        "--machinereadable"
+      ],
+      "exit_code": 0,
+      "stdout": "WARNING: The vboxdrv kernel module is not loaded. Either there is no module\n         available for the current kernel (7.2.8-arch1-2) or it failed to\n         load. Please recompile the kernel module and install it by\n\n           sudo /sbin/vboxconfig\n\n         You will not be able to start VMs until this problem is fixed.\nname=\"ISSD-Member6-SEED12\"\nencryption=\"disabled\"\ngroups=\"/\"\nplatformArchitecture=\"x86\"\nostype=\"Ubuntu 12.04 LTS (Precise Pangolin) (32-bit)\"\nUUID=\"242db196-83e1-4b7a-9f0b-e399d6f8b9dc\"\nCfgFile=\"/home/DHB/VirtualBox VMs/ISSD-Member6-SEED12/ISSD-Member6-SEED12.vbox\"\nSnapFldr=\"/home/DHB/VirtualBox VMs/ISSD-Member6-SEED12/Snapshots\"\nLogFldr=\"/home/DHB/VirtualBox VMs/ISSD-Member6-SEED12/Logs\"\nhardwareuuid=\"242db196-83e1-4b7a-9f0b-e399d6f8b9dc\"\nmemory=2048\npagefusion=\"off\"\nvram=64\ncpuexecutioncap=100\ncpu-profile=\"host\"\nchipset=\"piix3\"\nfirmware=\"BIOS\"\ncpus=2\nhpet=\"off\"\npae=\"on\"\nlongmode=\"off\"\ntriplefaultreset=\"off\"\napic=\"on\"\nx2apic=\"on\"\nnested-hw-virt=\"off\"\nhwvirtex=\"on\"\nnestedpaging=\"on\"\nlargepages=\"off\"\nvtxvpid=\"on\"\nvtxux=\"on\"\nvirtvmsavevmload=\"on\"\ncpuid-portability-level=0\nbootmenu=\"messageandmenu\"\nboot1=\"disk\"\nboot2=\"dvd\"\nboot3=\"none\"\nboot4=\"none\"\nacpi=\"on\"\nioapic=\"on\"\nbiosapic=\"apic\"\nbiossystemtimeoffset=0\nNvramFile=\"/home/DHB/VirtualBox VMs/ISSD-Member6-SEED12/ISSD-Member6-SEED12.nvram\"\nrtcuseutc=\"on\"\niommu=\"none\"\nparavirtprovider=\"default\"\neffparavirtprovider=\"kvm\"\nVMState=\"poweroff\"\nVMStateChangeTime=\"2026-10-07T18:10:36.672000000\"\ngraphicscontroller=\"vmsvga\"\nmonitorcount=1\naccelerate3d=\"off\"\nteleporterenabled=\"off\"\nteleporterport=0\nteleporteraddress=\"\"\nteleporterpassword=\"\"\ntracing-enabled=\"off\"\ntracing-allow-vm-access=\"off\"\ntracing-config=\"\"\nautostart-enabled=\"off\"\nautostart-delay=0\ndefaultfrontend=\"\"\nvmprocpriority=\"default\"\nstoragecontrollername0=\"M6-SCSI\"\nstoragecontrollertype0=\"LsiLogic\"\nstoragecontrollerinstance0=\"0\"\nstoragecontrollermaxportcount0=\"16\"\nstoragecontrollerportcount0=\"16\"\nstoragecontrollerbootable0=\"on\"\nstoragecontrollername1=\"M6-IDE\"\nstoragecontrollertype1=\"PIIX4\"\nstoragecontrollerinstance1=\"0\"\nstoragecontrollermaxportcount1=\"2\"\nstoragecontrollerportcount1=\"2\"\nstoragecontrollerbootable1=\"on\"\n\"M6-SCSI-0-0\"=\"/home/DHB/VirtualBox VMs/ISSD-Member6-SEED12/Snapshots/{07f6aed5-7127-40b7-b6c8-6cbf2eabc1a7}.vmdk\"\n\"M6-SCSI-ImageUUID-0-0\"=\"07f6aed5-7127-40b7-b6c8-6cbf2eabc1a7\"\n\"M6-SCSI-nonrotational-0-0\"=\"off\"\n\"M6-SCSI-discard-0-0\"=\"off\"\n\"M6-SCSI-1-0\"=\"none\"\n\"M6-SCSI-2-0\"=\"none\"\n\"M6-SCSI-3-0\"=\"none\"\n\"M6-SCSI-4-0\"=\"none\"\n\"M6-SCSI-5-0\"=\"none\"\n\"M6-SCSI-6-0\"=\"none\"\n\"M6-SCSI-7-0\"=\"none\"\n\"M6-SCSI-8-0\"=\"none\"\n\"M6-SCSI-9-0\"=\"none\"\n\"M6-SCSI-10-0\"=\"none\"\n\"M6-SCSI-11-0\"=\"none\"\n\"M6-SCSI-12-0\"=\"none\"\n\"M6-SCSI-13-0\"=\"none\"\n\"M6-SCSI-14-0\"=\"none\"\n\"M6-SCSI-15-0\"=\"none\"\n\"M6-IDE-0-0\"=\"/home/DHB/VirtualBox VMs/ISSD-Member6-media/M6-transfer-20261007-final.iso\"\n\"M6-IDE-ImageUUID-0-0\"=\"c3ea8345-6da1-4499-a4c7-5297327bb905\"\n\"M6-IDE-tempeject-0-0\"=\"off\"\n\"M6-IDE-IsEjected-0-0\"=\"off\"\n\"M6-IDE-nonrotational-0-0\"=\"off\"\n\"M6-IDE-discard-0-0\"=\"off\"\n\"M6-IDE-0-1\"=\"none\"\n\"M6-IDE-1-0\"=\"none\"\n\"M6-IDE-1-1\"=\"none\"\nnatnet1=\"nat\"\nmacaddress1=\"0800277197DC\"\ncableconnected1=\"off\"\nnic1=\"nat\"\nnictype1=\"82540EM\"\nnicspeed1=\"0\"\nmtu=\"0\"\nsockSnd=\"64\"\nsockRcv=\"64\"\ntcpWndSnd=\"64\"\ntcpWndRcv=\"64\"\nlocalhostReachable=\"0\"\nforwardBroadcast=\"0\"\nenableTFTP=\"0\"\nnic2=\"none\"\nnic3=\"none\"\nnic4=\"none\"\nnic5=\"none\"\nnic6=\"none\"\nnic7=\"none\"\nnic8=\"none\"\nhidpointing=\"ps2mouse\"\nhidkeyboard=\"ps2kbd\"\nuart1=\"off\"\nuart2=\"off\"\nuart3=\"off\"\nuart4=\"off\"\nlpt1=\"off\"\nlpt2=\"off\"\naudio=\"none\"\naudio_out=\"off\"\naudio_in=\"off\"\nclipboard=\"hosttoguest\"\nclipboard_file_transfers=\"off\"\ndraganddrop=\"disabled\"\nvrde=\"off\"\nusb=\"off\"\nehci=\"off\"\nxhci=\"off\"\nSharedFolderNameMachineMapping1=\"M6pack\"\nSharedFolderPathMachineMapping1=\"/home/DHB/Downloads/ISSP/ISSD-seed-labs/Member6\"\nSharedFolderNameMachineMapping2=\"M6export\"\nSharedFolderPathMachineMapping2=\"/home/DHB/Downloads/ISSP/ISSD-seed-labs/Member6/evidence/incoming\"\nrecording_started=\"off\"\nrecording_enabled=\"off\"\nrecording_screens=1\n rec_screen0\nrec_screen_enabled=\"on\"\nrec_screen_id=0\nrec_screen_video_enabled=\"on\"\nrec_screen_audio_enabled=\"off\"\nrec_screen_dest=\"File\"\nrec_screen_dest_filename=\"/home/DHB/VirtualBox VMs/ISSD-Member6-SEED12/ISSD-Member6-SEED12-screen0.webm\"\nrec_screen_opts=\"ac_profile=med\"\nrec_screen_video_res_xy=\"1024x768\"\nrec_screen_video_rate_kbps=512\nrec_screen_video_fps=25\nSnapshotName=\"M6-clean-SEED12\"\nSnapshotUUID=\"7ecb8a4e-7430-497d-8772-fe3317d43b30\"\nSnapshotDescription=\"Verified official SEED12 disk; powered off before first boot, lab transfer, target creation or account changes.\"\nCurrentSnapshotName=\"M6-clean-SEED12\"\nCurrentSnapshotUUID=\"7ecb8a4e-7430-497d-8772-fe3317d43b30\"\nCurrentSnapshotNode=\"SnapshotName\"\nGuestMemoryBalloon=0\n",
+      "stderr": ""
+    },
+    {
+      "command": [
+        "VBoxManage",
+        "snapshot",
+        "ISSD-Member6-SEED12",
+        "list",
+        "--machinereadable"
+      ],
+      "exit_code": 0,
+      "stdout": "WARNING: The vboxdrv kernel module is not loaded. Either there is no module\n         available for the current kernel (7.2.8-arch1-2) or it failed to\n         load. Please recompile the kernel module and install it by\n\n           sudo /sbin/vboxconfig\n\n         You will not be able to start VMs until this problem is fixed.\nSnapshotName=\"M6-clean-SEED12\"\nSnapshotUUID=\"7ecb8a4e-7430-497d-8772-fe3317d43b30\"\nSnapshotDescription=\"Verified official SEED12 disk; powered off before first boot, lab transfer, target creation or account changes.\"\nCurrentSnapshotName=\"M6-clean-SEED12\"\nCurrentSnapshotUUID=\"7ecb8a4e-7430-497d-8772-fe3317d43b30\"\nCurrentSnapshotNode=\"SnapshotName\"\n",
+      "stderr": ""
+    },
+    {
+      "command": [
+        "VBoxManage",
+        "showmediuminfo",
+        "disk",
+        "07f6aed5-7127-40b7-b6c8-6cbf2eabc1a7"
+      ],
+      "exit_code": 0,
+      "stdout": "WARNING: The vboxdrv kernel module is not loaded. Either there is no module\n         available for the current kernel (7.2.8-arch1-2) or it failed to\n         load. Please recompile the kernel module and install it by\n\n           sudo /sbin/vboxconfig\n\n         You will not be able to start VMs until this problem is fixed.\nUUID:           07f6aed5-7127-40b7-b6c8-6cbf2eabc1a7\nParent UUID:    e77c85d1-7ba3-4751-b502-7d684317ee2b\nState:          created\nType:           normal (differencing)\nAuto-Reset:     off\nLocation:       /home/DHB/VirtualBox VMs/ISSD-Member6-SEED12/Snapshots/{07f6aed5-7127-40b7-b6c8-6cbf2eabc1a7}.vmdk\nStorage format: VMDK\nFormat variant: differencing split2G\nCapacity:       81920 MBytes\nSize on disk:   12 MBytes\nEncryption:     disabled\nProperty:       BootSector=\n                Partitions=\n                RawDrive=\n                Relative=\nIn use by VMs:  ISSD-Member6-SEED12 (UUID: 242db196-83e1-4b7a-9f0b-e399d6f8b9dc)\n",
+      "stderr": ""
+    },
+    {
+      "command": [
+        "bash",
+        "-n",
+        "/home/DHB/Downloads/ISSP/ISSD-seed-labs/Member6/automation/check-cleanup.sh"
+      ],
+      "exit_code": 0,
+      "stdout": "",
+      "stderr": ""
+    },
+    {
+      "command": [
+        "bash",
+        "-n",
+        "/home/DHB/Downloads/ISSP/ISSD-seed-labs/Member6/automation/check-environment.sh"
+      ],
+      "exit_code": 0,
+      "stdout": "",
+      "stderr": ""
+    },
+    {
+      "command": [
+        "bash",
+        "-n",
+        "/home/DHB/Downloads/ISSP/ISSD-seed-labs/Member6/automation/export-evidence.sh"
+      ],
+      "exit_code": 0,
+      "stdout": "",
+      "stderr": ""
+    },
+    {
+      "command": [
+        "bash",
+        "-n",
+        "/home/DHB/Downloads/ISSP/ISSD-seed-labs/Member6/automation/guest-guard.sh"
+      ],
+      "exit_code": 0,
+      "stdout": "",
+      "stderr": ""
+    },
+    {
+      "command": [
+        "bash",
+        "-n",
+        "/home/DHB/Downloads/ISSP/ISSD-seed-labs/Member6/automation/prepare-workspace.sh"
+      ],
+      "exit_code": 0,
+      "stdout": "",
+      "stderr": ""
+    },
+    {
+      "command": [
+        "bash",
+        "-n",
+        "/home/DHB/Downloads/ISSP/ISSD-seed-labs/Member6/automation/trial-with-evidence.sh"
+      ],
+      "exit_code": 0,
+      "stdout": "",
+      "stderr": ""
+    },
+    {
+      "command": [
+        "bash",
+        "-n",
+        "/home/DHB/Downloads/ISSP/ISSD-seed-labs/Member6/lab-files/build.sh"
+      ],
+      "exit_code": 0,
+      "stdout": "",
+      "stderr": ""
+    },
+    {
+      "command": [
+        "bash",
+        "-n",
+        "/home/DHB/Downloads/ISSP/ISSD-seed-labs/Member6/lab-files/run_trial.sh"
+      ],
+      "exit_code": 0,
+      "stdout": "",
+      "stderr": ""
+    },
+    {
+      "command": [
+        "bash",
+        "-n",
+        "/home/DHB/Downloads/ISSP/ISSD-seed-labs/Member6/tools/setup-vm.sh"
+      ],
+      "exit_code": 0,
+      "stdout": "",
+      "stderr": ""
+    }
+  ],
+  "m6_screenshot_files": [],
+  "guest_runtime_verified": false,
+  "experiment_result_verified": false,
+  "vboxdrv_device_exists": false
+}
