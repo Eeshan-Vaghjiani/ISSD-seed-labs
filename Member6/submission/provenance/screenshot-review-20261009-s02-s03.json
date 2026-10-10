@@ -1,0 +1,75 @@
+{
+  "reviewed_utc": "2026-10-09T20:01:41.470219+00:00",
+  "images": [
+    {
+      "filename": "M6-S01-vm-setup.png",
+      "sha256": "636d1f07e0df79828b5d1f68727c6d2c1fbc9afe19807e650f5ad64847c40da3",
+      "width": 1920,
+      "height": 1080,
+      "method": "User-supplied host settings capture; acquisition tool not independently recorded",
+      "visually_reviewed": true,
+      "status": "partial",
+      "actual_observation": "Host settings show VM name, Ubuntu 12.04 32-bit profile and 2048 MB. Processor count is not displayed; disk details are cut off.",
+      "pixels_edited": false
+    },
+    {
+      "filename": "M6-S02-environment.png",
+      "sha256": "0f2bb0bc691505cb04b97183f3ac73f680612d883d773b3b7108ab4612c6de21",
+      "width": 1280,
+      "height": 960,
+      "method": "VirtualBox screenshotpng: actual guest framebuffer, unedited",
+      "visually_reviewed": true,
+      "status": "verified",
+      "actual_observation": "seed UID/GID 1000; Ubuntu 12.04.2; kernel 3.5.0-37-generic; i686; 32 bits; package 3.5.0-37.58~precise1; GCC 4.6.3.",
+      "pixels_edited": false
+    },
+    {
+      "filename": "M6-S02-b-environment.png",
+      "sha256": "a55be3c5a2d685aca5f476ffb7318a8bde8574f1fe4e56bcdcda7d282ae622af",
+      "width": 1280,
+      "height": 960,
+      "method": "VirtualBox screenshotpng: actual guest framebuffer, unedited",
+      "visually_reviewed": true,
+      "status": "verified",
+      "actual_observation": "Required tool paths; i386 linux-lts-quantal; VirtualBox DMI; UTC date; native ext4 workspace; both shares currently unmounted.",
+      "pixels_edited": false
+    },
+    {
+      "filename": "M6-S03-code-build.png",
+      "sha256": "6972c079d991fb250dc89e6d9a6edce0da6cf6538d1607a4b4a57ca8f3c691e5",
+      "width": 1280,
+      "height": 960,
+      "method": "VirtualBox screenshotpng: actual guest framebuffer, unedited",
+      "visually_reviewed": true,
+      "status": "verified",
+      "actual_observation": "Four hashes OK; seed-owned 0644 sources; bash build.sh exits 0; both binaries seed-owned 0755 ELF32.",
+      "pixels_edited": false
+    },
+    {
+      "filename": "M6-S03-b-code-build.png",
+      "sha256": "3486bc41c24467b2ef91da30cb70fd16e74a2fcd95c2347a66e6e864c2a9bf0a",
+      "width": 1280,
+      "height": 960,
+      "method": "VirtualBox screenshotpng: actual guest framebuffer, unedited",
+      "visually_reviewed": true,
+      "status": "verified",
+      "actual_observation": "Actual supplied source: O_RDONLY, PROT_READ, MAP_PRIVATE, virtual-address conversion and two pthread_create calls.",
+      "pixels_edited": false
+    },
+    {
+      "filename": "M6-S03-c-code-build.png",
+      "sha256": "b215714fbed7da04927a351cb0fd93909e03e6abd182454cb6f51002eff9abdc",
+      "width": 1280,
+      "height": 960,
+      "method": "VirtualBox screenshotpng: actual guest framebuffer, unedited",
+      "visually_reviewed": true,
+      "status": "verified",
+      "actual_observation": "Actual supplied source: repeated MADV_DONTNEED and pwrite through /proc/self/mem, with error checks.",
+      "pixels_edited": false
+    }
+  ],
+  "guest_transcript": "/home/seed/m6-fresh-20261009-1946.typescript",
+  "guest_transcript_active": true,
+  "guest_transcript_export_verified": false,
+  "review_basis": "Actual displayed guest output and source-hash comparison; full transcript review awaits export."
+}

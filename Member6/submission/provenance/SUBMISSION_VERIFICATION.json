@@ -1,0 +1,57 @@
+{
+  "verified_utc": "2026-10-10T18:08:10.072224+00:00",
+  "boundary": "HOST: local artifact/package checks only",
+  "findings": [
+    "21 selected original PNGs match fresh sources and recorded hashes.",
+    "20 labelled crops preserve the exact pixels of their documented rectangles.",
+    "Original sources, logs, full trial changes, restored file, identity chain and cleanup artifacts are consistent.",
+    "REPORT: 16 PDF pages; 19 images; matching DOCX/PDF text; no off-page words/placeholders.",
+    "LIVE_DEMO: 3 PDF pages; 0 images; matching DOCX/PDF text; no off-page words/placeholders.",
+    "LIVE_COMMANDS: 1 PDF pages; 0 images; matching DOCX/PDF text; no off-page words/placeholders.",
+    "LIVE_PREPARATION: 3 PDF pages; 0 images; matching DOCX/PDF text; no off-page words/placeholders.",
+    "SLIDE_NOTES: 3 PDF pages; 0 images; matching DOCX/PDF text; no off-page words/placeholders.",
+    "10-slide PPTX/PDF text matches; every slide has embedded notes; all shapes/words within page bounds.",
+    "Video original hashes, explicit edit intervals and fully decoded H.264 fallback verified."
+  ],
+  "documents": [
+    {
+      "name": "REPORT",
+      "pages": 16,
+      "images": 19,
+      "docx_sha256": "77ae67d8f6fde7130cb3535f97ae0d9a2165f178ec1f0d069f101bc386153882",
+      "pdf_sha256": "0662f7cb4c17f7362ff1fd4647beeceefe0749b3030dfb8be46ae562f8561dc7"
+    },
+    {
+      "name": "LIVE_DEMO",
+      "pages": 3,
+      "images": 0,
+      "docx_sha256": "99730d85c15dffca64ab67f6a77a1341d5d2dbbce9d69098f707563aa3417cdf",
+      "pdf_sha256": "c3ed37e3d749d996eb743f097f237943d638027e305ac123e30bc5b3e9183240"
+    },
+    {
+      "name": "LIVE_COMMANDS",
+      "pages": 1,
+      "images": 0,
+      "docx_sha256": "d66d89e6f2f9a4a88622977ffc9fde2e4cfb87475844d8b8f5d5516398f6e8d4",
+      "pdf_sha256": "187bacdd487c2876b45f940a9cb8720a75877098e00b68a32efe545bc5233b05"
+    },
+    {
+      "name": "LIVE_PREPARATION",
+      "pages": 3,
+      "images": 0,
+      "docx_sha256": "c25dcc203f1a137421a7525fdd98bc2a6913fc20d7b5c08e9fcdf611df4b6073",
+      "pdf_sha256": "4b750b4a364ec9f2f11a5c812b1a5adfe073b52ab9feed5cc2e4c33ebe15cf52"
+    },
+    {
+      "name": "SLIDE_NOTES",
+      "pages": 3,
+      "images": 0,
+      "docx_sha256": "ddc0539a63396e1387206afcc4c0067a3b112f02b0299d5a8c6345240c43f6d7",
+      "pdf_sha256": "e16ae064e964471a11d81bb941d4f02ed3b89f5e837f5950814cee45bf7f4c29"
+    }
+  ],
+  "presentation_sha256": "a2bd21a79e3106996dea4e77fc63ac78e9422e4de2c53ffedba8d3c58bf7824a",
+  "presentation_pdf_sha256": "4a1fdacf4f0758e79ca7546f9eb898d73fa4517132a0d07b419316df2cf63c5e",
+  "video_sha256": "79c181a39dbd79ef935f75c5c3f94fea89432ce74430fa027ff493e606d5b8ec",
+  "visual_review": "Separate manual inspection of rendered pages/slides is documented in BUILD_VERIFICATION.md."
+}

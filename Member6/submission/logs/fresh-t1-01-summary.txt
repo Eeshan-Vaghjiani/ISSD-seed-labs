@@ -1,0 +1,10 @@
+Date: 2026-10-09T13:28:48-0700
+Kernel: 3.5.0-37-generic
+Identity: uid=1000(seed) gid=1000(seed) groups=1000(seed),4(adm),24(cdrom),27(sudo),30(dip),46(plugdev),109(lpadmin),124(sambashare),130(wireshark)
+Target: /zzz
+Limit: 30s
+Before: 7342e673ad4f9a5ea02fe84fa6ab1760d922e3f362c885ef4feda980423b9552  /zzz
+Elapsed: 0s
+Change detected: yes
+After: 97c0ed6bb0deb556349015713d1c0a86d11e1bf5572a78b087650e814479b47b  /zzz
+Stopped after content change; inspect the full diff and verify exact outcome.

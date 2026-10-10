@@ -1,0 +1,262 @@
+[
+  {
+    "figure": "report-S01-profile.png",
+    "original": "M6-S01-vm-setup.png",
+    "original_sha256": "636d1f07e0df79828b5d1f68727c6d2c1fbc9afe19807e650f5ad64847c40da3",
+    "crop_box_xyxy": [
+      212,
+      75,
+      910,
+      306
+    ],
+    "figure_sha256": "acdce7bece239451d2557c6c5828df17848de1582899eefd530960c3cdcd836d",
+    "purpose": "Labelled readability excerpt; contained pixels unchanged"
+  },
+  {
+    "figure": "report-S01-cpu.png",
+    "original": "M6-S01-c-vm-setup.png",
+    "original_sha256": "cd1e42ade2cffb934b91aacae35f6fa42c8212bebd2f8f4d15364efae78d67e2",
+    "crop_box_xyxy": [
+      0,
+      0,
+      678,
+      98
+    ],
+    "figure_sha256": "778fd9aad2efd4709e217070ff4ba0ce8248c52e8444c00fafea92982e315c84",
+    "purpose": "Labelled readability excerpt; contained pixels unchanged"
+  },
+  {
+    "figure": "report-S01-disk.png",
+    "original": "M6-S01-d-vm-setup.png",
+    "original_sha256": "30cab78cb311ffd043cc2e7b9ad6315a427ae1d3838d51dd93df79af183fc17f",
+    "crop_box_xyxy": [
+      0,
+      0,
+      697,
+      335
+    ],
+    "figure_sha256": "ea162196149434c733081b4b3b8db588181839a9fd02917b208f37aab6eb70df",
+    "purpose": "Labelled readability excerpt; contained pixels unchanged"
+  },
+  {
+    "figure": "report-S02.png",
+    "original": "M6-S02-environment.png",
+    "original_sha256": "0f2bb0bc691505cb04b97183f3ac73f680612d883d773b3b7108ab4612c6de21",
+    "crop_box_xyxy": [
+      65,
+      25,
+      1276,
+      525
+    ],
+    "figure_sha256": "d80999888583d132cf3efa551d104c8d3a15f92912fa365b89bf88051475fc52",
+    "purpose": "Labelled readability excerpt; contained pixels unchanged"
+  },
+  {
+    "figure": "report-S02-tools.png",
+    "original": "M6-S02-b-environment.png",
+    "original_sha256": "a55be3c5a2d685aca5f476ffb7318a8bde8574f1fe4e56bcdcda7d282ae622af",
+    "crop_box_xyxy": [
+      65,
+      25,
+      1276,
+      565
+    ],
+    "figure_sha256": "c29fa67a36371e1cf0f56aa7ad0ec2ae6dff71295239ced8ff1e50fb506a4c84",
+    "purpose": "Labelled readability excerpt; contained pixels unchanged"
+  },
+  {
+    "figure": "report-S03-build.png",
+    "original": "M6-S03-code-build.png",
+    "original_sha256": "6972c079d991fb250dc89e6d9a6edce0da6cf6538d1607a4b4a57ca8f3c691e5",
+    "crop_box_xyxy": [
+      65,
+      25,
+      1276,
+      545
+    ],
+    "figure_sha256": "f9ea7117a06151efa0001deeafcb9bedb0264fbd6924c2220f8d842280096808",
+    "purpose": "Labelled readability excerpt; contained pixels unchanged"
+  },
+  {
+    "figure": "report-S03-mapping.png",
+    "original": "M6-S03-b-code-build.png",
+    "original_sha256": "3486bc41c24467b2ef91da30cb70fd16e74a2fcd95c2347a66e6e864c2a9bf0a",
+    "crop_box_xyxy": [
+      65,
+      25,
+      1276,
+      792
+    ],
+    "figure_sha256": "f50b02b7f2852f8bc94eb63db97a9e83494f9ee968048d182db17435db9ee548",
+    "purpose": "Labelled readability excerpt; contained pixels unchanged"
+  },
+  {
+    "figure": "report-S03-workers.png",
+    "original": "M6-S03-c-code-build.png",
+    "original_sha256": "b215714fbed7da04927a351cb0fd93909e03e6abd182454cb6f51002eff9abdc",
+    "crop_box_xyxy": [
+      65,
+      25,
+      1276,
+      661
+    ],
+    "figure_sha256": "b84bb7964f792c9340a7df442a5628a40e1ce3746b0ae34c861635611ce5f97a",
+    "purpose": "Labelled readability excerpt; contained pixels unchanged"
+  },
+  {
+    "figure": "report-S04.png",
+    "original": "M6-S04-dummy-baseline.png",
+    "original_sha256": "cad74381f15acae0a294dab8530a5b3beffda71d3faa31bd469f6af2f44d56a9",
+    "crop_box_xyxy": [
+      65,
+      25,
+      1276,
+      375
+    ],
+    "figure_sha256": "e95666d3c004ba0a94af86e291aefbefab91b121a87b4509c6906f0ec23251d7",
+    "purpose": "Labelled readability excerpt; contained pixels unchanged"
+  },
+  {
+    "figure": "report-S05.png",
+    "original": "M6-S05-normal-cow.png",
+    "original_sha256": "2784a8c1e1cf8da6f8112020595aa2905cbc97476debd95047a1d55e832d10d0",
+    "crop_box_xyxy": [
+      65,
+      25,
+      1276,
+      316
+    ],
+    "figure_sha256": "0fd3416b5ba504eb68e95524e446c9a7a75aa737f3a6aea497e947815da475fb",
+    "purpose": "Labelled readability excerpt; contained pixels unchanged"
+  },
+  {
+    "figure": "report-S06.png",
+    "original": "M6-S06-task1-running.png",
+    "original_sha256": "b6de40ee583b88b1290c94dadec9408cf534f34bd5b35472859d56651bc48b1d",
+    "crop_box_xyxy": [
+      65,
+      25,
+      1276,
+      506
+    ],
+    "figure_sha256": "86c65a4907b7fbdd71bd2bbf7a897f2e1ab3f62d186c2a4e22b058041e59e3fc",
+    "purpose": "Labelled readability excerpt; contained pixels unchanged"
+  },
+  {
+    "figure": "report-S07.png",
+    "original": "M6-S07-task1-result.png",
+    "original_sha256": "54f16ec8e9574842f254ea37fb60b9432036efea14f822ac83c133ef6135bad3",
+    "crop_box_xyxy": [
+      65,
+      25,
+      1276,
+      489
+    ],
+    "figure_sha256": "6d17abda26ba81e18dbcf6d883bc106a6ef9564581bc7ee17a5499bc5fa122fe",
+    "purpose": "Labelled readability excerpt; contained pixels unchanged"
+  },
+  {
+    "figure": "report-S08-login.png",
+    "original": "M6-S08-charlie-baseline.png",
+    "original_sha256": "b3688fbb0d0fdc610d550e535d1d8bfca1fa8eb508dde6845c8c8eb07e6360a2",
+    "crop_box_xyxy": [
+      65,
+      25,
+      1276,
+      375
+    ],
+    "figure_sha256": "e8860a29dc1d29b9cb1ca6bdd4d0e4d587e5a7c3e35df8a2ac35372e9974f53a",
+    "purpose": "Labelled readability excerpt; contained pixels unchanged"
+  },
+  {
+    "figure": "report-S08-backup.png",
+    "original": "M6-S08-b-charlie-baseline.png",
+    "original_sha256": "4f6801d586adf5f37452e4631b7c9e0716d7b19736c42cd9073ef4135555813f",
+    "crop_box_xyxy": [
+      65,
+      25,
+      1276,
+      432
+    ],
+    "figure_sha256": "31ed3858371de9411de5ecf65b31a85fd9c9eeeef03df26eaf634f24589a39fe",
+    "purpose": "Labelled readability excerpt; contained pixels unchanged"
+  },
+  {
+    "figure": "report-S09-run.png",
+    "original": "M6-S09-task2-uid-change.png",
+    "original_sha256": "fafa04a7a0a6975e63b7de4cb53171570bc16271b46203aed2f0a77100244cc0",
+    "crop_box_xyxy": [
+      65,
+      25,
+      1276,
+      602
+    ],
+    "figure_sha256": "9fe634e5e81c1e2fa59d40db21b28f56c4f1f4228ef1385aa4c22265a2ec984d",
+    "purpose": "Labelled readability excerpt; contained pixels unchanged"
+  },
+  {
+    "figure": "report-S09-diff.png",
+    "original": "M6-S09-b-task2-uid-change.png",
+    "original_sha256": "a5a92b999ffdc015e78994d50c032a124866cdd4e587e52ee9d5d4cbfe940ded",
+    "crop_box_xyxy": [
+      65,
+      25,
+      1276,
+      508
+    ],
+    "figure_sha256": "db30b512ed82d77b42a1ada718a96e3c2fc3f7215a0bc2765c710b230ccd455c",
+    "purpose": "Labelled readability excerpt; contained pixels unchanged"
+  },
+  {
+    "figure": "report-S10.png",
+    "original": "M6-S10-task2-root-proof.png",
+    "original_sha256": "5fa0d3ebb3a8e9678fe2bb47affbbf853a6da9251c8cf319986389a00d0c88dd",
+    "crop_box_xyxy": [
+      65,
+      25,
+      1276,
+      414
+    ],
+    "figure_sha256": "9268d386e769a3910f5eb39c15f6ffe190c48639de363e84d444b256e8e75231",
+    "purpose": "Labelled readability excerpt; contained pixels unchanged"
+  },
+  {
+    "figure": "report-S11.png",
+    "original": "M6-S11-account-restored.png",
+    "original_sha256": "4a485d4a0b566db5fc53759be5184c34de69b3d8d9527888ba700d83d2366fdf",
+    "crop_box_xyxy": [
+      65,
+      25,
+      1276,
+      563
+    ],
+    "figure_sha256": "83b1050eec6d6a3a8610915f821ee66df3a74c08a16316979a2ce1d7facd37db",
+    "purpose": "Labelled readability excerpt; contained pixels unchanged"
+  },
+  {
+    "figure": "report-S13.png",
+    "original": "M6-S13-cleanup.png",
+    "original_sha256": "6ee3c556e989b6b849ef7bee6633a8f0c4fbaac9b9c96e1759a646df18dfb6ce",
+    "crop_box_xyxy": [
+      65,
+      25,
+      1276,
+      489
+    ],
+    "figure_sha256": "8b134ed5ed6898384045bb6225953f2583f5cec6b608e87421bbbdfc0d40a603",
+    "purpose": "Labelled readability excerpt; contained pixels unchanged"
+  },
+  {
+    "figure": "slide-S10-proof.png",
+    "original": "M6-S10-task2-root-proof.png",
+    "original_sha256": "5fa0d3ebb3a8e9678fe2bb47affbbf853a6da9251c8cf319986389a00d0c88dd",
+    "crop_box_xyxy": [
+      65,
+      105,
+      920,
+      413
+    ],
+    "figure_sha256": "6a26773968e3a0fcaed71e8b13ac2e7d436c7027128a2af0a8d50667c56f6c94",
+    "purpose": "Labelled readability excerpt; contained pixels unchanged"
+  }
+]

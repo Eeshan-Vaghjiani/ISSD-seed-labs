@@ -1,0 +1,20 @@
+No matching process: cow_attack
+No supplied trial wrapper is running.
+No matching process: cow_control
+No matching process: su
+uid=1000(seed) gid=1000(seed) groups=1000(seed),4(adm),24(cdrom),27(sudo),30(dip),46(plugdev),109(lpadmin),124(sambashare),130(wireshark)
+/etc/passwd: OK
+charlie:x:1001:1002:,,,:/home/charlie:/bin/bash
+uid=1001(charlie) gid=1002(charlie) groups=1002(charlie)
+/zzz is absent.
++ numeric UID-0 records
+root:0
++ inspect privileged shell processes
+build.sh: OK
+cow_attack.c: OK
+cow_control.c: OK
+run_trial.sh: OK
+-rwxr-xr-x 1 seed seed 12540 Oct  9 12:55 cow_attack
+-rwxr-xr-x 1 seed seed  7601 Oct  9 12:55 cow_control
+Checked: exact normal passwd/charlie/UID-0 baseline, no attacker/su/root shell, no /zzz.
+S11 must also contain a fresh non-sudo charlie login with the original nonzero UID.

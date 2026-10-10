@@ -1,48 +1,72 @@
-# Member 6 — speaker notes and evidence order
+# Speaker notes — Member 6 — ISSD
 
-**Preparation only; results slides await real VM evidence.** This follows the six slides in `../PRESENTATION_PLAN.md`, rather than substituting another tutorial or Member 5's results. Use `LIVE_COMMANDS.md` for terminal transitions.
+**Main talk: slides 1–6. Backup evidence and references: slides 7–10.** The live transition is **slide 4 → LIVE_DEMO Part 1**; slide 5 uses recorded Task 2 evidence. Follow Part 0 before the slot and Part 3 afterward. The suggested 5–7 minutes is provisional, not a measured rehearsal or confirmed allowance.
 
-| Slide / order | Evidence to insert after verification | Short explanation to say |
-|---|---|---|
-| 1. Dirty COW, before the demo | CVE-2016-5195 and the assignment's kernel/application distinction | “Copy-on-write should keep a process's private changes separate from the original file. Dirty COW is a historical local kernel race that can break that boundary.” |
-| 2. Normal COW and the race | Diagram from the existing guide; readable S03 worker/mapping excerpts; S05 control | “The main thread opens the file read-only and maps it privately. One worker writes its own `/proc/self/mem`; the other discards mapping state with `MADV_DONTNEED`. Their concurrent kernel handling is the critical race.” |
-| 3. Correct environment and protection | S01/S02; S04 denied ordinary write | “The website category says 20.04, but the lab explicitly requires the old 32-bit 12.04 image. These guest commands establish the actual kernel and user. The target is already protected by normal file permissions.” Use the actual S02 package value, currently unobserved. |
-| 4. Live dummy demonstration | Actual live terminal; real S07 as fallback once collected | “First the ordinary write is denied. The normal control changes only its private view. Next I run the repository's bounded race and check the file itself.” Then describe exactly what the new run shows. |
-| 5. Recorded account impact | S08 original UID; S09 exact diff; S10 login; S11 restoration | “The field width is preserved and only charlie's UID digits change. The meaningful privilege proof is a new non-sudo login followed by numeric UID output. The restored account is tested with another new login.” State the observed values only after verification. |
-| 6. Countermeasures and takeaway | S13; S12 only if really performed | “The primary defence is a fixed kernel that is actually booted. Keep supported systems updated, limit unnecessary local code execution, and monitor account integrity and privileged sessions. Monitoring supports detection; it does not repair COW.” |
+## Slide 1 — Private should stay private
 
-Suggested timing from the repository: 40/50/45/90/50/60 seconds, adjusted to the group. Setup, passwords and display switching also consume time. The short dummy demonstration is live; the fuller account experiment is normally shown as genuine recorded evidence.
+Introduce Dirty COW, CVE-2016-5195, as a historical local kernel race. Copy-on-write should keep a process's private changes separate from the original file. This vulnerability can break that boundary and modify data an ordinary user cannot normally write. Member 5's example was in a deliberately privileged application; here the vulnerable component is the kernel. Explain this before the live demonstration. The fresh work took place on 9 October 2026 in the separate SEED12 guest. Suggested 40 seconds.
 
-## Concepts to explain accurately
+## Slide 2 — Normal COW and the two workers
 
-* **COW / MAP_PRIVATE:** private writes should update a private page, not the backing file.
-* **Read-only mapping:** a normal direct write through a `PROT_READ` pointer would fault. The control deliberately uses a writable private mapping; the exploit uses another memory-access path.
-* **`/proc/self/mem`:** the calling process's own address space. The `pwrite` offset is a virtual address, not a protected-file offset.
-* **`MADV_DONTNEED`:** discards relevant page state so later access can refault/repopulate; this alone is not the privilege bypass.
-* **Race:** outcome depends on concurrent interleaving in affected kernel COW handling. Repetition does not supply a guaranteed success time.
-* **Normal direct writing:** target owner/mode denies ordinary seed; setup/reset sudo commands are separate administrative actions.
-* **UID 0:** the numeric identity supplies root authority even if the name or GID differs. Updating the account file does not change existing processes' credentials.
-* **Patched behaviour:** correct COW handling preserves the backing file; a finite failed attempt needs valid setup and vendor package evidence, not just a timeout.
+Trace the normal lane first: read-only-opened file, writable private mapping, private copy changes and backing file stays intact. Then trace the attack: target O_RDONLY, PROT_READ plus MAP_PRIVATE, one worker repeatedly writing its own /proc/self/mem and another repeatedly discarding mapping state with MADV_DONTNEED. The kernel's concurrent COW/page handling is the vulnerable boundary. pwrite's offset is a virtual address in this process; the program did not gain ordinary file-write permission. The diagram is conceptual, not a measured kernel trace. Suggested 50 seconds.
 
-## Likely lecturer questions
+## Slide 3 — Verified environment and normal protection
+
+State the actual environment: Ubuntu 12.04.2, i686/32-bit, kernel 3.5.0-37-generic, package 3.5.0-37.58~precise1 from linux-lts-quantal, seed UID 1000. The directory name Labs_20.04 does not change the official requirement for the old image. The programs were built on guest ext4 and remained seed-owned 0755; no Set-UID installation was used. Point to S04: root:root 0644, original digits and Permission denied. Its normal file protection works. These are recorded observations, with the actual full environment in S02. Suggested 45 seconds.
+
+## Slide 4 — Switch to the live dummy
+
+Use the already-prepared same Ubuntu terminal and LIVE_COMMANDS. Show id, permissions and the original file. Attempt the ordinary write, then run cow_control and reread the file/hash. Only after that baseline passes, run the supplied wrapper with the new label and 15-second limit. Describe the actual result and verify complete bytes/metadata. Do not promise a win. If this run times out or is partial, preserve it and show recorded S07 from 9 October, explicitly labelled recorded. The original fresh-t1-01 used a 30-second bound and measured 0 integer seconds; no finer time or kernel attempt count was measured. Return to slide 5. Suggested 90 seconds.
+
+## Slide 5 — Recorded UID change and actual root login
+
+Say clearly: this is recorded Task 2 evidence from 9 October. Charlie began at UID 1001 and GID 1002. The sole fresh-t2-01 race, run as seed, changed only the four-character UID field to 0000; all other file bytes and mode/owner stayed the same. The first authentication failed for an unestablished reason. The retry was another non-sudo su - charlie, followed by actual id, id -u = 0 and whoami root. The numeric UID is the privilege proof; GID remained 1002. The proof shell was exited before full restoration and a new UID-1001 login. Use backup slides 8/9 for the exact diff or restoration, or the labelled native-recording fallback if time allows. Suggested 50 seconds with the static proof; full video needs extra time.
+
+## Slide 6 — Fix the kernel and verify the final state
+
+Cover all four allocation themes: patch the kernel and boot the fixed version; maintain a supported updated OS; limit unnecessary local accounts/untrusted code execution; monitor account integrity, unexpected numeric UID-0 entries and privileged sessions. Monitoring aids detection and does not repair COW. Standard target permissions were already restrictive. Member 5's symlink protection or removing unrelated Set-UID bits cannot fix this kernel bug. The optional patched comparison was not performed; discussion only. Our final full baseline and fresh UID-1001 login passed; no test shell/attacker or dummy remained, and evidence was exported before normal shutdown. Close with private changes must remain private. Suggested 60 seconds. Run LIVE_DEMO Part 3 after the live session.
+
+## Slide 7 — Recorded Task 1 fallback
+
+Use this if the new live race does not succeed or the lecturer asks for complete backing-file verification. S07 is an actual 9 October framebuffer excerpt. It shows the full before/after diff, fresh cat, root:root 0644 and 19 bytes, complete expected-byte comparison returning 0 and the original elapsed reading. The attacker was already stopped. This recorded result does not change or replace the outcome of a later live attempt.
+
+## Slide 8 — Exact account change
+
+Point to both complete charlie lines in the diff: 1001 became 0000; the GID remains 1002 and other fields match. The verifier compared all 2040 bytes, not just this displayed line. Metadata remained root:root 0644. The numeric UID-0 query found root and charlie after the attack. Explain why a broad search for a number or a one-byte overwrite would be unsuitable, and why the actual original UID was discovered rather than assumed. The two original zero positions stay zero; four is the field width, not the number of necessarily different bytes.
+
+## Slide 9 — Restoration includes a new login
+
+This is S11, after proof shell PID 3392 had ended and been checked absent. The protected full-file comparison and original hash pass. A new non-sudo charlie login reports UID 1001, GID 1002 and whoami charlie, then exits to seed. Restoring a database does not revoke credentials already held by a process. S13 separately establishes no experiment/su/root shell, original root-only UID-0 list, absent dummy and ordinary binaries. Both transcripts and the final archive were closed and verified before shutdown.
+
+## Slide 10 — Sources and assistance
+
+Attribute the task/exploit pattern to Wenliang Du / SEED Labs, Copyright 2017, CC BY-NC-SA 4.0. The report includes the official task/source, historical VM manual, Linux memory-interface manuals, vendor CVE information and lecturer allocation. The four supplied C/build/trial files were unchanged. GPT-6 Astra through OpenCode helped with public guest command delivery, genuine captures, verification and document preparation; the user supplied host settings views and entered passwords interactively. The folder name does not identify the model used. No oral delivery or upload has occurred automatically.
+
+## Lecturer Q&A
 
 | Question | Concise answer |
 |---|---|
-| Why use 12.04 when the URL says 20.04? | The official task specifies the separate historical 32-bit SEED 12.04 guest; the directory name is not the runtime requirement. |
-| Is every 12.04 kernel vulnerable? | No. Inspect the running kernel and package family; distribution backports matter. |
-| Why does `MAP_PRIVATE` normally keep the file intact? | Changes belong to a private copy rather than being propagated to the mapped backing file. |
-| Why not use ordinary file writes? | Seed lacks write permission; the exploit races the kernel's memory/COW path instead. |
-| Is the control identical except for one missing thread? | No. It uses a writable private mapping and direct memory writes; the exploit mapping is read-only and uses `/proc/self/mem`. |
-| What is special about `pwrite` here? | It writes the process-memory interface at a virtual address in one call; it replaces the upstream seek/write pair. |
-| Why do both workers repeat? | The vulnerable interleaving is timing-dependent, so repeated concurrent operations create opportunities; runtime is not a guarantee. |
-| Why `0000` instead of `0`? | Same-width in-place overwrite preserves separators/other fields; a one-byte replacement would leave old digits. Actual width follows the measured UID. |
-| Did a changed hash prove root? | No. Full file/record verification and a fresh non-sudo `su - charlie` followed by numeric UID 0 are separate requirements. |
-| Why might `whoami` print root? | UID 0 may resolve to the first account named root; numeric UID is the privilege evidence. |
-| Does restoring passwd revoke old root shells? | No. Existing processes retain credentials; those shells must be exited and a new login checked. |
-| Does Member 5's symlink defence fix this? | No. Member 5 races pathname operations in an application; this bug is in kernel COW handling. |
-| Can a short timeout prove a kernel fixed? | No. It is a finite observation, interpreted with error-free setup and package/advisory evidence. |
-| How does it connect to authentication? | A write-protection failure can undermine the account database that login trusts, without needing to crack charlie's password. |
+| Why Ubuntu 12.04 when the link says 20.04? | The official lab specifies the historical 32-bit SEED12 VM; the URL category is not the runtime requirement. |
+| Is every 12.04 kernel vulnerable? | No. Actual running package family and backports matter. This measured guest reproduced the flaw. |
+| Is this remote exploitation? | The demonstrated prerequisite is local ordinary code execution. |
+| What does MAP_PRIVATE promise? | Private modifications should not propagate into the mapped backing file. |
+| Is the control just the attack minus a thread? | No. The control uses a writable private mapping and memcpy; the exploit uses a read-only mapping and /proc/self/mem. |
+| Why not write directly through the pointer? | A PROT_READ pointer normally faults on a direct write; the exploit uses the memory interface and kernel race. |
+| Why pwrite? | It combines the upstream seek/write pair; its offset here is a virtual process address. |
+| What does MADV_DONTNEED do? | Discards relevant mapping/page state so access can refault/repopulate, racing the write/COW handling. |
+| Why repeat the workers? | The outcome depends on scheduling/interleaving; repetition creates opportunities but no guaranteed win time. |
+| Why 0000 instead of 0? | Equal-width replacement preserves the in-place field and separators; one byte would leave old digits. |
+| Why is charlie's GID 1002? | That is the actually allocated group in this VM; UID and GID need not match. |
+| Does a hash change prove root? | No. Complete-byte validation and a fresh non-sudo login with numeric UID 0 are separate checks. |
+| Why did whoami say root? | UID 0 resolved to the root account name; numeric identity supplies the authority. |
+| Why did the first authentication fail? | Its cause was not established. The failure is preserved; the second non-sudo attempt succeeded. |
+| Does 0 seconds mean instantaneous or one attempt? | Neither. It is an integer timer reading; no kernel attempt count or finer race runtime was measured. |
+| Did restoration revoke the old root shell? | No. It was explicitly exited and checked absent before restoring; a new ordinary login was then tested. |
+| Did you test a patched guest? | No; optional S12 is not performed, discussion only. |
+| Is a failed 15-second live run proof of patching? | No. It is a finite observation; inspect setup/errors and actual package evidence. |
+| Does Member 5's symlink defence fix this? | No. The mechanisms are at different layers; this historical flaw needs a kernel fix. |
+| How does this relate to authentication? | Login trusts account-database integrity; a kernel write bypass can change the identity applied at login without cracking the password. |
 
-## Completion gate for the final deck
+## Final rehearsal reminder
 
-Insert only reviewed originals or explicitly identified readability crops, preserve failure qualifications, replace pending guest fields from S02, and fill trial durations from their labelled logs. Keep source attribution to **Wenliang Du / SEED Labs, CC BY-NC-SA 4.0**, plus the actual assistance disclosure. The existing preparation outline and these notes are ready; an evidence-based final PPTX and timed rehearsal remain pending.
+Confirm the course allowance, practise the actual transitions and explanation, record your spoken time, and clean up afterward. Keep screenshots/video outside the VM. Every new attempt gets a fresh label and is described according to its own output.

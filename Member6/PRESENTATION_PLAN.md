@@ -1,6 +1,6 @@
 # Member 6 — Dirty COW presentation and live demo
 
-Suggested length **5–7 minutes**, to be adjusted to your group allocation. Replace measurements/images with your own actual results.
+The completed deck, embedded notes, recorded fallback and exact rehearsal commands are in [submission/](submission/README.md). The main six-slide structure below is retained. Suggested length **5–7 minutes** remains provisional because the course allowance is unconfirmed; no spoken rehearsal duration has been measured.
 
 ## Slide 1 — what is Dirty COW? (40 seconds)
 
@@ -28,7 +28,7 @@ Show the diagram from the guide and these three roles:
 
 Insert M6-S01–S04 selectively. Show actual kernel, ordinary identity, `/zzz` permissions and denied ordinary write.
 
-**Say:** “Although the website link includes 20.04, SEED explicitly requires the old 32-bit Ubuntu 12.04 VM for this lab. My running kernel was [INSERT]. This is a separate VM from the Member 5 lab. The attack executable has no Set-UID bit and runs without sudo.”
+**Say:** “Although the website link includes 20.04, SEED explicitly requires the old 32-bit Ubuntu 12.04 VM for this lab. My running kernel was 3.5.0-37-generic, package 3.5.0-37.58~precise1 from linux-lts-quantal. This is a separate VM from the Member 5 lab. The attack executable has no Set-UID bit and runs without sudo.”
 
 ## Slide 4 — short live dummy-file demonstration (90 seconds)
 
@@ -69,12 +69,12 @@ Do not change file permissions or use `sudo` to produce the expected result. If 
 Show M6-S08–S10, particularly the exact diff and `su - charlie` → `id -u` result.
 
 ```text
-charlie:x:1001:1001:...  ->  charlie:x:0000:1001:...
+charlie:x:1001:1002:...  ->  charlie:x:0000:1002:...
 ```
 
-Substitute your actual starting UID and show the unchanged field width.
+These are the actual fresh-run UID/GID values. Show the unchanged field width and full-file verification.
 
-**Say:** “The same mechanism changed only charlie's UID digits. UID 0 confers root privilege, independently of the account name. The password stayed the same. A fresh login without sudo produced [INSERT actual numeric UID].”
+**Say:** “The same mechanism replaced only charlie's UID field. UID 0 confers root privilege, independently of the account name. The first authentication failed; a second fresh login without sudo produced numeric UID 0. After the proof shell exited, exact restoration and a new UID-1001 login passed.”
 
 This is recorded Task 2 evidence unless you explicitly perform the full account experiment live. The small dummy target is the simpler live demonstration; completing the account task beforehand is still required.
 

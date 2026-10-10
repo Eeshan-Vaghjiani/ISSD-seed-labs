@@ -1,0 +1,84 @@
+{
+  "recorded_utc": "2026-10-10T17:30:23.388562+00:00",
+  "experiment_date": "2026-10-09",
+  "images": [
+    {
+      "filename": "M6-S08-charlie-baseline.png",
+      "sha256": "b3688fbb0d0fdc610d550e535d1d8bfca1fa8eb508dde6845c8c8eb07e6360a2",
+      "content_reviewed": true,
+      "captured_utc": "2026-10-09T20:50:08.548552+00:00",
+      "observation": "Fresh non-sudo normal login: UID 1001, GID 1002, whoami charlie; exit to seed UID 1000.",
+      "review_method": "Actual original image visually inspected; cross-checked against closed native transcript and verification records"
+    },
+    {
+      "filename": "M6-S08-b-charlie-baseline.png",
+      "sha256": "4f6801d586adf5f37452e4631b7c9e0716d7b19736c42cd9073ef4135555813f",
+      "content_reviewed": true,
+      "captured_utc": "2026-10-09T20:57:27.683269+00:00",
+      "observation": "Protected full-file backup cmp 0; baseline hash OK; root:root 0644, 2040 bytes; seed cannot write.",
+      "review_method": "Actual original image visually inspected; cross-checked against closed native transcript and verification records"
+    },
+    {
+      "filename": "M6-S09-task2-uid-change.png",
+      "sha256": "fafa04a7a0a6975e63b7de4cb53171570bc16271b46203aed2f0a77100244cc0",
+      "content_reviewed": true,
+      "captured_utc": "2026-10-09T21:17:09.744992+00:00",
+      "observation": "Completed sole ordinary-seed fresh-t2-01 trial; 30-second limit, 0 integer seconds; UID field 1001 to 0000.",
+      "review_method": "Actual original image visually inspected; cross-checked against closed native transcript and verification records"
+    },
+    {
+      "filename": "M6-S09-b-task2-uid-change.png",
+      "sha256": "a5a92b999ffdc015e78994d50c032a124866cdd4e587e52ee9d5d4cbfe940ded",
+      "content_reviewed": true,
+      "captured_utc": "2026-10-09T21:21:13.365277+00:00",
+      "observation": "Full UID-only diff; live file equals retained after-copy; 0:0:644:2040; root and charlie numeric UID-0 records.",
+      "review_method": "Actual original image visually inspected; cross-checked against closed native transcript and verification records"
+    },
+    {
+      "filename": "M6-S10-task2-root-proof.png",
+      "sha256": "5fa0d3ebb3a8e9678fe2bb47affbbf853a6da9251c8cf319986389a00d0c88dd",
+      "content_reviewed": true,
+      "captured_utc": "2026-10-09T21:27:10.334223+00:00",
+      "observation": "First authentication failure retained, second non-sudo su accepted; id UID 0/GID 1002, id -u 0, whoami root; PID 3392.",
+      "review_method": "Actual original image visually inspected; cross-checked against closed native transcript and verification records"
+    },
+    {
+      "filename": "M6-S10-b-proof-shell-exited.png",
+      "sha256": "e9cf2ea72db80ddb72cc7486c078df886813475e20df0d2c8cce8780d627b265",
+      "content_reviewed": true,
+      "captured_utc": "2026-10-09T21:27:43.501681+00:00",
+      "observation": "Seed UID 1000; proof PID absent and pgrep su absent, each exit 1.",
+      "review_method": "Actual original image visually inspected; cross-checked against closed native transcript and verification records"
+    },
+    {
+      "filename": "M6-S11-b-baseline-restored.png",
+      "sha256": "619bee3081cbfa06f6cf375b93db27423bba88b525744e6f07a297b8f1aab7c4",
+      "content_reviewed": true,
+      "captured_utc": "2026-10-09T21:30:17.233057+00:00",
+      "observation": "Protected full-file comparison and original hash pass; UID 1001/GID 1002 and 0:0:644:2040 restored.",
+      "review_method": "Actual original image visually inspected; cross-checked against closed native transcript and verification records"
+    },
+    {
+      "filename": "M6-S11-account-restored.png",
+      "sha256": "4a485d4a0b566db5fc53759be5184c34de69b3d8d9527888ba700d83d2366fdf",
+      "content_reviewed": true,
+      "captured_utc": "2026-10-09T21:31:06.994912+00:00",
+      "observation": "Fresh non-sudo charlie login after restoration: UID 1001, GID 1002, whoami charlie, then exit to seed.",
+      "review_method": "Actual original image visually inspected; cross-checked against closed native transcript and verification records"
+    },
+    {
+      "filename": "M6-S13-cleanup.png",
+      "sha256": "6ee3c556e989b6b849ef7bee6633a8f0c4fbaac9b9c96e1759a646df18dfb6ce",
+      "content_reviewed": true,
+      "captured_utc": "2026-10-09T21:33:05.393798+00:00",
+      "observation": "No attack/control/su or proof PID; baseline hash OK; only root:0, normal charlie, dummy absent, ordinary binaries, input unmounted.",
+      "review_method": "Actual original image visually inspected; cross-checked against closed native transcript and verification records"
+    }
+  ],
+  "qualifications": [
+    "Authentication failure cause unknown; preserved.",
+    "S09 is a completed trial, not a still-live attacker.",
+    "S12 not performed; discussion only.",
+    "Final explicit output-share unmount required password; normal shutdown followed verified export."
+  ]
+}

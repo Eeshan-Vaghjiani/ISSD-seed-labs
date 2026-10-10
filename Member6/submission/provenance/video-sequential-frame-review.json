@@ -1,0 +1,95 @@
+{
+  "checked_utc": "2026-10-09T21:41:43.850025+00:00",
+  "initial_input_seek_issue": "Initial -ss before -i frame extraction emitted VP8 Invalid data found when processing input; 312-second frame attempt returned 69. Original full linear decodes had passed. Existing initial frame files are retained.",
+  "resolution": "Decode sequentially from the beginning, using output-side -ss; no source media modified.",
+  "actions": [
+    {
+      "command": [
+        "ffmpeg",
+        "-nostdin",
+        "-v",
+        "error",
+        "-i",
+        "Member6/evidence/incoming/opus-fresh-20261008/M6-task2-recorded-screen0.webm",
+        "-ss",
+        "12",
+        "-frames:v",
+        "1",
+        "-update",
+        "1",
+        "-n",
+        "Member6/evidence/incoming/opus-fresh-20261008/provenance/video-trial-review-decode-12s.png"
+      ],
+      "returncode": 0,
+      "stdout": "",
+      "stderr": "",
+      "frame_exists": true
+    },
+    {
+      "command": [
+        "ffmpeg",
+        "-nostdin",
+        "-v",
+        "error",
+        "-i",
+        "Member6/evidence/incoming/opus-fresh-20261008/M6-task2-login-screen0.webm",
+        "-ss",
+        "270",
+        "-frames:v",
+        "1",
+        "-update",
+        "1",
+        "-n",
+        "Member6/evidence/incoming/opus-fresh-20261008/provenance/video-login-review-decode-270s.png"
+      ],
+      "returncode": 0,
+      "stdout": "",
+      "stderr": "",
+      "frame_exists": true
+    },
+    {
+      "command": [
+        "ffmpeg",
+        "-nostdin",
+        "-v",
+        "error",
+        "-i",
+        "Member6/evidence/incoming/opus-fresh-20261008/M6-task2-login-screen0.webm",
+        "-ss",
+        "283",
+        "-frames:v",
+        "1",
+        "-update",
+        "1",
+        "-n",
+        "Member6/evidence/incoming/opus-fresh-20261008/provenance/video-login-review-decode-283s.png"
+      ],
+      "returncode": 0,
+      "stdout": "",
+      "stderr": "",
+      "frame_exists": true
+    },
+    {
+      "command": [
+        "ffmpeg",
+        "-nostdin",
+        "-v",
+        "error",
+        "-i",
+        "Member6/evidence/incoming/opus-fresh-20261008/M6-task2-login-screen0.webm",
+        "-ss",
+        "312",
+        "-frames:v",
+        "1",
+        "-update",
+        "1",
+        "-n",
+        "Member6/evidence/incoming/opus-fresh-20261008/provenance/video-login-review-decode-312s.png"
+      ],
+      "returncode": 0,
+      "stdout": "",
+      "stderr": "",
+      "frame_exists": true
+    }
+  ]
+}

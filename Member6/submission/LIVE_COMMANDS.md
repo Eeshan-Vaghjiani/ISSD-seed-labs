@@ -1,32 +1,10 @@
-# Member 6 — short live demonstration command sheet
+# Live commands — Member 6 — ISSD
 
-**PREPARED, NOT REHEARSED.** Use only after the actual lab, S02 verification and genuine Task 1/2 evidence are complete. All commands below run in the separate SEED 12.04 VM as ordinary `seed`, except the labelled administrative target preparation/reset.
+**All commands on this sheet run inside ISSD-Member6-SEED12 as seed.** Prepare the VM and a fresh `$RUN` using Part 0 of `LIVE_DEMO.md` before presenting. Actual experiments are complete; the classroom sequence is **prepared, not orally rehearsed**.
 
-## Before the presentation
+## Slide 4 → live dummy demonstration
 
-Confirm the group's allowance; the existing plan suggests 5–7 minutes. Open real S07, S09, S10 and S11 outside the VM as recorded-evidence backup. There are **no such M6 captures yet** at this preparation checkpoint.
-
-**MANUAL ACTION REQUIRED — VM: prepare the known lab dummy**
-
-```bash
-cd ~/issd-member6/lab-files
-bash ../automation/check-environment.sh
-pgrep -x cow_attack
-id
-```
-
-Proceed only if the environment is correct and no attacker remains. If `/zzz` exists, establish that it is the known lab target before resetting:
-
-```bash
-sudo sh -c 'printf "111111222222333333\n" > /zzz'
-sudo chown root:root /zzz
-sudo chmod 0644 /zzz
-RUN=presentation-dummy-$(date -u +%Y%m%dT%H%M%SZ)
-```
-
-Enter any VM sudo password manually. Explain COW and the two worker operations before beginning the demonstration.
-
-## Slide 4 → live terminal
+Keep the same terminal used for preparation. Explain normal COW before starting.
 
 ```bash
 id
@@ -35,28 +13,41 @@ cat /zzz
 echo 99999 > /zzz
 ./cow_control
 cat /zzz
-bash ../automation/trial-with-evidence.sh dummy 15 "$RUN"
+sha256sum -c ../provenance/dummy-normal.sha256
+bash run_trial.sh dummy 15 "$RUN"
 cat /zzz
 ls -l /zzz
-cat "logs/$RUN-summary.txt"
 ```
 
-Explain the **actual** output in order: ordinary write denial; private-memory change but original file unchanged; bounded race result verified from a fresh file read. If the live run is partial/unchanged, say so and show an earlier genuine S07 only if it has actually been collected. Identify it as recorded and use its real runtime. Do not promise success within 15 seconds.
+Say what actually happened: direct write denied; normal COW changed private memory only; inspect the race's backing-file result. The 15-second classroom bound differs from the recorded 30-second trials. Then verify the whole result:
+
+```bash
+(set -C; stat -c '%u:%g:%a:%s' /zzz > "logs/$RUN-metadata-after.txt")
+(set -C; python ../automation/verify-trial.py dummy "logs/$RUN" --live > "logs/$RUN-verification.log" 2>&1)
+echo $?
+```
+
+Exit 0 means the verifier accepted the exact result and metadata. For another exit, inspect the retained verification/program logs and describe the actual outcome. If the race does not succeed, show **recorded S07 from 9 October 2026**: exact replacement, 0 integer elapsed seconds in its 30-second-bound trial. Keep the new trial's failure/logs.
 
 ## Slide 5 → recorded account proof
 
-Show the actual S08 normal UID, S09 exact UID-only diff and S10 **non-sudo** login/`id -u` proof. State that the account experiment was recorded. Explain unchanged field width, password continuity and numeric UID 0. Show S11 restoration as the final account state. Do not type a template UID in place of the measured UID.
+Show S08 → S09 → S10 → S11, or `video/TASK2_FALLBACK.mp4` with its excerpt labels. Say: **“This is recorded Task 2 evidence from 9 October.”**
 
-## After rehearsal/presentation
+* Original UID/GID: **1001 / 1002**. Exact UID field: **1001 → 0000**.
+* First authentication failed; second non-sudo login returned **UID 0**, `whoami` root.
+* The proof shell ended; complete restoration and a new **UID 1001** login passed.
 
-**MANUAL ACTION REQUIRED — VM:** close any test login shells; confirm no attacker, remove the known dummy, and verify the normal account baseline:
+## After the demonstration → cleanup
+
+After the bounded trial returns, verify seed and stopped processes. Remove only this preparation's known `/zzz`.
 
 ```bash
-pgrep -x cow_attack
-pgrep -x su
 id
-sudo rm -f /zzz
+source ../automation/guest-guard.sh
+m6_no_attacker && m6_no_process su
+sudo cmp /etc/passwd /root/issd-member6-passwd.normal
+sudo rm -- /zzz
 bash ../automation/check-cleanup.sh
 ```
 
-Keep the new presentation trial logs. A successful future oral rehearsal, duration, classroom demonstration or course upload has not been claimed by this preparation sheet.
+Enter any sudo password directly in the VM. Stop on an unexpected account/process/permission result and use `LIVE_DEMO.md` recovery. Close/export the recording before shutdown or rollback. Recorded success does not predetermine a future live outcome.

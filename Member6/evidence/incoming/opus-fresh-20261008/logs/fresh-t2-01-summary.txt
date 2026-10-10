@@ -1,0 +1,10 @@
+Date: 2026-10-09T14:17:08-0700
+Kernel: 3.5.0-37-generic
+Identity: uid=1000(seed) gid=1000(seed) groups=1000(seed),4(adm),24(cdrom),27(sudo),30(dip),46(plugdev),109(lpadmin),124(sambashare),130(wireshark)
+Target: /etc/passwd
+Limit: 30s
+Before: 3edf14347c28c11d3a8816326e14baa3b99b569f1dc33dd15cd7d953c91dc337  /etc/passwd
+Elapsed: 0s
+Change detected: yes
+After: 99fced9d0853d999474f92617022e78efe7c87b0f63450da264c46bfa9d47cd2  /etc/passwd
+Stopped after content change; inspect the full diff and verify exact outcome.

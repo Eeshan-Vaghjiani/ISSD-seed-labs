@@ -1,0 +1,28 @@
+No matching process: cow_attack
+No supplied trial wrapper is running.
+{
+  "ACTUAL": "exact-change", 
+  "EXPECTED": "Complete six-byte dummy replacement", 
+  "EXPLANATION": "Compared entire before/after byte sequences, hashes and root:root 0644 metadata.", 
+  "actual_file_content": "111111******333333\n", 
+  "after_sha256": "97c0ed6bb0deb556349015713d1c0a86d11e1bf5572a78b087650e814479b47b", 
+  "baseline_details": {
+    "before_content": "111111222222333333\n"
+  }, 
+  "before_sha256": "7342e673ad4f9a5ea02fe84fa6ab1760d922e3f362c885ef4feda980423b9552", 
+  "elapsed_integer_seconds": 0, 
+  "euid": 1000, 
+  "file_length_unchanged": true, 
+  "identity_from_summary": "uid=1000(seed) gid=1000(seed) groups=1000(seed),4(adm),24(cdrom),27(sudo),30(dip),46(plugdev),109(lpadmin),124(sambashare),130(wireshark)", 
+  "kernel_from_summary": "3.5.0-37-generic", 
+  "kernel_race_attempt_count": null, 
+  "limit_seconds": 30, 
+  "live_file_checked": true, 
+  "live_sha256": "97c0ed6bb0deb556349015713d1c0a86d11e1bf5572a78b087650e814479b47b", 
+  "login_verified": false, 
+  "mode": "dummy", 
+  "prefix": "logs/fresh-t1-01", 
+  "program_has_only_expected_initialization_lines": true, 
+  "program_output": "RUID=1000 EUID=1000 target=/zzz file-byte-offset=6 length=6\nO_RDONLY + PROT_READ + MAP_PRIVATE; racing memory writes and MADV_DONTNEED.\nRun bounded trials with run_trial.sh; Ctrl+C stops a direct run.\n", 
+  "ruid": 1000
+}

@@ -1,0 +1,233 @@
+[
+  {
+    "selected": "M6-S01-vm-setup.png",
+    "original": "evidence/incoming/opus-fresh-20261008/M6-S01-vm-setup.png",
+    "sha256": "636d1f07e0df79828b5d1f68727c6d2c1fbc9afe19807e650f5ad64847c40da3",
+    "dimensions": [
+      1920,
+      1080
+    ],
+    "source_type": "User-supplied host capture",
+    "review": "Visually inspected; see fresh EVIDENCE_REVIEW.md"
+  },
+  {
+    "selected": "M6-S01-c-vm-setup.png",
+    "original": "evidence/incoming/opus-fresh-20261008/M6-S01-c-vm-setup.png",
+    "sha256": "cd1e42ade2cffb934b91aacae35f6fa42c8212bebd2f8f4d15364efae78d67e2",
+    "dimensions": [
+      678,
+      98
+    ],
+    "source_type": "User-supplied host capture",
+    "review": "Visually inspected; see fresh EVIDENCE_REVIEW.md"
+  },
+  {
+    "selected": "M6-S01-d-vm-setup.png",
+    "original": "evidence/incoming/opus-fresh-20261008/M6-S01-d-vm-setup.png",
+    "sha256": "30cab78cb311ffd043cc2e7b9ad6315a427ae1d3838d51dd93df79af183fc17f",
+    "dimensions": [
+      697,
+      335
+    ],
+    "source_type": "User-supplied host capture",
+    "review": "Visually inspected; see fresh EVIDENCE_REVIEW.md"
+  },
+  {
+    "selected": "M6-S02-environment.png",
+    "original": "evidence/incoming/opus-fresh-20261008/M6-S02-environment.png",
+    "sha256": "0f2bb0bc691505cb04b97183f3ac73f680612d883d773b3b7108ab4612c6de21",
+    "dimensions": [
+      1280,
+      960
+    ],
+    "source_type": "Unedited VirtualBox guest framebuffer",
+    "review": "Visually inspected; see fresh EVIDENCE_REVIEW.md"
+  },
+  {
+    "selected": "M6-S02-b-environment.png",
+    "original": "evidence/incoming/opus-fresh-20261008/M6-S02-b-environment.png",
+    "sha256": "a55be3c5a2d685aca5f476ffb7318a8bde8574f1fe4e56bcdcda7d282ae622af",
+    "dimensions": [
+      1280,
+      960
+    ],
+    "source_type": "Unedited VirtualBox guest framebuffer",
+    "review": "Visually inspected; see fresh EVIDENCE_REVIEW.md"
+  },
+  {
+    "selected": "M6-S03-code-build.png",
+    "original": "evidence/incoming/opus-fresh-20261008/M6-S03-code-build.png",
+    "sha256": "6972c079d991fb250dc89e6d9a6edce0da6cf6538d1607a4b4a57ca8f3c691e5",
+    "dimensions": [
+      1280,
+      960
+    ],
+    "source_type": "Unedited VirtualBox guest framebuffer",
+    "review": "Visually inspected; see fresh EVIDENCE_REVIEW.md"
+  },
+  {
+    "selected": "M6-S03-b-code-build.png",
+    "original": "evidence/incoming/opus-fresh-20261008/M6-S03-b-code-build.png",
+    "sha256": "3486bc41c24467b2ef91da30cb70fd16e74a2fcd95c2347a66e6e864c2a9bf0a",
+    "dimensions": [
+      1280,
+      960
+    ],
+    "source_type": "Unedited VirtualBox guest framebuffer",
+    "review": "Visually inspected; see fresh EVIDENCE_REVIEW.md"
+  },
+  {
+    "selected": "M6-S03-c-code-build.png",
+    "original": "evidence/incoming/opus-fresh-20261008/M6-S03-c-code-build.png",
+    "sha256": "b215714fbed7da04927a351cb0fd93909e03e6abd182454cb6f51002eff9abdc",
+    "dimensions": [
+      1280,
+      960
+    ],
+    "source_type": "Unedited VirtualBox guest framebuffer",
+    "review": "Visually inspected; see fresh EVIDENCE_REVIEW.md"
+  },
+  {
+    "selected": "M6-S04-dummy-baseline.png",
+    "original": "evidence/incoming/opus-fresh-20261008/M6-S04-dummy-baseline.png",
+    "sha256": "cad74381f15acae0a294dab8530a5b3beffda71d3faa31bd469f6af2f44d56a9",
+    "dimensions": [
+      1280,
+      960
+    ],
+    "source_type": "Unedited VirtualBox guest framebuffer",
+    "review": "Visually inspected; see fresh EVIDENCE_REVIEW.md"
+  },
+  {
+    "selected": "M6-S05-normal-cow.png",
+    "original": "evidence/incoming/opus-fresh-20261008/M6-S05-normal-cow.png",
+    "sha256": "2784a8c1e1cf8da6f8112020595aa2905cbc97476debd95047a1d55e832d10d0",
+    "dimensions": [
+      1280,
+      960
+    ],
+    "source_type": "Unedited VirtualBox guest framebuffer",
+    "review": "Visually inspected; see fresh EVIDENCE_REVIEW.md"
+  },
+  {
+    "selected": "M6-S06-task1-running.png",
+    "original": "evidence/incoming/opus-fresh-20261008/M6-S06-task1-running.png",
+    "sha256": "b6de40ee583b88b1290c94dadec9408cf534f34bd5b35472859d56651bc48b1d",
+    "dimensions": [
+      1280,
+      960
+    ],
+    "source_type": "Unedited VirtualBox guest framebuffer",
+    "review": "Visually inspected; see fresh EVIDENCE_REVIEW.md"
+  },
+  {
+    "selected": "M6-S07-task1-result.png",
+    "original": "evidence/incoming/opus-fresh-20261008/M6-S07-task1-result.png",
+    "sha256": "54f16ec8e9574842f254ea37fb60b9432036efea14f822ac83c133ef6135bad3",
+    "dimensions": [
+      1280,
+      960
+    ],
+    "source_type": "Unedited VirtualBox guest framebuffer",
+    "review": "Visually inspected; see fresh EVIDENCE_REVIEW.md"
+  },
+  {
+    "selected": "M6-S08-charlie-baseline.png",
+    "original": "evidence/incoming/opus-fresh-20261008/M6-S08-charlie-baseline.png",
+    "sha256": "b3688fbb0d0fdc610d550e535d1d8bfca1fa8eb508dde6845c8c8eb07e6360a2",
+    "dimensions": [
+      1280,
+      960
+    ],
+    "source_type": "Unedited VirtualBox guest framebuffer",
+    "review": "Visually inspected; see fresh EVIDENCE_REVIEW.md"
+  },
+  {
+    "selected": "M6-S08-b-charlie-baseline.png",
+    "original": "evidence/incoming/opus-fresh-20261008/M6-S08-b-charlie-baseline.png",
+    "sha256": "4f6801d586adf5f37452e4631b7c9e0716d7b19736c42cd9073ef4135555813f",
+    "dimensions": [
+      1280,
+      960
+    ],
+    "source_type": "Unedited VirtualBox guest framebuffer",
+    "review": "Visually inspected; see fresh EVIDENCE_REVIEW.md"
+  },
+  {
+    "selected": "M6-S09-task2-uid-change.png",
+    "original": "evidence/incoming/opus-fresh-20261008/M6-S09-task2-uid-change.png",
+    "sha256": "fafa04a7a0a6975e63b7de4cb53171570bc16271b46203aed2f0a77100244cc0",
+    "dimensions": [
+      1280,
+      960
+    ],
+    "source_type": "Unedited VirtualBox guest framebuffer",
+    "review": "Visually inspected; see fresh EVIDENCE_REVIEW.md"
+  },
+  {
+    "selected": "M6-S09-b-task2-uid-change.png",
+    "original": "evidence/incoming/opus-fresh-20261008/M6-S09-b-task2-uid-change.png",
+    "sha256": "a5a92b999ffdc015e78994d50c032a124866cdd4e587e52ee9d5d4cbfe940ded",
+    "dimensions": [
+      1280,
+      960
+    ],
+    "source_type": "Unedited VirtualBox guest framebuffer",
+    "review": "Visually inspected; see fresh EVIDENCE_REVIEW.md"
+  },
+  {
+    "selected": "M6-S10-task2-root-proof.png",
+    "original": "evidence/incoming/opus-fresh-20261008/M6-S10-task2-root-proof.png",
+    "sha256": "5fa0d3ebb3a8e9678fe2bb47affbbf853a6da9251c8cf319986389a00d0c88dd",
+    "dimensions": [
+      1280,
+      960
+    ],
+    "source_type": "Unedited VirtualBox guest framebuffer",
+    "review": "Visually inspected; see fresh EVIDENCE_REVIEW.md"
+  },
+  {
+    "selected": "M6-S10-b-proof-shell-exited.png",
+    "original": "evidence/incoming/opus-fresh-20261008/M6-S10-b-proof-shell-exited.png",
+    "sha256": "e9cf2ea72db80ddb72cc7486c078df886813475e20df0d2c8cce8780d627b265",
+    "dimensions": [
+      1280,
+      960
+    ],
+    "source_type": "Unedited VirtualBox guest framebuffer",
+    "review": "Visually inspected; see fresh EVIDENCE_REVIEW.md"
+  },
+  {
+    "selected": "M6-S11-account-restored.png",
+    "original": "evidence/incoming/opus-fresh-20261008/M6-S11-account-restored.png",
+    "sha256": "4a485d4a0b566db5fc53759be5184c34de69b3d8d9527888ba700d83d2366fdf",
+    "dimensions": [
+      1280,
+      960
+    ],
+    "source_type": "Unedited VirtualBox guest framebuffer",
+    "review": "Visually inspected; see fresh EVIDENCE_REVIEW.md"
+  },
+  {
+    "selected": "M6-S11-b-baseline-restored.png",
+    "original": "evidence/incoming/opus-fresh-20261008/M6-S11-b-baseline-restored.png",
+    "sha256": "619bee3081cbfa06f6cf375b93db27423bba88b525744e6f07a297b8f1aab7c4",
+    "dimensions": [
+      1280,
+      960
+    ],
+    "source_type": "Unedited VirtualBox guest framebuffer",
+    "review": "Visually inspected; see fresh EVIDENCE_REVIEW.md"
+  },
+  {
+    "selected": "M6-S13-cleanup.png",
+    "original": "evidence/incoming/opus-fresh-20261008/M6-S13-cleanup.png",
+    "sha256": "6ee3c556e989b6b849ef7bee6633a8f0c4fbaac9b9c96e1759a646df18dfb6ce",
+    "dimensions": [
+      1280,
+      960
+    ],
+    "source_type": "Unedited VirtualBox guest framebuffer",
+    "review": "Visually inspected; see fresh EVIDENCE_REVIEW.md"
+  }
+]

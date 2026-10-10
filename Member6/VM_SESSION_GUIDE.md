@@ -1,6 +1,8 @@
 # Member 6 — the actual VM session, checkpoint by checkpoint
 
-**Execution status: pending first boot.** This is the continuation procedure for the VM already configured on Arch. The original [START_TO_FINISH_GUIDE.md](START_TO_FINISH_GUIDE.md) supplies the assignment, source explanation and troubleshooting. Use the existing four lab files. Every command in this document is **inside the SEED VM**, except an explicitly labelled HOST ACTION.
+**Completed-run pointer — 9 October 2026:** all required checkpoints now pass; see [the verified results](submission/RESULTS.md) and [fresh evidence table](evidence/incoming/opus-fresh-20261008/README.md). The VM is powered off normally with charlie restored and the dummy removed. Use `submission/LIVE_PREPARATION.md` for the next rehearsal. The procedure below remains instructional and its expected/actual placeholders are not current results.
+
+**Fresh-run update — 8 October 2026:** the previous session booted the VM and completed environment/transfer/build checks, then stopped before the experiments. The user now requests new screenshots; see [OPENCODE_HANDOFF.md](OPENCODE_HANDOFF.md). This document retains the prepared full procedure. Its per-step expected/actual placeholders are instructions, not a current results ledger. The original [START_TO_FINISH_GUIDE.md](START_TO_FINISH_GUIDE.md) supplies the assignment, source explanation and troubleshooting. Use the existing four lab files. Every command in this document is **inside the SEED VM**, except an explicitly labelled HOST ACTION.
 
 At each checkpoint record **EXPECTED / ACTUAL / EXPLANATION**. “Expected” below is a prediction, never a saved result. Stop at any unexpected environment, setup, account or verification error and send its actual output. Keep failed/partial trials under their original labels.
 

@@ -1,0 +1,151 @@
+{
+  "checked_utc": "2026-10-09T21:37:18.591743+00:00",
+  "records": [
+    {
+      "filename": "M6-task2-login-screen0.webm",
+      "sha256": "631a38ead710c04301a883d6812cf65937acfd47cf3f064e46583d197279f53f",
+      "bytes": 1975875,
+      "ffprobe": {
+        "streams": [
+          {
+            "index": 0,
+            "codec_name": "vp8",
+            "codec_long_name": "On2 VP8",
+            "profile": "0",
+            "codec_type": "video",
+            "codec_tag_string": "[0][0][0][0]",
+            "codec_tag": "0x0000",
+            "mime_codec_string": "vp8",
+            "width": 1280,
+            "height": 960,
+            "coded_width": 1280,
+            "coded_height": 960,
+            "has_b_frames": 0,
+            "sample_aspect_ratio": "1:1",
+            "display_aspect_ratio": "4:3",
+            "pix_fmt": "yuv420p",
+            "level": -99,
+            "field_order": "progressive",
+            "r_frame_rate": "15/1",
+            "avg_frame_rate": "15/1",
+            "time_base": "1/1000",
+            "start_pts": 0,
+            "start_time": "0.000000",
+            "disposition": {
+              "default": 1,
+              "dub": 0,
+              "original": 0,
+              "comment": 0,
+              "lyrics": 0,
+              "karaoke": 0,
+              "forced": 0,
+              "hearing_impaired": 0,
+              "visual_impaired": 0,
+              "clean_effects": 0,
+              "attached_pic": 0,
+              "timed_thumbnails": 0,
+              "non_diegetic": 0,
+              "captions": 0,
+              "descriptions": 0,
+              "metadata": 0,
+              "dependent": 0,
+              "still_image": 0,
+              "multilayer": 0
+            }
+          }
+        ],
+        "format": {
+          "filename": "Member6/evidence/incoming/opus-fresh-20261008/M6-task2-login-screen0.webm",
+          "nb_streams": 1,
+          "nb_programs": 0,
+          "nb_stream_groups": 0,
+          "format_name": "matroska,webm",
+          "format_long_name": "Matroska / WebM",
+          "start_time": "0.000000",
+          "duration": "313.096000",
+          "size": "1975875",
+          "bit_rate": "50486",
+          "probe_score": 100,
+          "tags": {
+            "encoder": "vpxencv1.17.0"
+          }
+        }
+      },
+      "full_decode_returncode": 0,
+      "full_decode_stderr": "[null @ 0x5631ee7e6680] Application provided invalid, non monotonically increasing dts to muxer in stream 0: 41 >= 41\n[null @ 0x5631ee7e6680] Application provided invalid, non monotonically increasing dts to muxer in stream 0: 42 >= 42\n[null @ 0x5631ee7e6680] Application provided invalid, non monotonically increasing dts to muxer in stream 0: 46 >= 46\n[null @ 0x5631ee7e6680] Application provided invalid, non monotonically increasing dts to muxer in stream 0: 47 >= 47\n[null @ 0x5631ee7e6680] Application provided invalid, non monotonically increasing dts to muxer in stream 0: 51 >= 51\n[null @ 0x5631ee7e6680] Application provided invalid, non monotonically increasing dts to muxer in stream 0: 77 >= 77\n    Last message repeated 1 times\n[null @ 0x5631ee7e6680] Application provided invalid, non monotonically increasing dts to muxer in stream 0: 78 >= 78\n[null @ 0x5631ee7e6680] Application provided invalid, non monotonically increasing dts to muxer in stream 0: 82 >= 82\n[null @ 0x5631ee7e6680] Application provided invalid, non monotonically increasing dts to muxer in stream 0: 83 >= 83\n[null @ 0x5631ee7e6680] Application provided invalid, non monotonically increasing dts to muxer in stream 0: 87 >= 87\n    Last message repeated 1 times\n[null @ 0x5631ee7e6680] Application provided invalid, non monotonically increasing dts to muxer in stream 0: 88 >= 88\n[null @ 0x5631ee7e6680] Application provided invalid, non monotonically increasing dts to muxer in stream 0: 92 >= 92\n[null @ 0x5631ee7e6680] Application provided invalid, non monotonically increasing dts to muxer in stream 0: 118 >= 118\n[null @ 0x5631ee7e6680] Application provided invalid, non monotonically increasing dts to muxer in stream 0: 119 >= 119\n[null @ 0x5631ee7e6680] Application provided invalid, non monotonically increasing dts to muxer in stream 0: 123 >= 123\n[null @ 0x5631ee7e6680] Application provided invalid, non monotonically increasing dts to muxer in stream 0: 2017 >= 2017\n    Last message repeated 1 times\n[null @ 0x5631ee7e6680] Application provided invalid, non monotonically increasing dts to muxer in stream 0: 2019 >= 2019\n    Last message repeated 9 times\n[null @ 0x5631ee7e6680] Application provided invalid, non monotonically increasing dts to muxer in stream 0: 2022 >= 2022\n[null @ 0x5631ee7e6680] Application provided invalid, non monotonically increasing dts to muxer in stream 0: 2164 >= 2164\n[null @ 0x5631ee7e6680] Application provided invalid, non monotonically increasing dts to muxer in stream 0: 2313 >= 2313\n[null @ 0x5631ee7e6680] Application provided invalid, non monotonically increasing dts to muxer in stream 0: 3309 >= 3309\n    Last message repeated 13 times\n[null @ 0x5631ee7e6680] Application provided invalid, non monotonically increasing dts to muxer in stream 0: 3310 >= 3310\n    Last message repeated 5 times\n[null @ 0x5631ee7e6680] Application provided invalid, non monotonically increasing dts to muxer in stream 0: 3311 >= 3311\n[null @ 0x5631ee7e6680] Application provided invalid, non monotonically increasing dts to muxer in stream 0: 3316 >= 3316\n[null @ 0x5631ee7e6680] Application provided invalid, non monotonically increasing dts to muxer in stream 0: 3317 >= 3317\n    Last message repeated 6 times\n[null @ 0x5631ee7e6680] Application provided invalid, non monotonically increasing dts to muxer in stream 0: 3318 >= 3318\n    Last message repeated 15 times\n[null @ 0x5631ee7e6680] Application provided invalid, non monotonically increasing dts to muxer in stream 0: 3319 >= 3319\n    Last message repeated 10 times\n[null @ 0x5631ee7e6680] Application provided invalid, non monotonically increasing dts to muxer in stream 0: 3320 >= 3320\n    Last message repeated 7 times\n[null @ 0x5631ee7e6680] Application provided invalid, non monotonically increasing dts to muxer in stream 0: 3321 >= 3321\n    Last message repeated 3 times\n[null @ 0x5631ee7e6680] Application provided invalid, non monotonically increasing dts to muxer in stream 0: 3346 >= 3346\n[null @ 0x5631ee7e6680] Application provided invalid, non monotonically increasing dts to muxer in stream 0: 3347 >= 3347\n    Last message repeated 9 times\n[null @ 0x5631ee7e6680] Application provided invalid, non monotonically increasing dts to muxer in stream 0: 3349 >= 3349\n[null @ 0x5631ee7e6680] Application provided invalid, non monotonically increasing dts to muxer in stream 0: 3357 >= 3357\n    Last message repeated 5 times\n[null @ 0x5631ee7e6680] Application provided invalid, non monotonically increasing dts to muxer in stream 0: 3358 >= 3358\n    Last message repeated 7 times\n[null @ 0x5631ee7e6680] Application provided invalid, non monotonically increasing dts to muxer in stream 0: 3801 >= 3801\n    Last message repeated 3 times\n[null @ 0x5631ee7e6680] Application provided invalid, non monotonically increasing dts to muxer in stream 0: 3814 >= 3814\n    Last message repeated 6 times\n[null @ 0x5631ee7e6680] Application provided invalid, non monotonically increasing dts to muxer in stream 0: 3815 >= 3815\n    Last message repeated 4 times\n[null @ 0x5631ee7e6680] Application provided invalid, non monotonically increasing dts to muxer in stream 0: 3816 >= 3816\n    Last message repeated 3 times\n[null @ 0x5631ee7e6680] Application provided invalid, non monotonically increasing dts to muxer in stream 0: 3830 >= 3830\n[null @ 0x5631ee7e6680] Application provided invalid, non monotonically increasing dts to muxer in stream 0: 3831 >= 3831\n    Last message repeated 4 times\n[null @ 0x5631ee7e6680] Application provided invalid, non monotonically increasing dts to muxer in stream 0: 3832 >= 3832\n    Last message repeated 7 times\n[null @ 0x5631ee7e6680] Application provided invalid, non monotonically increasing dts to muxer in stream 0: 3843 >= 3843\n    Last message repeated 6 times\n[null @ 0x5631ee7e6680] Application provided invalid, non monotonically increasing dts to muxer in stream 0: 3844 >= 3844\n    Last message repeated 3 times\n[null @ 0x5631ee7e6680] Application provided invalid, non monotonically increasing dts to muxer in stream 0: 3845 >= 3845\n    Last message repeated 4 times\n[null @ 0x5631ee7e6680] Application provided invalid, non monotonically increasing dts to muxer in stream 0: 3846 >= 3846\n    Last message repeated 3 times\n[null @ 0x5631ee7e6680] Application provided invalid, non monotonically increasing dts to muxer in stream 0: 3847 >= 3847\n    Last message repeated 3 times\n[null @ 0x5631ee7e6680] Application provided invalid, non monotonically increasing dts to muxer in stream 0: 3848 >= 3848\n    Last message repeated 4 times\n[null @ 0x5631ee7e6680] Application provided invalid, non monotonically increasing dts to muxer in stream 0: 3849 >= 3849\n    Last message repeated 4 times\n[null @ 0x5631ee7e6680] Application provided invalid, non monotonically increasing dts to muxer in stream 0: 3850 >= 3850\n    Last message repeated 5 times\n[null @ 0x5631ee7e6680] Application provided invalid, non monotonically increasing dts to muxer in stream 0: 3854 >= 3854\n[null @ 0x5631ee7e6680] Application provided invalid, non monotonically increasing dts to muxer in stream 0: 3855 >= 3855\n    Last message repeated 4 times\n[null @ 0x5631ee7e6680] Application provided invalid, non monotonically increasing dts to muxer in stream 0: 3856 >= 3856\n    Last message repeated 4 times\n[null @ 0x5631ee7e6680] Application provided invalid, non monotonically increasing dts to muxer in stream 0: 3857 >= 3857\n    Last message repeated 2 times\n[null @ 0x5631ee7e6680] Application provided invalid, non monotonically increasing dts to muxer in stream 0: 3858 >= 3858\n    Last message repeated 2 times\n[null @ 0x5631ee7e6680] Application provided invalid, non monotonically increasing dts to muxer in stream 0: 3859 >= 3859\n    Last message repeated 3 times\n[null @ 0x5631ee7e6680] Application provided invalid, non monotonically increasing dts to muxer in stream 0: 3860 >= 3860\n    Last message repeated 4 times\n[null @ 0x5631ee7e6680] Application provided invalid, non monotonically increasing dts to muxer in stream 0: 3861 >= 3861\n    Last message repeated 5 times\n[null @ 0x5631ee7e6680] Application provided invalid, non monotonically increasing dts to muxer in stream 0: 3862 >= 3862\n    Last message repeated 3 times\n[null @ 0x5631ee7e6680] Application provided invalid, non monotonically increasing dts to muxer in stream 0: 4118 >= 4118\n[null @ 0x5631ee7e6680] Application provided invalid, non monotonically increasing dts to muxer in stream 0: 4145 >= 4145\n[null @ 0x5631ee7e6680] Application provided invalid, non monotonically increasing dts to muxer in stream 0: 4146 >= 4146\n[null @ 0x5631ee7e6680] Application provided invalid, non monotonically increasing dts to muxer in stream 0: 4172 >= 4172\n[null @ 0x5631ee7e6680] Application provided invalid, non monotonically increasing dts to muxer in stream 0: 4173 >= 4173\n[null @ 0x5631ee7e6680] Application provided invalid, non monotonically increasing dts to muxer in stream 0: 4177 >= 4177\n[null @ 0x5631ee7e6680] Application provided invalid, non monotonically increasing dts to muxer in stream 0: 4178 >= 4178\n    Last message repeated 1 times\n[null @ 0x5631ee7e6680] Application provided invalid, non monotonically increasing dts to muxer in stream 0: 4182 >= 4182\n[null @ 0x5631ee7e6680] Application provided invalid, non monotonically increasing dts to muxer in stream 0: 4183 >= 4183\n    Last message repeated 1 times\n[null @ 0x5631ee7e6680] Application provided invalid, non monotonically increasing dts to muxer in stream 0: 4526 >= 4526\n[null @ 0x5631ee7e6680] Application provided invalid, non monotonically increasing dts to muxer in stream 0: 4578 >= 4578\n[null @ 0x5631ee7e6680] Application provided invalid, non monotonically increasing dts to muxer in stream 0: 4579 >= 4579\n[null @ 0x5631ee7e6680] Application provided invalid, non monotonically increasing dts to muxer in stream 0: 4583 >= 4583\n[null @ 0x5631ee7e6680] Application provided invalid, non monotonically increasing dts to muxer in stream 0: 4584 >= 4584\n[null @ 0x5631ee7e6680] Application provided invalid, non monotonically increasing dts to muxer in stream 0: 4588 >= 4588\n[null @ 0x5631ee7e6680] Application provided invalid, non monotonically increasing dts to muxer in stream 0: 4589 >= 4589\n[null @ 0x5631ee7e6680] Application provided invalid, non monotonically increasing dts to muxer in stream 0: 4593 >= 4593\n[null @ 0x5631ee7e6680] Application provided invalid, non monotonically increasing dts to muxer in stream 0: 4594 >= 4594\n[null @ 0x5631ee7e6680] Application provided invalid, non monotonically increasing dts to muxer in stream 0: 4598 >= 4598\n[null @ 0x5631ee7e6680] Application provided invalid, non monotonically increasing dts to muxer in stream 0: 4625 >= 4625\n[null @ 0x5631ee7e6680] Application provided invalid, non monotonically increasing dts to muxer in stream 0: 4626 >= 4626\n[null @ 0x5631ee7e6680] Application provided invalid, non monotonically increasing dts to muxer in stream 0: 4652 >= 4652\n[null @ 0x5631ee7e6680] Application provided invalid, non monotonically increasing dts to muxer in stream 0: 4653 >= 4653\n    Last message repeated 1 times\n[null @ 0x5631ee7e6680] Application provided invalid, non monotonically increasing dts to muxer in stream 0: 4657 >= 4657\n[null @ 0x5631ee7e6680] Application provided invalid, non monotonically increasing dts to muxer in stream 0: 4683 >= 4683\n[null @ 0x5631ee7e6680] Application provided invalid, non monotonically increasing dts to muxer in stream 0: 4684 >= 4684\n"
+    },
+    {
+      "filename": "M6-task2-recorded-screen0.webm",
+      "sha256": "92500c60da493c075755dc41696a5f31c3096610f9b02f66676013db9c94bfe2",
+      "bytes": 875768,
+      "ffprobe": {
+        "streams": [
+          {
+            "index": 0,
+            "codec_name": "vp8",
+            "codec_long_name": "On2 VP8",
+            "profile": "0",
+            "codec_type": "video",
+            "codec_tag_string": "[0][0][0][0]",
+            "codec_tag": "0x0000",
+            "mime_codec_string": "vp8",
+            "width": 1280,
+            "height": 960,
+            "coded_width": 1280,
+            "coded_height": 960,
+            "has_b_frames": 0,
+            "sample_aspect_ratio": "1:1",
+            "display_aspect_ratio": "4:3",
+            "pix_fmt": "yuv420p",
+            "level": -99,
+            "field_order": "progressive",
+            "r_frame_rate": "15/1",
+            "avg_frame_rate": "15/1",
+            "time_base": "1/1000",
+            "start_pts": 0,
+            "start_time": "0.000000",
+            "disposition": {
+              "default": 1,
+              "dub": 0,
+              "original": 0,
+              "comment": 0,
+              "lyrics": 0,
+              "karaoke": 0,
+              "forced": 0,
+              "hearing_impaired": 0,
+              "visual_impaired": 0,
+              "clean_effects": 0,
+              "attached_pic": 0,
+              "timed_thumbnails": 0,
+              "non_diegetic": 0,
+              "captions": 0,
+              "descriptions": 0,
+              "metadata": 0,
+              "dependent": 0,
+              "still_image": 0,
+              "multilayer": 0
+            }
+          }
+        ],
+        "format": {
+          "filename": "Member6/evidence/incoming/opus-fresh-20261008/M6-task2-recorded-screen0.webm",
+          "nb_streams": 1,
+          "nb_programs": 0,
+          "nb_stream_groups": 0,
+          "format_name": "matroska,webm",
+          "format_long_name": "Matroska / WebM",
+          "start_time": "0.000000",
+          "duration": "130.065000",
+          "size": "875768",
+          "bit_rate": "53866",
+          "probe_score": 100,
+          "tags": {
+            "encoder": "vpxencv1.17.0"
+          }
+        }
+      },
+      "full_decode_returncode": 0,
+      "full_decode_stderr": "[null @ 0x55e048556680] Application provided invalid, non monotonically increasing dts to muxer in stream 0: 46 >= 46\n[null @ 0x55e048556680] Application provided invalid, non monotonically increasing dts to muxer in stream 0: 47 >= 47\n[null @ 0x55e048556680] Application provided invalid, non monotonically increasing dts to muxer in stream 0: 51 >= 51\n    Last message repeated 1 times\n[null @ 0x55e048556680] Application provided invalid, non monotonically increasing dts to muxer in stream 0: 52 >= 52\n[null @ 0x55e048556680] Application provided invalid, non monotonically increasing dts to muxer in stream 0: 56 >= 56\n[null @ 0x55e048556680] Application provided invalid, non monotonically increasing dts to muxer in stream 0: 57 >= 57\n[null @ 0x55e048556680] Application provided invalid, non monotonically increasing dts to muxer in stream 0: 61 >= 61\n[null @ 0x55e048556680] Application provided invalid, non monotonically increasing dts to muxer in stream 0: 91 >= 91\n[null @ 0x55e048556680] Application provided invalid, non monotonically increasing dts to muxer in stream 0: 92 >= 92\n[null @ 0x55e048556680] Application provided invalid, non monotonically increasing dts to muxer in stream 0: 96 >= 96\n[null @ 0x55e048556680] Application provided invalid, non monotonically increasing dts to muxer in stream 0: 97 >= 97\n[null @ 0x55e048556680] Application provided invalid, non monotonically increasing dts to muxer in stream 0: 101 >= 101\n[null @ 0x55e048556680] Application provided invalid, non monotonically increasing dts to muxer in stream 0: 102 >= 102\n    Last message repeated 1 times\n[null @ 0x55e048556680] Application provided invalid, non monotonically increasing dts to muxer in stream 0: 106 >= 106\n[null @ 0x55e048556680] Application provided invalid, non monotonically increasing dts to muxer in stream 0: 107 >= 107\n[null @ 0x55e048556680] Application provided invalid, non monotonically increasing dts to muxer in stream 0: 111 >= 111\n[null @ 0x55e048556680] Application provided invalid, non monotonically increasing dts to muxer in stream 0: 112 >= 112\n"
+    }
+  ]
+}

@@ -1,6 +1,6 @@
 # Member 6 — execution helpers
 
-Use [../VM_SESSION_GUIDE.md](../VM_SESSION_GUIDE.md) after the host reboot and actual guest checks. These helpers supplement the supplied four lab files. `SOURCE_SHA256SUMS` identifies those originals at repository commit `2906f262d2f9364dc8dddd3ec69a9087b4b413de`.
+Both tasks, restoration and cleanup were completed on **9 October 2026**. Use [the verified results](../submission/RESULTS.md) for that run and [the preparation guide](../submission/LIVE_PREPARATION.md) for a future rehearsal. These helpers supplement the supplied four lab files. `SOURCE_SHA256SUMS` identifies those originals at repository commit `2906f262d2f9364dc8dddd3ec69a9087b4b413de`.
 
 | Helper | Purpose | Invocation / effects |
 |---|---|---|
@@ -41,6 +41,6 @@ Omit `--live` on the host. The ordinary prescribed-guest verifier intentionally 
 
 ## Compatibility and validation status
 
-The shell helpers target Bash 4.x and use `pgrep -x` plus `ps`, avoiding reliance on newer `pgrep -a`. The verifier uses Python 2.7/3-compatible syntax. Host syntax checks, in-memory comparator checks, and rejection of the actual Arch host passed on 7 October 2026. **Runtime compatibility with the SEED guest is pending its first boot.** A runtime failure must be recorded and corrected before proceeding.
+The shell helpers target Bash 4.x and use `pgrep -x` plus `ps`, avoiding reliance on newer `pgrep -a`. The verifier uses Python 2.7/3-compatible syntax. Host syntax checks, in-memory comparator checks, and rejection of the actual Arch host passed on 7 October 2026. In the **9 October fresh guest run**, the guard, environment/build checks, Python 2.7 whole-file verifier, cleanup checker and export helper were exercised successfully. The supplied `run_trial.sh` was invoked directly and visibly for each task, with metadata and detailed verification recorded separately. The alternative `trial-with-evidence.sh` route shown above is not the invocation claimed for those two fresh trials. See the retained transcripts and final-export records in `../evidence/incoming/opus-fresh-20261008/`.
 
 Authentication stays interactive. Enter passwords only at the VM's password prompts. The report should disclose that these helpers assist collection/verification, while the supplied C programs perform the experiment.

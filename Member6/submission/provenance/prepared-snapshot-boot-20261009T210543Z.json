@@ -1,0 +1,12 @@
+{
+  "command": [
+    "VBoxManage",
+    "startvm",
+    "242db196-83e1-4b7a-9f0b-e399d6f8b9dc",
+    "--type",
+    "gui"
+  ],
+  "returncode": 0,
+  "stdout": "Waiting for VM \"242db196-83e1-4b7a-9f0b-e399d6f8b9dc\" to power on...\nVM \"242db196-83e1-4b7a-9f0b-e399d6f8b9dc\" has been successfully started.\n",
+  "stderr": ""
+}

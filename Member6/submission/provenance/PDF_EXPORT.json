@@ -1,0 +1,20 @@
+{
+  "command": [
+    "libreoffice",
+    "-env:UserInstallation=file:///tmp/opencode/member6-libreoffice-profile",
+    "--headless",
+    "--convert-to",
+    "pdf",
+    "--outdir",
+    "/home/DHB/Downloads/ISSP/ISSD-seed-labs/Member6/submission",
+    "/home/DHB/Downloads/ISSP/ISSD-seed-labs/Member6/submission/REPORT.docx",
+    "/home/DHB/Downloads/ISSP/ISSD-seed-labs/Member6/submission/LIVE_DEMO.docx",
+    "/home/DHB/Downloads/ISSP/ISSD-seed-labs/Member6/submission/LIVE_COMMANDS.docx",
+    "/home/DHB/Downloads/ISSP/ISSD-seed-labs/Member6/submission/LIVE_PREPARATION.docx",
+    "/home/DHB/Downloads/ISSP/ISSD-seed-labs/Member6/submission/SLIDE_NOTES.docx",
+    "/home/DHB/Downloads/ISSP/ISSD-seed-labs/Member6/submission/MAIN_PRESENTATION.pptx"
+  ],
+  "returncode": 0,
+  "stdout": "convert /home/DHB/Downloads/ISSP/ISSD-seed-labs/Member6/submission/REPORT.docx as a Writer document -> /home/DHB/Downloads/ISSP/ISSD-seed-labs/Member6/submission/REPORT.pdf using filter : writer_pdf_Export\nOverwriting: /home/DHB/Downloads/ISSP/ISSD-seed-labs/Member6/submission/REPORT.pdf\nconvert /home/DHB/Downloads/ISSP/ISSD-seed-labs/Member6/submission/LIVE_DEMO.docx as a Writer document -> /home/DHB/Downloads/ISSP/ISSD-seed-labs/Member6/submission/LIVE_DEMO.pdf using filter : writer_pdf_Export\nOverwriting: /home/DHB/Downloads/ISSP/ISSD-seed-labs/Member6/submission/LIVE_DEMO.pdf\nconvert /home/DHB/Downloads/ISSP/ISSD-seed-labs/Member6/submission/LIVE_COMMANDS.docx as a Writer document -> /home/DHB/Downloads/ISSP/ISSD-seed-labs/Member6/submission/LIVE_COMMANDS.pdf using filter : writer_pdf_Export\nOverwriting: /home/DHB/Downloads/ISSP/ISSD-seed-labs/Member6/submission/LIVE_COMMANDS.pdf\nconvert /home/DHB/Downloads/ISSP/ISSD-seed-labs/Member6/submission/LIVE_PREPARATION.docx as a Writer document -> /home/DHB/Downloads/ISSP/ISSD-seed-labs/Member6/submission/LIVE_PREPARATION.pdf using filter : writer_pdf_Export\nOverwriting: /home/DHB/Downloads/ISSP/ISSD-seed-labs/Member6/submission/LIVE_PREPARATION.pdf\nconvert /home/DHB/Downloads/ISSP/ISSD-seed-labs/Member6/submission/SLIDE_NOTES.docx as a Writer document -> /home/DHB/Downloads/ISSP/ISSD-seed-labs/Member6/submission/SLIDE_NOTES.pdf using filter : writer_pdf_Export\nOverwriting: /home/DHB/Downloads/ISSP/ISSD-seed-labs/Member6/submission/SLIDE_NOTES.pdf\nconvert /home/DHB/Downloads/ISSP/ISSD-seed-labs/Member6/submission/MAIN_PRESENTATION.pptx as a Impress document -> /home/DHB/Downloads/ISSP/ISSD-seed-labs/Member6/submission/MAIN_PRESENTATION.pdf using filter : impress_pdf_Export\nOverwriting: /home/DHB/Downloads/ISSP/ISSD-seed-labs/Member6/submission/MAIN_PRESENTATION.pdf\n",
+  "stderr": ""
+}

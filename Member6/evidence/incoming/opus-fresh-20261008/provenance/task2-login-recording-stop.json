@@ -1,0 +1,13 @@
+{
+  "time_utc": "2026-10-09T21:27:43.670222+00:00",
+  "command": [
+    "VBoxManage",
+    "controlvm",
+    "242db196-83e1-4b7a-9f0b-e399d6f8b9dc",
+    "recording",
+    "stop"
+  ],
+  "returncode": 0,
+  "stdout": "",
+  "stderr": ""
+}

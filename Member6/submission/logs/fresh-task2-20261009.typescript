@@ -1,0 +1,213 @@
+Script started on Fri 09 Oct 2026 02:08:17 PM PDT
+[10/09/2026 14:08] seed@ubuntu:~/issd-member6/lab-files$ sudo -v
+[sudo] password for seed: 
+[10/09/2026 14:08] seed@ubuntu:~/issd-member6/lab-files$ xrandr -s 1280x9 60
+[10/09/2026 14:11] seed@ubuntu:~/issd-member6/lab-files$ [K[10/09/2026 14:11] seed@ubuntu:~/issd-member6/lab-files$ python -c 'import gtk; r=gtk.gdk.get_default_root_window(); w=r. property_get("_NET_ACTIVE_WINDOW")[2][0]; gtk.gdk.window_foreign_new(w).maximize(); gtk.gdk.display_get_default().warp_po inter(gtk.gdk.screen_get_default(),1250,930); gtk.gdk.flush()'
+[10/09/2026 14:12] seed@ubuntu:~/issd-member6/lab-files$ source ../automation/guest-guard.sh && m6_require_guest && m6_re quire_workspace
+[10/09/2026 14:12] seed@ubuntu:~/issd-member6/lab-files$ id
+uid=1000(seed) gid=1000(seed) groups=1000(seed),4(adm),24(cdrom),27(sudo),30(dip),46(plugdev),109(lpadmin),124(sambashare),130(wireshark)
+[10/09/2026 14:12] seed@ubuntu:~/issd-member6/lab-files$ uname -r
+3.5.0-37-generic
+[10/09/2026 14:12] seed@ubuntu:~/issd-member6/lab-files$ ps -p $$,$PPID -o pid,ppid,comm
+  PID  PPID COMMAND
+ 2788  2787 script
+ 2789  2788 bash
+[10/09/2026 14:12] seed@ubuntu:~/issd-member6/lab-files$ sha256sum -c ../provenance/passwd-normal.sha256
+/etc/passwd: OK
+[10/09/2026 14:12] seed@ubuntu:~/issd-member6/lab-files$ sudo -n cmp /etc/passwd /root/issd-member6-passwd.normal
+[10/09/2026 14:12] seed@ubuntu:~/issd-member6/lab-files$ echo $?
+0
+[10/09/2026 14:12] seed@ubuntu:~/issd-member6/lab-files$ grep '^charlie:' /etc/passwd
+[01;31m[Kcharlie:[m[Kx:1001:1002:,,,:/home/charlie:/bin/bash
+[10/09/2026 14:12] seed@ubuntu:~/issd-member6/lab-files$ pgrep -x cow_attack
+[10/09/2026 14:12] seed@ubuntu:~/issd-member6/lab-files$ pgrep -x su
+[10/09/2026 14:12] seed@ubuntu:~/issd-member6/lab-files$ mountpoint -q ~/m6-transfer || sudo -n mount -t vboxsf -o ro M6p ack ~/m6-transfer
+[10/09/2026 14:12] seed@ubuntu:~/issd-member6/lab-files$ mountpoint -q ~/m6-export || sudo -n mount -t vboxsf -o uid=$(id  -u),gid=$(id -g) M6export ~/m6-export
+[10/09/2026 14:12] seed@ubuntu:~/issd-member6/lab-files$ grep vboxsf /proc/mounts
+none /home/seed/m6-transfer [01;31m[Kvboxsf[m[K ro,nodev,relatime 0 0
+none /home/seed/m6-export [01;31m[Kvboxsf[m[K rw,nodev,relatime 0 0
+[10/09/2026 14:12] seed@ubuntu:~/issd-member6/lab-files$ m6_require_guest && m6_require_workspace && m6_no_attacker && sh a256sum -c SOURCE_SHA256SUMS && sha256sum -c ../provenance/passwd-normal.sha256 && (set -C; stat -c '%u:%g:%a:%s' /etc/pa sswd > logs/fresh-t2-01-metadata-before.txt)
+No matching process: cow_attack
+No supplied trial wrapper is running.
+build.sh: OK
+cow_attack.c: OK
+cow_control.c: OK
+run_trial.sh: OK
+/etc/passwd: OK
+[10/09/2026 14:15] seed@ubuntu:~/issd-member6/lab-files$ echo $?
+0
+[10/09/2026 14:15] seed@ubuntu:~/issd-member6/lab-files$ clear
+[H[2J[10/09/2026 14:16] seed@ubuntu:~/issd-member6/lab-files$ id
+uid=1000(seed) gid=1000(seed) groups=1000(seed),4(adm),24(cdrom),27(sudo),30(dip),46(plugdev),109(lpadmin),124(sambashare),130(wireshark)
+[10/09/2026 14:17] seed@ubuntu:~/issd-member6/lab-files$ grep '^charlie:' /etc/passwd
+[01;31m[Kcharlie:[m[Kx:1001:1002:,,,:/home/charlie:/bin/bash
+[10/09/2026 14:17] seed@ubuntu:~/issd-member6/lab-files$ bash run_trial.sh passwd 30 fresh-t2-01
+Date: 2026-10-09T14:17:08-0700
+Kernel: 3.5.0-37-generic
+Identity: uid=1000(seed) gid=1000(seed) groups=1000(seed),4(adm),24(cdrom),27(sudo),30(dip),46(plugdev),109(lpadmin),124(sambashare),130(wireshark)
+Target: /etc/passwd
+Limit: 30s
+Before: 3edf14347c28c11d3a8816326e14baa3b99b569f1dc33dd15cd7d953c91dc337  /etc/passwd
+Elapsed: 0s
+Change detected: yes
+After: 99fced9d0853d999474f92617022e78efe7c87b0f63450da264c46bfa9d47cd2  /etc/passwd
+Stopped after content change; inspect the full diff and verify exact outcome.
+RUID=1000 EUID=1000 target=/etc/passwd file-byte-offset=2002 length=4
+O_RDONLY + PROT_READ + MAP_PRIVATE; racing memory writes and MADV_DONTNEED.
+Run bounded trials with run_trial.sh; Ctrl+C stops a direct run.
+--- logs/fresh-t2-01-before.txt	2026-10-09 14:17:08.182233560 -0700
++++ logs/fresh-t2-01-after.txt	2026-10-09 14:17:08.406345561 -0700
+@@ -39,4 +39,4 @@
+ telnetd:x:119:129::/nonexistent:/bin/false
+ vboxadd:x:999:1::/var/run/vboxadd:/bin/false
+ sshd:x:120:65534::/var/run/sshd:/usr/sbin/nologin
+-charlie:x:1001:1002:,,,:/home/charlie:/bin/bash
++charlie:x:0000:1002:,,,:/home/charlie:/bin/bash
+A content change alone is not proof of UID 0; follow the guide verification steps.
+[10/09/2026 14:17] seed@ubuntu:~/issd-member6/lab-files$ (set -C; stat -c '%u:%g:%a:%s' /etc/passwd > logs/fresh-t2-01-me tadata-after.txt)
+[10/09/2026 14:19] seed@ubuntu:~/issd-member6/lab-files$ (set -C; python ../automation/verify-trial.py passwd logs/fresh- t2-01 --live > logs/fresh-t2-01-verification.log 2>&1)
+[10/09/2026 14:19] seed@ubuntu:~/issd-member6/lab-files$ echo $?
+0
+[10/09/2026 14:19] seed@ubuntu:~/issd-member6/lab-files$ mountpoint -q ~/m6-export && cp -n logs/fresh-t2-01* ~/m6-export /opus-fresh-20261008/logs/
+[10/09/2026 14:19] seed@ubuntu:~/issd-member6/lab-files$ clear
+[H[2J[10/09/2026 14:20] seed@ubuntu:~/issd-member6/lab-files$ grep '^charlie:' /etc/passwd
+[01;31m[Kcharlie:[m[Kx:0000:1002:,,,:/home/charlie:/bin/bash
+[10/09/2026 14:20] seed@ubuntu:~/issd-member6/lab-files$ diff -u logs/fresh-t2-01-before.txt logs/fresh-t2-01-after.txt
+--- logs/fresh-t2-01-before.txt	2026-10-09 14:17:08.182233560 -0700
++++ logs/fresh-t2-01-after.txt	2026-10-09 14:17:08.406345561 -0700
+@@ -39,4 +39,4 @@
+ telnetd:x:119:129::/nonexistent:/bin/false
+ vboxadd:x:999:1::/var/run/vboxadd:/bin/false
+ sshd:x:120:65534::/var/run/sshd:/usr/sbin/nologin
+-charlie:x:1001:1002:,,,:/home/charlie:/bin/bash
++charlie:x:0000:1002:,,,:/home/charlie:/bin/bash
+[10/09/2026 14:20] seed@ubuntu:~/issd-member6/lab-files$ stat -c '%u:%g:%a:%s' /etc/passwd
+0:0:644:2040
+[10/09/2026 14:20] seed@ubuntu:~/issd-member6/lab-files$ sha256sum /etc/passwd
+99fced9d0853d999474f92617022e78efe7c87b0f63450da264c46bfa9d47cd2  /etc/passwd
+[10/09/2026 14:20] seed@ubuntu:~/issd-member6/lab-files$ cmp /etc/passwd logs/fresh-t2-01-after.txt
+[10/09/2026 14:21] seed@ubuntu:~/issd-member6/lab-files$ echo $?
+0
+[10/09/2026 14:21] seed@ubuntu:~/issd-member6/lab-files$ pgrep -x cow_attack
+[10/09/2026 14:21] seed@ubuntu:~/issd-member6/lab-files$ grep '^Elapsed:' logs/fresh-t2-01-summary.txt
+[01;31m[KElapsed:[m[K 0s
+[10/09/2026 14:21] seed@ubuntu:~/issd-member6/lab-files$ awk -F: '$3 == 0 {print $1 ":" $3}' /etc/passwd
+root:0
+charlie:0000
+[10/09/2026 14:21] seed@ubuntu:~/issd-member6/lab-files$ clear
+[H[2J[10/09/2026 14:22] seed@ubuntu:~/issd-member6/lab-files$ id
+uid=1000(seed) gid=1000(seed) groups=1000(seed),4(adm),24(cdrom),27(sudo),30(dip),46(plugdev),109(lpadmin),124(sambashare),130(wireshark)
+[10/09/2026 14:22] seed@ubuntu:~/issd-member6/lab-files$ pgrep -x cow_attack
+[10/09/2026 14:22] seed@ubuntu:~/issd-member6/lab-files$ grep '^charlie:' /etc/passwd
+[01;31m[Kcharlie:[m[Kx:0000:1002:,,,:/home/charlie:/bin/bash
+[10/09/2026 14:22] seed@ubuntu:~/issd-member6/lab-files$ su - charlie
+Password: 
+su: Authentication failure
+[10/09/2026 14:25] seed@ubuntu:~/issd-member6/lab-files$ su - charlie
+Password: 
+]0;root@ubuntu: ~root@ubuntu:~# id
+uid=0(root) gid=1002(charlie) groups=0(root),1002(charlie)
+]0;root@ubuntu: ~root@ubuntu:~# id -u
+0
+]0;root@ubuntu: ~root@ubuntu:~# whoami
+root
+]0;root@ubuntu: ~root@ubuntu:~# echo "Proof shell PID=$$"
+Proof shell PID=3392
+]0;root@ubuntu: ~root@ubuntu:~# exit
+logout
+[H[2J[10/09/2026 14:27] seed@ubuntu:~/issd-member6/lab-files$ id
+uid=1000(seed) gid=1000(seed) groups=1000(seed),4(adm),24(cdrom),27(sudo),30(dip),46(plugdev),109(lpadmin),124(sambashare),130(wireshark)
+[10/09/2026 14:27] seed@ubuntu:~/issd-member6/lab-files$ ps -p 3392 -o pid,ppid,ruid,euid,comm
+  PID  PPID  RUID  EUID COMMAND
+[10/09/2026 14:27] seed@ubuntu:~/issd-member6/lab-files$ echo $?
+1
+[10/09/2026 14:27] seed@ubuntu:~/issd-member6/lab-files$ pgrep -x su
+[10/09/2026 14:27] seed@ubuntu:~/issd-member6/lab-files$ echo $?
+1
+[10/09/2026 14:27] seed@ubuntu:~/issd-member6/lab-files$ m6_require_guest && m6_require_workspace && m6_no_attacker && m6 _no_process su
+No matching process: cow_attack
+No supplied trial wrapper is running.
+No matching process: su
+[10/09/2026 14:27] seed@ubuntu:~/issd-member6/lab-files$ sudo -n -v
+sudo: sorry, a password is required to run sudo
+[10/09/2026 14:27] seed@ubuntu:~/issd-member6/lab-files$ echo $?
+1
+[10/09/2026 14:27] seed@ubuntu:~/issd-member6/lab-files$ sudo -v
+[sudo] password for seed: 
+[10/09/2026 14:28] seed@ubuntu:~/issd-member6/lab-files$ m6_require_guest && m6_require_workspace && m6_no_attacker && m6 _no_process su && sudo -n cmp /root/issd-member6-passwd.normal logs/fresh-t2-01-before.txt && cmp /etc/passwd logs/fresh- t2-01-after.txt && sudo -n cp -a /root/issd-member6-passwd.normal /etc/passwd
+No matching process: cow_attack
+No supplied trial wrapper is running.
+No matching process: su
+[10/09/2026 14:29] seed@ubuntu:~/issd-member6/lab-files$ echo $?
+0
+[10/09/2026 14:29] seed@ubuntu:~/issd-member6/lab-files$ (set -eC; cp -n /etc/passwd logs/fresh-restoration-01-passwd.txt ; stat -c "%u:%g:%a:%s" /etc/passwd > logs/fresh-restoration-01-metadata.txt; sha256sum /etc/passwd > logs/fresh-restorat ion-01-sha256.txt)
+[10/09/2026 14:29] seed@ubuntu:~/issd-member6/lab-files$ echo $?
+0
+[10/09/2026 14:29] seed@ubuntu:~/issd-member6/lab-files$ clear
+[H[2J[10/09/2026 14:29] seed@ubuntu:~/issd-member6/lab-files$ id
+uid=1000(seed) gid=1000(seed) groups=1000(seed),4(adm),24(cdrom),27(sudo),30(dip),46(plugdev),109(lpadmin),124(sambashare),130(wireshark)
+[10/09/2026 14:29] seed@ubuntu:~/issd-member6/lab-files$ sudo -n cmp /etc/passwd /root/issd-member6-passwd.normal && echo  'Normal-account baseline restored'
+Normal-account baseline restored
+[10/09/2026 14:30] seed@ubuntu:~/issd-member6/lab-files$ sha256sum -c ../provenance/passwd-normal.sha256
+/etc/passwd: OK
+[10/09/2026 14:30] seed@ubuntu:~/issd-member6/lab-files$ grep '^charlie:' /etc/passwd
+[01;31m[Kcharlie:[m[Kx:1001:1002:,,,:/home/charlie:/bin/bash
+[10/09/2026 14:30] seed@ubuntu:~/issd-member6/lab-files$ id charlie
+uid=1001(charlie) gid=1002(charlie) groups=1002(charlie)
+[10/09/2026 14:30] seed@ubuntu:~/issd-member6/lab-files$ stat -c '%u:%g:%a:%s' /etc/passwd
+0:0:644:2040
+[10/09/2026 14:30] seed@ubuntu:~/issd-member6/lab-files$ su - charlie
+Password: 
+]0;charlie@ubuntu: ~charlie@ubuntu:~$ id
+uid=1001(charlie) gid=1002(charlie) groups=1002(charlie)
+]0;charlie@ubuntu: ~charlie@ubuntu:~$ id -u
+1001
+]0;charlie@ubuntu: ~charlie@ubuntu:~$ whoami
+charlie
+]0;charlie@ubuntu: ~charlie@ubuntu:~$ exit
+logout
+[10/09/2026 14:31] seed@ubuntu:~/issd-member6/lab-files$ id
+uid=1000(seed) gid=1000(seed) groups=1000(seed),4(adm),24(cdrom),27(sudo),30(dip),46(plugdev),109(lpadmin),124(sambashare),130(wireshark)
+[10/09/2026 14:31] seed@ubuntu:~/issd-member6/lab-files$ m6_require_guest && m6_require_workspace && m6_no_attacker && m6 _no_process su && test -f /zzz && test ! -L /zzz && sha256sum -c ../provenance/dummy-normal.sha256 && sudo -n cmp /etc/pa sswd /root/issd-member6-passwd.normal && sudo -n rm -- /zzz
+No matching process: cow_attack
+No supplied trial wrapper is running.
+No matching process: su
+/zzz: OK
+[10/09/2026 14:31] seed@ubuntu:~/issd-member6/lab-files$ echo $?
+0
+[10/09/2026 14:31] seed@ubuntu:~/issd-member6/lab-files$ (set -C; sudo -n -v && bash ../automation/check-cleanup.sh > log s/fresh-cleanup-01.txt 2>&1)
+[10/09/2026 14:31] seed@ubuntu:~/issd-member6/lab-files$ echo $?
+0
+[10/09/2026 14:31] seed@ubuntu:~/issd-member6/lab-files$ sudo -n umount ~/m6-transfer
+[10/09/2026 14:31] seed@ubuntu:~/issd-member6/lab-files$ echo $?
+0
+[10/09/2026 14:31] seed@ubuntu:~/issd-member6/lab-files$ mountpoint -q ~/m6-export && cp -n logs/fresh-restoration-01-* l ogs/fresh-cleanup-01.txt ~/m6-export/opus-fresh-20261008/logs/
+[10/09/2026 14:32] seed@ubuntu:~/issd-member6/lab-files$ ps -p $$,$PPID -o pid,ppid,comm
+  PID  PPID COMMAND
+ 2788  2787 script
+ 2789  2788 bash
+[10/09/2026 14:32] seed@ubuntu:~/issd-member6/lab-files$ clear
+[H[2J[10/09/2026 14:32] seed@ubuntu:~/issd-member6/lab-files$ id
+uid=1000(seed) gid=1000(seed) groups=1000(seed),4(adm),24(cdrom),27(sudo),30(dip),46(plugdev),109(lpadmin),124(sambashare),130(wireshark)
+[10/09/2026 14:32] seed@ubuntu:~/issd-member6/lab-files$ pgrep -x 'cow_attack|cow_control|su'
+[10/09/2026 14:32] seed@ubuntu:~/issd-member6/lab-files$ echo $?
+1
+[10/09/2026 14:32] seed@ubuntu:~/issd-member6/lab-files$ ps -p 3392 -o pid,ppid,ruid,euid,comm
+  PID  PPID  RUID  EUID COMMAND
+[10/09/2026 14:32] seed@ubuntu:~/issd-member6/lab-files$ echo $?
+1
+[10/09/2026 14:32] seed@ubuntu:~/issd-member6/lab-files$ sha256sum -c ../provenance/passwd-normal.sha256
+/etc/passwd: OK
+[10/09/2026 14:32] seed@ubuntu:~/issd-member6/lab-files$ id charlie
+uid=1001(charlie) gid=1002(charlie) groups=1002(charlie)
+[10/09/2026 14:32] seed@ubuntu:~/issd-member6/lab-files$ awk -F: '$3 == 0 {print $1 ":" $3}' /etc/passwd
+root:0
+[10/09/2026 14:32] seed@ubuntu:~/issd-member6/lab-files$ test ! -e /zzz && test ! -L /zzz && echo '/zzz removed'
+/zzz removed
+[10/09/2026 14:32] seed@ubuntu:~/issd-member6/lab-files$ ls -l cow_attack cow_control
+-rwxr-xr-x 1 seed seed 12540 Oct  9 12:55 [0m[01;32mcow_attack[0m
+-rwxr-xr-x 1 seed seed  7601 Oct  9 12:55 [01;32mcow_control[0m
+[10/09/2026 14:33] seed@ubuntu:~/issd-member6/lab-files$ mountpoint ~/m6-transfer
+/home/seed/m6-transfer is not a mountpoint
+[10/09/2026 14:33] seed@ubuntu:~/issd-member6/lab-files$ exit
+exit

@@ -1,0 +1,217 @@
+{
+  "started_utc": "2026-10-09T19:36:59.672579+00:00",
+  "boundary": "HOST",
+  "vm_name": "ISSD-Member6-SEED12",
+  "vm_uuid": "242db196-83e1-4b7a-9f0b-e399d6f8b9dc",
+  "fresh_directory_existing_entries_before_preflight": [],
+  "commands": [
+    {
+      "boundary": "HOST",
+      "command": [
+        "uname",
+        "-srmo"
+      ],
+      "observed_utc": "2026-10-09T19:36:59.674202+00:00",
+      "returncode": 0,
+      "stdout": "Linux 7.2.9-arch1-1 x86_64 GNU/Linux\n",
+      "stderr": ""
+    },
+    {
+      "boundary": "HOST",
+      "command": [
+        "cat",
+        "/etc/os-release"
+      ],
+      "observed_utc": "2026-10-09T19:36:59.675190+00:00",
+      "returncode": 0,
+      "stdout": "NAME=\"Arch Linux\"\nPRETTY_NAME=\"Arch Linux\"\nID=arch\nBUILD_ID=rolling\nANSI_COLOR=\"38;2;23;147;209\"\nHOME_URL=\"https://archlinux.org/\"\nDOCUMENTATION_URL=\"https://wiki.archlinux.org/\"\nSUPPORT_URL=\"https://bbs.archlinux.org/\"\nBUG_REPORT_URL=\"https://gitlab.archlinux.org/groups/archlinux/-/issues\"\nPRIVACY_POLICY_URL=\"https://terms.archlinux.org/docs/privacy-policy/\"\nLOGO=archlinux-logo\n",
+      "stderr": ""
+    },
+    {
+      "boundary": "HOST",
+      "command": [
+        "id"
+      ],
+      "observed_utc": "2026-10-09T19:36:59.685009+00:00",
+      "returncode": 0,
+      "stdout": "uid=1000(DHB) gid=984(users) groups=984(users),950(docker),968(libvirt),985(video),986(uucp),987(storage),994(input),996(audio),998(wheel),1002(dept)\n",
+      "stderr": ""
+    },
+    {
+      "boundary": "HOST",
+      "command": [
+        "VBoxManage",
+        "--version"
+      ],
+      "observed_utc": "2026-10-09T19:36:59.736539+00:00",
+      "returncode": 0,
+      "stdout": "7.2.20r175154\n",
+      "stderr": ""
+    },
+    {
+      "boundary": "HOST",
+      "command": [
+        "modinfo",
+        "-F",
+        "vermagic",
+        "vboxdrv"
+      ],
+      "observed_utc": "2026-10-09T19:36:59.743779+00:00",
+      "returncode": 0,
+      "stdout": "7.2.9-arch1-1 SMP preempt mod_unload \n",
+      "stderr": ""
+    },
+    {
+      "boundary": "HOST",
+      "command": [
+        "stat",
+        "-c",
+        "%A %a %U:%G %n",
+        "/dev/vboxdrv"
+      ],
+      "observed_utc": "2026-10-09T19:36:59.745923+00:00",
+      "returncode": 0,
+      "stdout": "crw------- 600 root:root /dev/vboxdrv\n",
+      "stderr": ""
+    },
+    {
+      "boundary": "HOST",
+      "command": [
+        "VBoxManage",
+        "showvminfo",
+        "242db196-83e1-4b7a-9f0b-e399d6f8b9dc",
+        "--machinereadable"
+      ],
+      "observed_utc": "2026-10-09T19:36:59.912747+00:00",
+      "returncode": 0,
+      "stdout": "name=\"ISSD-Member6-SEED12\"\nencryption=\"disabled\"\ngroups=\"/\"\nplatformArchitecture=\"x86\"\nostype=\"Ubuntu 12.04 LTS (Precise Pangolin) (32-bit)\"\nUUID=\"242db196-83e1-4b7a-9f0b-e399d6f8b9dc\"\nCfgFile=\"/home/DHB/VirtualBox VMs/ISSD-Member6-SEED12/ISSD-Member6-SEED12.vbox\"\nSnapFldr=\"/home/DHB/VirtualBox VMs/ISSD-Member6-SEED12/Snapshots\"\nLogFldr=\"/home/DHB/VirtualBox VMs/ISSD-Member6-SEED12/Logs\"\nhardwareuuid=\"242db196-83e1-4b7a-9f0b-e399d6f8b9dc\"\nmemory=2048\npagefusion=\"off\"\nvram=64\ncpuexecutioncap=100\ncpu-profile=\"host\"\nchipset=\"piix3\"\nfirmware=\"BIOS\"\ncpus=2\nhpet=\"off\"\npae=\"on\"\nlongmode=\"off\"\ntriplefaultreset=\"off\"\napic=\"on\"\nx2apic=\"on\"\nnested-hw-virt=\"off\"\nhwvirtex=\"on\"\nnestedpaging=\"on\"\nlargepages=\"off\"\nvtxvpid=\"on\"\nvtxux=\"on\"\nvirtvmsavevmload=\"on\"\ncpuid-portability-level=0\nbootmenu=\"messageandmenu\"\nboot1=\"disk\"\nboot2=\"dvd\"\nboot3=\"none\"\nboot4=\"none\"\nacpi=\"on\"\nioapic=\"on\"\nbiosapic=\"apic\"\nbiossystemtimeoffset=0\nNvramFile=\"/home/DHB/VirtualBox VMs/ISSD-Member6-SEED12/ISSD-Member6-SEED12.nvram\"\nrtcuseutc=\"on\"\niommu=\"none\"\nparavirtprovider=\"default\"\neffparavirtprovider=\"kvm\"\nVMState=\"poweroff\"\nVMStateChangeTime=\"2026-10-07T20:12:52.000000000\"\ngraphicscontroller=\"vmsvga\"\nmonitorcount=1\naccelerate3d=\"off\"\nteleporterenabled=\"off\"\nteleporterport=0\nteleporteraddress=\"\"\nteleporterpassword=\"\"\ntracing-enabled=\"off\"\ntracing-allow-vm-access=\"off\"\ntracing-config=\"\"\nautostart-enabled=\"off\"\nautostart-delay=0\ndefaultfrontend=\"\"\nvmprocpriority=\"default\"\nstoragecontrollername0=\"M6-SCSI\"\nstoragecontrollertype0=\"LsiLogic\"\nstoragecontrollerinstance0=\"0\"\nstoragecontrollermaxportcount0=\"16\"\nstoragecontrollerportcount0=\"16\"\nstoragecontrollerbootable0=\"on\"\nstoragecontrollername1=\"M6-IDE\"\nstoragecontrollertype1=\"PIIX4\"\nstoragecontrollerinstance1=\"0\"\nstoragecontrollermaxportcount1=\"2\"\nstoragecontrollerportcount1=\"2\"\nstoragecontrollerbootable1=\"on\"\n\"M6-SCSI-0-0\"=\"/home/DHB/VirtualBox VMs/ISSD-Member6-SEED12/Snapshots/{07f6aed5-7127-40b7-b6c8-6cbf2eabc1a7}.vmdk\"\n\"M6-SCSI-ImageUUID-0-0\"=\"07f6aed5-7127-40b7-b6c8-6cbf2eabc1a7\"\n\"M6-SCSI-nonrotational-0-0\"=\"off\"\n\"M6-SCSI-discard-0-0\"=\"off\"\n\"M6-SCSI-1-0\"=\"none\"\n\"M6-SCSI-2-0\"=\"none\"\n\"M6-SCSI-3-0\"=\"none\"\n\"M6-SCSI-4-0\"=\"none\"\n\"M6-SCSI-5-0\"=\"none\"\n\"M6-SCSI-6-0\"=\"none\"\n\"M6-SCSI-7-0\"=\"none\"\n\"M6-SCSI-8-0\"=\"none\"\n\"M6-SCSI-9-0\"=\"none\"\n\"M6-SCSI-10-0\"=\"none\"\n\"M6-SCSI-11-0\"=\"none\"\n\"M6-SCSI-12-0\"=\"none\"\n\"M6-SCSI-13-0\"=\"none\"\n\"M6-SCSI-14-0\"=\"none\"\n\"M6-SCSI-15-0\"=\"none\"\n\"M6-IDE-0-0\"=\"/home/DHB/VirtualBox VMs/ISSD-Member6-media/M6-transfer-20261007-final.iso\"\n\"M6-IDE-ImageUUID-0-0\"=\"c3ea8345-6da1-4499-a4c7-5297327bb905\"\n\"M6-IDE-tempeject-0-0\"=\"off\"\n\"M6-IDE-IsEjected-0-0\"=\"off\"\n\"M6-IDE-nonrotational-0-0\"=\"off\"\n\"M6-IDE-discard-0-0\"=\"off\"\n\"M6-IDE-0-1\"=\"none\"\n\"M6-IDE-1-0\"=\"none\"\n\"M6-IDE-1-1\"=\"none\"\nnatnet1=\"nat\"\nmacaddress1=\"0800277197DC\"\ncableconnected1=\"on\"\nnic1=\"nat\"\nnictype1=\"82540EM\"\nnicspeed1=\"0\"\nmtu=\"0\"\nsockSnd=\"64\"\nsockRcv=\"64\"\ntcpWndSnd=\"64\"\ntcpWndRcv=\"64\"\nlocalhostReachable=\"1\"\nforwardBroadcast=\"0\"\nenableTFTP=\"0\"\nnic2=\"none\"\nnic3=\"none\"\nnic4=\"none\"\nnic5=\"none\"\nnic6=\"none\"\nnic7=\"none\"\nnic8=\"none\"\nhidpointing=\"ps2mouse\"\nhidkeyboard=\"ps2kbd\"\nuart1=\"off\"\nuart2=\"off\"\nuart3=\"off\"\nuart4=\"off\"\nlpt1=\"off\"\nlpt2=\"off\"\naudio=\"none\"\naudio_out=\"off\"\naudio_in=\"off\"\nclipboard=\"bidirectional\"\nclipboard_file_transfers=\"off\"\ndraganddrop=\"disabled\"\nvrde=\"off\"\nusb=\"off\"\nehci=\"off\"\nxhci=\"off\"\nSharedFolderNameMachineMapping1=\"M6pack\"\nSharedFolderPathMachineMapping1=\"/home/DHB/Downloads/ISSP/ISSD-seed-labs/Member6\"\nSharedFolderNameMachineMapping2=\"M6export\"\nSharedFolderPathMachineMapping2=\"/home/DHB/Downloads/ISSP/ISSD-seed-labs/Member6/evidence/incoming\"\nrecording_started=\"off\"\nrecording_enabled=\"off\"\nrecording_screens=1\n rec_screen0\nrec_screen_enabled=\"on\"\nrec_screen_id=0\nrec_screen_video_enabled=\"on\"\nrec_screen_audio_enabled=\"off\"\nrec_screen_dest=\"File\"\nrec_screen_dest_filename=\"/home/DHB/VirtualBox VMs/ISSD-Member6-SEED12/ISSD-Member6-SEED12-screen0.webm\"\nrec_screen_opts=\"ac_profile=med\"\nrec_screen_video_res_xy=\"1024x768\"\nrec_screen_video_rate_kbps=512\nrec_screen_video_fps=25\nSnapshotName=\"M6-clean-SEED12\"\nSnapshotUUID=\"7ecb8a4e-7430-497d-8772-fe3317d43b30\"\nSnapshotDescription=\"Verified official SEED12 disk; powered off before first boot, lab transfer, target creation or account changes.\"\nCurrentSnapshotName=\"M6-clean-SEED12\"\nCurrentSnapshotUUID=\"7ecb8a4e-7430-497d-8772-fe3317d43b30\"\nCurrentSnapshotNode=\"SnapshotName\"\nGuestMemoryBalloon=0\n",
+      "stderr": ""
+    },
+    {
+      "boundary": "HOST",
+      "command": [
+        "VBoxManage",
+        "snapshot",
+        "242db196-83e1-4b7a-9f0b-e399d6f8b9dc",
+        "list",
+        "--machinereadable"
+      ],
+      "observed_utc": "2026-10-09T19:36:59.980034+00:00",
+      "returncode": 0,
+      "stdout": "SnapshotName=\"M6-clean-SEED12\"\nSnapshotUUID=\"7ecb8a4e-7430-497d-8772-fe3317d43b30\"\nSnapshotDescription=\"Verified official SEED12 disk; powered off before first boot, lab transfer, target creation or account changes.\"\nCurrentSnapshotName=\"M6-clean-SEED12\"\nCurrentSnapshotUUID=\"7ecb8a4e-7430-497d-8772-fe3317d43b30\"\nCurrentSnapshotNode=\"SnapshotName\"\n",
+      "stderr": ""
+    },
+    {
+      "boundary": "HOST",
+      "command": [
+        "VBoxManage",
+        "showmediuminfo",
+        "disk",
+        "07f6aed5-7127-40b7-b6c8-6cbf2eabc1a7"
+      ],
+      "observed_utc": "2026-10-09T19:37:00.049432+00:00",
+      "returncode": 0,
+      "stdout": "UUID:           07f6aed5-7127-40b7-b6c8-6cbf2eabc1a7\nParent UUID:    e77c85d1-7ba3-4751-b502-7d684317ee2b\nState:          created\nType:           normal (differencing)\nAuto-Reset:     off\nLocation:       /home/DHB/VirtualBox VMs/ISSD-Member6-SEED12/Snapshots/{07f6aed5-7127-40b7-b6c8-6cbf2eabc1a7}.vmdk\nStorage format: VMDK\nFormat variant: differencing split2G\nCapacity:       81920 MBytes\nSize on disk:   90 MBytes\nEncryption:     disabled\nProperty:       BootSector=\n                Partitions=\n                RawDrive=\n                Relative=\nIn use by VMs:  ISSD-Member6-SEED12 (UUID: 242db196-83e1-4b7a-9f0b-e399d6f8b9dc)\n",
+      "stderr": ""
+    },
+    {
+      "boundary": "HOST",
+      "command": [
+        "VBoxManage",
+        "showmediuminfo",
+        "disk",
+        "e77c85d1-7ba3-4751-b502-7d684317ee2b"
+      ],
+      "observed_utc": "2026-10-09T19:37:00.150878+00:00",
+      "returncode": 0,
+      "stdout": "UUID:           e77c85d1-7ba3-4751-b502-7d684317ee2b\nParent UUID:    base\nState:          created\nType:           normal (base)\nLocation:       /home/DHB/VirtualBox VMs/ISSD-Member6-media/SEEDUbuntu12.04/SEEDUbuntu12.04.vmdk\nStorage format: VMDK\nFormat variant: dynamic split2G\nCapacity:       81920 MBytes\nSize on disk:   6374 MBytes\nEncryption:     disabled\nProperty:       BootSector=\n                Partitions=\n                RawDrive=\n                Relative=\nIn use by VMs:  ISSD-Member6-SEED12 (UUID: 242db196-83e1-4b7a-9f0b-e399d6f8b9dc) [M6-clean-SEED12 (UUID: 7ecb8a4e-7430-497d-8772-fe3317d43b30)]\nChild UUIDs:    07f6aed5-7127-40b7-b6c8-6cbf2eabc1a7\n",
+      "stderr": ""
+    },
+    {
+      "boundary": "HOST",
+      "command": [
+        "git",
+        "status",
+        "--short"
+      ],
+      "observed_utc": "2026-10-09T19:37:00.157191+00:00",
+      "returncode": 0,
+      "stdout": " M Member6/ARCH_HOST_SETUP.md\n M Member6/EXECUTION_STATUS.md\n M Member6/README.md\n M Member6/VERIFICATION.md\n M Member6/VM_SESSION_GUIDE.md\n M Member6/evidence/host/console-actions.jsonl\n M Member6/tools/capture-vm.py\n?? Member6/OPENCODE_HANDOFF.md\n?? Member6/OPUS_5_5_FRESH_RUN_PROMPT.md\n?? Member6/evidence/M6-S03-b-mapping.capture.json\n?? Member6/evidence/M6-S03-b-mapping.png\n?? Member6/evidence/M6-S03-c-workers.capture.json\n?? Member6/evidence/M6-S03-c-workers.png\n?? Member6/evidence/M6-S03-code-build.capture.json\n?? Member6/evidence/M6-S03-code-build.png\n",
+      "stderr": ""
+    }
+  ],
+  "original_source_checks": [
+    {
+      "file": "Member6/lab-files/build.sh",
+      "sha256": "d2a0b9a5dd0b0a284e0fbbef46295be5cd9f3982f79c494b0db076f5cd7c6bcb",
+      "matches_manifest": true,
+      "contains_CR": false,
+      "bytes": 458,
+      "compiled_or_executed_on_host": false
+    },
+    {
+      "file": "Member6/lab-files/cow_attack.c",
+      "sha256": "77fc34c697f0217b1fcd29bfe7cba4e53ea92a3dc41e72dde5ae02ec23e756b4",
+      "matches_manifest": true,
+      "contains_CR": false,
+      "bytes": 5150,
+      "compiled_or_executed_on_host": false
+    },
+    {
+      "file": "Member6/lab-files/cow_control.c",
+      "sha256": "32a85207d427bf3ae706e8cf2987febb2b5542b0e4a57ae4cd805dd94804e20f",
+      "matches_manifest": true,
+      "contains_CR": false,
+      "bytes": 1378,
+      "compiled_or_executed_on_host": false
+    },
+    {
+      "file": "Member6/lab-files/run_trial.sh",
+      "sha256": "73a1885c95d5e21ececfea7bf8bd264946f86fc0e413d3667b0bd91094999478",
+      "matches_manifest": true,
+      "contains_CR": false,
+      "bytes": 3022,
+      "compiled_or_executed_on_host": false
+    }
+  ],
+  "member5_reference_images_reviewed": [
+    {
+      "path": "Member5/submission/evidence/S01-vm-setup.png",
+      "sha256": "c23efb367a2111314b0f29e6d40cf0a07a58ea1a5e010f1a5e04727ac34d8ab5",
+      "width": 691,
+      "height": 798,
+      "role": "Member 5 reference image visually reviewed; not Member 6 evidence"
+    },
+    {
+      "path": "Member5/submission/evidence/S02-guest-environment.png",
+      "sha256": "07e80b53863b5fb184f9d2702993702830b817f950f1c8ccdfe75868947693fc",
+      "width": 958,
+      "height": 946,
+      "role": "Member 5 reference image visually reviewed; not Member 6 evidence"
+    },
+    {
+      "path": "Member5/submission/evidence/S07-task2a-result.png",
+      "sha256": "c7eac8fb598023728f98e30194c2b6e10032cfa46d3f3e643669e1798852582d",
+      "width": 1920,
+      "height": 967,
+      "role": "Member 5 reference image visually reviewed; not Member 6 evidence"
+    },
+    {
+      "path": "Member5/submission/evidence/S09-task2b-result.png",
+      "sha256": "122d20ffabd9d98e72caac3189d461695bcf73f7730f49123d29d2223b0aac7c",
+      "width": 1920,
+      "height": 967,
+      "role": "Member 5 reference image visually reviewed; not Member 6 evidence"
+    },
+    {
+      "path": "Member5/submission/evidence/S14-cleanup.png",
+      "sha256": "9384ad31983333ec91916e704845c5e1fbb8a7a43ec368b99c75350c26c2d205",
+      "width": 1920,
+      "height": 967,
+      "role": "Member 5 reference image visually reviewed; not Member 6 evidence"
+    }
+  ],
+  "guest_experiments_executed_in_this_preflight": false,
+  "guest_state_verified": false,
+  "note": "VM profile and snapshot metadata do not establish running guest state."
+}

@@ -1,0 +1,32 @@
+No matching process: cow_attack
+No supplied trial wrapper is running.
+{
+  "ACTUAL": "exact-change", 
+  "EXPECTED": "Only charlie UID digits become same-width zeroes", 
+  "EXPLANATION": "Compared entire before/after byte sequences, hashes and root:root 0644 metadata. A fresh non-sudo su/id session is still required for privilege proof.", 
+  "actual_charlie_records": [
+    "charlie:x:0000:1002:,,,:/home/charlie:/bin/bash"
+  ], 
+  "after_sha256": "99fced9d0853d999474f92617022e78efe7c87b0f63450da264c46bfa9d47cd2", 
+  "baseline_details": {
+    "before_uid_numeric": 1001, 
+    "before_uid_text": "1001", 
+    "uid_byte_width": 4
+  }, 
+  "before_sha256": "3edf14347c28c11d3a8816326e14baa3b99b569f1dc33dd15cd7d953c91dc337", 
+  "elapsed_integer_seconds": 0, 
+  "euid": 1000, 
+  "file_length_unchanged": true, 
+  "identity_from_summary": "uid=1000(seed) gid=1000(seed) groups=1000(seed),4(adm),24(cdrom),27(sudo),30(dip),46(plugdev),109(lpadmin),124(sambashare),130(wireshark)", 
+  "kernel_from_summary": "3.5.0-37-generic", 
+  "kernel_race_attempt_count": null, 
+  "limit_seconds": 30, 
+  "live_file_checked": true, 
+  "live_sha256": "99fced9d0853d999474f92617022e78efe7c87b0f63450da264c46bfa9d47cd2", 
+  "login_verified": false, 
+  "mode": "passwd", 
+  "prefix": "logs/fresh-t2-01", 
+  "program_has_only_expected_initialization_lines": true, 
+  "program_output": "RUID=1000 EUID=1000 target=/etc/passwd file-byte-offset=2002 length=4\nO_RDONLY + PROT_READ + MAP_PRIVATE; racing memory writes and MADV_DONTNEED.\nRun bounded trials with run_trial.sh; Ctrl+C stops a direct run.\n", 
+  "ruid": 1000
+}

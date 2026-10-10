@@ -1,0 +1,369 @@
+{
+  "built_utc": "2026-10-10T17:32:54.840464+00:00",
+  "source": "Two unaltered native VirtualBox guest recordings; original hashes/copies retained",
+  "ranges": [
+    [
+      "M6-task2-recorded-screen0.webm",
+      0.0,
+      22.0,
+      "01-uid-overwrite.mp4"
+    ],
+    [
+      "M6-task2-login-screen0.webm",
+      268.0,
+      304.2,
+      "02-login-proof.mp4"
+    ]
+  ],
+  "originals": [
+    {
+      "filename": "M6-task2-recorded-screen0.webm",
+      "sha256": "92500c60da493c075755dc41696a5f31c3096610f9b02f66676013db9c94bfe2",
+      "bytes": 875768
+    },
+    {
+      "filename": "M6-task2-login-screen0.webm",
+      "sha256": "631a38ead710c04301a883d6812cf65937acfd47cf3f064e46583d197279f53f",
+      "bytes": 1975875
+    }
+  ],
+  "title_cards": [
+    {
+      "filename": "01-introduction.png",
+      "sha256": "419c39e5d6a7591964e96438fef81bf982a4e79580c9e60ecdbda96d4c1d3c26",
+      "description": "Presentation title card, not experimental terminal evidence"
+    },
+    {
+      "filename": "02-transition.png",
+      "sha256": "180d783a9f8ebf7062ad5dee846809e5ac455be87d95d69e30f48fb00f262320",
+      "description": "Presentation title card, not experimental terminal evidence"
+    },
+    {
+      "filename": "03-restoration.png",
+      "sha256": "2a64163f36fd1e111c63a5f903c77d26ec3df9e39b81c07bab4e28d0d0ba70b2",
+      "description": "Presentation title card, not experimental terminal evidence"
+    }
+  ],
+  "sequence": [
+    "01-introduction.mp4",
+    "01-uid-overwrite.mp4",
+    "02-transition.mp4",
+    "02-login-proof.mp4",
+    "03-restoration.mp4"
+  ],
+  "output": "TASK2_FALLBACK.mp4",
+  "output_sha256": "79c181a39dbd79ef935f75c5c3f94fea89432ce74430fa027ff493e606d5b8ec",
+  "ffprobe": {
+    "streams": [
+      {
+        "index": 0,
+        "codec_name": "h264",
+        "codec_long_name": "H.264 / AVC / MPEG-4 AVC / MPEG-4 part 10",
+        "profile": "High",
+        "codec_type": "video",
+        "codec_tag_string": "avc1",
+        "codec_tag": "0x31637661",
+        "mime_codec_string": "avc1.640020",
+        "width": 1280,
+        "height": 960,
+        "coded_width": 1280,
+        "coded_height": 960,
+        "has_b_frames": 2,
+        "pix_fmt": "yuv420p",
+        "level": 32,
+        "chroma_location": "left",
+        "field_order": "progressive",
+        "is_avc": "true",
+        "nal_length_size": "4",
+        "id": "0x1",
+        "r_frame_rate": "15/1",
+        "avg_frame_rate": "15/1",
+        "time_base": "1/15360",
+        "start_pts": 0,
+        "start_time": "0.000000",
+        "duration_ts": 1022976,
+        "duration": "66.600000",
+        "bit_rate": "155119",
+        "bits_per_raw_sample": "8",
+        "nb_frames": "999",
+        "extradata_size": 46,
+        "disposition": {
+          "default": 1,
+          "dub": 0,
+          "original": 0,
+          "comment": 0,
+          "lyrics": 0,
+          "karaoke": 0,
+          "forced": 0,
+          "hearing_impaired": 0,
+          "visual_impaired": 0,
+          "clean_effects": 0,
+          "attached_pic": 0,
+          "timed_thumbnails": 0,
+          "non_diegetic": 0,
+          "captions": 0,
+          "descriptions": 0,
+          "metadata": 0,
+          "dependent": 0,
+          "still_image": 0,
+          "multilayer": 0
+        },
+        "tags": {
+          "language": "und",
+          "handler_name": "VideoHandler",
+          "encoder": "Lavc63.1.102 libx264"
+        }
+      }
+    ],
+    "format": {
+      "filename": "/home/DHB/Downloads/ISSP/ISSD-seed-labs/Member6/submission/video/TASK2_FALLBACK.mp4",
+      "nb_streams": 1,
+      "nb_programs": 0,
+      "nb_stream_groups": 0,
+      "format_name": "mov,mp4,m4a,3gp,3g2,mj2",
+      "format_long_name": "QuickTime / MOV",
+      "start_time": "0.000000",
+      "duration": "66.600000",
+      "size": "1304208",
+      "bit_rate": "156661",
+      "probe_score": 100,
+      "tags": {
+        "major_brand": "isom",
+        "minor_version": "512",
+        "compatible_brands": "isomiso2avc1mp41",
+        "encoder": "Lavf63.1.102"
+      }
+    }
+  },
+  "full_decode_passed": true,
+  "actions": [
+    {
+      "command": [
+        "ffmpeg",
+        "-nostdin",
+        "-v",
+        "error",
+        "-i",
+        "/home/DHB/Downloads/ISSP/ISSD-seed-labs/Member6/evidence/incoming/opus-fresh-20261008/M6-task2-recorded-screen0.webm",
+        "-ss",
+        "0.0",
+        "-t",
+        "22.0",
+        "-an",
+        "-c:v",
+        "libx264",
+        "-preset",
+        "medium",
+        "-crf",
+        "16",
+        "-pix_fmt",
+        "yuv420p",
+        "-r",
+        "15",
+        "-movflags",
+        "+faststart",
+        "-n",
+        "/home/DHB/Downloads/ISSP/ISSD-seed-labs/Member6/submission/video/segments/01-uid-overwrite.mp4"
+      ],
+      "returncode": 0,
+      "stdout": "",
+      "stderr": ""
+    },
+    {
+      "command": [
+        "ffmpeg",
+        "-nostdin",
+        "-v",
+        "error",
+        "-i",
+        "/home/DHB/Downloads/ISSP/ISSD-seed-labs/Member6/evidence/incoming/opus-fresh-20261008/M6-task2-login-screen0.webm",
+        "-ss",
+        "268.0",
+        "-t",
+        "36.2",
+        "-an",
+        "-c:v",
+        "libx264",
+        "-preset",
+        "medium",
+        "-crf",
+        "16",
+        "-pix_fmt",
+        "yuv420p",
+        "-r",
+        "15",
+        "-movflags",
+        "+faststart",
+        "-n",
+        "/home/DHB/Downloads/ISSP/ISSD-seed-labs/Member6/submission/video/segments/02-login-proof.mp4"
+      ],
+      "returncode": 0,
+      "stdout": "",
+      "stderr": ""
+    },
+    {
+      "command": [
+        "ffmpeg",
+        "-nostdin",
+        "-v",
+        "error",
+        "-loop",
+        "1",
+        "-framerate",
+        "15",
+        "-i",
+        "/home/DHB/Downloads/ISSP/ISSD-seed-labs/Member6/submission/video/title-cards/01-introduction.png",
+        "-t",
+        "3",
+        "-an",
+        "-c:v",
+        "libx264",
+        "-preset",
+        "medium",
+        "-crf",
+        "16",
+        "-pix_fmt",
+        "yuv420p",
+        "-r",
+        "15",
+        "-movflags",
+        "+faststart",
+        "-n",
+        "/home/DHB/Downloads/ISSP/ISSD-seed-labs/Member6/submission/video/segments/01-introduction.mp4"
+      ],
+      "returncode": 0,
+      "stdout": "",
+      "stderr": ""
+    },
+    {
+      "command": [
+        "ffmpeg",
+        "-nostdin",
+        "-v",
+        "error",
+        "-loop",
+        "1",
+        "-framerate",
+        "15",
+        "-i",
+        "/home/DHB/Downloads/ISSP/ISSD-seed-labs/Member6/submission/video/title-cards/02-transition.png",
+        "-t",
+        "3",
+        "-an",
+        "-c:v",
+        "libx264",
+        "-preset",
+        "medium",
+        "-crf",
+        "16",
+        "-pix_fmt",
+        "yuv420p",
+        "-r",
+        "15",
+        "-movflags",
+        "+faststart",
+        "-n",
+        "/home/DHB/Downloads/ISSP/ISSD-seed-labs/Member6/submission/video/segments/02-transition.mp4"
+      ],
+      "returncode": 0,
+      "stdout": "",
+      "stderr": ""
+    },
+    {
+      "command": [
+        "ffmpeg",
+        "-nostdin",
+        "-v",
+        "error",
+        "-loop",
+        "1",
+        "-framerate",
+        "15",
+        "-i",
+        "/home/DHB/Downloads/ISSP/ISSD-seed-labs/Member6/submission/video/title-cards/03-restoration.png",
+        "-t",
+        "3",
+        "-an",
+        "-c:v",
+        "libx264",
+        "-preset",
+        "medium",
+        "-crf",
+        "16",
+        "-pix_fmt",
+        "yuv420p",
+        "-r",
+        "15",
+        "-movflags",
+        "+faststart",
+        "-n",
+        "/home/DHB/Downloads/ISSP/ISSD-seed-labs/Member6/submission/video/segments/03-restoration.mp4"
+      ],
+      "returncode": 0,
+      "stdout": "",
+      "stderr": ""
+    },
+    {
+      "command": [
+        "ffmpeg",
+        "-nostdin",
+        "-v",
+        "error",
+        "-f",
+        "concat",
+        "-safe",
+        "0",
+        "-i",
+        "/home/DHB/Downloads/ISSP/ISSD-seed-labs/Member6/submission/video/segments/sequence.ffconcat",
+        "-c",
+        "copy",
+        "-movflags",
+        "+faststart",
+        "-n",
+        "/home/DHB/Downloads/ISSP/ISSD-seed-labs/Member6/submission/video/TASK2_FALLBACK.mp4"
+      ],
+      "returncode": 0,
+      "stdout": "",
+      "stderr": ""
+    },
+    {
+      "command": [
+        "ffprobe",
+        "-v",
+        "error",
+        "-show_format",
+        "-show_streams",
+        "-of",
+        "json",
+        "/home/DHB/Downloads/ISSP/ISSD-seed-labs/Member6/submission/video/TASK2_FALLBACK.mp4"
+      ],
+      "returncode": 0,
+      "stdout": "{\n    \"streams\": [\n        {\n            \"index\": 0,\n            \"codec_name\": \"h264\",\n            \"codec_long_name\": \"H.264 / AVC / MPEG-4 AVC / MPEG-4 part 10\",\n            \"profile\": \"High\",\n            \"codec_type\": \"video\",\n            \"codec_tag_string\": \"avc1\",\n            \"codec_tag\": \"0x31637661\",\n            \"mime_codec_string\": \"avc1.640020\",\n            \"width\": 1280,\n            \"height\": 960,\n            \"coded_width\": 1280,\n            \"coded_height\": 960,\n            \"has_b_frames\": 2,\n            \"pix_fmt\": \"yuv420p\",\n            \"level\": 32,\n            \"chroma_location\": \"left\",\n            \"field_order\": \"progressive\",\n            \"is_avc\": \"true\",\n            \"nal_length_size\": \"4\",\n            \"id\": \"0x1\",\n            \"r_frame_rate\": \"15/1\",\n            \"avg_frame_rate\": \"15/1\",\n            \"time_base\": \"1/15360\",\n            \"start_pts\": 0,\n            \"start_time\": \"0.000000\",\n            \"duration_ts\": 1022976,\n            \"duration\": \"66.600000\",\n            \"bit_rate\": \"155119\",\n            \"bits_per_raw_sample\": \"8\",\n            \"nb_frames\": \"999\",\n            \"extradata_size\": 46,\n            \"disposition\": {\n                \"default\": 1,\n                \"dub\": 0,\n                \"original\": 0,\n                \"comment\": 0,\n                \"lyrics\": 0,\n                \"karaoke\": 0,\n                \"forced\": 0,\n                \"hearing_impaired\": 0,\n                \"visual_impaired\": 0,\n                \"clean_effects\": 0,\n                \"attached_pic\": 0,\n                \"timed_thumbnails\": 0,\n                \"non_diegetic\": 0,\n                \"captions\": 0,\n                \"descriptions\": 0,\n                \"metadata\": 0,\n                \"dependent\": 0,\n                \"still_image\": 0,\n                \"multilayer\": 0\n            },\n            \"tags\": {\n                \"language\": \"und\",\n                \"handler_name\": \"VideoHandler\",\n                \"encoder\": \"Lavc63.1.102 libx264\"\n            }\n        }\n    ],\n    \"format\": {\n        \"filename\": \"/home/DHB/Downloads/ISSP/ISSD-seed-labs/Member6/submission/video/TASK2_FALLBACK.mp4\",\n        \"nb_streams\": 1,\n        \"nb_programs\": 0,\n        \"nb_stream_groups\": 0,\n        \"format_name\": \"mov,mp4,m4a,3gp,3g2,mj2\",\n        \"format_long_name\": \"QuickTime / MOV\",\n        \"start_time\": \"0.000000\",\n        \"duration\": \"66.600000\",\n        \"size\": \"1304208\",\n        \"bit_rate\": \"156661\",\n        \"probe_score\": 100,\n        \"tags\": {\n            \"major_brand\": \"isom\",\n            \"minor_version\": \"512\",\n            \"compatible_brands\": \"isomiso2avc1mp41\",\n            \"encoder\": \"Lavf63.1.102\"\n        }\n    }\n}\n",
+      "stderr": ""
+    },
+    {
+      "command": [
+        "ffmpeg",
+        "-nostdin",
+        "-v",
+        "error",
+        "-i",
+        "/home/DHB/Downloads/ISSP/ISSD-seed-labs/Member6/submission/video/TASK2_FALLBACK.mp4",
+        "-f",
+        "null",
+        "-"
+      ],
+      "returncode": 0,
+      "stdout": "",
+      "stderr": ""
+    }
+  ],
+  "qualifications": [
+    "Edited recorded presentation fallback, not a continuous live classroom run.",
+    "First excerpt is 0–22 s of trial recording. Second is 268–304.2 s of login recording.",
+    "Authentication waiting before the second excerpt is omitted; initial failure remains visible.",
+    "Second excerpt shows actual identity commands, proof shell exit and return to seed.",
+    "Final title card summarizes separately evidenced S11/S13 restoration; it is not video of restoration.",
+    "H.264 transcoding changes encoding; no terminal text is reconstructed or overlaid."
+  ]
+}

@@ -1,0 +1,13 @@
+{
+  "checked_utc": "2026-10-09T20:31:07.006618+00:00",
+  "boundary": "HOST offline artifact verification; no host target-file access",
+  "command": [
+    "/usr/bin/python",
+    "Member6/automation/verify-trial.py",
+    "dummy",
+    "Member6/evidence/incoming/opus-fresh-20261008/logs/fresh-t1-01"
+  ],
+  "returncode": 0,
+  "stdout": "{\n  \"ACTUAL\": \"exact-change\",\n  \"EXPECTED\": \"Complete six-byte dummy replacement\",\n  \"EXPLANATION\": \"Compared entire before/after byte sequences, hashes and root:root 0644 metadata.\",\n  \"actual_file_content\": \"111111******333333\\n\",\n  \"after_sha256\": \"97c0ed6bb0deb556349015713d1c0a86d11e1bf5572a78b087650e814479b47b\",\n  \"baseline_details\": {\n    \"before_content\": \"111111222222333333\\n\"\n  },\n  \"before_sha256\": \"7342e673ad4f9a5ea02fe84fa6ab1760d922e3f362c885ef4feda980423b9552\",\n  \"elapsed_integer_seconds\": 0,\n  \"euid\": 1000,\n  \"file_length_unchanged\": true,\n  \"identity_from_summary\": \"uid=1000(seed) gid=1000(seed) groups=1000(seed),4(adm),24(cdrom),27(sudo),30(dip),46(plugdev),109(lpadmin),124(sambashare),130(wireshark)\",\n  \"kernel_from_summary\": \"3.5.0-37-generic\",\n  \"kernel_race_attempt_count\": null,\n  \"limit_seconds\": 30,\n  \"live_file_checked\": false,\n  \"login_verified\": false,\n  \"mode\": \"dummy\",\n  \"prefix\": \"Member6/evidence/incoming/opus-fresh-20261008/logs/fresh-t1-01\",\n  \"program_has_only_expected_initialization_lines\": true,\n  \"program_output\": \"RUID=1000 EUID=1000 target=/zzz file-byte-offset=6 length=6\\nO_RDONLY + PROT_READ + MAP_PRIVATE; racing memory writes and MADV_DONTNEED.\\nRun bounded trials with run_trial.sh; Ctrl+C stops a direct run.\\n\",\n  \"ruid\": 1000\n}\n",
+  "stderr": ""
+}

@@ -1,6 +1,8 @@
 # Member 6 — Arch Linux and the configured VirtualBox VM
 
-**Current stop: reboot the Arch host, then verify VirtualBox's driver.** The separate VM and clean snapshot are already created. Use this companion for host operations; the original start-to-finish guide remains the experiment specification.
+**Completed fresh run — 9 October 2026:** both tasks, non-sudo UID-0 proof, exact restoration and cleanup are verified. The VM is powered off normally; its cable is disconnected and both snapshots are retained. Use [submission/LIVE_PREPARATION.md](submission/LIVE_PREPARATION.md) for the next rehearsal. The reboot/installation instructions below are historical setup and need not be repeated for this prepared VM.
+
+**Update — 8 October 2026:** the required Arch reboot was completed, VirtualBox started the guest, and actual guest environment/build checks passed. For the requested new Opus session use [OPENCODE_HANDOFF.md](OPENCODE_HANDOFF.md). The sections below retain the earlier setup/diagnosis and reproducible host instructions; their pre-reboot table is historical. The original start-to-finish guide remains the experiment specification.
 
 ## 1. What is actually installed
 

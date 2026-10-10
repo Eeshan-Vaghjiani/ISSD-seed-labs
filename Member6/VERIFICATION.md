@@ -1,6 +1,24 @@
 # Member 6 — preparation and verification status
 
-## Current execution preparation — 7 October 2026
+## Fresh verification — 9 October 2026
+
+Fresh guest S02/S03 captures now establish Ubuntu 12.04.2, i686/32-bit, kernel `3.5.0-37-generic` / package `3.5.0-37.58~precise1` from `linux-lts-quantal`, GCC 4.6.3, seed UID/GID 1000 and the native ext4 workspace. Four guest source hashes match the host originals. `bash build.sh` returned 0 and produced seed-owned 0755 ELF32 binaries. Both source-worker views were captured and reviewed. See the [fresh image review](evidence/incoming/opus-fresh-20261008/EVIDENCE_REVIEW.md) and [current checkpoint table](evidence/incoming/opus-fresh-20261008/README.md).
+
+The guest guard and Python 2.7.3 verifier parse returned 0; the timeout compatibility check returned 124. Following the user's authentication, both transfer mounts were verified. S01's complementary CPU/disk images are now reviewed. S04/S05 establish the denied ordinary write and unchanged backing file under normal COW. The Task 1 trial `fresh-t1-01` produced the exact 19-byte replacement with root:root 0644 retained; the live guest verifier and independent exported-file verifier both passed. Its 30-second bound produced a measured 0 integer elapsed seconds, without any finer runtime or attempt-count claim. See `submission/RESULTS.md` and the fresh S06/S07 captures.
+
+Charlie was created with UID 1001 / GID 1002, and an ordinary non-sudo login was verified before the protected full-file baseline and powered-off `M6-charlie-normal-ready` snapshot. The sole Task 2 trial `fresh-t2-01` changed only the same-width UID field to `0000`, retaining root:root 0644 and 2040 bytes. Live and offline verification passed. One authentication attempt failed; the retry succeeded with actual UID 0, GID 1002, `whoami` root and proof PID 3392. That shell exited before exact full-file restoration; a new charlie login then reported UID 1001 and exited to seed.
+
+The complete cleanup checker returned 0, finding no attacker/wrapper/control/su/root shell, only the original `root:0` entry, no `/zzz`, matching account baseline and ordinary 0755 binaries. Both native transcripts are closed and hash-verified on the host. The 46-file final archive passed source, transcript, trial-artifact and complete restored-file checks. The input share was unmounted; a password-required final output-share unmount is retained as a failure, followed by normal guest shutdown. VirtualBox confirms the powered-off final state, disconnected network cable and both retained snapshots. See `provenance/final-export-verification.json` and `provenance/final-powered-off-state.json` in the fresh folder.
+
+All required checkpoints are complete. **S12 is not performed; discussion only.** The original preparation sections below describe their dated state, not outstanding practical work. The user approved the generic **Member 6 — ISSD** cover; course deadline/format/identity/speaking allowance and future spoken rehearsal/upload remain human follow-up.
+
+## Historical handoff — 8 October 2026
+
+The host reboot and guest boot succeeded. Actual guest checks established Ubuntu 12.04.2, i686, kernel 3.5.0-37-generic / package 3.5.0-37.58~precise1, GCC 4.6.3 and seed UID/GID 1000. Source transfer onto ext4 and the guest build passed; both binaries were seed-owned 0755 ELF32. Actual records are in `evidence/incoming/M6-S02-environment.log`, `M6-preflight-extra.log`, `M6-transfer-native.log` and `M6-S03-build.log`.
+
+The user stopped the prior workflow before any normal-COW control, dummy-file attack or account experiment and requested fresh screenshots with Opus 5.5. Follow [OPENCODE_HANDOFF.md](OPENCODE_HANDOFF.md) and the [fresh-run prompt](OPUS_5_5_FRESH_RUN_PROMPT.md). The new screenshot folder is `evidence/incoming/opus-fresh-20261008/`. Reverify the current VM; earlier captures are not this new run's evidence.
+
+## Historical execution preparation — 7 October 2026, before first boot
 
 The full current audit is [EXECUTION_STATUS.md](EXECUTION_STATUS.md); the completed pre-boot checks and retained records are in [PREPARATION_VERIFICATION.md](PREPARATION_VERIFICATION.md). The repository audit covered all 616 original tracked files, with no detected structural/integrity errors. All Member 6 requirements/source and the relevant Member 5 coursework, finished documents, evidence/provenance and helper code were reviewed.
 
@@ -38,7 +56,7 @@ Research/check date: **29 September 2026**.
 * The monitor's process stopping and exact exploit behaviour must be verified during the documented VM trials.
 * Word documents have been library-reopened, not visually paginated in Microsoft Word. Check page breaks, image placement and long commands when preparing the final submission.
 
-## Checks to complete during your run
+## Checks identified during the original preparation
 
 1. Confirm actual image/kernel/architecture and build with Linux GCC.
 2. Verify ordinary dummy writes are denied and normal private COW leaves the backing file unchanged.

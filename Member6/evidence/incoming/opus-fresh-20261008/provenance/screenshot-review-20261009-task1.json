@@ -1,0 +1,88 @@
+{
+  "reviewed_utc": "2026-10-09T20:35:16.493345+00:00",
+  "images": [
+    {
+      "filename": "M6-S01-c-vm-setup.png",
+      "sha256": "cd1e42ade2cffb934b91aacae35f6fa42c8212bebd2f8f4d15364efae78d67e2",
+      "width": 678,
+      "height": 98,
+      "method": "User-supplied host settings region; no agent pixel editing",
+      "visually_reviewed": true,
+      "actual_observation": "User-supplied Processor region shows 2 CPUs; paired with the named VM settings and host configuration record."
+    },
+    {
+      "filename": "M6-S01-d-vm-setup.png",
+      "sha256": "30cab78cb311ffd043cc2e7b9ad6315a427ae1d3838d51dd93df79af183fc17f",
+      "width": 697,
+      "height": 335,
+      "method": "User-supplied host settings region; no agent pixel editing",
+      "visually_reviewed": true,
+      "actual_observation": "User-supplied Storage region shows SEEDUbuntu12.04.vmdk under M6-SCSI, 80.00 GB virtual size, and attachment to ISSD-Member6-SEED12. Location text is truncated; full disk chain is in host provenance."
+    },
+    {
+      "filename": "M6-S04-dummy-baseline.png",
+      "sha256": "cad74381f15acae0a294dab8530a5b3beffda71d3faa31bd469f6af2f44d56a9",
+      "width": 1280,
+      "height": 960,
+      "method": "VirtualBox screenshotpng: actual guest framebuffer, unedited",
+      "visually_reviewed": true,
+      "actual_observation": "seed UID 1000; root:root 0644, 19-byte original dummy; ordinary redirection denied with exit 1; content and SHA-256 unchanged."
+    },
+    {
+      "filename": "M6-S05-normal-cow.png",
+      "sha256": "2784a8c1e1cf8da6f8112020595aa2905cbc97476debd95047a1d55e832d10d0",
+      "width": 1280,
+      "height": 960,
+      "method": "VirtualBox screenshotpng: actual guest framebuffer, unedited",
+      "visually_reviewed": true,
+      "actual_observation": "Control private memory becomes 111111******333333; backing file stays original. Fresh read, saved-hash check and full baseline cmp pass."
+    },
+    {
+      "filename": "M6-S06-task1-running.png",
+      "sha256": "b6de40ee583b88b1290c94dadec9408cf534f34bd5b35472859d56651bc48b1d",
+      "width": 1280,
+      "height": 960,
+      "method": "VirtualBox screenshotpng: actual guest framebuffer, unedited",
+      "visually_reviewed": true,
+      "actual_observation": "Completed supplied fresh-t1-01 ordinary-seed trial, 30-second limit, 0 integer elapsed seconds, detected change, mapping details and full diff. Captured after completion, not evidence of a still-running process."
+    },
+    {
+      "filename": "M6-S07-task1-result.png",
+      "sha256": "54f16ec8e9574842f254ea37fb60b9432036efea14f822ac83c133ef6135bad3",
+      "width": 1280,
+      "height": 960,
+      "method": "VirtualBox screenshotpng: actual guest framebuffer, unedited",
+      "visually_reviewed": true,
+      "actual_observation": "No cow_attack match; exact full diff and fresh file read; root:root 0644 and 19 bytes retained; comparison against complete expected bytes returns 0."
+    }
+  ],
+  "task1_live_verification": {
+    "ACTUAL": "exact-change",
+    "EXPECTED": "Complete six-byte dummy replacement",
+    "EXPLANATION": "Compared entire before/after byte sequences, hashes and root:root 0644 metadata.",
+    "actual_file_content": "111111******333333\n",
+    "after_sha256": "97c0ed6bb0deb556349015713d1c0a86d11e1bf5572a78b087650e814479b47b",
+    "baseline_details": {
+      "before_content": "111111222222333333\n"
+    },
+    "before_sha256": "7342e673ad4f9a5ea02fe84fa6ab1760d922e3f362c885ef4feda980423b9552",
+    "elapsed_integer_seconds": 0,
+    "euid": 1000,
+    "file_length_unchanged": true,
+    "identity_from_summary": "uid=1000(seed) gid=1000(seed) groups=1000(seed),4(adm),24(cdrom),27(sudo),30(dip),46(plugdev),109(lpadmin),124(sambashare),130(wireshark)",
+    "kernel_from_summary": "3.5.0-37-generic",
+    "kernel_race_attempt_count": null,
+    "limit_seconds": 30,
+    "live_file_checked": true,
+    "live_sha256": "97c0ed6bb0deb556349015713d1c0a86d11e1bf5572a78b087650e814479b47b",
+    "login_verified": false,
+    "mode": "dummy",
+    "prefix": "logs/fresh-t1-01",
+    "program_has_only_expected_initialization_lines": true,
+    "program_output": "RUID=1000 EUID=1000 target=/zzz file-byte-offset=6 length=6\nO_RDONLY + PROT_READ + MAP_PRIVATE; racing memory writes and MADV_DONTNEED.\nRun bounded trials with run_trial.sh; Ctrl+C stops a direct run.\n",
+    "ruid": 1000
+  },
+  "task1_offline_verification_record": "provenance/fresh-t1-01-offline-check.json",
+  "task2_state": "adduser announced charlie UID 1001 and GID 1002; waiting for interactive new password; ordinary login and baseline not yet verified",
+  "active_guest_transcript": "/home/seed/m6-fresh-20261009-1946.typescript"
+}
