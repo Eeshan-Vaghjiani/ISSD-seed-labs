@@ -18,6 +18,16 @@ restoration and countermeasures. Kit: `demo-prep.sh`, `demo-live.txt`,
 VirtualBox → **ISSD-Member6-SEED12** → Start. Log in as **seed** (type the
 password yourself — never paste it). Open a terminal: **Ctrl+Alt+T**.
 
+> **Watch the record dot (learned the hard way on 21 Oct).** This VM still has
+> VirtualBox screen capture enabled at boot: it records the first **10
+> minutes** and saves them *straight into an evidence file* in the repo
+> (overwriting it — we restored the original from git and will disable the
+> setting at the next normal shutdown). Until then: if a record dot shows in
+> the VM window's status bar, click it to stop; do **not** reboot the VM
+> mid-session; and never drag or copy files over anything under
+> `Member6/evidence/` in the file manager — one drag replaced the deck once
+> already today.
+
 ## 1. Check the lab is intact (paste, one line)
 
 ```bash
