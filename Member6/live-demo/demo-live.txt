@@ -1,0 +1,16 @@
+cd ~/issd-member6/lab-files
+
+id
+ls -l /zzz
+cat /zzz
+
+echo 99999 > /zzz
+
+./cow_control
+cat /zzz
+sha256sum -c ../provenance/dummy-normal.sha256
+
+bash run_trial.sh dummy 15 "$RUN"
+
+cat /zzz
+ls -l /zzz
