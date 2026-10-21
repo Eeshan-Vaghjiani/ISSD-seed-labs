@@ -9,6 +9,8 @@
 #     source ~/demo-prep.sh          # or paste this whole file instead
 #
 # It asks for the VM sudo password once — type it, nothing appears.
+# Re-prep is safe: it rewrites /zzz and picks a fresh RUN label (rehearse freely),
+# but run it once per round on the day so the RUN label stays unique.
 test "${BASH_SOURCE[0]}" != "$0" || { echo 'Run it with:  source demo-prep.sh'; return 1 2>/dev/null || exit 1; }
 
 echo '== 1. basic guards: right VM, no leftover attacker, account file untouched =='
