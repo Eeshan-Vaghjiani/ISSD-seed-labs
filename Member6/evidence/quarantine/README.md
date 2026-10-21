@@ -20,6 +20,21 @@ personal rehearsal reference. Recording-at-boot will be disabled (and the
 target path blanked) at the next normal VM shutdown; until then avoid
 rebooting the VM, and click the status-bar record dot if one appears.
 
+## 2026-10-21-shutdown-finalized-capture.webm
+
+A 507.7 s capture (~8.5 min, ends 17:17:55 local) that VirtualBox finalized
+when the VM was powered off at 14:17:54Z — a recording started manually from
+the status bar mid-session (a status-bar record click starts one as well as
+stops one) still wrote to the old configured evidence path, because the path
+was only redirected after shutdown. Not evidence; kept for the user's
+rehearsal reference.
+
+**State now fixed:** `recording_enabled="off"` (no capture at boot) and the
+capture path points to the VM's own folder — neither boot nor a manual record
+click can write into the repository any more. The evidence clip
+`M6-task2-login-screen0.webm` was restored byte-identical from git twice on
+this date; its committed hash remains authoritative.
+
 ## 2026-10-21-stray-four-slide-copy.pptx
 
 A re-serialized copy of `Member6/group-slides/Member 6 slides only.pptx`

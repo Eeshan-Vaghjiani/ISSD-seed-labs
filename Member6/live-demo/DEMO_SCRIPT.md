@@ -18,15 +18,15 @@ restoration and countermeasures. Kit: `demo-prep.sh`, `demo-live.txt`,
 VirtualBox → **ISSD-Member6-SEED12** → Start. Log in as **seed** (type the
 password yourself — never paste it). Open a terminal: **Ctrl+Alt+T**.
 
-> **Watch the record dot (learned the hard way on 21 Oct).** This VM still has
-> VirtualBox screen capture enabled at boot: it records the first **10
-> minutes** and saves them *straight into an evidence file* in the repo
-> (overwriting it — we restored the original from git and will disable the
-> setting at the next normal shutdown). Until then: if a record dot shows in
-> the VM window's status bar, click it to stop; do **not** reboot the VM
-> mid-session; and never drag or copy files over anything under
-> `Member6/evidence/` in the file manager — one drag replaced the deck once
-> already today.
+> **Screen capture — fixed 21 Oct.** The VM had VirtualBox capture enabled at
+> boot (10-minute cap) writing straight into an evidence file in the repo, and
+> it recorded twice today (once from boot, once from a status-bar click that
+> finalized at shutdown). Both evidence overwrites were restored from git, the
+> capture setting is now **off**, and its save path points to the VM's own
+> folder — so no recording can touch the repository any more. Two habits that
+> still matter: a **red** record dot means VirtualBox is filming (clicking an
+> idle dot *starts* a recording), and never drag or copy files over anything
+> under `Member6/evidence/` in the file manager.
 
 ## 1. Check the lab is intact (paste, one line)
 
@@ -93,18 +93,18 @@ newest `RUN` shown.
 Type one command, pause, say the line, read the screen. Same lines are in
 `demo-live.txt`.
 
-| Type | Say | What's actually happening (if someone asks) |
-| --- | --- | --- |
-| `id` | "I'm seed — UID 1000, an ordinary user. No sudo here." | Your identity: uid 1000, not 0. |
-| `ls -l /zzz` | "`/zzz` belongs to root, mode 644 — only root may write." | Owner root + 644 = group/others get read-only. |
-| `cat /zzz` | "Content: `111111222222333333`." | The baseline bytes you're about to attack. |
-| `echo 99999 > /zzz` | "A normal write — **Permission denied.** Protection works." | Kernel checks permission first: uid 1000 ≠ owner root → denied. This is Unix working correctly. |
-| `./cow_control` | "Copy-on-write the normal way: the program asks for a *private* writable copy of the file. It writes stars into its own memory…" | Opens `/zzz` read-only, maps it `MAP_PRIVATE` (writable in memory only). Writes go to the private copy. |
-| `cat /zzz` | "…but the file on disk still reads the digits. Nothing leaked." | The mapping's backing file is untouched — COW doing its job. |
-| `sha256sum -c ../provenance/dummy-normal.sha256` | "Hash check: the file is bit-for-bit the original." | Independent proof the control changed nothing. |
-| `bash run_trial.sh dummy 15 "$RUN"` | "Now the race. It stops itself the moment the file changes — capped at 15 seconds in class." | `cow_attack` re-maps `/zzz` read-only *private*, then hammers two things at once: a write to its **own memory** through `/proc/self/mem`, and `madvise(MADV_DONTNEED)` to throw the private pages away. The kernel sometimes ends up writing into the *page cache of the real file* — that's the bug. When `/zzz` changes (or 15 s pass), the wrapper stops it and logs everything. |
-| `cat /zzz` | "The root file now reads `111111******333333` — six middle bytes rewritten by seed, no sudo." | Exactly 6 targeted bytes changed — not random corruption; the race wrote the attacker's bytes through the kernel. |
-| `ls -l /zzz` | "Still root-owned, still mode 644 — the write never opened the file." | Owner/mode unchanged: proof the write bypassed file permissions entirely. |
+| Type                                             | Say                                                                                                                              | What's actually happening (if someone asks)                                                                                                                                                                                                                                                                                                                                         |
+| ------------------------------------------------ | -------------------------------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| `id`                                             | "I'm seed — UID 1000, an ordinary user. No sudo here."                                                                           | Your identity: uid 1000, not 0.                                                                                                                                                                                                                                                                                                                                                     |
+| `ls -l /zzz`                                     | "`/zzz` belongs to root, mode 644 — only root may write."                                                                        | Owner root + 644 = group/others get read-only.                                                                                                                                                                                                                                                                                                                                      |
+| `cat /zzz`                                       | "Content: `111111222222333333`."                                                                                                 | The baseline bytes you're about to attack.                                                                                                                                                                                                                                                                                                                                          |
+| `echo 99999 > /zzz`                              | "A normal write — **Permission denied.** Protection works."                                                                      | Kernel checks permission first: uid 1000 ≠ owner root → denied. This is Unix working correctly.                                                                                                                                                                                                                                                                                     |
+| `./cow_control`                                  | "Copy-on-write the normal way: the program asks for a *private* writable copy of the file. It writes stars into its own memory…" | Opens `/zzz` read-only, maps it `MAP_PRIVATE` (writable in memory only). Writes go to the private copy.                                                                                                                                                                                                                                                                             |
+| `cat /zzz`                                       | "…but the file on disk still reads the digits. Nothing leaked."                                                                  | The mapping's backing file is untouched — COW doing its job.                                                                                                                                                                                                                                                                                                                        |
+| `sha256sum -c ../provenance/dummy-normal.sha256` | "Hash check: the file is bit-for-bit the original."                                                                              | Independent proof the control changed nothing.                                                                                                                                                                                                                                                                                                                                      |
+| `bash run_trial.sh dummy 15 "$RUN"`              | "Now the race. It stops itself the moment the file changes — capped at 15 seconds in class."                                     | `cow_attack` re-maps `/zzz` read-only *private*, then hammers two things at once: a write to its **own memory** through `/proc/self/mem`, and `madvise(MADV_DONTNEED)` to throw the private pages away. The kernel sometimes ends up writing into the *page cache of the real file* — that's the bug. When `/zzz` changes (or 15 s pass), the wrapper stops it and logs everything. |
+| `cat /zzz`                                       | "The root file now reads `111111******333333` — six middle bytes rewritten by seed, no sudo."                                    | Exactly 6 targeted bytes changed — not random corruption; the race wrote the attacker's bytes through the kernel.                                                                                                                                                                                                                                                                   |
+| `ls -l /zzz`                                     | "Still root-owned, still mode 644 — the write never opened the file."                                                            | Owner/mode unchanged: proof the write bypassed file permissions entirely.                                                                                                                                                                                                                                                                                                           |
 
 **If the race doesn't win live** (kernel timing varies — it happens): don't
 fumble. Say *"scheduling is different on the day — here is the recorded run
